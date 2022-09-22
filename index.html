@@ -77,6 +77,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-• 基本数学概念" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/weicun581/2022/09/22/%E2%80%A2%20%E5%9F%BA%E6%9C%AC%E6%95%B0%E5%AD%A6%E6%A6%82%E5%BF%B5/" class="article-date">
+  <time class="dt-published" datetime="2022-09-22T08:33:44.777Z" itemprop="datePublished">2022-09-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="基本数学概念"><a href="#基本数学概念" class="headerlink" title="基本数学概念"></a>基本数学概念</h1><p>[TOC]  </p>
+<h2 id="常用的数学概念"><a href="#常用的数学概念" class="headerlink" title="常用的数学概念"></a>常用的数学概念</h2><h3 id="异或运算"><a href="#异或运算" class="headerlink" title="异或运算"></a>异或运算</h3><ul>
+<li><p><strong>定义：参与运算的两个值，如果两个相应bit位相同，则结果为0，否则为1。</strong><br>&#x3D;&#x3D;两者相同则为0，两者不同则为1&#x3D;&#x3D;  </p>
+<ul>
+<li>&#96;&#96;&#96;<br> 0^0 &#x3D; 0<br> 1^0 &#x3D; 1<br> 0^1 &#x3D; 1<br> 1^1 &#x3D; 0  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">-   **特点：**  </span><br><span class="line"></span><br><span class="line">    - ==0异或任何书等于任何数==  0^0=0，0^1=1  </span><br><span class="line"></span><br><span class="line">    - ==1异或任何数－任何数取反==  1^0=1，1^1=0   </span><br><span class="line"></span><br><span class="line">    - ==任何数异或自己＝把自己置0==  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-   **常见用途：**  </span><br><span class="line"></span><br><span class="line">    1.   **使某些特定的位翻转**   </span><br><span class="line">         例如对数10100001的第2位和第3位翻转，则可以将该数与00000110进行按位异或运算。 </span><br><span class="line"></span><br><span class="line">         -   ```</span><br><span class="line">             10100001^00000110 = 10100111  </span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="2">
+<li><p><strong>实现两个值的交换，而不必使用临时变量。</strong>例如交换两个整数a&#x3D;10100001，b&#x3D;00000110的值，可通过下列语句实现：</p>
+<ul>
+<li>&#96;&#96;&#96;<br> a &#x3D; a^b； 　　&#x2F;&#x2F;a&#x3D;10100111<br> b &#x3D; b^a； 　　&#x2F;&#x2F;b&#x3D;10100001<br> a &#x3D; a^b； 　　&#x2F;&#x2F;a&#x3D;00000110  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3.   **在汇编语言中经常用于将变量置零**</span><br><span class="line"></span><br><span class="line">     -   ```</span><br><span class="line">          a = a^a     </span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>快速判断两个值是否相等</strong><br>判断两个整数a，b是否相等，则可通过下列语句实现。  </p>
+<ul>
+<li><pre><code>return （（a ^ b） == 0） // a==b 返回就是 0 
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220922163334.png" alt="image-20220922163334096"></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://weicun581.github.io/weicun581/2022/09/22/%E2%80%A2%20%E5%9F%BA%E6%9C%AC%E6%95%B0%E5%AD%A6%E6%A6%82%E5%BF%B5/" data-id="cl8cssj860002y4ul8v4i0jrl" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-jimmy-test-new-md-file" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/weicun581/2022/09/21/jimmy-test-new-md-file/" class="article-date">
@@ -148,7 +199,7 @@ hexo deploy 	#部署发布
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weicun581.github.io/weicun581/2022/09/21/jimmy-test-new-md-file/" data-id="cl8cju5sy00019gul5dtd0ax8" data-title="jimmy test new md file" class="article-share-link">Share</a>
+      <a data-url="https://weicun581.github.io/weicun581/2022/09/21/jimmy-test-new-md-file/" data-id="cl8cssj830001y4ulavrze4go" data-title="jimmy test new md file" class="article-share-link">Share</a>
       
       
       
@@ -199,7 +250,7 @@ hexo deploy 	#部署发布
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://weicun581.github.io/weicun581/2022/08/24/hello-world/" data-id="cl8cju5sn00009gul7ufvfobc" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://weicun581.github.io/weicun581/2022/08/24/hello-world/" data-id="cl8cssj7z0000y4ul9n72etn1" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -240,6 +291,10 @@ hexo deploy 	#部署发布
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/weicun581/2022/09/22/%E2%80%A2%20%E5%9F%BA%E6%9C%AC%E6%95%B0%E5%AD%A6%E6%A6%82%E5%BF%B5/">(no title)</a>
+          </li>
         
           <li>
             <a href="/weicun581/2022/09/21/jimmy-test-new-md-file/">jimmy test new md file</a>
