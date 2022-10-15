@@ -55,24 +55,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/08/24/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Python字符串小技巧</title>
     <url>/2022/09/27/Python%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220927171316.jpeg" alt="Free photos of Vintage pocket watch" style="zoom:50%;" />
@@ -132,6 +114,120 @@
         <tag>python</tag>
         <tag>python字符串</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>hexo评论系统waline服务器及数据库搭建</title>
+    <url>/2022/10/12/%E2%80%A2%2001-%E5%AE%89%E8%A3%85hexo%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9Fwaline%E7%9A%84%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20221012171211.png" alt="image-20221012171211527" style="zoom:67%;" />
+
+<p>先吐槽一下<a href="https://waline.js.org/guide/server/databases.html">waline官网教程</a>，浪费了我3day时间去debug。</p>
+<p>目前，官网推荐的：</p>
+<ul>
+<li>vercel（服务器）NG</li>
+<li>leancloud（数据库）NG</li>
+</ul>
+<p>我目前使用的方法：docker服务器端 + sqlite数据库，下面分享下我的做法。</p>
+<span id="more"></span>
+
+
+
+<h2 id="安装docker、docker-compose环境"><a href="#安装docker、docker-compose环境" class="headerlink" title="安装docker、docker compose环境"></a>安装docker、docker compose环境</h2><ul>
+<li><p><strong>安装docker：</strong></p>
+<ul>
+<li>国内：<code>curl -sSL https://get.daocloud.io/docker | sh</code></li>
+<li>国外：<code>curl -sSL https://get.docker.com/ | sh</code></li>
+</ul>
+</li>
+<li><p><strong>安装docker compose：</strong></p>
+<ul>
+<li><p>国内：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -L https://get.daocloud.io/docker/compose/releases/download/v2.2.2/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose</span><br><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>国外：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -L &quot;https://github.com/docker/compose/releases/download/2.2.2/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</span><br><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>检查是否安装成功：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker -v</span><br><span class="line">docker-compose -v</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>docker compose作用：</p>
+<blockquote>
+<p>用来负责对Docker容器集群的快速编排，</p>
+<p>由一组关联的应用容器组成的一个完整业务单元，在docker-compose.yml文件当中进行定义</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p><strong>最小docker compse使用范例：</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建目录</span></span><br><span class="line">mkdir hello</span><br><span class="line">cd hello</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">新建docker-compose.yml文件</span></span><br><span class="line">vim docker-compose.yml</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">写入内容（这里在vim当中编辑yml文件挺难受的，可以在idea当中编辑远程主机的文件）</span></span><br><span class="line">version: &quot;3.0&quot;    # 指定compose的版本</span><br><span class="line">services:         # 指定服务</span><br><span class="line">  tomcat:         # 单个服务</span><br><span class="line">    image: tomcat:9.0.27-jdk8     # 服务镜像</span><br><span class="line">    ports:</span><br><span class="line">      - 8081:8080                 # 暴露对应的端口</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">保持文件内容后进行启动compose</span></span><br><span class="line">docker-compose up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">服务启动之后，可以直接进行访问8081端口</span></span><br><span class="line">http://远程主机ip/8081</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参考：<a href="https://blog.csdn.net/qq_44973159/article/details/121357388">https://blog.csdn.net/qq_44973159/article/details/121357388</a></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="安装waline服务器及数据库"><a href="#安装waline服务器及数据库" class="headerlink" title="安装waline服务器及数据库"></a>安装waline服务器及数据库</h2><h4 id="step1：创建测试目录："><a href="#step1：创建测试目录：" class="headerlink" title="step1：创建测试目录："></a><strong>step1：创建测试目录：</strong></h4><ul>
+<li><p>执行如下命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /root</span><br><span class="line">mkdir composetest</span><br><span class="line">cd composetest</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="step2：拉取镜像："><a href="#step2：拉取镜像：" class="headerlink" title="step2：拉取镜像："></a><strong>step2：拉取镜像：</strong></h4><ul>
+<li><code>docker pull lizheming/waline</code></li>
+</ul>
+<h4 id="step3：在-composetest-目录下创建docker-compose-yml文件，内容如下："><a href="#step3：在-composetest-目录下创建docker-compose-yml文件，内容如下：" class="headerlink" title="step3：在 composetest 目录下创建docker-compose.yml文件，内容如下："></a><strong>step3：在 composetest 目录下创建docker-compose.yml文件，内容如下：</strong></h4><ul>
+<li><p>写入如下内容：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">version: &#x27;3&#x27;</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  waline:</span><br><span class="line">    container_name: waline</span><br><span class="line">    image: lizheming/waline:latest</span><br><span class="line">    restart: always</span><br><span class="line">    ports:</span><br><span class="line">      - 8360:8360</span><br><span class="line">    volumes:</span><br><span class="line">      - $&#123;PWD&#125;/data:/app/data</span><br><span class="line">    environment:</span><br><span class="line">      TZ: &#x27;Asia/Shanghai&#x27;</span><br><span class="line">      SQLITE_PATH: &#x27;/app/data&#x27;</span><br><span class="line">      JWT_TOKEN: &#x27;Your token&#x27;</span><br><span class="line">      SITE_NAME: &#x27;Your site name&#x27;</span><br><span class="line">      SITE_URL: &#x27;https://example.com&#x27;</span><br><span class="line">      SECURE_DOMAINS: &#x27;example.com&#x27;</span><br><span class="line">      AUTHOR_EMAIL: &#x27;mail@example.com&#x27;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="step4：在-composetest-目录下创建-data-目录，下载-waline-sqlite-这个数据库文件："><a href="#step4：在-composetest-目录下创建-data-目录，下载-waline-sqlite-这个数据库文件：" class="headerlink" title="step4：在 composetest 目录下创建 data 目录，下载 waline.sqlite 这个数据库文件："></a><strong>step4：在 composetest 目录下创建 data 目录，下载 <a href="https://github.com/walinejs/waline/blob/main/assets/waline.sqlite">waline.sqlite</a> 这个数据库文件：</strong></h4><ul>
+<li><p>命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /root/composetest</span><br><span class="line">mkdir data</span><br><span class="line">cd data</span><br><span class="line">wget https://raw.githubusercontent.com/walinejs/waline/main/assets/waline.sqlite</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="step5：使用-Compose-命令构建和运行"><a href="#step5：使用-Compose-命令构建和运行" class="headerlink" title="step5：使用 Compose 命令构建和运行"></a><strong>step5：使用 Compose 命令构建和运行</strong></h4><ul>
+<li><p>命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /root/composetest</span><br><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列出所有运行的容器：<code>docker-compose ps</code></p>
+</li>
+</ul>
+<h4 id="step6：-访问-ip-端口："><a href="#step6：-访问-ip-端口：" class="headerlink" title="step6： 访问 ip:端口："></a><strong>step6： 访问 <code>ip:端口</code>：</strong></h4><ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20221012173410.png" alt="image-20221012173410742" style="zoom:50%;" /></li>
+</ul>
+<h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><blockquote>
+<ol>
+<li><p><a href="https://blog.csdn.net/weixin_43943642/article/details/126678317">Waline评论服务docker自部署手册 + 无需备案域名配置</a></p>
+</li>
+<li><p><a href="https://009898.xyz/post/docker-ji-lu/">Docker 记录 | Mark (009898.xyz)</a></p>
+</li>
+<li><p><a href="https://waline.js.org/guide/server/databases.html">多数据库服务支持 | Waline</a></p>
+</li>
+</ol>
+</blockquote>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+        <tag>hexo</tag>
+        <tag>waline</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/08/24/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>ADB(Android Debug Bridge)用法总结</title>
