@@ -149,7 +149,7 @@
 
 
 
-<h2 id="安装docker、docker-compose环境"><a href="#安装docker、docker-compose环境" class="headerlink" title="安装docker、docker compose环境"></a>安装docker、docker compose环境</h2><ul>
+<h2 id="安装docker、docker-compose环境21"><a href="#安装docker、docker-compose环境21" class="headerlink" title="安装docker、docker compose环境21"></a>安装docker、docker compose环境21</h2><ul>
 <li><p><strong>安装docker：</strong></p>
 <ul>
 <li>国内：<code>curl -sSL https://get.daocloud.io/docker | sh</code></li>
