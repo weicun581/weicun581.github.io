@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20221012171211.png">
 <meta property="og:image" content="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20221012173410.png">
 <meta property="article:published_time" content="2022-10-12T10:51:33.000Z">
-<meta property="article:modified_time" content="2022-10-20T06:25:41.823Z">
+<meta property="article:modified_time" content="2022-10-20T06:30:30.570Z">
 <meta property="article:author" content="hello_world">
 <meta property="article:tag" content="docker">
 <meta property="article:tag" content="hexo">
@@ -155,7 +155,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85docker%E3%80%81docker-compose%E7%8E%AF%E5%A2%83123d2"><span class="nav-number">1.</span> <span class="nav-text">安装docker、docker compose环境123d2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85waline%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">安装waline服务器及数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#step1%EF%BC%9A%E5%88%9B%E5%BB%BA%E6%B5%8B%E8%AF%95%E7%9B%AE%E5%BD%95%EF%BC%9A"><span class="nav-number">2.0.1.</span> <span class="nav-text">step1：创建测试目录：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step2%EF%BC%9A%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F%EF%BC%9A"><span class="nav-number">2.0.2.</span> <span class="nav-text">step2：拉取镜像：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step3%EF%BC%9A%E5%9C%A8-composetest-%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%88%9B%E5%BB%BAdocker-compose-yml%E6%96%87%E4%BB%B6%EF%BC%8C%E5%86%85%E5%AE%B9%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">2.0.3.</span> <span class="nav-text">step3：在 composetest 目录下创建docker-compose.yml文件，内容如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step4%EF%BC%9A%E5%9C%A8-composetest-%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%88%9B%E5%BB%BA-data-%E7%9B%AE%E5%BD%95%EF%BC%8C%E4%B8%8B%E8%BD%BD-waline-sqlite-%E8%BF%99%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="nav-number">2.0.4.</span> <span class="nav-text">step4：在 composetest 目录下创建 data 目录，下载 waline.sqlite 这个数据库文件：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step5%EF%BC%9A%E4%BD%BF%E7%94%A8-Compose-%E5%91%BD%E4%BB%A4%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="nav-number">2.0.5.</span> <span class="nav-text">step5：使用 Compose 命令构建和运行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step6%EF%BC%9A-%E8%AE%BF%E9%97%AE-ip-%E7%AB%AF%E5%8F%A3%EF%BC%9A"><span class="nav-number">2.0.6.</span> <span class="nav-text">step6： 访问 ip:端口：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">参考教程</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85docker%E3%80%81docker-compose%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">安装docker、docker compose环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85waline%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">安装waline服务器及数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#step1%EF%BC%9A%E5%88%9B%E5%BB%BA%E6%B5%8B%E8%AF%95%E7%9B%AE%E5%BD%95%EF%BC%9A"><span class="nav-number">2.0.1.</span> <span class="nav-text">step1：创建测试目录：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step2%EF%BC%9A%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F%EF%BC%9A"><span class="nav-number">2.0.2.</span> <span class="nav-text">step2：拉取镜像：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step3%EF%BC%9A%E5%9C%A8-composetest-%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%88%9B%E5%BB%BAdocker-compose-yml%E6%96%87%E4%BB%B6%EF%BC%8C%E5%86%85%E5%AE%B9%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">2.0.3.</span> <span class="nav-text">step3：在 composetest 目录下创建docker-compose.yml文件，内容如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step4%EF%BC%9A%E5%9C%A8-composetest-%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%88%9B%E5%BB%BA-data-%E7%9B%AE%E5%BD%95%EF%BC%8C%E4%B8%8B%E8%BD%BD-waline-sqlite-%E8%BF%99%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="nav-number">2.0.4.</span> <span class="nav-text">step4：在 composetest 目录下创建 data 目录，下载 waline.sqlite 这个数据库文件：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step5%EF%BC%9A%E4%BD%BF%E7%94%A8-Compose-%E5%91%BD%E4%BB%A4%E6%9E%84%E5%BB%BA%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="nav-number">2.0.5.</span> <span class="nav-text">step5：使用 Compose 命令构建和运行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#step6%EF%BC%9A-%E8%AE%BF%E9%97%AE-ip-%E7%AB%AF%E5%8F%A3%EF%BC%9A"><span class="nav-number">2.0.6.</span> <span class="nav-text">step6： 访问 ip:端口：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">参考教程</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -276,7 +276,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-10-20 14:25:41" itemprop="dateModified" datetime="2022-10-20T14:25:41+08:00">2022-10-20</time>
+      <time title="修改时间：2022-10-20 14:30:30" itemprop="dateModified" datetime="2022-10-20T14:30:30+08:00">2022-10-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -332,7 +332,7 @@
 
 
 
-<h2 id="安装docker、docker-compose环境123d2"><a href="#安装docker、docker-compose环境123d2" class="headerlink" title="安装docker、docker compose环境123d2"></a>安装docker、docker compose环境123d2</h2><ul>
+<h2 id="安装docker、docker-compose环境"><a href="#安装docker、docker-compose环境" class="headerlink" title="安装docker、docker compose环境"></a>安装docker、docker compose环境</h2><ul>
 <li><p><strong>安装docker：</strong></p>
 <ul>
 <li>国内：<code>curl -sSL https://get.daocloud.io/docker | sh</code></li>
