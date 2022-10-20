@@ -1,128 +1,382 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>docker hexo评论系统waline服务器及数据库搭建</title>
-      <link href="/2022/10/12/%E2%80%A2%2001-%E5%AE%89%E8%A3%85hexo%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9Fwaline%E7%9A%84%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-      <url>/2022/10/12/%E2%80%A2%2001-%E5%AE%89%E8%A3%85hexo%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9Fwaline%E7%9A%84%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
-      
-        <content type="html"><![CDATA[<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20221012171211.png" alt="image-20221012171211527" style="zoom:67%;" /><p>先吐槽一下<a href="https://waline.js.org/guide/server/databases.html">waline官网教程</a>，浪费了我3day时间去debug。</p><p>目前，官网推荐的：</p><ul><li>vercel（服务器）NG</li><li>leancloud（数据库）NG</li></ul><p>我目前使用的方法：docker服务器端 + sqlite数据库，下面分享下我的做法。</p><span id="more"></span><h2 id="安装docker、docker-compose环境123"><a href="#安装docker、docker-compose环境123" class="headerlink" title="安装docker、docker compose环境123"></a>安装docker、docker compose环境123</h2><ul><li><p><strong>安装docker：</strong></p><ul><li>国内：<code>curl -sSL https://get.daocloud.io/docker | sh</code></li><li>国外：<code>curl -sSL https://get.docker.com/ | sh</code></li></ul></li><li><p><strong>安装docker compose：</strong></p><ul><li><p>国内：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://get.daocloud.io/docker/compose/releases/download/v2.2.2/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose</span><br><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></li><li><p>国外：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -L &quot;https://github.com/docker/compose/releases/download/2.2.2/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</span><br><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></li></ul></li><li><p>检查是否安装成功：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker -v</span><br><span class="line">docker-compose -v</span><br></pre></td></tr></table></figure></li></ul><blockquote><p>docker compose作用：</p><blockquote><p>用来负责对Docker容器集群的快速编排，</p><p>由一组关联的应用容器组成的一个完整业务单元，在docker-compose.yml文件当中进行定义</p></blockquote></blockquote><ul><li><p><strong>最小docker compse使用范例：</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建目录</span></span><br><span class="line">mkdir hello</span><br><span class="line">cd hello</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">新建docker-compose.yml文件</span></span><br><span class="line">vim docker-compose.yml</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">写入内容（这里在vim当中编辑yml文件挺难受的，可以在idea当中编辑远程主机的文件）</span></span><br><span class="line">version: &quot;3.0&quot;    # 指定compose的版本</span><br><span class="line">services:         # 指定服务</span><br><span class="line">  tomcat:         # 单个服务</span><br><span class="line">    image: tomcat:9.0.27-jdk8     # 服务镜像</span><br><span class="line">    ports:</span><br><span class="line">      - 8081:8080                 # 暴露对应的端口</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">保持文件内容后进行启动compose</span></span><br><span class="line">docker-compose up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">服务启动之后，可以直接进行访问8081端口</span></span><br><span class="line">http://远程主机ip/8081</span><br></pre></td></tr></table></figure><blockquote><p>参考：<a href="https://blog.csdn.net/qq_44973159/article/details/121357388">https://blog.csdn.net/qq_44973159/article/details/121357388</a></p></blockquote></li></ul><h2 id="安装waline服务器及数据库"><a href="#安装waline服务器及数据库" class="headerlink" title="安装waline服务器及数据库"></a>安装waline服务器及数据库</h2><h4 id="step1：创建测试目录："><a href="#step1：创建测试目录：" class="headerlink" title="step1：创建测试目录："></a><strong>step1：创建测试目录：</strong></h4><ul><li><p>执行如下命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /root</span><br><span class="line">mkdir composetest</span><br><span class="line">cd composetest</span><br></pre></td></tr></table></figure></li></ul><h4 id="step2：拉取镜像："><a href="#step2：拉取镜像：" class="headerlink" title="step2：拉取镜像："></a><strong>step2：拉取镜像：</strong></h4><ul><li><code>docker pull lizheming/waline</code></li></ul><h4 id="step3：在-composetest-目录下创建docker-compose-yml文件，内容如下："><a href="#step3：在-composetest-目录下创建docker-compose-yml文件，内容如下：" class="headerlink" title="step3：在 composetest 目录下创建docker-compose.yml文件，内容如下："></a><strong>step3：在 composetest 目录下创建docker-compose.yml文件，内容如下：</strong></h4><ul><li><p>写入如下内容：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">version: &#x27;3&#x27;</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  waline:</span><br><span class="line">    container_name: waline</span><br><span class="line">    image: lizheming/waline:latest</span><br><span class="line">    restart: always</span><br><span class="line">    ports:</span><br><span class="line">      - 8360:8360</span><br><span class="line">    volumes:</span><br><span class="line">      - $&#123;PWD&#125;/data:/app/data</span><br><span class="line">    environment:</span><br><span class="line">      TZ: &#x27;Asia/Shanghai&#x27;</span><br><span class="line">      SQLITE_PATH: &#x27;/app/data&#x27;</span><br><span class="line">      JWT_TOKEN: &#x27;Your token&#x27;</span><br><span class="line">      SITE_NAME: &#x27;Your site name&#x27;</span><br><span class="line">      SITE_URL: &#x27;https://example.com&#x27;</span><br><span class="line">      SECURE_DOMAINS: &#x27;example.com&#x27;</span><br><span class="line">      AUTHOR_EMAIL: &#x27;mail@example.com&#x27;</span><br></pre></td></tr></table></figure></li></ul><h4 id="step4：在-composetest-目录下创建-data-目录，下载-waline-sqlite-这个数据库文件："><a href="#step4：在-composetest-目录下创建-data-目录，下载-waline-sqlite-这个数据库文件：" class="headerlink" title="step4：在 composetest 目录下创建 data 目录，下载 waline.sqlite 这个数据库文件："></a><strong>step4：在 composetest 目录下创建 data 目录，下载 <a href="https://github.com/walinejs/waline/blob/main/assets/waline.sqlite">waline.sqlite</a> 这个数据库文件：</strong></h4><ul><li><p>命令如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /root/composetest</span><br><span class="line">mkdir data</span><br><span class="line">cd data</span><br><span class="line">wget https://raw.githubusercontent.com/walinejs/waline/main/assets/waline.sqlite</span><br></pre></td></tr></table></figure></li></ul><h4 id="step5：使用-Compose-命令构建和运行"><a href="#step5：使用-Compose-命令构建和运行" class="headerlink" title="step5：使用 Compose 命令构建和运行"></a><strong>step5：使用 Compose 命令构建和运行</strong></h4><ul><li><p>命令如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /root/composetest</span><br><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure></li><li><p>列出所有运行的容器：<code>docker-compose ps</code></p></li></ul><h4 id="step6：-访问-ip-端口："><a href="#step6：-访问-ip-端口：" class="headerlink" title="step6： 访问 ip:端口："></a><strong>step6： 访问 <code>ip:端口</code>：</strong></h4><ul><li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20221012173410.png" alt="image-20221012173410742" style="zoom:50%;" /></li></ul><h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><blockquote><ol><li><p><a href="https://blog.csdn.net/weixin_43943642/article/details/126678317">Waline评论服务docker自部署手册 + 无需备案域名配置</a></p></li><li><p><a href="https://009898.xyz/post/docker-ji-lu/">Docker 记录 | Mark (009898.xyz)</a></p></li><li><p><a href="https://waline.js.org/guide/server/databases.html">多数据库服务支持 | Waline</a></p></li></ol></blockquote>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>foldersync同步软件使用介绍</title>
+    <url>/2022/10/20/001_foldersync%E5%90%8C%E6%AD%A5%E8%BD%AF%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="foldersync简介"><a href="#foldersync简介" class="headerlink" title="foldersync简介"></a>foldersync简介</h2><blockquote>
+<p>​       FolderSync pro是一款功能非常强大的设备本地存储(包括SD卡)文件&#x2F;文件夹与云存储同步应用。它可以将手机中的文件自动同步到云端空间，支持包括 FTP、WebDAV、Dropbox、 Google Docs 在内的众多空间。</p>
+<p>  FolderSync Pro 支持各种不同的云服务商和文件协议，并且不断增加对更多平台的支持。在 root 设备上支持根文件访问。这款软件目前支持多个Google Drive，Dropbox，Amazon S3，SugarSync，Box.net，OneDrive，FTP，FTPS，SFTP，WebDAV和Windows共享帐户。</p>
+<p>  FolderSync Pro 支持将音乐、图片和其他重要文件从手机备份到您的云存储或其他方式。使用起来十分舒爽简便。而且借助于 Tasker 和类似程序的自动化支持可对您的同步进行更准确精细的控制。它包含一个完整的文件管理器，使您可以在本地和云中管理文件。复制，移动和删除云&#x2F;远程帐户中的文件。支持在Amazon S3中创建&#x2F;删除存储。从手机上载和下载文件。</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="软件功能"><a href="#软件功能" class="headerlink" title="软件功能"></a>软件功能</h3><blockquote>
+<p>一款同步app，支持windows电脑和安卓手机之间文件夹、文件同步，需要有云盘（坚果云）作为server。</p>
+<p>总体来说，还是一款很不错的软件。</p>
+</blockquote>
+<ul>
+<li>&#x3D;&#x3D;经验总结：&#x3D;&#x3D;<ul>
+<li>坚果云，不可以短时间内多次同步，会出现无法连接的情况（连接持续30s左右后不成功）。</li>
+<li>连接参数配置很关键，出错的话，无法实现双向同步。我的参数配置如下图：<ul>
+<li>TBD(在小米平板上，待补充！)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="支持的云盘"><a href="#支持的云盘" class="headerlink" title="支持的云盘"></a>支持的云盘</h3><ul>
+<li>&#96;&#96;&#96;<br>Amazon S3 Simple Storage Service, Box, CloudMe, Dropbox, Google Drive, HiDrive, Livedrive Premium, MyDrive.ch, MyKolab, NetDocuments, OneDrive, OneDrive for Business, OwnCloud, pCloud, Storegate, SugarSync, WEB.DE, Yandex Disk<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 支持的协议</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  FTP / FTPES / FTPS</span><br><span class="line">  SFTP</span><br><span class="line">  WebDAV</span><br><span class="line">  Samba / SMB / CIFS（仅SMB1）</span><br><span class="line">  SMB2（实验性）</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="foldersync下载"><a href="#foldersync下载" class="headerlink" title="foldersync下载"></a>foldersync下载</h2><ul>
+<li>官网地址：<a href="https://www.tacit.dk/foldersync">https://www.tacit.dk/foldersync</a></li>
+<li>网络资源：<a href="https://pan.qian.blue/share_exp_1ove_ml/Android-APP/FolderSync/">https://pan.qian.blue/share_exp_1ove_ml/Android-APP/FolderSync/</a></li>
+</ul>
+<h2 id="foldersync使用方法"><a href="#foldersync使用方法" class="headerlink" title="foldersync使用方法"></a>foldersync使用方法</h2><h3 id="foldersync配置"><a href="#foldersync配置" class="headerlink" title="foldersync配置"></a>foldersync配置</h3><ul>
+<li><strong>点击【帐户】-【添加账户】-【WebDAV】</strong><ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100314.png" alt="image-20220831112839160" style="zoom:50%;" /></li>
+</ul>
+</li>
+<li><strong>填写服务器信息</strong><ul>
+<li>step1：获取坚果云WebDAV信息、服务器信息、用户名、密码：<ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100315.png" alt="image-20220831154942174"></li>
+</ul>
+</li>
+<li>step2：配置foldersync参数：<ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100316.png" alt="image-20220831155045745"></li>
+<li>点击测试按钮，可以连接成功即可。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="foldersync搭配坚果云"><a href="#foldersync搭配坚果云" class="headerlink" title="foldersync搭配坚果云"></a>foldersync搭配坚果云</h3><ul>
+<li><p>FolderSync主界面，点击右下角的“+”号-选择“坚果云”</p>
+<ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100317.png" alt="image-20220831155202869" style="zoom:50%;" /></li>
+</ul>
+</li>
+<li><p>选择同步类型，设置远程文件夹路径和本地文件夹路径</p>
+<ul>
+<li><p>到远程文件夹（仅上传到云端）</p>
+</li>
+<li><p>到本地文件夹（仅同步到本地）</p>
+</li>
+<li><p>双向（同步文件夹功能）</p>
+<blockquote>
+<p>此处以双向同步</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>选择远程文件夹、本地文件夹（可以自己新建一个）</p>
+</li>
+<li><p>计划任务（定时自动同步sync）可填可不填。</p>
+<ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100318.png" alt="image-20220831155543956"></li>
+<li>点击同步即可进行同步。</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><ul>
+<li><a href="https://content.jianguoyun.com/36693.html">手机与电脑文件同步 - 好用的网盘坚果云 (jianguoyun.com)</a></li>
+<li><a href="https://www.qian.blue/archives/foldersync-pro.html">FolderSync Pro介绍与各版本版集合下载 - 勿埋我心 (qian.blue)</a></li>
+</ul>
+]]></content>
       <categories>
-          
-          <category> 软件 </category>
-          
+        <category>软件</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> docker </tag>
-            
-            <tag> hexo </tag>
-            
-            <tag> waline </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>dsyncnorize使用教</title>
-      <link href="/2022/09/29/008_dsyncnorize%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
-      <url>/2022/09/29/008_dsyncnorize%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>一款自动备份、传递数据的软件，</p><p>支持win to win的定时备份、双向传递。</p></blockquote><span id="more"></span><h2 id="使用方法-amp-基础设定"><a href="#使用方法-amp-基础设定" class="headerlink" title="使用方法&amp;基础设定"></a>使用方法&amp;基础设定</h2><ul><li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220916112432.png" alt="image-20220916112432857" style="zoom: 50%;" /><ul><li><p>使用前一定要在checkbox上打勾，处于选中状态才能进行同步sync。</p></li><li><p>设定部分参考上面的截图。</p></li><li><p>如果需要双向同步，选择：bidirectional sync。</p></li></ul></li></ul><h2 id="特性分析"><a href="#特性分析" class="headerlink" title="特性分析"></a>特性分析</h2><h3 id="单向同步："><a href="#单向同步：" class="headerlink" title="单向同步："></a>单向同步：</h3><ul><li>过程：同步source的新增、删除。</li><li>结果：目标文件夹会与源文件夹一模一样。</li></ul><h3 id="双向同步："><a href="#双向同步：" class="headerlink" title="双向同步："></a>双向同步：</h3><ul><li>过程：双向同步新增或缺失的文件，不能同步删除动作。</li><li>结果：增量同步，两个文件夹叠加结果。</li></ul><h3 id="如何实现双向同步新增、同步删除？"><a href="#如何实现双向同步新增、同步删除？" class="headerlink" title="如何实现双向同步新增、同步删除？"></a>如何实现双向同步新增、同步删除？</h3><ul><li>平时使用时，选择双向同步。</li><li>如果需要同步删除怎么操作？<ul><li>step1：双向同步一次。</li><li>step2：在source端，删除目标文件夹、文件。</li><li>step3：在source端，单向同步到远端。</li><li>step4：改为双向同步。</li></ul></li></ul><h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ul><li>大文件同步的时候，软件会进入假死状态！</li></ul>]]></content>
-      
-      
+      <tags>
+        <tag>foldersync</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python字符串小技巧</title>
+    <url>/2022/09/27/Python%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220927171316.jpeg" alt="Free photos of Vintage pocket watch" style="zoom:50%;" />
+
+<blockquote>
+<p>python字符串是最常用的功能，无论是办公自动化还是变成代码，字符串都是必不可少的技能。</p>
+<p>本文将介绍python字符串的常用功能、转移字符。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="Python的转义字符"><a href="#Python的转义字符" class="headerlink" title="Python的转义字符"></a>Python的转义字符</h2><p>​	Python 转义字符列表我们将在这里介绍三个实际的转义字符用例, 如果你想了解更多关于转义字符的信息，可以在此处(<a href="https://python-reference.readthedocs.io/en/latest/docs/str/escapes.html)%E6%89%BE%E5%88%B0%E5%AE%8C%E6%95%B4%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6%E5%88%97%E8%A1%A8%E3%80%82">https://python-reference.readthedocs.io/en/latest/docs/str/escapes.html)找到完整的转义字符列表。</a></p>
+<ul>
+<li>\n – 换行</li>
+<li>\ – 文字反斜杠</li>
+<li>‘ – 单引号</li>
+<li>\” – 双引号</li>
+</ul>
+<p><strong>换行符</strong></p>
+<p>​	有时我们可能想要打印多行字符串,我们可以通过使用单个打印语句结合换行符 \n 将字符串分成多行来实现这一点。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;this is a long sentence\nand we need to print it\non multiple lines!&quot;</span>)</span><br><span class="line">this <span class="keyword">is</span> a long sentence</span><br><span class="line"><span class="keyword">and</span> we need to <span class="built_in">print</span> it</span><br><span class="line">on multiple lines!</span><br></pre></td></tr></table></figure>
+
+<p><strong>单引号和双引号</strong></p>
+<p>​	在字符串中使用引号的一种方法是对字符串和实际的引号部分使用不同的引号。如下例所示，如果我们对字符串使用单引号，那么我们将不得不对引号使用双引号，反之亦然。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;he say, &quot;hello world&quot;&#x27;</span>)</span><br><span class="line">he say, <span class="string">&quot;hello world&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;python&#x27;s awesome!&quot;</span>)</span><br><span class="line">python<span class="string">&#x27;s awesome!</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="字符串常用函数"><a href="#字符串常用函数" class="headerlink" title="字符串常用函数"></a>字符串常用函数</h2><h3 id="split"><a href="#split" class="headerlink" title="split()"></a><strong>split()</strong></h3><p>​	看单词意思就可以知道，这个方法是用来分割字符串的，它接受参数，参数就是用来分割的标识，默认是空格分割，看个代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">&quot;abc bcd&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.split()</span><br><span class="line">[<span class="string">&#x27;abc&#x27;</span>, <span class="string">&#x27;bcd&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="strip"><a href="#strip" class="headerlink" title="strip()"></a><strong>strip()</strong></h3><p>​	这个函数用来去掉字符串的空格，它还有两个兄弟函数，rstrip()，lstrip()分别是去掉字符串右边空格和去掉左边空格，代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">&quot; abc &quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.strip()</span><br><span class="line"><span class="string">&#x27;abc&#x27;</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.rstrip()</span><br><span class="line"><span class="string">&#x27; abc&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.lstrip()</span><br><span class="line"><span class="string">&#x27;abc</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="replace"><a href="#replace" class="headerlink" title="replace()"></a><strong>replace()</strong></h3><p>​	这个函数可以进行字符串的替换，接收2个参数，一个是要被替换的串和替换完的串，</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">&quot;I&#x27;m zhangsan&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.replace(<span class="string">&quot;zhangsan&quot;</span>, <span class="string">&quot;lisi&quot;</span>)</span><br><span class="line"><span class="string">&quot;I&#x27;m lisi&quot;</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line"><span class="string">&quot;I&#x27;m zhangsan&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s1 = s.replace(<span class="string">&quot;zhangsan&quot;</span>, <span class="string">&quot;lisi&quot;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(s1)</span><br><span class="line">I<span class="string">&#x27;m lisi</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="join"><a href="#join" class="headerlink" title="join()"></a><strong>join()</strong></h3><p>​	这个函数可以将列表拼接成一个字符串的形式，</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>mylist = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;d&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">&quot;&quot;</span>.join(mylist)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line"><span class="string">&#x27;abcd&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>​	引号不写内容，默认直接将字符拼接到一起，如果写上分割字符，比如逗号，拼接起来后是这样的：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">&quot;,&quot;</span>.join(mylist)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line"><span class="string">&#x27;a,b,c,d&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="startswith-endswith"><a href="#startswith-endswith" class="headerlink" title="startswith(),endswith()"></a><strong>startswith(),endswith()</strong></h3><p>​	这2个方法经常用在条件判断中， 来判断字符串是否以某个字符开头或以某个字符结尾，举例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">str</span> = <span class="string">&quot;hello, python&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> <span class="built_in">str</span>.startswith(<span class="string">&quot;h&quot;</span>):</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="string">&quot;字符串以h开头&quot;</span>)</span><br><span class="line">...</span><br><span class="line">字符串以h开头</span><br></pre></td></tr></table></figure>
+
+<p>​	同理，可以判断字符串以某个字符结尾：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> <span class="built_in">str</span>.endswith(<span class="string">&quot;n&quot;</span>):</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="string">&quot;字符串以n结尾&quot;</span>)</span><br><span class="line">...</span><br><span class="line">字符串以n结尾</span><br></pre></td></tr></table></figure>
+
+<h3 id="upper-，lower"><a href="#upper-，lower" class="headerlink" title="upper()，lower()"></a><strong>upper()，lower()</strong></h3><p>​	upper可以将字符串转成大写，lower将字符串转成小写，这个2个方法一般用带字符判断前，进行字符串转换，转换完毕后再进行判断，比如用户输入的字符，输入Y还是y都可以，你就需要将这些输入后台都转成小写然后进行后续代码的执行：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">str</span> = <span class="string">&quot;Hello,Python!!&quot;</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">str</span>.upper()</span><br><span class="line"><span class="string">&#x27;HELLO,PYTHON!!&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">str</span>.lower()</span><br><span class="line"><span class="string">&#x27;hello,python!!&#x27;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
       <categories>
-          
-          <category> 软件 </category>
-          
+        <category>编程</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 工具 </tag>
-            
-            <tag> NAS相关 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Python字符串小技巧</title>
-      <link href="/2022/09/27/Python%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-      <url>/2022/09/27/Python%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
-      
-        <content type="html"><![CDATA[<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220927171316.jpeg" alt="Free photos of Vintage pocket watch" style="zoom:50%;" /><blockquote><p>python字符串是最常用的功能，无论是办公自动化还是变成代码，字符串都是必不可少的技能。</p><p>本文将介绍python字符串的常用功能、转移字符。</p></blockquote><span id="more"></span><h2 id="Python的转义字符"><a href="#Python的转义字符" class="headerlink" title="Python的转义字符"></a>Python的转义字符</h2><p>​Python 转义字符列表我们将在这里介绍三个实际的转义字符用例, 如果你想了解更多关于转义字符的信息，可以在此处(<a href="https://python-reference.readthedocs.io/en/latest/docs/str/escapes.html)%E6%89%BE%E5%88%B0%E5%AE%8C%E6%95%B4%E7%9A%84%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6%E5%88%97%E8%A1%A8%E3%80%82">https://python-reference.readthedocs.io/en/latest/docs/str/escapes.html)找到完整的转义字符列表。</a></p><ul><li>\n – 换行</li><li>\ – 文字反斜杠</li><li>‘ – 单引号</li><li>\” – 双引号</li></ul><p><strong>换行符</strong></p><p>​有时我们可能想要打印多行字符串,我们可以通过使用单个打印语句结合换行符 \n 将字符串分成多行来实现这一点。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;this is a long sentence\nand we need to print it\non multiple lines!&quot;</span>)</span><br><span class="line">this <span class="keyword">is</span> a long sentence</span><br><span class="line"><span class="keyword">and</span> we need to <span class="built_in">print</span> it</span><br><span class="line">on multiple lines!</span><br></pre></td></tr></table></figure><p><strong>单引号和双引号</strong></p><p>​在字符串中使用引号的一种方法是对字符串和实际的引号部分使用不同的引号。如下例所示，如果我们对字符串使用单引号，那么我们将不得不对引号使用双引号，反之亦然。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;he say, &quot;hello world&quot;&#x27;</span>)</span><br><span class="line">he say, <span class="string">&quot;hello world&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;python&#x27;s awesome!&quot;</span>)</span><br><span class="line">python<span class="string">&#x27;s awesome!</span></span><br></pre></td></tr></table></figure><h2 id="字符串常用函数"><a href="#字符串常用函数" class="headerlink" title="字符串常用函数"></a>字符串常用函数</h2><h3 id="split"><a href="#split" class="headerlink" title="split()"></a><strong>split()</strong></h3><p>​看单词意思就可以知道，这个方法是用来分割字符串的，它接受参数，参数就是用来分割的标识，默认是空格分割，看个代码：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">&quot;abc bcd&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.split()</span><br><span class="line">[<span class="string">&#x27;abc&#x27;</span>, <span class="string">&#x27;bcd&#x27;</span>]</span><br></pre></td></tr></table></figure><h3 id="strip"><a href="#strip" class="headerlink" title="strip()"></a><strong>strip()</strong></h3><p>​这个函数用来去掉字符串的空格，它还有两个兄弟函数，rstrip()，lstrip()分别是去掉字符串右边空格和去掉左边空格，代码如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">&quot; abc &quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.strip()</span><br><span class="line"><span class="string">&#x27;abc&#x27;</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.rstrip()</span><br><span class="line"><span class="string">&#x27; abc&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.lstrip()</span><br><span class="line"><span class="string">&#x27;abc</span></span><br></pre></td></tr></table></figure><h3 id="replace"><a href="#replace" class="headerlink" title="replace()"></a><strong>replace()</strong></h3><p>​这个函数可以进行字符串的替换，接收2个参数，一个是要被替换的串和替换完的串，</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">&quot;I&#x27;m zhangsan&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s.replace(<span class="string">&quot;zhangsan&quot;</span>, <span class="string">&quot;lisi&quot;</span>)</span><br><span class="line"><span class="string">&quot;I&#x27;m lisi&quot;</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line"><span class="string">&quot;I&#x27;m zhangsan&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s1 = s.replace(<span class="string">&quot;zhangsan&quot;</span>, <span class="string">&quot;lisi&quot;</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">print</span>(s1)</span><br><span class="line">I<span class="string">&#x27;m lisi</span></span><br></pre></td></tr></table></figure><h3 id="join"><a href="#join" class="headerlink" title="join()"></a><strong>join()</strong></h3><p>​这个函数可以将列表拼接成一个字符串的形式，</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>mylist = [<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;d&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">&quot;&quot;</span>.join(mylist)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line"><span class="string">&#x27;abcd&#x27;</span></span><br></pre></td></tr></table></figure><p>​引号不写内容，默认直接将字符拼接到一起，如果写上分割字符，比如逗号，拼接起来后是这样的：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = <span class="string">&quot;,&quot;</span>.join(mylist)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s</span><br><span class="line"><span class="string">&#x27;a,b,c,d&#x27;</span></span><br></pre></td></tr></table></figure><h3 id="startswith-endswith"><a href="#startswith-endswith" class="headerlink" title="startswith(),endswith()"></a><strong>startswith(),endswith()</strong></h3><p>​这2个方法经常用在条件判断中， 来判断字符串是否以某个字符开头或以某个字符结尾，举例：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">str</span> = <span class="string">&quot;hello, python&quot;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> <span class="built_in">str</span>.startswith(<span class="string">&quot;h&quot;</span>):</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="string">&quot;字符串以h开头&quot;</span>)</span><br><span class="line">...</span><br><span class="line">字符串以h开头</span><br></pre></td></tr></table></figure><p>​同理，可以判断字符串以某个字符结尾：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">if</span> <span class="built_in">str</span>.endswith(<span class="string">&quot;n&quot;</span>):</span><br><span class="line"><span class="meta">... </span>    <span class="built_in">print</span>(<span class="string">&quot;字符串以n结尾&quot;</span>)</span><br><span class="line">...</span><br><span class="line">字符串以n结尾</span><br></pre></td></tr></table></figure><h3 id="upper-，lower"><a href="#upper-，lower" class="headerlink" title="upper()，lower()"></a><strong>upper()，lower()</strong></h3><p>​upper可以将字符串转成大写，lower将字符串转成小写，这个2个方法一般用带字符判断前，进行字符串转换，转换完毕后再进行判断，比如用户输入的字符，输入Y还是y都可以，你就需要将这些输入后台都转成小写然后进行后续代码的执行：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">str</span> = <span class="string">&quot;Hello,Python!!&quot;</span></span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">str</span>.upper()</span><br><span class="line"><span class="string">&#x27;HELLO,PYTHON!!&#x27;</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="built_in">str</span>.lower()</span><br><span class="line"><span class="string">&#x27;hello,python!!&#x27;</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>python</tag>
+        <tag>python字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>dsyncnorize使用教</title>
+    <url>/2022/09/29/008_dsyncnorize%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<blockquote>
+<p>一款自动备份、传递数据的软件，</p>
+<p>支持win to win的定时备份、双向传递。</p>
+</blockquote>
+<span id="more"></span>
+
+
+
+<h2 id="使用方法-amp-基础设定"><a href="#使用方法-amp-基础设定" class="headerlink" title="使用方法&amp;基础设定"></a>使用方法&amp;基础设定</h2><ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220916112432.png" alt="image-20220916112432857" style="zoom: 50%;" />
+
+<ul>
+<li><p>使用前一定要在checkbox上打勾，处于选中状态才能进行同步sync。</p>
+</li>
+<li><p>设定部分参考上面的截图。</p>
+</li>
+<li><p>如果需要双向同步，选择：bidirectional sync。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="特性分析"><a href="#特性分析" class="headerlink" title="特性分析"></a>特性分析</h2><h3 id="单向同步："><a href="#单向同步：" class="headerlink" title="单向同步："></a>单向同步：</h3><ul>
+<li>过程：同步source的新增、删除。</li>
+<li>结果：目标文件夹会与源文件夹一模一样。</li>
+</ul>
+<h3 id="双向同步："><a href="#双向同步：" class="headerlink" title="双向同步："></a>双向同步：</h3><ul>
+<li>过程：双向同步新增或缺失的文件，不能同步删除动作。</li>
+<li>结果：增量同步，两个文件夹叠加结果。</li>
+</ul>
+<h3 id="如何实现双向同步新增、同步删除？"><a href="#如何实现双向同步新增、同步删除？" class="headerlink" title="如何实现双向同步新增、同步删除？"></a>如何实现双向同步新增、同步删除？</h3><ul>
+<li>平时使用时，选择双向同步。</li>
+<li>如果需要同步删除怎么操作？<ul>
+<li>step1：双向同步一次。</li>
+<li>step2：在source端，删除目标文件夹、文件。</li>
+<li>step3：在source端，单向同步到远端。</li>
+<li>step4：改为双向同步。</li>
+</ul>
+</li>
+</ul>
+<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ul>
+<li>大文件同步的时候，软件会进入假死状态！</li>
+</ul>
+]]></content>
       <categories>
-          
-          <category> 编程 </category>
-          
+        <category>软件</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> python </tag>
-            
-            <tag> python字符串 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>ADB(Android Debug Bridge)用法总结</title>
-      <link href="/2022/09/27/%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/"/>
-      <url>/2022/09/27/%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/</url>
-      
-        <content type="html"><![CDATA[<p><strong>ADB(Android Debug Bridge)用法总结</strong>  </p><blockquote><p>作用：让win电脑通过命令行控制手机的各种行为。</p><p>亲测有效。</p></blockquote><span id="more"></span><h2 id="软件资源"><a href="#软件资源" class="headerlink" title="软件资源"></a>软件资源</h2><h3 id="ADB软件资源"><a href="#ADB软件资源" class="headerlink" title="ADB软件资源"></a>ADB软件资源</h3><p>链接：<a href="https://pan.baidu.com/s/1EkmwKrR0sNI1_FpQlObBeg">https://pan.baidu.com/s/1EkmwKrR0sNI1_FpQlObBeg</a>  </p><p>提取码：zcf6  </p><p>注意要设置“系统环境变量”，否则无法使用ADB 命令。</p><h3 id="华为手机驱动软件资源"><a href="#华为手机驱动软件资源" class="headerlink" title="华为手机驱动软件资源"></a>华为手机驱动软件资源</h3><p>链接：<a href="https://pan.baidu.com/s/1xjyV11HKdF-Tj0MB3DbUCQ">https://pan.baidu.com/s/1xjyV11HKdF-Tj0MB3DbUCQ</a>  </p><p>提取码：j3jw  </p><h3 id="参考教程："><a href="#参考教程：" class="headerlink" title="参考教程："></a>参考教程：</h3><p>[adb下载安装及使用]<a href="https://blog.csdn.net/weixin_43927138/article/details/90477966">https://blog.csdn.net/weixin_43927138/article/details/90477966</a>  </p><p>[adb 模拟点击时间的命令]<a href="https://blog.csdn.net/stronking/article/details/100559801">https://blog.csdn.net/stronking/article/details/100559801</a>  </p><h2 id="ADB启动系统命令："><a href="#ADB启动系统命令：" class="headerlink" title="ADB启动系统命令："></a>ADB启动系统命令：</h2><p>启动 adb server 命令：adb start-server  </p><p>停止 adb server 命令：adb kill-server  </p><p>查询已连接设备&#x2F;模拟器：adb devices  </p><h2 id="手机USB连接："><a href="#手机USB连接：" class="headerlink" title="手机USB连接："></a>手机USB连接：</h2><p>在手机“设置”-“关于手机”连续点击“版本号”7 次，可以进入到开发者模式；</p><p>然后可以到“设置”-“开发者选项”-“调试”里打开USB调试以及允许ADB的一些权限；</p><p>连接时手机会弹出“允许HiSuite通过HDB连接设备”点击允许&#x2F;接受即可；   </p><p><strong>查看是否有root权限：</strong></p><ul><li><p>输入adb shell，</p></li><li><p>输入su KaTeX parse error: Expected ‘EOF’, got ‘#’ at position 5: </p></li><li><p>如果变为#̲则成功，如果仍为则未有root权限；</p></li><li><p>恢复命令：adb unroot</p></li></ul><h2 id="ADB操作手机系统性命令："><a href="#ADB操作手机系统性命令：" class="headerlink" title="ADB操作手机系统性命令："></a>ADB操作手机系统性命令：</h2><p><strong>查看所有应用列表</strong>：adb shell pm list packages </p><p><strong>查看系统应用列表</strong>：adb shell pm list packages -s </p><p><strong>查看第三方应用列表</strong>：adb shell pm list packages -3：  </p><p><strong>安装apk</strong>：adb install “-lrtsdg” “path_to_apk” </p><ul><li><p>&#96;&#96;&#96;<br>  “-lrtsdg”： </p><p>  -l：将应用安装到保护目录 &#x2F;mnt&#x2F;asec； </p><p>  -r：允许覆盖安装； </p><p>  -t：允许安装 AndroidManifest.xml 里 application 指定 android:testOnly&#x3D;“true” 的应用； </p><p>  -s：将应用安装到 sdcard； </p><p>  -d：允许降级覆盖安装； </p><p>  -g：授予所有运行时权限； </p><p>  path_to_apk：apk的绝对路径。</p>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**示例安装淘宝apk**：adb install -l /data/local/tmp/taobao.apk  </span><br><span class="line"></span><br><span class="line">**卸载apk**：adb uninstall -k “packagename” </span><br><span class="line"></span><br><span class="line">“packagename”：表示应用的包名，以下相同； </span><br><span class="line"></span><br><span class="line">-k 参数可选，表示卸载应用但保留数据和缓存目录。 </span><br><span class="line"></span><br><span class="line">示例卸载 手机淘宝：adb uninstall com.taobao.taobao  </span><br><span class="line"></span><br><span class="line">查看应用详细信息命令：adb shell dumpsys package “packagename” </span><br><span class="line"></span><br><span class="line">调起 Activity命令格式：adb shell am start [options] </span><br><span class="line"></span><br><span class="line">例如：adb shell am start -n com.tencent.mm/.ui.LauncherUI表示调起微信主界面  </span><br><span class="line"></span><br><span class="line">强制停止应用命令：adb shell am force-stop “packagename” </span><br><span class="line"></span><br><span class="line">例如强制停止淘宝：adb shell am force-stop com.taobao.taobao  </span><br><span class="line"></span><br><span class="line">查看设备信息型号命令：adb shell getprop ro.product.model </span><br><span class="line"></span><br><span class="line">电池状况命令：adb shell dumpsys battery </span><br><span class="line"></span><br><span class="line">显示屏参数：adb shell dumpsys window displays </span><br><span class="line"></span><br><span class="line">android_id查看命令：adb shell settings get secure android_id  </span><br><span class="line"></span><br><span class="line">查看Android 系统版本：adb shell getprop ro.build.version.release  </span><br><span class="line"></span><br><span class="line">查看设备ip地址：adb shell ifconfig | grep Mask或者adb shell netcfg  </span><br><span class="line"></span><br><span class="line">查看CPU 信息命令：adb shell cat /proc/cpuinfo  </span><br><span class="line"></span><br><span class="line">查看内存信息命令：adb shell cat /proc/meminfo  </span><br><span class="line"></span><br><span class="line">如果PC要想同时控制多台Android手机，必须在adb 后面添加-s  </span><br><span class="line"></span><br><span class="line">例如：adb -s 13b6e4c4 shell input tap 400 400  </span><br><span class="line"></span><br><span class="line">表示对13b6e4c4这台Android手机进行在屏幕上（400,400）坐标位置进行模拟的点击事件。 </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## ADB操作手机常用功能：  </span><br><span class="line"></span><br><span class="line">滑动解锁：如果锁屏没有密码，是通过滑动手势解锁，那么可以通过 input swipe 来解锁。  </span><br><span class="line"></span><br><span class="line">命令:adb shell input swipe 300 1000 300 500  </span><br><span class="line"></span><br><span class="line">(其中参数 300 1000 300 500 分别表示起始点x坐标 起始点y坐标 结束点x坐标 结束点y坐标。)  </span><br><span class="line"></span><br><span class="line">adb shell input swipe  </span><br><span class="line"></span><br><span class="line">这条命令模拟Android手机从屏幕坐标（X1,Y1）滑动到坐标（X2,Y2）的操作  </span><br><span class="line"></span><br><span class="line">adb shell input tap  </span><br><span class="line"></span><br><span class="line">这条命令模拟Android手机在屏幕坐标（X,Y）处进行了点击操作。  </span><br><span class="line"></span><br><span class="line">输入文本:在焦点处于某文本框时，可以通过 input 命令来输入文本。  </span><br><span class="line"></span><br><span class="line">命令：adb shell input text *** (***即为输入内容)  </span><br><span class="line"></span><br><span class="line">屏幕分辨率命令：adb shell wm size  </span><br><span class="line"></span><br><span class="line">截图保存到电脑：adb shell screencap -p /sdcard/autojump.png  </span><br><span class="line"></span><br><span class="line">然后将 png 文件导出到电脑：adb pull /sdcard/autojump.png .  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## ADB操作手机不常用功能：  </span><br><span class="line"></span><br><span class="line">模拟按键/输入:adb shell input keyevent keycode 不同的 keycode有不同的功能：  </span><br><span class="line"></span><br><span class="line">keycode含义  </span><br><span class="line"></span><br><span class="line">3HOME 键  </span><br><span class="line"></span><br><span class="line">4返回键  </span><br><span class="line"></span><br><span class="line">5打开拨号应用  </span><br><span class="line"></span><br><span class="line">6挂断电话  </span><br><span class="line"></span><br><span class="line">26电源键  </span><br><span class="line"></span><br><span class="line">27拍照（需要在相机应用里）  </span><br><span class="line"></span><br><span class="line">61Tab键  </span><br><span class="line"></span><br><span class="line">64打开浏览器  </span><br><span class="line"></span><br><span class="line">67退格键  </span><br><span class="line"></span><br><span class="line">80拍照对焦键  </span><br><span class="line"></span><br><span class="line">82菜单键  </span><br><span class="line"></span><br><span class="line">85播放/暂停  </span><br><span class="line"></span><br><span class="line">86停止播放  </span><br><span class="line"></span><br><span class="line">92向上翻页键  </span><br><span class="line"></span><br><span class="line">93向下翻页键  </span><br><span class="line"></span><br><span class="line">111ESC键  </span><br><span class="line"></span><br><span class="line">112删除键  </span><br><span class="line"></span><br><span class="line">122移动光标到行首或列表顶部  </span><br><span class="line"></span><br><span class="line">123移动光标到行末或列表底部  </span><br><span class="line"></span><br><span class="line">124插入键  </span><br><span class="line"></span><br><span class="line">164静音  </span><br><span class="line"></span><br><span class="line">176打开系统设置  </span><br><span class="line"></span><br><span class="line">207打开联系人  </span><br><span class="line"></span><br><span class="line">208打开日历  </span><br><span class="line"></span><br><span class="line">209打开音乐  </span><br><span class="line"></span><br><span class="line">220降低屏幕亮度  </span><br><span class="line"></span><br><span class="line">221提高屏幕亮度  </span><br><span class="line"></span><br><span class="line">223系统休眠  </span><br><span class="line"></span><br><span class="line">224点亮屏幕  </span><br><span class="line"></span><br><span class="line">224点亮屏幕  </span><br><span class="line"></span><br><span class="line">224点亮屏幕  </span><br><span class="line"></span><br><span class="line">231打开语音助手  </span><br><span class="line"></span><br><span class="line">276如果没有 wakelock 则让系统休眠  </span><br><span class="line"></span><br><span class="line">0 --&gt;  &quot;KEYCODE_UNKNOWN&quot;  </span><br><span class="line"></span><br><span class="line">1 --&gt;  &quot;KEYCODE_MENU&quot;  </span><br><span class="line"></span><br><span class="line">2 --&gt;  &quot;KEYCODE_SOFT_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">3 --&gt;  &quot;KEYCODE_HOME&quot;  </span><br><span class="line"></span><br><span class="line">4 --&gt;  &quot;KEYCODE_BACK&quot;  </span><br><span class="line"></span><br><span class="line">5 --&gt;  &quot;KEYCODE_CALL&quot;  </span><br><span class="line"></span><br><span class="line">6 --&gt;  &quot;KEYCODE_ENDCALL&quot;  </span><br><span class="line"></span><br><span class="line">7 --&gt;  &quot;KEYCODE_0&quot;  </span><br><span class="line"></span><br><span class="line">8 --&gt;  &quot;KEYCODE_1&quot;  </span><br><span class="line"></span><br><span class="line">9 --&gt;  &quot;KEYCODE_2&quot;  </span><br><span class="line"></span><br><span class="line">10 --&gt;  &quot;KEYCODE_3&quot;  </span><br><span class="line"></span><br><span class="line">11 --&gt;  &quot;KEYCODE_4&quot;  </span><br><span class="line"></span><br><span class="line">12 --&gt;  &quot;KEYCODE_5&quot;  </span><br><span class="line"></span><br><span class="line">13 --&gt;  &quot;KEYCODE_6&quot;  </span><br><span class="line"></span><br><span class="line">14 --&gt;  &quot;KEYCODE_7&quot;  </span><br><span class="line"></span><br><span class="line">15 --&gt;  &quot;KEYCODE_8&quot;  </span><br><span class="line"></span><br><span class="line">16 --&gt;  &quot;KEYCODE_9&quot;  </span><br><span class="line"></span><br><span class="line">17 --&gt;  &quot;KEYCODE_STAR&quot;  </span><br><span class="line"></span><br><span class="line">18 --&gt;  &quot;KEYCODE_POUND&quot;  </span><br><span class="line"></span><br><span class="line">19 --&gt;  &quot;KEYCODE_DPAD_UP&quot;  </span><br><span class="line"></span><br><span class="line">20 --&gt;  &quot;KEYCODE_DPAD_DOWN&quot;  </span><br><span class="line"></span><br><span class="line">21 --&gt;  &quot;KEYCODE_DPAD_LEFT&quot;  </span><br><span class="line"></span><br><span class="line">22 --&gt;  &quot;KEYCODE_DPAD_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">23 --&gt;  &quot;KEYCODE_DPAD_CENTER&quot;  </span><br><span class="line"></span><br><span class="line">24 --&gt;  &quot;KEYCODE_VOLUME_UP&quot;  </span><br><span class="line"></span><br><span class="line">25 --&gt;  &quot;KEYCODE_VOLUME_DOWN&quot;  </span><br><span class="line"></span><br><span class="line">26 --&gt;  &quot;KEYCODE_POWER&quot;  </span><br><span class="line"></span><br><span class="line">27 --&gt;  &quot;KEYCODE_CAMERA&quot;  </span><br><span class="line"></span><br><span class="line">28 --&gt;  &quot;KEYCODE_CLEAR&quot;  </span><br><span class="line"></span><br><span class="line">29 --&gt;  &quot;KEYCODE_A&quot;  </span><br><span class="line"></span><br><span class="line">30 --&gt;  &quot;KEYCODE_B&quot;  </span><br><span class="line"></span><br><span class="line">31 --&gt;  &quot;KEYCODE_C&quot;  </span><br><span class="line"></span><br><span class="line">32 --&gt;  &quot;KEYCODE_D&quot;  </span><br><span class="line"></span><br><span class="line">33 --&gt;  &quot;KEYCODE_E&quot;  </span><br><span class="line"></span><br><span class="line">34 --&gt;  &quot;KEYCODE_F&quot;  </span><br><span class="line"></span><br><span class="line">35 --&gt;  &quot;KEYCODE_G&quot;  </span><br><span class="line"></span><br><span class="line">36 --&gt;  &quot;KEYCODE_H&quot;  </span><br><span class="line"></span><br><span class="line">37 --&gt;  &quot;KEYCODE_I&quot;  </span><br><span class="line"></span><br><span class="line">38 --&gt;  &quot;KEYCODE_J&quot;  </span><br><span class="line"></span><br><span class="line">39 --&gt;  &quot;KEYCODE_K&quot;  </span><br><span class="line"></span><br><span class="line">40 --&gt;  &quot;KEYCODE_L&quot;  </span><br><span class="line"></span><br><span class="line">41 --&gt;  &quot;KEYCODE_M&quot;  </span><br><span class="line"></span><br><span class="line">42 --&gt;  &quot;KEYCODE_N&quot;  </span><br><span class="line"></span><br><span class="line">43 --&gt;  &quot;KEYCODE_O&quot;  </span><br><span class="line"></span><br><span class="line">44 --&gt;  &quot;KEYCODE_P&quot;  </span><br><span class="line"></span><br><span class="line">45 --&gt;  &quot;KEYCODE_Q&quot;  </span><br><span class="line"></span><br><span class="line">46 --&gt;  &quot;KEYCODE_R&quot;  </span><br><span class="line"></span><br><span class="line">47 --&gt;  &quot;KEYCODE_S&quot;  </span><br><span class="line"></span><br><span class="line">48 --&gt;  &quot;KEYCODE_T&quot;  </span><br><span class="line"></span><br><span class="line">49 --&gt;  &quot;KEYCODE_U&quot;  </span><br><span class="line"></span><br><span class="line">50 --&gt;  &quot;KEYCODE_V&quot;  </span><br><span class="line"></span><br><span class="line">51 --&gt;  &quot;KEYCODE_W&quot;  </span><br><span class="line"></span><br><span class="line">52 --&gt;  &quot;KEYCODE_X&quot;  </span><br><span class="line"></span><br><span class="line">53 --&gt;  &quot;KEYCODE_Y&quot;  </span><br><span class="line"></span><br><span class="line">54 --&gt;  &quot;KEYCODE_Z&quot;  </span><br><span class="line"></span><br><span class="line">55 --&gt;  &quot;KEYCODE_COMMA&quot;  </span><br><span class="line"></span><br><span class="line">56 --&gt;  &quot;KEYCODE_PERIOD&quot;  </span><br><span class="line"></span><br><span class="line">57 --&gt;  &quot;KEYCODE_ALT_LEFT&quot;  </span><br><span class="line"></span><br><span class="line">58 --&gt;  &quot;KEYCODE_ALT_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">59 --&gt;  &quot;KEYCODE_SHIFT_LEFT&quot;  </span><br><span class="line"></span><br><span class="line">60 --&gt;  &quot;KEYCODE_SHIFT_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">61 --&gt;  &quot;KEYCODE_TAB&quot;  </span><br><span class="line"></span><br><span class="line">62 --&gt;  &quot;KEYCODE_SPACE&quot;  </span><br><span class="line"></span><br><span class="line">63 --&gt;  &quot;KEYCODE_SYM&quot;  </span><br><span class="line"></span><br><span class="line">64 --&gt;  &quot;KEYCODE_EXPLORER&quot;  </span><br><span class="line"></span><br><span class="line">65 --&gt;  &quot;KEYCODE_ENVELOPE&quot;  </span><br><span class="line"></span><br><span class="line">66 --&gt;  &quot;KEYCODE_ENTER&quot;  </span><br><span class="line"></span><br><span class="line">67 --&gt;  &quot;KEYCODE_DEL&quot;  </span><br><span class="line"></span><br><span class="line">68 --&gt;  &quot;KEYCODE_GRAVE&quot;  </span><br><span class="line"></span><br><span class="line">69 --&gt;  &quot;KEYCODE_MINUS&quot;  </span><br><span class="line"></span><br><span class="line">70 --&gt;  &quot;KEYCODE_EQUALS&quot;  </span><br><span class="line"></span><br><span class="line">71 --&gt;  &quot;KEYCODE_LEFT_BRACKET&quot;  </span><br><span class="line"></span><br><span class="line">72 --&gt;  &quot;KEYCODE_RIGHT_BRACKET&quot;  </span><br><span class="line"></span><br><span class="line">73 --&gt;  &quot;KEYCODE_BACKSLASH&quot;  </span><br><span class="line"></span><br><span class="line">74 --&gt;  &quot;KEYCODE_SEMICOLON&quot;  </span><br><span class="line"></span><br><span class="line">75 --&gt;  &quot;KEYCODE_APOSTROPHE&quot;  </span><br><span class="line"></span><br><span class="line">76 --&gt;  &quot;KEYCODE_SLASH&quot;  </span><br><span class="line"></span><br><span class="line">77 --&gt;  &quot;KEYCODE_AT&quot;  </span><br><span class="line"></span><br><span class="line">78 --&gt;  &quot;KEYCODE_NUM&quot;  </span><br><span class="line"></span><br><span class="line">79 --&gt;  &quot;KEYCODE_HEADSETHOOK&quot;  </span><br><span class="line"></span><br><span class="line">80 --&gt;  &quot;KEYCODE_FOCUS&quot;  </span><br><span class="line"></span><br><span class="line">81 --&gt;  &quot;KEYCODE_PLUS&quot;  </span><br><span class="line"></span><br><span class="line">82 --&gt;  &quot;KEYCODE_MENU&quot;  </span><br><span class="line"></span><br><span class="line">83 --&gt;  &quot;KEYCODE_NOTIFICATION&quot;  </span><br><span class="line"></span><br><span class="line">84 --&gt;  &quot;KEYCODE_SEARCH&quot;  </span><br><span class="line"></span><br><span class="line">85 --&gt;  &quot;TAG_LAST_KEYCODE&quot;  </span><br><span class="line"></span><br><span class="line">录制屏幕：adb shell screenrecord /sdcard/filename.mp4   </span><br><span class="line"></span><br><span class="line">录制屏幕以 mp4 格式保存到 /sdcard，需要停止时按 Ctrl-C，默认录制时间和最长录制时间都是 180 秒。  </span><br><span class="line"></span><br><span class="line">如果需要导出到电脑：adb pull /sdcard/filename.mp4 .  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 使用python脚本自动运行cmd 命令  </span><br><span class="line"></span><br><span class="line">**在adb文件夹下建立一个python文件**  </span><br><span class="line"></span><br><span class="line">```python3  </span><br><span class="line">#运行脚本，发现与在命令行输入相同语句有同样的效果。  </span><br><span class="line">import os  </span><br><span class="line">os.system(&#x27;adb shell input tap 100 100&#x27;);  </span><br></pre></td></tr></table></figure></li></ul><p><strong>可以使用subprocess.Popen，最简单使用方式如下，设置shell&#x3D;True，就不会弹出cmd框</strong>  </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">process = subprocess.Popen(&#x27;adb shell input tap 14 1402&#x27;,shell=True)  </span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>工具</tag>
+        <tag>NAS相关</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/08/24/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>docker hexo评论系统waline服务器及数据库搭建</title>
+    <url>/2022/10/12/%E2%80%A2%2001-%E5%AE%89%E8%A3%85hexo%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9Fwaline%E7%9A%84%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20221012171211.png" alt="image-20221012171211527" style="zoom:67%;" />
+
+<p>先吐槽一下<a href="https://waline.js.org/guide/server/databases.html">waline官网教程</a>，浪费了我3day时间去debug。</p>
+<p>目前，官网推荐的：</p>
+<ul>
+<li>vercel（服务器）NG</li>
+<li>leancloud（数据库）NG</li>
+</ul>
+<p>我目前使用的方法：docker服务器端 + sqlite数据库，下面分享下我的做法。</p>
+<span id="more"></span>
+
+
+
+<h2 id="安装docker、docker-compose环境123"><a href="#安装docker、docker-compose环境123" class="headerlink" title="安装docker、docker compose环境123"></a>安装docker、docker compose环境123</h2><ul>
+<li><p><strong>安装docker：</strong></p>
+<ul>
+<li>国内：<code>curl -sSL https://get.daocloud.io/docker | sh</code></li>
+<li>国外：<code>curl -sSL https://get.docker.com/ | sh</code></li>
+</ul>
+</li>
+<li><p><strong>安装docker compose：</strong></p>
+<ul>
+<li><p>国内：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -L https://get.daocloud.io/docker/compose/releases/download/v2.2.2/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose</span><br><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>国外：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -L &quot;https://github.com/docker/compose/releases/download/2.2.2/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</span><br><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>检查是否安装成功：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker -v</span><br><span class="line">docker-compose -v</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>docker compose作用：</p>
+<blockquote>
+<p>用来负责对Docker容器集群的快速编排，</p>
+<p>由一组关联的应用容器组成的一个完整业务单元，在docker-compose.yml文件当中进行定义</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p><strong>最小docker compse使用范例：</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建目录</span></span><br><span class="line">mkdir hello</span><br><span class="line">cd hello</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">新建docker-compose.yml文件</span></span><br><span class="line">vim docker-compose.yml</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">写入内容（这里在vim当中编辑yml文件挺难受的，可以在idea当中编辑远程主机的文件）</span></span><br><span class="line">version: &quot;3.0&quot;    # 指定compose的版本</span><br><span class="line">services:         # 指定服务</span><br><span class="line">  tomcat:         # 单个服务</span><br><span class="line">    image: tomcat:9.0.27-jdk8     # 服务镜像</span><br><span class="line">    ports:</span><br><span class="line">      - 8081:8080                 # 暴露对应的端口</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">保持文件内容后进行启动compose</span></span><br><span class="line">docker-compose up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">服务启动之后，可以直接进行访问8081端口</span></span><br><span class="line">http://远程主机ip/8081</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参考：<a href="https://blog.csdn.net/qq_44973159/article/details/121357388">https://blog.csdn.net/qq_44973159/article/details/121357388</a></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="安装waline服务器及数据库"><a href="#安装waline服务器及数据库" class="headerlink" title="安装waline服务器及数据库"></a>安装waline服务器及数据库</h2><h4 id="step1：创建测试目录："><a href="#step1：创建测试目录：" class="headerlink" title="step1：创建测试目录："></a><strong>step1：创建测试目录：</strong></h4><ul>
+<li><p>执行如下命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /root</span><br><span class="line">mkdir composetest</span><br><span class="line">cd composetest</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="step2：拉取镜像："><a href="#step2：拉取镜像：" class="headerlink" title="step2：拉取镜像："></a><strong>step2：拉取镜像：</strong></h4><ul>
+<li><code>docker pull lizheming/waline</code></li>
+</ul>
+<h4 id="step3：在-composetest-目录下创建docker-compose-yml文件，内容如下："><a href="#step3：在-composetest-目录下创建docker-compose-yml文件，内容如下：" class="headerlink" title="step3：在 composetest 目录下创建docker-compose.yml文件，内容如下："></a><strong>step3：在 composetest 目录下创建docker-compose.yml文件，内容如下：</strong></h4><ul>
+<li><p>写入如下内容：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">version: &#x27;3&#x27;</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  waline:</span><br><span class="line">    container_name: waline</span><br><span class="line">    image: lizheming/waline:latest</span><br><span class="line">    restart: always</span><br><span class="line">    ports:</span><br><span class="line">      - 8360:8360</span><br><span class="line">    volumes:</span><br><span class="line">      - $&#123;PWD&#125;/data:/app/data</span><br><span class="line">    environment:</span><br><span class="line">      TZ: &#x27;Asia/Shanghai&#x27;</span><br><span class="line">      SQLITE_PATH: &#x27;/app/data&#x27;</span><br><span class="line">      JWT_TOKEN: &#x27;Your token&#x27;</span><br><span class="line">      SITE_NAME: &#x27;Your site name&#x27;</span><br><span class="line">      SITE_URL: &#x27;https://example.com&#x27;</span><br><span class="line">      SECURE_DOMAINS: &#x27;example.com&#x27;</span><br><span class="line">      AUTHOR_EMAIL: &#x27;mail@example.com&#x27;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="step4：在-composetest-目录下创建-data-目录，下载-waline-sqlite-这个数据库文件："><a href="#step4：在-composetest-目录下创建-data-目录，下载-waline-sqlite-这个数据库文件：" class="headerlink" title="step4：在 composetest 目录下创建 data 目录，下载 waline.sqlite 这个数据库文件："></a><strong>step4：在 composetest 目录下创建 data 目录，下载 <a href="https://github.com/walinejs/waline/blob/main/assets/waline.sqlite">waline.sqlite</a> 这个数据库文件：</strong></h4><ul>
+<li><p>命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /root/composetest</span><br><span class="line">mkdir data</span><br><span class="line">cd data</span><br><span class="line">wget https://raw.githubusercontent.com/walinejs/waline/main/assets/waline.sqlite</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="step5：使用-Compose-命令构建和运行"><a href="#step5：使用-Compose-命令构建和运行" class="headerlink" title="step5：使用 Compose 命令构建和运行"></a><strong>step5：使用 Compose 命令构建和运行</strong></h4><ul>
+<li><p>命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /root/composetest</span><br><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列出所有运行的容器：<code>docker-compose ps</code></p>
+</li>
+</ul>
+<h4 id="step6：-访问-ip-端口："><a href="#step6：-访问-ip-端口：" class="headerlink" title="step6： 访问 ip:端口："></a><strong>step6： 访问 <code>ip:端口</code>：</strong></h4><ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20221012173410.png" alt="image-20221012173410742" style="zoom:50%;" /></li>
+</ul>
+<h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><blockquote>
+<ol>
+<li><p><a href="https://blog.csdn.net/weixin_43943642/article/details/126678317">Waline评论服务docker自部署手册 + 无需备案域名配置</a></p>
+</li>
+<li><p><a href="https://009898.xyz/post/docker-ji-lu/">Docker 记录 | Mark (009898.xyz)</a></p>
+</li>
+<li><p><a href="https://waline.js.org/guide/server/databases.html">多数据库服务支持 | Waline</a></p>
+</li>
+</ol>
+</blockquote>
+]]></content>
       <categories>
-          
-          <category> 软件 </category>
-          
+        <category>软件</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 工具 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2022/08/24/hello-world/"/>
-      <url>/2022/08/24/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>docker</tag>
+        <tag>hexo</tag>
+        <tag>waline</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ADB(Android Debug Bridge)用法总结</title>
+    <url>/2022/09/27/%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/</url>
+    <content><![CDATA[<p><strong>ADB(Android Debug Bridge)用法总结</strong>  </p>
+<blockquote>
+<p>作用：让win电脑通过命令行控制手机的各种行为。</p>
+<p>亲测有效。</p>
+</blockquote>
+<span id="more"></span>
+
+
+
+<h2 id="软件资源"><a href="#软件资源" class="headerlink" title="软件资源"></a>软件资源</h2><h3 id="ADB软件资源"><a href="#ADB软件资源" class="headerlink" title="ADB软件资源"></a>ADB软件资源</h3><p>链接：<a href="https://pan.baidu.com/s/1EkmwKrR0sNI1_FpQlObBeg">https://pan.baidu.com/s/1EkmwKrR0sNI1_FpQlObBeg</a>  </p>
+<p>提取码：zcf6  </p>
+<p>注意要设置“系统环境变量”，否则无法使用ADB 命令。</p>
+<h3 id="华为手机驱动软件资源"><a href="#华为手机驱动软件资源" class="headerlink" title="华为手机驱动软件资源"></a>华为手机驱动软件资源</h3><p>链接：<a href="https://pan.baidu.com/s/1xjyV11HKdF-Tj0MB3DbUCQ">https://pan.baidu.com/s/1xjyV11HKdF-Tj0MB3DbUCQ</a>  </p>
+<p>提取码：j3jw  </p>
+<h3 id="参考教程："><a href="#参考教程：" class="headerlink" title="参考教程："></a>参考教程：</h3><p>[adb下载安装及使用]<a href="https://blog.csdn.net/weixin_43927138/article/details/90477966">https://blog.csdn.net/weixin_43927138/article/details/90477966</a>  </p>
+<p>[adb 模拟点击时间的命令]<a href="https://blog.csdn.net/stronking/article/details/100559801">https://blog.csdn.net/stronking/article/details/100559801</a>  </p>
+<h2 id="ADB启动系统命令："><a href="#ADB启动系统命令：" class="headerlink" title="ADB启动系统命令："></a>ADB启动系统命令：</h2><p>启动 adb server 命令：adb start-server  </p>
+<p>停止 adb server 命令：adb kill-server  </p>
+<p>查询已连接设备&#x2F;模拟器：adb devices  </p>
+<h2 id="手机USB连接："><a href="#手机USB连接：" class="headerlink" title="手机USB连接："></a>手机USB连接：</h2><p>在手机“设置”-“关于手机”连续点击“版本号”7 次，可以进入到开发者模式；</p>
+<p>然后可以到“设置”-“开发者选项”-“调试”里打开USB调试以及允许ADB的一些权限；</p>
+<p>连接时手机会弹出“允许HiSuite通过HDB连接设备”点击允许&#x2F;接受即可；   </p>
+<p><strong>查看是否有root权限：</strong></p>
+<ul>
+<li><p>输入adb shell，</p>
+</li>
+<li><p>输入su KaTeX parse error: Expected ‘EOF’, got ‘#’ at position 5: </p>
+</li>
+<li><p>如果变为#̲则成功，如果仍为则未有root权限；</p>
+</li>
+<li><p>恢复命令：adb unroot</p>
+</li>
+</ul>
+<h2 id="ADB操作手机系统性命令："><a href="#ADB操作手机系统性命令：" class="headerlink" title="ADB操作手机系统性命令："></a>ADB操作手机系统性命令：</h2><p><strong>查看所有应用列表</strong>：adb shell pm list packages </p>
+<p><strong>查看系统应用列表</strong>：adb shell pm list packages -s </p>
+<p><strong>查看第三方应用列表</strong>：adb shell pm list packages -3：  </p>
+<p><strong>安装apk</strong>：adb install “-lrtsdg” “path_to_apk” </p>
+<ul>
+<li><p>&#96;&#96;&#96;<br>  “-lrtsdg”： </p>
+<p>  -l：将应用安装到保护目录 &#x2F;mnt&#x2F;asec； </p>
+<p>  -r：允许覆盖安装； </p>
+<p>  -t：允许安装 AndroidManifest.xml 里 application 指定 android:testOnly&#x3D;“true” 的应用； </p>
+<p>  -s：将应用安装到 sdcard； </p>
+<p>  -d：允许降级覆盖安装； </p>
+<p>  -g：授予所有运行时权限； </p>
+<p>  path_to_apk：apk的绝对路径。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">**示例安装淘宝apk**：adb install -l /data/local/tmp/taobao.apk  </span><br><span class="line"></span><br><span class="line">**卸载apk**：adb uninstall -k “packagename” </span><br><span class="line"></span><br><span class="line">“packagename”：表示应用的包名，以下相同； </span><br><span class="line"></span><br><span class="line">-k 参数可选，表示卸载应用但保留数据和缓存目录。 </span><br><span class="line"></span><br><span class="line">示例卸载 手机淘宝：adb uninstall com.taobao.taobao  </span><br><span class="line"></span><br><span class="line">查看应用详细信息命令：adb shell dumpsys package “packagename” </span><br><span class="line"></span><br><span class="line">调起 Activity命令格式：adb shell am start [options] </span><br><span class="line"></span><br><span class="line">例如：adb shell am start -n com.tencent.mm/.ui.LauncherUI表示调起微信主界面  </span><br><span class="line"></span><br><span class="line">强制停止应用命令：adb shell am force-stop “packagename” </span><br><span class="line"></span><br><span class="line">例如强制停止淘宝：adb shell am force-stop com.taobao.taobao  </span><br><span class="line"></span><br><span class="line">查看设备信息型号命令：adb shell getprop ro.product.model </span><br><span class="line"></span><br><span class="line">电池状况命令：adb shell dumpsys battery </span><br><span class="line"></span><br><span class="line">显示屏参数：adb shell dumpsys window displays </span><br><span class="line"></span><br><span class="line">android_id查看命令：adb shell settings get secure android_id  </span><br><span class="line"></span><br><span class="line">查看Android 系统版本：adb shell getprop ro.build.version.release  </span><br><span class="line"></span><br><span class="line">查看设备ip地址：adb shell ifconfig | grep Mask或者adb shell netcfg  </span><br><span class="line"></span><br><span class="line">查看CPU 信息命令：adb shell cat /proc/cpuinfo  </span><br><span class="line"></span><br><span class="line">查看内存信息命令：adb shell cat /proc/meminfo  </span><br><span class="line"></span><br><span class="line">如果PC要想同时控制多台Android手机，必须在adb 后面添加-s  </span><br><span class="line"></span><br><span class="line">例如：adb -s 13b6e4c4 shell input tap 400 400  </span><br><span class="line"></span><br><span class="line">表示对13b6e4c4这台Android手机进行在屏幕上（400,400）坐标位置进行模拟的点击事件。 </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## ADB操作手机常用功能：  </span><br><span class="line"></span><br><span class="line">滑动解锁：如果锁屏没有密码，是通过滑动手势解锁，那么可以通过 input swipe 来解锁。  </span><br><span class="line"></span><br><span class="line">命令:adb shell input swipe 300 1000 300 500  </span><br><span class="line"></span><br><span class="line">(其中参数 300 1000 300 500 分别表示起始点x坐标 起始点y坐标 结束点x坐标 结束点y坐标。)  </span><br><span class="line"></span><br><span class="line">adb shell input swipe  </span><br><span class="line"></span><br><span class="line">这条命令模拟Android手机从屏幕坐标（X1,Y1）滑动到坐标（X2,Y2）的操作  </span><br><span class="line"></span><br><span class="line">adb shell input tap  </span><br><span class="line"></span><br><span class="line">这条命令模拟Android手机在屏幕坐标（X,Y）处进行了点击操作。  </span><br><span class="line"></span><br><span class="line">输入文本:在焦点处于某文本框时，可以通过 input 命令来输入文本。  </span><br><span class="line"></span><br><span class="line">命令：adb shell input text *** (***即为输入内容)  </span><br><span class="line"></span><br><span class="line">屏幕分辨率命令：adb shell wm size  </span><br><span class="line"></span><br><span class="line">截图保存到电脑：adb shell screencap -p /sdcard/autojump.png  </span><br><span class="line"></span><br><span class="line">然后将 png 文件导出到电脑：adb pull /sdcard/autojump.png .  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## ADB操作手机不常用功能：  </span><br><span class="line"></span><br><span class="line">模拟按键/输入:adb shell input keyevent keycode 不同的 keycode有不同的功能：  </span><br><span class="line"></span><br><span class="line">keycode	含义  </span><br><span class="line"></span><br><span class="line">3	HOME 键  </span><br><span class="line"></span><br><span class="line">4	返回键  </span><br><span class="line"></span><br><span class="line">5	打开拨号应用  </span><br><span class="line"></span><br><span class="line">6	挂断电话  </span><br><span class="line"></span><br><span class="line">26	电源键  </span><br><span class="line"></span><br><span class="line">27	拍照（需要在相机应用里）  </span><br><span class="line"></span><br><span class="line">61	Tab键  </span><br><span class="line"></span><br><span class="line">64	打开浏览器  </span><br><span class="line"></span><br><span class="line">67	退格键  </span><br><span class="line"></span><br><span class="line">80	拍照对焦键  </span><br><span class="line"></span><br><span class="line">82	菜单键  </span><br><span class="line"></span><br><span class="line">85	播放/暂停  </span><br><span class="line"></span><br><span class="line">86	停止播放  </span><br><span class="line"></span><br><span class="line">92	向上翻页键  </span><br><span class="line"></span><br><span class="line">93	向下翻页键  </span><br><span class="line"></span><br><span class="line">111	ESC键  </span><br><span class="line"></span><br><span class="line">112	删除键  </span><br><span class="line"></span><br><span class="line">122	移动光标到行首或列表顶部  </span><br><span class="line"></span><br><span class="line">123	移动光标到行末或列表底部  </span><br><span class="line"></span><br><span class="line">124	插入键  </span><br><span class="line"></span><br><span class="line">164	静音  </span><br><span class="line"></span><br><span class="line">176	打开系统设置  </span><br><span class="line"></span><br><span class="line">207	打开联系人  </span><br><span class="line"></span><br><span class="line">208	打开日历  </span><br><span class="line"></span><br><span class="line">209	打开音乐  </span><br><span class="line"></span><br><span class="line">220	降低屏幕亮度  </span><br><span class="line"></span><br><span class="line">221	提高屏幕亮度  </span><br><span class="line"></span><br><span class="line">223	系统休眠  </span><br><span class="line"></span><br><span class="line">224	点亮屏幕  </span><br><span class="line"></span><br><span class="line">224	点亮屏幕  </span><br><span class="line"></span><br><span class="line">224	点亮屏幕  </span><br><span class="line"></span><br><span class="line">231	打开语音助手  </span><br><span class="line"></span><br><span class="line">276	如果没有 wakelock 则让系统休眠  </span><br><span class="line"></span><br><span class="line">0 --&gt;  &quot;KEYCODE_UNKNOWN&quot;  </span><br><span class="line"></span><br><span class="line">1 --&gt;  &quot;KEYCODE_MENU&quot;  </span><br><span class="line"></span><br><span class="line">2 --&gt;  &quot;KEYCODE_SOFT_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">3 --&gt;  &quot;KEYCODE_HOME&quot;  </span><br><span class="line"></span><br><span class="line">4 --&gt;  &quot;KEYCODE_BACK&quot;  </span><br><span class="line"></span><br><span class="line">5 --&gt;  &quot;KEYCODE_CALL&quot;  </span><br><span class="line"></span><br><span class="line">6 --&gt;  &quot;KEYCODE_ENDCALL&quot;  </span><br><span class="line"></span><br><span class="line">7 --&gt;  &quot;KEYCODE_0&quot;  </span><br><span class="line"></span><br><span class="line">8 --&gt;  &quot;KEYCODE_1&quot;  </span><br><span class="line"></span><br><span class="line">9 --&gt;  &quot;KEYCODE_2&quot;  </span><br><span class="line"></span><br><span class="line">10 --&gt;  &quot;KEYCODE_3&quot;  </span><br><span class="line"></span><br><span class="line">11 --&gt;  &quot;KEYCODE_4&quot;  </span><br><span class="line"></span><br><span class="line">12 --&gt;  &quot;KEYCODE_5&quot;  </span><br><span class="line"></span><br><span class="line">13 --&gt;  &quot;KEYCODE_6&quot;  </span><br><span class="line"></span><br><span class="line">14 --&gt;  &quot;KEYCODE_7&quot;  </span><br><span class="line"></span><br><span class="line">15 --&gt;  &quot;KEYCODE_8&quot;  </span><br><span class="line"></span><br><span class="line">16 --&gt;  &quot;KEYCODE_9&quot;  </span><br><span class="line"></span><br><span class="line">17 --&gt;  &quot;KEYCODE_STAR&quot;  </span><br><span class="line"></span><br><span class="line">18 --&gt;  &quot;KEYCODE_POUND&quot;  </span><br><span class="line"></span><br><span class="line">19 --&gt;  &quot;KEYCODE_DPAD_UP&quot;  </span><br><span class="line"></span><br><span class="line">20 --&gt;  &quot;KEYCODE_DPAD_DOWN&quot;  </span><br><span class="line"></span><br><span class="line">21 --&gt;  &quot;KEYCODE_DPAD_LEFT&quot;  </span><br><span class="line"></span><br><span class="line">22 --&gt;  &quot;KEYCODE_DPAD_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">23 --&gt;  &quot;KEYCODE_DPAD_CENTER&quot;  </span><br><span class="line"></span><br><span class="line">24 --&gt;  &quot;KEYCODE_VOLUME_UP&quot;  </span><br><span class="line"></span><br><span class="line">25 --&gt;  &quot;KEYCODE_VOLUME_DOWN&quot;  </span><br><span class="line"></span><br><span class="line">26 --&gt;  &quot;KEYCODE_POWER&quot;  </span><br><span class="line"></span><br><span class="line">27 --&gt;  &quot;KEYCODE_CAMERA&quot;  </span><br><span class="line"></span><br><span class="line">28 --&gt;  &quot;KEYCODE_CLEAR&quot;  </span><br><span class="line"></span><br><span class="line">29 --&gt;  &quot;KEYCODE_A&quot;  </span><br><span class="line"></span><br><span class="line">30 --&gt;  &quot;KEYCODE_B&quot;  </span><br><span class="line"></span><br><span class="line">31 --&gt;  &quot;KEYCODE_C&quot;  </span><br><span class="line"></span><br><span class="line">32 --&gt;  &quot;KEYCODE_D&quot;  </span><br><span class="line"></span><br><span class="line">33 --&gt;  &quot;KEYCODE_E&quot;  </span><br><span class="line"></span><br><span class="line">34 --&gt;  &quot;KEYCODE_F&quot;  </span><br><span class="line"></span><br><span class="line">35 --&gt;  &quot;KEYCODE_G&quot;  </span><br><span class="line"></span><br><span class="line">36 --&gt;  &quot;KEYCODE_H&quot;  </span><br><span class="line"></span><br><span class="line">37 --&gt;  &quot;KEYCODE_I&quot;  </span><br><span class="line"></span><br><span class="line">38 --&gt;  &quot;KEYCODE_J&quot;  </span><br><span class="line"></span><br><span class="line">39 --&gt;  &quot;KEYCODE_K&quot;  </span><br><span class="line"></span><br><span class="line">40 --&gt;  &quot;KEYCODE_L&quot;  </span><br><span class="line"></span><br><span class="line">41 --&gt;  &quot;KEYCODE_M&quot;  </span><br><span class="line"></span><br><span class="line">42 --&gt;  &quot;KEYCODE_N&quot;  </span><br><span class="line"></span><br><span class="line">43 --&gt;  &quot;KEYCODE_O&quot;  </span><br><span class="line"></span><br><span class="line">44 --&gt;  &quot;KEYCODE_P&quot;  </span><br><span class="line"></span><br><span class="line">45 --&gt;  &quot;KEYCODE_Q&quot;  </span><br><span class="line"></span><br><span class="line">46 --&gt;  &quot;KEYCODE_R&quot;  </span><br><span class="line"></span><br><span class="line">47 --&gt;  &quot;KEYCODE_S&quot;  </span><br><span class="line"></span><br><span class="line">48 --&gt;  &quot;KEYCODE_T&quot;  </span><br><span class="line"></span><br><span class="line">49 --&gt;  &quot;KEYCODE_U&quot;  </span><br><span class="line"></span><br><span class="line">50 --&gt;  &quot;KEYCODE_V&quot;  </span><br><span class="line"></span><br><span class="line">51 --&gt;  &quot;KEYCODE_W&quot;  </span><br><span class="line"></span><br><span class="line">52 --&gt;  &quot;KEYCODE_X&quot;  </span><br><span class="line"></span><br><span class="line">53 --&gt;  &quot;KEYCODE_Y&quot;  </span><br><span class="line"></span><br><span class="line">54 --&gt;  &quot;KEYCODE_Z&quot;  </span><br><span class="line"></span><br><span class="line">55 --&gt;  &quot;KEYCODE_COMMA&quot;  </span><br><span class="line"></span><br><span class="line">56 --&gt;  &quot;KEYCODE_PERIOD&quot;  </span><br><span class="line"></span><br><span class="line">57 --&gt;  &quot;KEYCODE_ALT_LEFT&quot;  </span><br><span class="line"></span><br><span class="line">58 --&gt;  &quot;KEYCODE_ALT_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">59 --&gt;  &quot;KEYCODE_SHIFT_LEFT&quot;  </span><br><span class="line"></span><br><span class="line">60 --&gt;  &quot;KEYCODE_SHIFT_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">61 --&gt;  &quot;KEYCODE_TAB&quot;  </span><br><span class="line"></span><br><span class="line">62 --&gt;  &quot;KEYCODE_SPACE&quot;  </span><br><span class="line"></span><br><span class="line">63 --&gt;  &quot;KEYCODE_SYM&quot;  </span><br><span class="line"></span><br><span class="line">64 --&gt;  &quot;KEYCODE_EXPLORER&quot;  </span><br><span class="line"></span><br><span class="line">65 --&gt;  &quot;KEYCODE_ENVELOPE&quot;  </span><br><span class="line"></span><br><span class="line">66 --&gt;  &quot;KEYCODE_ENTER&quot;  </span><br><span class="line"></span><br><span class="line">67 --&gt;  &quot;KEYCODE_DEL&quot;  </span><br><span class="line"></span><br><span class="line">68 --&gt;  &quot;KEYCODE_GRAVE&quot;  </span><br><span class="line"></span><br><span class="line">69 --&gt;  &quot;KEYCODE_MINUS&quot;  </span><br><span class="line"></span><br><span class="line">70 --&gt;  &quot;KEYCODE_EQUALS&quot;  </span><br><span class="line"></span><br><span class="line">71 --&gt;  &quot;KEYCODE_LEFT_BRACKET&quot;  </span><br><span class="line"></span><br><span class="line">72 --&gt;  &quot;KEYCODE_RIGHT_BRACKET&quot;  </span><br><span class="line"></span><br><span class="line">73 --&gt;  &quot;KEYCODE_BACKSLASH&quot;  </span><br><span class="line"></span><br><span class="line">74 --&gt;  &quot;KEYCODE_SEMICOLON&quot;  </span><br><span class="line"></span><br><span class="line">75 --&gt;  &quot;KEYCODE_APOSTROPHE&quot;  </span><br><span class="line"></span><br><span class="line">76 --&gt;  &quot;KEYCODE_SLASH&quot;  </span><br><span class="line"></span><br><span class="line">77 --&gt;  &quot;KEYCODE_AT&quot;  </span><br><span class="line"></span><br><span class="line">78 --&gt;  &quot;KEYCODE_NUM&quot;  </span><br><span class="line"></span><br><span class="line">79 --&gt;  &quot;KEYCODE_HEADSETHOOK&quot;  </span><br><span class="line"></span><br><span class="line">80 --&gt;  &quot;KEYCODE_FOCUS&quot;  </span><br><span class="line"></span><br><span class="line">81 --&gt;  &quot;KEYCODE_PLUS&quot;  </span><br><span class="line"></span><br><span class="line">82 --&gt;  &quot;KEYCODE_MENU&quot;  </span><br><span class="line"></span><br><span class="line">83 --&gt;  &quot;KEYCODE_NOTIFICATION&quot;  </span><br><span class="line"></span><br><span class="line">84 --&gt;  &quot;KEYCODE_SEARCH&quot;  </span><br><span class="line"></span><br><span class="line">85 --&gt;  &quot;TAG_LAST_KEYCODE&quot;  </span><br><span class="line"></span><br><span class="line">录制屏幕：adb shell screenrecord /sdcard/filename.mp4   </span><br><span class="line"></span><br><span class="line">录制屏幕以 mp4 格式保存到 /sdcard，需要停止时按 Ctrl-C，默认录制时间和最长录制时间都是 180 秒。  </span><br><span class="line"></span><br><span class="line">如果需要导出到电脑：adb pull /sdcard/filename.mp4 .  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 使用python脚本自动运行cmd 命令  </span><br><span class="line"></span><br><span class="line">**在adb文件夹下建立一个python文件**  </span><br><span class="line"></span><br><span class="line">```python3  </span><br><span class="line">#运行脚本，发现与在命令行输入相同语句有同样的效果。  </span><br><span class="line">import os  </span><br><span class="line">os.system(&#x27;adb shell input tap 100 100&#x27;);  </span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>可以使用subprocess.Popen，最简单使用方式如下，设置shell&#x3D;True，就不会弹出cmd框</strong>  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">process = subprocess.Popen(&#x27;adb shell input tap 14 1402&#x27;,shell=True)  </span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
 </search>
