@@ -633,7 +633,7 @@
   <entry>
     <title>python多线程</title>
     <url>/2022/10/26/007-Python%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
-    <content><![CDATA[<h2 id="多线程介绍"><a href="#多线程介绍" class="headerlink" title="多线程介绍"></a>多线程介绍</h2><h4 id="什么是线程"><a href="#什么是线程" class="headerlink" title="什么是线程"></a>什么是线程</h4><p>​		线程（Thread）也叫轻量级进程，是操作系统能够进行运算调度的最小单位，它被包涵在进程之中，是进程中的实际运作单位。</p>
+    <content><![CDATA[<h2 id="多线程介绍"><a href="#多线程介绍" class="headerlink" title="多线程介绍_"></a>多线程介绍_</h2><h4 id="什么是线程"><a href="#什么是线程" class="headerlink" title="什么是线程"></a>什么是线程</h4><p>​		线程（Thread）也叫轻量级进程，是操作系统能够进行运算调度的最小单位，它被包涵在进程之中，是进程中的实际运作单位。</p>
 <p>​		个线程可以创建和撤消另一个线程，同一进程中的多个线程之间可以并发执行。</p>
 <h3 id="为什么需要多线程"><a href="#为什么需要多线程" class="headerlink" title="为什么需要多线程"></a>为什么需要多线程</h3><ul>
 <li>进程之间不能共享内存，但线程之间共享内存非常容易。</li>
