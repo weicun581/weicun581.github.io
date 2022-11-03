@@ -161,7 +161,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -221,6 +221,195 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://weicun581.github.io/2022/10/27/008-Python%E5%A4%9A%E8%BF%9B%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="hello_world">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝色单车">
+      <meta itemprop="description" content="养天地正气，法古今完人">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 蓝色单车">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/10/27/008-Python%E5%A4%9A%E8%BF%9B%E7%A8%8B/" class="post-title-link" itemprop="url">python多进程</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-27 18:51:33" itemprop="dateCreated datePublished" datetime="2022-10-27T18:51:33+08:00">2022-10-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-03 09:41:12" itemprop="dateModified" datetime="2022-11-03T09:41:12+08:00">2022-11-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2022/10/27/008-Python%E5%A4%9A%E8%BF%9B%E7%A8%8B/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2022/10/27/008-Python%E5%A4%9A%E8%BF%9B%E7%A8%8B/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>​		大家看过前面文章的应该都知道python中的GIL的存在，也就是多线程的时候，同一时间只能有一个线程在CPU上运行，而且是单个CPU上运行，不管你的CPU有多少核数。如果想要充分地使用多核CPU的资源，在python中大部分情况需要使用多进程。</p>
+</blockquote>
+<h2 id="多进程介绍"><a href="#多进程介绍" class="headerlink" title="多进程介绍"></a>多进程介绍</h2><ul>
+<li>进程：一个程序运行起来后，代码+用到的资源 称为进程。他是操作系统分配资源的基本单元。线程完成的多任务，进程也可以。</li>
+<li>现在的电脑的CPU一般都有多个核心，在Python中可以使用 multiprocessing 包比较方便地实现将计算任务分配给多个核心，使之并行地计算以实现加速的效果。</li>
+<li>进程是表示资源分配的基本单位，又是调度运行的基本单位。例如，用户运行自己的程序，系统就创建一个进程，并为它分配资源，包括各种表格、<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%86%85%E5%AD%98&spm=1001.2101.3001.7020">内存</a>空间、磁盘空间、I&#x2F;O设备等。所以，进程是系统中的并发执行的单位。</li>
+</ul>
+<h2 id="多进程用法"><a href="#多进程用法" class="headerlink" title="多进程用法"></a>多进程用法</h2><h3 id="多进程实现方法"><a href="#多进程实现方法" class="headerlink" title="多进程实现方法"></a>多进程实现方法</h3><ul>
+<li>Python中的多进程是通过multiprocessing包来实现的。</li>
+<li>利用multiprocessing.Process对象来创建一个进程对象。</li>
+<li>构造方法：<code>Process([group [, target [, name [, args [, kwargs]]]]])</code><ul>
+<li>group: 线程组 </li>
+<li>target: 要执行的方法</li>
+<li>name: 进程名</li>
+<li>args&#x2F;kwargs: 要传入方法的参数</li>
+</ul>
+</li>
+<li>实例方法：<ul>
+<li>start() ：进程准备就绪，等待CPU调度。</li>
+<li>run()：strat()调用run方法，如果实例进程时未制定传入target，这star执行t默认run()方法。</li>
+<li>join([timeout])：阻塞当前上下文环境的进程程，直到调用此方法的进程终止或到达指定的timeout（可选参数）。</li>
+<li>is_alive()：返回进程是否在运行,bool类型。</li>
+<li>terminate()：不管任务是否完成，立即停止工作进程</li>
+</ul>
+</li>
+<li>属性：<ul>
+<li>name：进程名字</li>
+<li>pid：进程号</li>
+</ul>
+</li>
+</ul>
+<h4 id="1-常见多进程用法"><a href="#1-常见多进程用法" class="headerlink" title="1. 常见多进程用法"></a>1. 常见多进程用法</h4><ul>
+<li><p>最简单的多进程方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span>  Process</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun1</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;测试%s多进程&#x27;</span> %name)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    process_list = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):  <span class="comment">#开启5个子进程执行fun1函数</span></span><br><span class="line">        p = Process(target=fun1,args=(<span class="string">&#x27;Python&#x27;</span>,)) <span class="comment">#实例化进程对象</span></span><br><span class="line">        p.start()</span><br><span class="line">        process_list.append(p)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> process_list:</span><br><span class="line">        p.join()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;结束测试&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="2-类实现多进程用法"><a href="#2-类实现多进程用法" class="headerlink" title="2. 类实现多进程用法"></a>2. 类实现多进程用法</h4><ul>
+<li><p>继承类Process方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span>  Process</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyProcess</span>(<span class="title class_ inherited__">Process</span>): <span class="comment">#继承Process类</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name</span>):</span><br><span class="line">        <span class="built_in">super</span>(MyProcess,self).__init__()</span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">run</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;测试%s多进程&#x27;</span> % self.name)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    process_list = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):  <span class="comment">#开启5个子进程执行fun1函数</span></span><br><span class="line">        p = MyProcess(<span class="string">&#x27;Python&#x27;</span>) <span class="comment">#实例化进程对象</span></span><br><span class="line">        p.start()</span><br><span class="line">        process_list.append(p)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> process_list:</span><br><span class="line">        p.join()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;结束测试&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="多进程通信"><a href="#多进程通信" class="headerlink" title="多进程通信"></a>多进程通信</h3><blockquote>
+<p>​		进程是系统独立调度核分配系统资源（CPU、内存）的基本单位，进程之间是相互独立的，每启动一个新的进程相当于把数据进行了一次克隆，子进程里的数据修改无法影响到主进程中的数据，不同子进程之间的数据也不能共享，这是多进程在使用中与多线程最明显的区别。</p>
+<p>​		但是难道Python多进程中间难道就是孤立的吗？</p>
+<p>​		当然不是，python也提供了多种方法实现了多进程中间的通信和数据共享（可以修改一份数据）</p>
+</blockquote>
+<h4 id="1-进程队列Queue"><a href="#1-进程队列Queue" class="headerlink" title="1. 进程队列Queue"></a>1. 进程队列Queue</h4><ul>
+<li><p>queue:进程之间的数据管道，实现进程通信。</p>
+</li>
+<li><p>有点类似派一个间谍过去，时不时的往回发送情报。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Process,Queue</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun1</span>(<span class="params">q,i</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;子进程%s 开始put数据&#x27;</span> %i)</span><br><span class="line">    q.put(<span class="string">&#x27;我是%s 通过Queue通信&#x27;</span> %i)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    q = Queue()</span><br><span class="line"></span><br><span class="line">    process_list = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>):</span><br><span class="line">        p = Process(target=fun1,args=(q,i,))  <span class="comment">#注意args里面要把q对象传给我们要执行的方法，这样子进程才能和主进程用Queue来通信</span></span><br><span class="line">        p.start()</span><br><span class="line">        process_list.append(p)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> process_list:</span><br><span class="line">        p.join()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;主进程获取Queue数据&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(q.get())</span><br><span class="line">    <span class="built_in">print</span>(q.get())</span><br><span class="line">    <span class="built_in">print</span>(q.get())</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;结束测试&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="2-管道Pipe"><a href="#2-管道Pipe" class="headerlink" title="2. 管道Pipe"></a>2. 管道Pipe</h4><ul>
+<li><p>管道Pipe和Queue的作用大致差不多，也是实现进程间的通信。</p>
+</li>
+<li><p>有点类似量子纠缠，先设置一对纠缠粒子，把其中一个发送给子进程，然后通过量子纠缠的方式进行瞬时通信。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> multiprocessing <span class="keyword">import</span> Process, Pipe</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fun1</span>(<span class="params">conn</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;子进程发送消息：&#x27;</span>)</span><br><span class="line">    conn.send(<span class="string">&#x27;你好主进程&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;子进程接受消息：&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(conn.recv())</span><br><span class="line">    conn.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    conn1, conn2 = Pipe() <span class="comment">#关键点，pipe实例化生成一个双向管</span></span><br><span class="line">    p = Process(target=fun1, args=(conn2,)) <span class="comment">#conn2传给子进程</span></span><br><span class="line">    p.start()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;主进程接受消息：&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(conn1.recv())</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;主进程发送消息：&#x27;</span>)</span><br><span class="line">    conn1.send(<span class="string">&quot;你好子进程&quot;</span>)</span><br><span class="line">    p.join()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;结束测试&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="3-数据共享方法Managers"><a href="#3-数据共享方法Managers" class="headerlink" title="3. 数据共享方法Managers"></a>3. 数据共享方法Managers</h4><ul>
+<li><p>Queue和Pipe只是实现了数据交互，并没实现数据共享，即一个进程去更改另一个进程的数据。那么久要用到Managers。</p>
+</li>
+<li><p>类似定义了一个跨进程的公共变量，传入到子进程后，主进程、子进程都可以访问读写这个公共变量。</p>
+<ul>
+<li><pre><code class="python">from multiprocessing import Process, Manager
+
+def fun1(dic,lis,index):
+    dic[index] = &#39;a&#39;
+    dic[&#39;2&#39;] = &#39;b&#39;    
+    lis.append(index)    # [0,1,2,3,4,0,1,2,3,4,5,6,7,8,9]
+    #print(l)
+
+if __name__ == &#39;__main__&#39;:
+    with Manager() as manager:
+        dic = manager.dict()	# 注意字典的声明方式，不能直接通过&#123;&#125;来定义
+        l = manager.list(range(5))	# [0,1,2,3,4]
+
+        process_list = []
+        for i in range(10):
+            p = Process(target=fun1, args=(dic,l,i))
+            p.start()
+            process_list.append(p)
+
+        for res in process_list:
+            res.join()
+        print(dic)
+        print(l)
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="进程池"><a href="#进程池" class="headerlink" title="进程池"></a>进程池</h3><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="进程与线程区别"><a href="#进程与线程区别" class="headerlink" title="进程与线程区别"></a>进程与线程区别</h3><h3 id="进程和线程分别适用于什么情况"><a href="#进程和线程分别适用于什么情况" class="headerlink" title="进程和线程分别适用于什么情况"></a>进程和线程分别适用于什么情况</h3><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
 
     
 
@@ -770,117 +959,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://weicun581.github.io/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/logo.png">
-      <meta itemprop="name" content="hello_world">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="蓝色单车">
-      <meta itemprop="description" content="养天地正气，法古今完人">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 蓝色单车">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/" class="post-title-link" itemprop="url">ADB(Android Debug Bridge)用法总结</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-09-27 17:23:37" itemprop="dateCreated datePublished" datetime="2022-09-27T17:23:37+08:00">2022-09-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-09-29 14:11:11" itemprop="dateModified" datetime="2022-09-29T14:11:11+08:00">2022-09-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><strong>ADB(Android Debug Bridge)用法总结</strong>  </p>
-<blockquote>
-<p>作用：让win电脑通过命令行控制手机的各种行为。</p>
-<p>亲测有效。</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://weicun581.github.io/2022/09/27/002-Python%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B0%8F%E6%8A%80%E5%B7%A7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -962,6 +1040,117 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/09/27/002-Python%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B0%8F%E6%8A%80%E5%B7%A7/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://weicun581.github.io/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="hello_world">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝色单车">
+      <meta itemprop="description" content="养天地正气，法古今完人">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 蓝色单车">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/" class="post-title-link" itemprop="url">ADB(Android Debug Bridge)用法总结</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-09-27 17:23:37" itemprop="dateCreated datePublished" datetime="2022-09-27T17:23:37+08:00">2022-09-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-09-29 14:11:11" itemprop="dateModified" datetime="2022-09-29T14:11:11+08:00">2022-09-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>ADB(Android Debug Bridge)用法总结</strong>  </p>
+<blockquote>
+<p>作用：让win电脑通过命令行控制手机的各种行为。</p>
+<p>亲测有效。</p>
+</blockquote>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1140,7 +1329,7 @@ setInterval("createtime()",250);
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共7.4k字</span>
+  <span class="post-count">博客全站共8.8k字</span>
 </div>
     </div>
   </footer>
