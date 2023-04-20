@@ -716,6 +716,20 @@
       </tags>
   </entry>
   <entry>
+    <title>日记怀旧</title>
+    <url>/2022/11/15/009-%E6%97%A5%E8%AE%B0%E6%80%80%E6%97%A7/</url>
+    <content><![CDATA[<h3 id="2022-x2F-11-x2F-15-小记"><a href="#2022-x2F-11-x2F-15-小记" class="headerlink" title="2022&#x2F;11&#x2F;15 小记"></a>2022&#x2F;11&#x2F;15 小记</h3> <iframe src="//player.bilibili.com/player.html?aid=254554192&bvid=BV1zY411g7zT&cid=544709836&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=300> </iframe>
+
+<p>很久之前，大概是2013年的时候，在人人上听过，惊为天人。<br>快10年了，<br>人人网也已经不在，<br>曾经想逃离的过去，现在却成了回不去的记忆。</p>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python多进程</title>
     <url>/2022/10/27/008-Python%E5%A4%9A%E8%BF%9B%E7%A8%8B/</url>
     <content><![CDATA[<blockquote>
@@ -819,20 +833,6 @@ if __name__ == &#39;__main__&#39;:
       </tags>
   </entry>
   <entry>
-    <title>日记怀旧</title>
-    <url>/2022/11/15/009-%E6%97%A5%E8%AE%B0%E6%80%80%E6%97%A7/</url>
-    <content><![CDATA[<h3 id="2022-x2F-11-x2F-15-小记"><a href="#2022-x2F-11-x2F-15-小记" class="headerlink" title="2022&#x2F;11&#x2F;15 小记"></a>2022&#x2F;11&#x2F;15 小记</h3> <iframe src="//player.bilibili.com/player.html?aid=254554192&bvid=BV1zY411g7zT&cid=544709836&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=300> </iframe>
-
-<p>很久之前，大概是2013年的时候，在人人上听过，惊为天人。<br>快10年了，<br>人人网也已经不在，<br>曾经想逃离的过去，现在却成了回不去的记忆。</p>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo 部署填写 github 用户名和密码一次性解决方案</title>
     <url>/2023/04/20/hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
     <content><![CDATA[<blockquote>
@@ -931,7 +931,7 @@ if __name__ == &#39;__main__&#39;:
 <ul>
 <li>疫情的爆发</li>
 <li>工作量突然加重</li>
-<li>内心的浮躁<br>我觉得客观原因都是小事情，关键是内心浮躁了，总是想着赚钱、赚钱、赚钱。结果啥也没干成。<br>所以想了下，还是要沉下心来，努力做事情，而不是天天想着搞钱，做事浅尝辄止、做人浮浮躁躁。</li>
+<li>内心的浮躁<br>我觉得客观原因都是小事情，关键是内心浮躁了，总是想着赚钱、赚钱、赚钱。结果啥也没干成。<br>所以想了下，还是要沉下心来，努力做事情，而不是天天想着搞钱，做事浅尝辄止、做人浮浮躁躁。<span id="more"></span></li>
 </ul>
 <h4 id="关于博客日后的规划"><a href="#关于博客日后的规划" class="headerlink" title="关于博客日后的规划"></a>关于博客日后的规划</h4><ol>
 <li>记录日常感悟，分享人生经历，总结生活。</li>
