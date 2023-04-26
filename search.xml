@@ -833,6 +833,66 @@ if __name__ == &#39;__main__&#39;:
       </tags>
   </entry>
   <entry>
+    <title>AgentGPT-带互联网搜索功能的chatGPT</title>
+    <url>/2023/04/25/AgentGPT-%E5%B8%A6%E4%BA%92%E8%81%94%E7%BD%91%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E7%9A%84chatGPT/</url>
+    <content><![CDATA[<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145426.png" alt="20230425145426|left|475"></p>
+<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	Agent GPT 主要的AI 功能就是建立在原版的AutoGPT 之上，然后再加上图形介面，这样阅读起来比较容易也比较方便。<br>相较于ChatGPT，它具有：互联网搜索查询功能、任务拆解各个执行然后串联能力。<br>它能够根据用户需求，在用户完全不插手的情况下自主执行任务，包括日常的事件分析、营销方案撰写、代码编程、数学运算等事务都能代劳。<br>这里我会按照AgentGPT 官方所建议的步骤，一步一步教搭建安装并体验AgentGPT。</p>
+</blockquote>
+<span id="more"></span>
+<h3 id="如何安装Agent-GPT"><a href="#如何安装Agent-GPT" class="headerlink" title="如何安装Agent GPT"></a>如何安装Agent GPT</h3><ul>
+<li>平台：win10 docker desktop </li>
+<li>安装方法：<ol>
+<li>在github上下载<a href="https://github.com/reworkd/AgentGPT">AgentGPT项目</a>：<code>git clone  git@github.com:reworkd/AgentGPT.git</code></li>
+<li>按照官网推荐的docker安装方式：<code>./setup.sh --docker</code>，当然你也可以在本地安装，不过介于docker安装方式最简单，所以这边就不再本地环境搭建了，有兴趣可以在github agentGPT官网上查询。<a href="https://github.com/reworkd/AgentGPT">GitHub - reworkd&#x2F;AgentGPT: 🤖 Assemble, configure, and deploy autonomous AI Agents in your browser.</a><br><em>这里有个小的知识点，如何在win10上运行.sh脚本文件？答案是：用git bash</em></li>
+<li>用setup脚本安装完成之后，可以用<code>docker ps -a</code>确认下container是否真的安装好并启动：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425144818.png" alt="20230425144818|left|525">可以看到agentgpt已经成功创建成功，并在3000端口运行了。</li>
+<li>访问agentGPT container的web：<a href="http://localhost:3000/">http://localhost:3000/</a>，出现这个界面就表示安装成功了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145027.png" alt="20230425145027|left|475"></li>
+<li>接下来我们设置下AI驱动，点击settings，选择gpt-3.5-turbo，输入你的gpt3.5 kye（这个需要你之前注册好，注册的硬性要求有两个：1. 需要会魔法。 2.需要有国外手机号，用于接收验证码，这类网站有很多，请自行百度）<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145325.png" alt="20230425145325|left|475"></li>
+</ol>
+</li>
+</ul>
+<h3 id="AgentGPT使用体验"><a href="#AgentGPT使用体验" class="headerlink" title="AgentGPT使用体验"></a>AgentGPT使用体验</h3><h4 id="询问系统时间"><a href="#询问系统时间" class="headerlink" title="询问系统时间"></a>询问系统时间</h4><p>这个实验尝试了文agentGPT现在时间是几点？<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145750.png" alt="20230425145750|left|500"><br>在这里可以看到他的分析思路是：</p>
+<ul>
+<li>使用系统时钟获取当前时间</li>
+<li>将当前时间转换为字符串格式</li>
+<li>返回字符串时间作为响应</li>
+<li>将字符串时间转换为数字时间</li>
+<li>返回数字时间作为响应<br>思路是对的，想法也很好，但是在执行第一步骤的时候就失败了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150017.png" alt="20230425150017|left|500">之后就是不停的循环这几个步骤，陷入了死循环。</li>
+</ul>
+<h4 id="统计淘宝网上销量前6的血压仪价格及名称"><a href="#统计淘宝网上销量前6的血压仪价格及名称" class="headerlink" title="统计淘宝网上销量前6的血压仪价格及名称"></a>统计淘宝网上销量前6的血压仪价格及名称</h4><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150456.png" alt="20230425150456|left|675"><br>结果：我很满意，的确是有访问互联网并统计到。<br>但是，我不满意的是它的任务拆解执行能力，我的确是从它的子任务重得到了答案，但是它把任务拆分的方式有问题，还是会陷入死循环。<br>因此，如何跳出死循环，这个是AgentGPT需要加强的地方。当然这也是最难的地方。</p>
+<p>随后我让它用中文回复我，可以看到它的确是有统计到结果，但是一旦遇到某一步骤无法得到结果，它就会不停的陷入死循环：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150901.png" alt="20230425150901|left|500"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>AgetGPT的确是给人眼前一亮的感觉，相较于chatGPT它的互联网搜索能力、任务拆解执行能力，的确是很经验。<br>但是，如何跳出死循环这部分还是需要继续努力。不过介于目前的版本还是beta版本，所以我觉得已经很棒了，加油，希望可以给我们带来更好的产品。</p>
+<p>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><p>1.<br>2.<br>3. </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo 部署填写 github 用户名和密码一次性解决方案</title>
+    <url>/2023/04/20/hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	hexo 部署文章时候，会弹出 github 弹窗填写 username 和 password，填完之后还是无法上传，本文会给出解决方法。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>hexo 博客半年没写了，今天尝试更新，发现 <code>hexo d</code> 之后需要输入 github 的用户名和密码，但是我输入之后没有效果，还是无法推送到 github 上。<br>研究之后发现 rootcause 是：github 已经无法再用密码登陆推送，只能用 token，我的 token 之前只设置了 3 个月的有效期，所以现在失效了。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h4 id="1-重新生成新的-token"><a href="#1-重新生成新的-token" class="headerlink" title="1. 重新生成新的 token"></a>1. 重新生成新的 token</h4><p>新的 token 设置网址：<a href="https://github.com/settings/tokens">Personal Access Tokens (Classic) (github.com)</a><br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101025.png" alt="20230420101025|left"><br>新的 token （%%🔐α 💡ID💡MDO&#x2F;W 4 Cm 9 AJ 4 Ls 8&#x2F;i+yXXM 5 GzNzTJ 0 o 2 u 4 AwfZGVs 5 EqWEESkIf 0+kWt+quYVANDGUCe 4 GJWAxLJnr 7 vIgsi 7 QtSUNma 9 MPz 🔐%%）记得保存好，网页刷新之后就再也看不见了。</p>
+<h4 id="2-配置-hexo-config-yml"><a href="#2-配置-hexo-config-yml" class="headerlink" title="2. 配置 hexo config.yml"></a>2. 配置 hexo config.yml</h4><p>配置 hexo config.yml：<br>原本的配置：<code>repo: https://github.com/weicun581/weicun581.git</code><br>新的配置：<code>repo: https://your token here@github.com/weicun581/weicun581.git</code><br>替换 <code>your token here</code> 替换成上一步的 token 就好了。</p>
+<h2 id="实际使用效果"><a href="#实际使用效果" class="headerlink" title="实际使用效果"></a>实际使用效果</h2><p>在 hexo 根目录下执行：<code>hexo d</code>，之后在 github project 的 action 界面就可以看到 action 动作了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101947.png" alt="20230420101947|left"></p>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a href="https://blog.csdn.net/qq_43340547/article/details/119895671">(75条消息) 命令行输入hexo d后发现不能输入GitHub密码登录_SoberGit的博客-CSDN博客</a></li>
+<li><a href="https://blog.csdn.net/weixin_41010198/article/details/119698015?utm_source=app&app_version=4.12.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">(75条消息) github开发人员在七夕搞事情：remote: Support for password authentication was removed on August 13, 2021._点亮～黑夜的博客-CSDN博客</a></li>
+</ol>
+<p>个人博客地址：<a href="https://weicun.gitee.io/">蓝色单车 (gitee.io)</a></p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>每日文章</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>FFmpeg用法</title>
     <url>/2023/04/25/Ffmpeg%E7%94%A8%E6%B3%95/</url>
     <content><![CDATA[<blockquote>
@@ -916,66 +976,6 @@ if __name__ == &#39;__main__&#39;:
       <tags>
         <tag>每日文章</tag>
         <tag>ffmpeg</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AgentGPT-带互联网搜索功能的chatGPT</title>
-    <url>/2023/04/25/AgentGPT-%E5%B8%A6%E4%BA%92%E8%81%94%E7%BD%91%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E7%9A%84chatGPT/</url>
-    <content><![CDATA[<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145426.png" alt="20230425145426|left|475"></p>
-<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	Agent GPT 主要的AI 功能就是建立在原版的AutoGPT 之上，然后再加上图形介面，这样阅读起来比较容易也比较方便。<br>相较于ChatGPT，它具有：互联网搜索查询功能、任务拆解各个执行然后串联能力。<br>它能够根据用户需求，在用户完全不插手的情况下自主执行任务，包括日常的事件分析、营销方案撰写、代码编程、数学运算等事务都能代劳。<br>这里我会按照AgentGPT 官方所建议的步骤，一步一步教搭建安装并体验AgentGPT。</p>
-</blockquote>
-<span id="more"></span>
-<h3 id="如何安装Agent-GPT"><a href="#如何安装Agent-GPT" class="headerlink" title="如何安装Agent GPT"></a>如何安装Agent GPT</h3><ul>
-<li>平台：win10 docker desktop </li>
-<li>安装方法：<ol>
-<li>在github上下载<a href="https://github.com/reworkd/AgentGPT">AgentGPT项目</a>：<code>git clone  git@github.com:reworkd/AgentGPT.git</code></li>
-<li>按照官网推荐的docker安装方式：<code>./setup.sh --docker</code>，当然你也可以在本地安装，不过介于docker安装方式最简单，所以这边就不再本地环境搭建了，有兴趣可以在github agentGPT官网上查询。<a href="https://github.com/reworkd/AgentGPT">GitHub - reworkd&#x2F;AgentGPT: 🤖 Assemble, configure, and deploy autonomous AI Agents in your browser.</a><br><em>这里有个小的知识点，如何在win10上运行.sh脚本文件？答案是：用git bash</em></li>
-<li>用setup脚本安装完成之后，可以用<code>docker ps -a</code>确认下container是否真的安装好并启动：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425144818.png" alt="20230425144818|left|525">可以看到agentgpt已经成功创建成功，并在3000端口运行了。</li>
-<li>访问agentGPT container的web：<a href="http://localhost:3000/">http://localhost:3000/</a>，出现这个界面就表示安装成功了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145027.png" alt="20230425145027|left|475"></li>
-<li>接下来我们设置下AI驱动，点击settings，选择gpt-3.5-turbo，输入你的gpt3.5 kye（这个需要你之前注册好，注册的硬性要求有两个：1. 需要会魔法。 2.需要有国外手机号，用于接收验证码，这类网站有很多，请自行百度）<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145325.png" alt="20230425145325|left|475"></li>
-</ol>
-</li>
-</ul>
-<h3 id="AgentGPT使用体验"><a href="#AgentGPT使用体验" class="headerlink" title="AgentGPT使用体验"></a>AgentGPT使用体验</h3><h4 id="询问系统时间"><a href="#询问系统时间" class="headerlink" title="询问系统时间"></a>询问系统时间</h4><p>这个实验尝试了文agentGPT现在时间是几点？<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145750.png" alt="20230425145750|left|500"><br>在这里可以看到他的分析思路是：</p>
-<ul>
-<li>使用系统时钟获取当前时间</li>
-<li>将当前时间转换为字符串格式</li>
-<li>返回字符串时间作为响应</li>
-<li>将字符串时间转换为数字时间</li>
-<li>返回数字时间作为响应<br>思路是对的，想法也很好，但是在执行第一步骤的时候就失败了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150017.png" alt="20230425150017|left|500">之后就是不停的循环这几个步骤，陷入了死循环。</li>
-</ul>
-<h4 id="统计淘宝网上销量前6的血压仪价格及名称"><a href="#统计淘宝网上销量前6的血压仪价格及名称" class="headerlink" title="统计淘宝网上销量前6的血压仪价格及名称"></a>统计淘宝网上销量前6的血压仪价格及名称</h4><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150456.png" alt="20230425150456|left|675"><br>结果：我很满意，的确是有访问互联网并统计到。<br>但是，我不满意的是它的任务拆解执行能力，我的确是从它的子任务重得到了答案，但是它把任务拆分的方式有问题，还是会陷入死循环。<br>因此，如何跳出死循环，这个是AgentGPT需要加强的地方。当然这也是最难的地方。</p>
-<p>随后我让它用中文回复我，可以看到它的确是有统计到结果，但是一旦遇到某一步骤无法得到结果，它就会不停的陷入死循环：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150901.png" alt="20230425150901|left|500"></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>AgetGPT的确是给人眼前一亮的感觉，相较于chatGPT它的互联网搜索能力、任务拆解执行能力，的确是很经验。<br>但是，如何跳出死循环这部分还是需要继续努力。不过介于目前的版本还是beta版本，所以我觉得已经很棒了，加油，希望可以给我们带来更好的产品。</p>
-<p>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><p>1.<br>2.<br>3. </p>
-]]></content>
-  </entry>
-  <entry>
-    <title>hexo 部署填写 github 用户名和密码一次性解决方案</title>
-    <url>/2023/04/20/hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	hexo 部署文章时候，会弹出 github 弹窗填写 username 和 password，填完之后还是无法上传，本文会给出解决方法。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>hexo 博客半年没写了，今天尝试更新，发现 <code>hexo d</code> 之后需要输入 github 的用户名和密码，但是我输入之后没有效果，还是无法推送到 github 上。<br>研究之后发现 rootcause 是：github 已经无法再用密码登陆推送，只能用 token，我的 token 之前只设置了 3 个月的有效期，所以现在失效了。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h4 id="1-重新生成新的-token"><a href="#1-重新生成新的-token" class="headerlink" title="1. 重新生成新的 token"></a>1. 重新生成新的 token</h4><p>新的 token 设置网址：<a href="https://github.com/settings/tokens">Personal Access Tokens (Classic) (github.com)</a><br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101025.png" alt="20230420101025|left"><br>新的 token （%%🔐α 💡ID💡MDO&#x2F;W 4 Cm 9 AJ 4 Ls 8&#x2F;i+yXXM 5 GzNzTJ 0 o 2 u 4 AwfZGVs 5 EqWEESkIf 0+kWt+quYVANDGUCe 4 GJWAxLJnr 7 vIgsi 7 QtSUNma 9 MPz 🔐%%）记得保存好，网页刷新之后就再也看不见了。</p>
-<h4 id="2-配置-hexo-config-yml"><a href="#2-配置-hexo-config-yml" class="headerlink" title="2. 配置 hexo config.yml"></a>2. 配置 hexo config.yml</h4><p>配置 hexo config.yml：<br>原本的配置：<code>repo: https://github.com/weicun581/weicun581.git</code><br>新的配置：<code>repo: https://your token here@github.com/weicun581/weicun581.git</code><br>替换 <code>your token here</code> 替换成上一步的 token 就好了。</p>
-<h2 id="实际使用效果"><a href="#实际使用效果" class="headerlink" title="实际使用效果"></a>实际使用效果</h2><p>在 hexo 根目录下执行：<code>hexo d</code>，之后在 github project 的 action 界面就可以看到 action 动作了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101947.png" alt="20230420101947|left"></p>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
-<li><a href="https://blog.csdn.net/qq_43340547/article/details/119895671">(75条消息) 命令行输入hexo d后发现不能输入GitHub密码登录_SoberGit的博客-CSDN博客</a></li>
-<li><a href="https://blog.csdn.net/weixin_41010198/article/details/119698015?utm_source=app&app_version=4.12.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">(75条消息) github开发人员在七夕搞事情：remote: Support for password authentication was removed on August 13, 2021._点亮～黑夜的博客-CSDN博客</a></li>
-</ol>
-<p>个人博客地址：<a href="https://weicun.gitee.io/">蓝色单车 (gitee.io)</a></p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-        <tag>每日文章</tag>
-        <tag>github</tag>
       </tags>
   </entry>
   <entry>
