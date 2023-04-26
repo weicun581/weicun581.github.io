@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2022/08/24/000-hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>ADB(Android Debug Bridge)用法总结</title>
     <url>/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/</url>
     <content><![CDATA[<p><strong>ADB(Android Debug Bridge)用法总结</strong>  </p>
@@ -60,24 +78,6 @@
       <tags>
         <tag>工具</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/08/24/000-hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>Python字符串小技巧</title>
@@ -192,6 +192,95 @@
       <tags>
         <tag>工具</tag>
         <tag>NAS相关</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>foldersync同步软件使用介绍</title>
+    <url>/2022/10/20/004-foldersync%E5%90%8C%E6%AD%A5%E8%BD%AF%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="foldersync简介"><a href="#foldersync简介" class="headerlink" title="foldersync简介"></a>foldersync简介</h2><blockquote>
+<p>​       FolderSync pro是一款功能非常强大的设备本地存储(包括SD卡)文件&#x2F;文件夹与云存储同步应用。它可以将手机中的文件自动同步到云端空间，支持包括 FTP、WebDAV、Dropbox、 Google Docs 在内的众多空间。</p>
+<p>  FolderSync Pro 支持各种不同的云服务商和文件协议，并且不断增加对更多平台的支持。在 root 设备上支持根文件访问。这款软件目前支持多个Google Drive，Dropbox，Amazon S3，SugarSync，Box.net，OneDrive，FTP，FTPS，SFTP，WebDAV和Windows共享帐户。</p>
+<p>  FolderSync Pro 支持将音乐、图片和其他重要文件从手机备份到您的云存储或其他方式。使用起来十分舒爽简便。而且借助于 Tasker 和类似程序的自动化支持可对您的同步进行更准确精细的控制。它包含一个完整的文件管理器，使您可以在本地和云中管理文件。复制，移动和删除云&#x2F;远程帐户中的文件。支持在Amazon S3中创建&#x2F;删除存储。从手机上载和下载文件。</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="软件功能"><a href="#软件功能" class="headerlink" title="软件功能"></a>软件功能</h3><blockquote>
+<p>一款同步app，支持windows电脑和安卓手机之间文件夹、文件同步，需要有云盘（坚果云）作为server。</p>
+<p>总体来说，还是一款很不错的软件。</p>
+</blockquote>
+<ul>
+<li>&#x3D;&#x3D;经验总结：&#x3D;&#x3D;<ul>
+<li>坚果云，不可以短时间内多次同步，会出现无法连接的情况（连接持续30s左右后不成功）。</li>
+<li>连接参数配置很关键，出错的话，无法实现双向同步。我的参数配置如下图：<ul>
+<li>TBD(在小米平板上，待补充！)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="支持的云盘"><a href="#支持的云盘" class="headerlink" title="支持的云盘"></a>支持的云盘</h3><ul>
+<li>&#96;&#96;&#96;<br>Amazon S3 Simple Storage Service, Box, CloudMe, Dropbox, Google Drive, HiDrive, Livedrive Premium, MyDrive.ch, MyKolab, NetDocuments, OneDrive, OneDrive for Business, OwnCloud, pCloud, Storegate, SugarSync, WEB.DE, Yandex Disk<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 支持的协议</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  FTP / FTPES / FTPS</span><br><span class="line">  SFTP</span><br><span class="line">  WebDAV</span><br><span class="line">  Samba / SMB / CIFS（仅SMB1）</span><br><span class="line">  SMB2（实验性）</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="foldersync下载"><a href="#foldersync下载" class="headerlink" title="foldersync下载"></a>foldersync下载</h2><ul>
+<li>官网地址：<a href="https://www.tacit.dk/foldersync">https://www.tacit.dk/foldersync</a></li>
+<li>网络资源：<a href="https://pan.qian.blue/share_exp_1ove_ml/Android-APP/FolderSync/">https://pan.qian.blue/share_exp_1ove_ml/Android-APP/FolderSync/</a></li>
+</ul>
+<h2 id="foldersync使用方法"><a href="#foldersync使用方法" class="headerlink" title="foldersync使用方法"></a>foldersync使用方法</h2><h3 id="foldersync配置"><a href="#foldersync配置" class="headerlink" title="foldersync配置"></a>foldersync配置</h3><ul>
+<li><strong>点击【帐户】-【添加账户】-【WebDAV】</strong><ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100314.png" alt="image-20220831112839160" style="zoom:50%;" /></li>
+</ul>
+</li>
+<li><strong>填写服务器信息</strong><ul>
+<li>step1：获取坚果云WebDAV信息、服务器信息、用户名、密码：<ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100315.png" alt="image-20220831154942174"></li>
+</ul>
+</li>
+<li>step2：配置foldersync参数：<ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100316.png" alt="image-20220831155045745"></li>
+<li>点击测试按钮，可以连接成功即可。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="foldersync搭配坚果云"><a href="#foldersync搭配坚果云" class="headerlink" title="foldersync搭配坚果云"></a>foldersync搭配坚果云</h3><ul>
+<li><p>FolderSync主界面，点击右下角的“+”号-选择“坚果云”</p>
+<ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100317.png" alt="image-20220831155202869" style="zoom:50%;" /></li>
+</ul>
+</li>
+<li><p>选择同步类型，设置远程文件夹路径和本地文件夹路径</p>
+<ul>
+<li><p>到远程文件夹（仅上传到云端）</p>
+</li>
+<li><p>到本地文件夹（仅同步到本地）</p>
+</li>
+<li><p>双向（同步文件夹功能）</p>
+<blockquote>
+<p>此处以双向同步</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>选择远程文件夹、本地文件夹（可以自己新建一个）</p>
+</li>
+<li><p>计划任务（定时自动同步sync）可填可不填。</p>
+<ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100318.png" alt="image-20220831155543956"></li>
+<li>点击同步即可进行同步。</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><ul>
+<li><a href="https://content.jianguoyun.com/36693.html">手机与电脑文件同步 - 好用的网盘坚果云 (jianguoyun.com)</a></li>
+<li><a href="https://www.qian.blue/archives/foldersync-pro.html">FolderSync Pro介绍与各版本版集合下载 - 勿埋我心 (qian.blue)</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>foldersync</tag>
       </tags>
   </entry>
   <entry>
@@ -624,95 +713,6 @@
       </categories>
       <tags>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>foldersync同步软件使用介绍</title>
-    <url>/2022/10/20/004-foldersync%E5%90%8C%E6%AD%A5%E8%BD%AF%E4%BB%B6/</url>
-    <content><![CDATA[<h2 id="foldersync简介"><a href="#foldersync简介" class="headerlink" title="foldersync简介"></a>foldersync简介</h2><blockquote>
-<p>​       FolderSync pro是一款功能非常强大的设备本地存储(包括SD卡)文件&#x2F;文件夹与云存储同步应用。它可以将手机中的文件自动同步到云端空间，支持包括 FTP、WebDAV、Dropbox、 Google Docs 在内的众多空间。</p>
-<p>  FolderSync Pro 支持各种不同的云服务商和文件协议，并且不断增加对更多平台的支持。在 root 设备上支持根文件访问。这款软件目前支持多个Google Drive，Dropbox，Amazon S3，SugarSync，Box.net，OneDrive，FTP，FTPS，SFTP，WebDAV和Windows共享帐户。</p>
-<p>  FolderSync Pro 支持将音乐、图片和其他重要文件从手机备份到您的云存储或其他方式。使用起来十分舒爽简便。而且借助于 Tasker 和类似程序的自动化支持可对您的同步进行更准确精细的控制。它包含一个完整的文件管理器，使您可以在本地和云中管理文件。复制，移动和删除云&#x2F;远程帐户中的文件。支持在Amazon S3中创建&#x2F;删除存储。从手机上载和下载文件。</p>
-</blockquote>
-<span id="more"></span>
-
-<h3 id="软件功能"><a href="#软件功能" class="headerlink" title="软件功能"></a>软件功能</h3><blockquote>
-<p>一款同步app，支持windows电脑和安卓手机之间文件夹、文件同步，需要有云盘（坚果云）作为server。</p>
-<p>总体来说，还是一款很不错的软件。</p>
-</blockquote>
-<ul>
-<li>&#x3D;&#x3D;经验总结：&#x3D;&#x3D;<ul>
-<li>坚果云，不可以短时间内多次同步，会出现无法连接的情况（连接持续30s左右后不成功）。</li>
-<li>连接参数配置很关键，出错的话，无法实现双向同步。我的参数配置如下图：<ul>
-<li>TBD(在小米平板上，待补充！)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="支持的云盘"><a href="#支持的云盘" class="headerlink" title="支持的云盘"></a>支持的云盘</h3><ul>
-<li>&#96;&#96;&#96;<br>Amazon S3 Simple Storage Service, Box, CloudMe, Dropbox, Google Drive, HiDrive, Livedrive Premium, MyDrive.ch, MyKolab, NetDocuments, OneDrive, OneDrive for Business, OwnCloud, pCloud, Storegate, SugarSync, WEB.DE, Yandex Disk<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 支持的协议</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  FTP / FTPES / FTPS</span><br><span class="line">  SFTP</span><br><span class="line">  WebDAV</span><br><span class="line">  Samba / SMB / CIFS（仅SMB1）</span><br><span class="line">  SMB2（实验性）</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="foldersync下载"><a href="#foldersync下载" class="headerlink" title="foldersync下载"></a>foldersync下载</h2><ul>
-<li>官网地址：<a href="https://www.tacit.dk/foldersync">https://www.tacit.dk/foldersync</a></li>
-<li>网络资源：<a href="https://pan.qian.blue/share_exp_1ove_ml/Android-APP/FolderSync/">https://pan.qian.blue/share_exp_1ove_ml/Android-APP/FolderSync/</a></li>
-</ul>
-<h2 id="foldersync使用方法"><a href="#foldersync使用方法" class="headerlink" title="foldersync使用方法"></a>foldersync使用方法</h2><h3 id="foldersync配置"><a href="#foldersync配置" class="headerlink" title="foldersync配置"></a>foldersync配置</h3><ul>
-<li><strong>点击【帐户】-【添加账户】-【WebDAV】</strong><ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100314.png" alt="image-20220831112839160" style="zoom:50%;" /></li>
-</ul>
-</li>
-<li><strong>填写服务器信息</strong><ul>
-<li>step1：获取坚果云WebDAV信息、服务器信息、用户名、密码：<ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100315.png" alt="image-20220831154942174"></li>
-</ul>
-</li>
-<li>step2：配置foldersync参数：<ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100316.png" alt="image-20220831155045745"></li>
-<li>点击测试按钮，可以连接成功即可。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="foldersync搭配坚果云"><a href="#foldersync搭配坚果云" class="headerlink" title="foldersync搭配坚果云"></a>foldersync搭配坚果云</h3><ul>
-<li><p>FolderSync主界面，点击右下角的“+”号-选择“坚果云”</p>
-<ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100317.png" alt="image-20220831155202869" style="zoom:50%;" /></li>
-</ul>
-</li>
-<li><p>选择同步类型，设置远程文件夹路径和本地文件夹路径</p>
-<ul>
-<li><p>到远程文件夹（仅上传到云端）</p>
-</li>
-<li><p>到本地文件夹（仅同步到本地）</p>
-</li>
-<li><p>双向（同步文件夹功能）</p>
-<blockquote>
-<p>此处以双向同步</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>选择远程文件夹、本地文件夹（可以自己新建一个）</p>
-</li>
-<li><p>计划任务（定时自动同步sync）可填可不填。</p>
-<ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100318.png" alt="image-20220831155543956"></li>
-<li>点击同步即可进行同步。</li>
-</ul>
-</li>
-</ul>
-<h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><ul>
-<li><a href="https://content.jianguoyun.com/36693.html">手机与电脑文件同步 - 好用的网盘坚果云 (jianguoyun.com)</a></li>
-<li><a href="https://www.qian.blue/archives/foldersync-pro.html">FolderSync Pro介绍与各版本版集合下载 - 勿埋我心 (qian.blue)</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>foldersync</tag>
       </tags>
   </entry>
   <entry>
