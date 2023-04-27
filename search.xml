@@ -80,60 +80,6 @@
       </tags>
   </entry>
   <entry>
-    <title>dsyncnorize使用教</title>
-    <url>/2022/09/29/003-dsyncnorize%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<blockquote>
-<p>一款自动备份、传递数据的软件，</p>
-<p>支持win to win的定时备份、双向传递。</p>
-</blockquote>
-<span id="more"></span>
-
-
-
-<h2 id="使用方法-amp-基础设定"><a href="#使用方法-amp-基础设定" class="headerlink" title="使用方法&amp;基础设定"></a>使用方法&amp;基础设定</h2><ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220916112432.png" alt="image-20220916112432857" style="zoom: 50%;" />
-
-<ul>
-<li><p>使用前一定要在checkbox上打勾，处于选中状态才能进行同步sync。</p>
-</li>
-<li><p>设定部分参考上面的截图。</p>
-</li>
-<li><p>如果需要双向同步，选择：bidirectional sync。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="特性分析"><a href="#特性分析" class="headerlink" title="特性分析"></a>特性分析</h2><h3 id="单向同步："><a href="#单向同步：" class="headerlink" title="单向同步："></a>单向同步：</h3><ul>
-<li>过程：同步source的新增、删除。</li>
-<li>结果：目标文件夹会与源文件夹一模一样。</li>
-</ul>
-<h3 id="双向同步："><a href="#双向同步：" class="headerlink" title="双向同步："></a>双向同步：</h3><ul>
-<li>过程：双向同步新增或缺失的文件，不能同步删除动作。</li>
-<li>结果：增量同步，两个文件夹叠加结果。</li>
-</ul>
-<h3 id="如何实现双向同步新增、同步删除？"><a href="#如何实现双向同步新增、同步删除？" class="headerlink" title="如何实现双向同步新增、同步删除？"></a>如何实现双向同步新增、同步删除？</h3><ul>
-<li>平时使用时，选择双向同步。</li>
-<li>如果需要同步删除怎么操作？<ul>
-<li>step1：双向同步一次。</li>
-<li>step2：在source端，删除目标文件夹、文件。</li>
-<li>step3：在source端，单向同步到远端。</li>
-<li>step4：改为双向同步。</li>
-</ul>
-</li>
-</ul>
-<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ul>
-<li>大文件同步的时候，软件会进入假死状态！</li>
-</ul>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>NAS相关</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python字符串小技巧</title>
     <url>/2022/09/27/002-Python%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220927171316.jpeg" alt="Free photos of Vintage pocket watch" style="zoom:50%;" />
@@ -192,6 +138,60 @@
       <tags>
         <tag>python</tag>
         <tag>python字符串</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>dsyncnorize使用教</title>
+    <url>/2022/09/29/003-dsyncnorize%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<blockquote>
+<p>一款自动备份、传递数据的软件，</p>
+<p>支持win to win的定时备份、双向传递。</p>
+</blockquote>
+<span id="more"></span>
+
+
+
+<h2 id="使用方法-amp-基础设定"><a href="#使用方法-amp-基础设定" class="headerlink" title="使用方法&amp;基础设定"></a>使用方法&amp;基础设定</h2><ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220916112432.png" alt="image-20220916112432857" style="zoom: 50%;" />
+
+<ul>
+<li><p>使用前一定要在checkbox上打勾，处于选中状态才能进行同步sync。</p>
+</li>
+<li><p>设定部分参考上面的截图。</p>
+</li>
+<li><p>如果需要双向同步，选择：bidirectional sync。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="特性分析"><a href="#特性分析" class="headerlink" title="特性分析"></a>特性分析</h2><h3 id="单向同步："><a href="#单向同步：" class="headerlink" title="单向同步："></a>单向同步：</h3><ul>
+<li>过程：同步source的新增、删除。</li>
+<li>结果：目标文件夹会与源文件夹一模一样。</li>
+</ul>
+<h3 id="双向同步："><a href="#双向同步：" class="headerlink" title="双向同步："></a>双向同步：</h3><ul>
+<li>过程：双向同步新增或缺失的文件，不能同步删除动作。</li>
+<li>结果：增量同步，两个文件夹叠加结果。</li>
+</ul>
+<h3 id="如何实现双向同步新增、同步删除？"><a href="#如何实现双向同步新增、同步删除？" class="headerlink" title="如何实现双向同步新增、同步删除？"></a>如何实现双向同步新增、同步删除？</h3><ul>
+<li>平时使用时，选择双向同步。</li>
+<li>如果需要同步删除怎么操作？<ul>
+<li>step1：双向同步一次。</li>
+<li>step2：在source端，删除目标文件夹、文件。</li>
+<li>step3：在source端，单向同步到远端。</li>
+<li>step4：改为双向同步。</li>
+</ul>
+</li>
+</ul>
+<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ul>
+<li>大文件同步的时候，软件会进入假死状态！</li>
+</ul>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>NAS相关</tag>
       </tags>
   </entry>
   <entry>
