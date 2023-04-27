@@ -19,6 +19,67 @@
 ]]></content>
   </entry>
   <entry>
+    <title>ADB(Android Debug Bridge)用法总结</title>
+    <url>/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/</url>
+    <content><![CDATA[<p><strong>ADB(Android Debug Bridge)用法总结</strong>  </p>
+<blockquote>
+<p>作用：让win电脑通过命令行控制手机的各种行为。</p>
+<p>亲测有效。</p>
+</blockquote>
+<span id="more"></span>
+
+
+
+<h2 id="软件资源"><a href="#软件资源" class="headerlink" title="软件资源"></a>软件资源</h2><h3 id="ADB软件资源"><a href="#ADB软件资源" class="headerlink" title="ADB软件资源"></a>ADB软件资源</h3><p>链接：<a href="https://pan.baidu.com/s/1EkmwKrR0sNI1_FpQlObBeg">https://pan.baidu.com/s/1EkmwKrR0sNI1_FpQlObBeg</a>  </p>
+<p>提取码：zcf6  </p>
+<p>注意要设置“系统环境变量”，否则无法使用ADB 命令。</p>
+<h3 id="华为手机驱动软件资源"><a href="#华为手机驱动软件资源" class="headerlink" title="华为手机驱动软件资源"></a>华为手机驱动软件资源</h3><p>链接：<a href="https://pan.baidu.com/s/1xjyV11HKdF-Tj0MB3DbUCQ">https://pan.baidu.com/s/1xjyV11HKdF-Tj0MB3DbUCQ</a>  </p>
+<p>提取码：j3jw  </p>
+<h3 id="参考教程："><a href="#参考教程：" class="headerlink" title="参考教程："></a>参考教程：</h3><p>[adb下载安装及使用]<a href="https://blog.csdn.net/weixin_43927138/article/details/90477966">https://blog.csdn.net/weixin_43927138/article/details/90477966</a>  </p>
+<p>[adb 模拟点击时间的命令]<a href="https://blog.csdn.net/stronking/article/details/100559801">https://blog.csdn.net/stronking/article/details/100559801</a>  </p>
+<h2 id="ADB启动系统命令："><a href="#ADB启动系统命令：" class="headerlink" title="ADB启动系统命令："></a>ADB启动系统命令：</h2><p>启动 adb server 命令：adb start-server  </p>
+<p>停止 adb server 命令：adb kill-server  </p>
+<p>查询已连接设备&#x2F;模拟器：adb devices  </p>
+<h2 id="手机USB连接："><a href="#手机USB连接：" class="headerlink" title="手机USB连接："></a>手机USB连接：</h2><p>在手机“设置”-“关于手机”连续点击“版本号”7 次，可以进入到开发者模式；</p>
+<p>然后可以到“设置”-“开发者选项”-“调试”里打开USB调试以及允许ADB的一些权限；</p>
+<p>连接时手机会弹出“允许HiSuite通过HDB连接设备”点击允许&#x2F;接受即可；   </p>
+<p><strong>查看是否有root权限：</strong></p>
+<ul>
+<li><p>输入adb shell，</p>
+</li>
+<li><p>输入su KaTeX parse error: Expected ‘EOF’, got ‘#’ at position 5: </p>
+</li>
+<li><p>如果变为#̲则成功，如果仍为则未有root权限；</p>
+</li>
+<li><p>恢复命令：adb unroot</p>
+</li>
+</ul>
+<h2 id="ADB操作手机系统性命令："><a href="#ADB操作手机系统性命令：" class="headerlink" title="ADB操作手机系统性命令："></a>ADB操作手机系统性命令：</h2><p><strong>查看所有应用列表</strong>：adb shell pm list packages </p>
+<p><strong>查看系统应用列表</strong>：adb shell pm list packages -s </p>
+<p><strong>查看第三方应用列表</strong>：adb shell pm list packages -3：  </p>
+<p><strong>安装apk</strong>：adb install “-lrtsdg” “path_to_apk” </p>
+<ul>
+<li><p>&#96;&#96;&#96;<br>  “-lrtsdg”： </p>
+<p>  -l：将应用安装到保护目录 &#x2F;mnt&#x2F;asec； </p>
+<p>  -r：允许覆盖安装； </p>
+<p>  -t：允许安装 AndroidManifest.xml 里 application 指定 android:testOnly&#x3D;“true” 的应用； </p>
+<p>  -s：将应用安装到 sdcard； </p>
+<p>  -d：允许降级覆盖安装； </p>
+<p>  -g：授予所有运行时权限； </p>
+<p>  path_to_apk：apk的绝对路径。</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">**示例安装淘宝apk**：adb install -l /data/local/tmp/taobao.apk  </span><br><span class="line"></span><br><span class="line">**卸载apk**：adb uninstall -k “packagename” </span><br><span class="line"></span><br><span class="line">“packagename”：表示应用的包名，以下相同； </span><br><span class="line"></span><br><span class="line">-k 参数可选，表示卸载应用但保留数据和缓存目录。 </span><br><span class="line"></span><br><span class="line">示例卸载 手机淘宝：adb uninstall com.taobao.taobao  </span><br><span class="line"></span><br><span class="line">查看应用详细信息命令：adb shell dumpsys package “packagename” </span><br><span class="line"></span><br><span class="line">调起 Activity命令格式：adb shell am start [options] </span><br><span class="line"></span><br><span class="line">例如：adb shell am start -n com.tencent.mm/.ui.LauncherUI表示调起微信主界面  </span><br><span class="line"></span><br><span class="line">强制停止应用命令：adb shell am force-stop “packagename” </span><br><span class="line"></span><br><span class="line">例如强制停止淘宝：adb shell am force-stop com.taobao.taobao  </span><br><span class="line"></span><br><span class="line">查看设备信息型号命令：adb shell getprop ro.product.model </span><br><span class="line"></span><br><span class="line">电池状况命令：adb shell dumpsys battery </span><br><span class="line"></span><br><span class="line">显示屏参数：adb shell dumpsys window displays </span><br><span class="line"></span><br><span class="line">android_id查看命令：adb shell settings get secure android_id  </span><br><span class="line"></span><br><span class="line">查看Android 系统版本：adb shell getprop ro.build.version.release  </span><br><span class="line"></span><br><span class="line">查看设备ip地址：adb shell ifconfig | grep Mask或者adb shell netcfg  </span><br><span class="line"></span><br><span class="line">查看CPU 信息命令：adb shell cat /proc/cpuinfo  </span><br><span class="line"></span><br><span class="line">查看内存信息命令：adb shell cat /proc/meminfo  </span><br><span class="line"></span><br><span class="line">如果PC要想同时控制多台Android手机，必须在adb 后面添加-s  </span><br><span class="line"></span><br><span class="line">例如：adb -s 13b6e4c4 shell input tap 400 400  </span><br><span class="line"></span><br><span class="line">表示对13b6e4c4这台Android手机进行在屏幕上（400,400）坐标位置进行模拟的点击事件。 </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## ADB操作手机常用功能：  </span><br><span class="line"></span><br><span class="line">滑动解锁：如果锁屏没有密码，是通过滑动手势解锁，那么可以通过 input swipe 来解锁。  </span><br><span class="line"></span><br><span class="line">命令:adb shell input swipe 300 1000 300 500  </span><br><span class="line"></span><br><span class="line">(其中参数 300 1000 300 500 分别表示起始点x坐标 起始点y坐标 结束点x坐标 结束点y坐标。)  </span><br><span class="line"></span><br><span class="line">adb shell input swipe  </span><br><span class="line"></span><br><span class="line">这条命令模拟Android手机从屏幕坐标（X1,Y1）滑动到坐标（X2,Y2）的操作  </span><br><span class="line"></span><br><span class="line">adb shell input tap  </span><br><span class="line"></span><br><span class="line">这条命令模拟Android手机在屏幕坐标（X,Y）处进行了点击操作。  </span><br><span class="line"></span><br><span class="line">输入文本:在焦点处于某文本框时，可以通过 input 命令来输入文本。  </span><br><span class="line"></span><br><span class="line">命令：adb shell input text *** (***即为输入内容)  </span><br><span class="line"></span><br><span class="line">屏幕分辨率命令：adb shell wm size  </span><br><span class="line"></span><br><span class="line">截图保存到电脑：adb shell screencap -p /sdcard/autojump.png  </span><br><span class="line"></span><br><span class="line">然后将 png 文件导出到电脑：adb pull /sdcard/autojump.png .  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## ADB操作手机不常用功能：  </span><br><span class="line"></span><br><span class="line">模拟按键/输入:adb shell input keyevent keycode 不同的 keycode有不同的功能：  </span><br><span class="line"></span><br><span class="line">keycode	含义  </span><br><span class="line"></span><br><span class="line">3	HOME 键  </span><br><span class="line"></span><br><span class="line">4	返回键  </span><br><span class="line"></span><br><span class="line">5	打开拨号应用  </span><br><span class="line"></span><br><span class="line">6	挂断电话  </span><br><span class="line"></span><br><span class="line">26	电源键  </span><br><span class="line"></span><br><span class="line">27	拍照（需要在相机应用里）  </span><br><span class="line"></span><br><span class="line">61	Tab键  </span><br><span class="line"></span><br><span class="line">64	打开浏览器  </span><br><span class="line"></span><br><span class="line">67	退格键  </span><br><span class="line"></span><br><span class="line">80	拍照对焦键  </span><br><span class="line"></span><br><span class="line">82	菜单键  </span><br><span class="line"></span><br><span class="line">85	播放/暂停  </span><br><span class="line"></span><br><span class="line">86	停止播放  </span><br><span class="line"></span><br><span class="line">92	向上翻页键  </span><br><span class="line"></span><br><span class="line">93	向下翻页键  </span><br><span class="line"></span><br><span class="line">111	ESC键  </span><br><span class="line"></span><br><span class="line">112	删除键  </span><br><span class="line"></span><br><span class="line">122	移动光标到行首或列表顶部  </span><br><span class="line"></span><br><span class="line">123	移动光标到行末或列表底部  </span><br><span class="line"></span><br><span class="line">124	插入键  </span><br><span class="line"></span><br><span class="line">164	静音  </span><br><span class="line"></span><br><span class="line">176	打开系统设置  </span><br><span class="line"></span><br><span class="line">207	打开联系人  </span><br><span class="line"></span><br><span class="line">208	打开日历  </span><br><span class="line"></span><br><span class="line">209	打开音乐  </span><br><span class="line"></span><br><span class="line">220	降低屏幕亮度  </span><br><span class="line"></span><br><span class="line">221	提高屏幕亮度  </span><br><span class="line"></span><br><span class="line">223	系统休眠  </span><br><span class="line"></span><br><span class="line">224	点亮屏幕  </span><br><span class="line"></span><br><span class="line">224	点亮屏幕  </span><br><span class="line"></span><br><span class="line">224	点亮屏幕  </span><br><span class="line"></span><br><span class="line">231	打开语音助手  </span><br><span class="line"></span><br><span class="line">276	如果没有 wakelock 则让系统休眠  </span><br><span class="line"></span><br><span class="line">0 --&gt;  &quot;KEYCODE_UNKNOWN&quot;  </span><br><span class="line"></span><br><span class="line">1 --&gt;  &quot;KEYCODE_MENU&quot;  </span><br><span class="line"></span><br><span class="line">2 --&gt;  &quot;KEYCODE_SOFT_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">3 --&gt;  &quot;KEYCODE_HOME&quot;  </span><br><span class="line"></span><br><span class="line">4 --&gt;  &quot;KEYCODE_BACK&quot;  </span><br><span class="line"></span><br><span class="line">5 --&gt;  &quot;KEYCODE_CALL&quot;  </span><br><span class="line"></span><br><span class="line">6 --&gt;  &quot;KEYCODE_ENDCALL&quot;  </span><br><span class="line"></span><br><span class="line">7 --&gt;  &quot;KEYCODE_0&quot;  </span><br><span class="line"></span><br><span class="line">8 --&gt;  &quot;KEYCODE_1&quot;  </span><br><span class="line"></span><br><span class="line">9 --&gt;  &quot;KEYCODE_2&quot;  </span><br><span class="line"></span><br><span class="line">10 --&gt;  &quot;KEYCODE_3&quot;  </span><br><span class="line"></span><br><span class="line">11 --&gt;  &quot;KEYCODE_4&quot;  </span><br><span class="line"></span><br><span class="line">12 --&gt;  &quot;KEYCODE_5&quot;  </span><br><span class="line"></span><br><span class="line">13 --&gt;  &quot;KEYCODE_6&quot;  </span><br><span class="line"></span><br><span class="line">14 --&gt;  &quot;KEYCODE_7&quot;  </span><br><span class="line"></span><br><span class="line">15 --&gt;  &quot;KEYCODE_8&quot;  </span><br><span class="line"></span><br><span class="line">16 --&gt;  &quot;KEYCODE_9&quot;  </span><br><span class="line"></span><br><span class="line">17 --&gt;  &quot;KEYCODE_STAR&quot;  </span><br><span class="line"></span><br><span class="line">18 --&gt;  &quot;KEYCODE_POUND&quot;  </span><br><span class="line"></span><br><span class="line">19 --&gt;  &quot;KEYCODE_DPAD_UP&quot;  </span><br><span class="line"></span><br><span class="line">20 --&gt;  &quot;KEYCODE_DPAD_DOWN&quot;  </span><br><span class="line"></span><br><span class="line">21 --&gt;  &quot;KEYCODE_DPAD_LEFT&quot;  </span><br><span class="line"></span><br><span class="line">22 --&gt;  &quot;KEYCODE_DPAD_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">23 --&gt;  &quot;KEYCODE_DPAD_CENTER&quot;  </span><br><span class="line"></span><br><span class="line">24 --&gt;  &quot;KEYCODE_VOLUME_UP&quot;  </span><br><span class="line"></span><br><span class="line">25 --&gt;  &quot;KEYCODE_VOLUME_DOWN&quot;  </span><br><span class="line"></span><br><span class="line">26 --&gt;  &quot;KEYCODE_POWER&quot;  </span><br><span class="line"></span><br><span class="line">27 --&gt;  &quot;KEYCODE_CAMERA&quot;  </span><br><span class="line"></span><br><span class="line">28 --&gt;  &quot;KEYCODE_CLEAR&quot;  </span><br><span class="line"></span><br><span class="line">29 --&gt;  &quot;KEYCODE_A&quot;  </span><br><span class="line"></span><br><span class="line">30 --&gt;  &quot;KEYCODE_B&quot;  </span><br><span class="line"></span><br><span class="line">31 --&gt;  &quot;KEYCODE_C&quot;  </span><br><span class="line"></span><br><span class="line">32 --&gt;  &quot;KEYCODE_D&quot;  </span><br><span class="line"></span><br><span class="line">33 --&gt;  &quot;KEYCODE_E&quot;  </span><br><span class="line"></span><br><span class="line">34 --&gt;  &quot;KEYCODE_F&quot;  </span><br><span class="line"></span><br><span class="line">35 --&gt;  &quot;KEYCODE_G&quot;  </span><br><span class="line"></span><br><span class="line">36 --&gt;  &quot;KEYCODE_H&quot;  </span><br><span class="line"></span><br><span class="line">37 --&gt;  &quot;KEYCODE_I&quot;  </span><br><span class="line"></span><br><span class="line">38 --&gt;  &quot;KEYCODE_J&quot;  </span><br><span class="line"></span><br><span class="line">39 --&gt;  &quot;KEYCODE_K&quot;  </span><br><span class="line"></span><br><span class="line">40 --&gt;  &quot;KEYCODE_L&quot;  </span><br><span class="line"></span><br><span class="line">41 --&gt;  &quot;KEYCODE_M&quot;  </span><br><span class="line"></span><br><span class="line">42 --&gt;  &quot;KEYCODE_N&quot;  </span><br><span class="line"></span><br><span class="line">43 --&gt;  &quot;KEYCODE_O&quot;  </span><br><span class="line"></span><br><span class="line">44 --&gt;  &quot;KEYCODE_P&quot;  </span><br><span class="line"></span><br><span class="line">45 --&gt;  &quot;KEYCODE_Q&quot;  </span><br><span class="line"></span><br><span class="line">46 --&gt;  &quot;KEYCODE_R&quot;  </span><br><span class="line"></span><br><span class="line">47 --&gt;  &quot;KEYCODE_S&quot;  </span><br><span class="line"></span><br><span class="line">48 --&gt;  &quot;KEYCODE_T&quot;  </span><br><span class="line"></span><br><span class="line">49 --&gt;  &quot;KEYCODE_U&quot;  </span><br><span class="line"></span><br><span class="line">50 --&gt;  &quot;KEYCODE_V&quot;  </span><br><span class="line"></span><br><span class="line">51 --&gt;  &quot;KEYCODE_W&quot;  </span><br><span class="line"></span><br><span class="line">52 --&gt;  &quot;KEYCODE_X&quot;  </span><br><span class="line"></span><br><span class="line">53 --&gt;  &quot;KEYCODE_Y&quot;  </span><br><span class="line"></span><br><span class="line">54 --&gt;  &quot;KEYCODE_Z&quot;  </span><br><span class="line"></span><br><span class="line">55 --&gt;  &quot;KEYCODE_COMMA&quot;  </span><br><span class="line"></span><br><span class="line">56 --&gt;  &quot;KEYCODE_PERIOD&quot;  </span><br><span class="line"></span><br><span class="line">57 --&gt;  &quot;KEYCODE_ALT_LEFT&quot;  </span><br><span class="line"></span><br><span class="line">58 --&gt;  &quot;KEYCODE_ALT_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">59 --&gt;  &quot;KEYCODE_SHIFT_LEFT&quot;  </span><br><span class="line"></span><br><span class="line">60 --&gt;  &quot;KEYCODE_SHIFT_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">61 --&gt;  &quot;KEYCODE_TAB&quot;  </span><br><span class="line"></span><br><span class="line">62 --&gt;  &quot;KEYCODE_SPACE&quot;  </span><br><span class="line"></span><br><span class="line">63 --&gt;  &quot;KEYCODE_SYM&quot;  </span><br><span class="line"></span><br><span class="line">64 --&gt;  &quot;KEYCODE_EXPLORER&quot;  </span><br><span class="line"></span><br><span class="line">65 --&gt;  &quot;KEYCODE_ENVELOPE&quot;  </span><br><span class="line"></span><br><span class="line">66 --&gt;  &quot;KEYCODE_ENTER&quot;  </span><br><span class="line"></span><br><span class="line">67 --&gt;  &quot;KEYCODE_DEL&quot;  </span><br><span class="line"></span><br><span class="line">68 --&gt;  &quot;KEYCODE_GRAVE&quot;  </span><br><span class="line"></span><br><span class="line">69 --&gt;  &quot;KEYCODE_MINUS&quot;  </span><br><span class="line"></span><br><span class="line">70 --&gt;  &quot;KEYCODE_EQUALS&quot;  </span><br><span class="line"></span><br><span class="line">71 --&gt;  &quot;KEYCODE_LEFT_BRACKET&quot;  </span><br><span class="line"></span><br><span class="line">72 --&gt;  &quot;KEYCODE_RIGHT_BRACKET&quot;  </span><br><span class="line"></span><br><span class="line">73 --&gt;  &quot;KEYCODE_BACKSLASH&quot;  </span><br><span class="line"></span><br><span class="line">74 --&gt;  &quot;KEYCODE_SEMICOLON&quot;  </span><br><span class="line"></span><br><span class="line">75 --&gt;  &quot;KEYCODE_APOSTROPHE&quot;  </span><br><span class="line"></span><br><span class="line">76 --&gt;  &quot;KEYCODE_SLASH&quot;  </span><br><span class="line"></span><br><span class="line">77 --&gt;  &quot;KEYCODE_AT&quot;  </span><br><span class="line"></span><br><span class="line">78 --&gt;  &quot;KEYCODE_NUM&quot;  </span><br><span class="line"></span><br><span class="line">79 --&gt;  &quot;KEYCODE_HEADSETHOOK&quot;  </span><br><span class="line"></span><br><span class="line">80 --&gt;  &quot;KEYCODE_FOCUS&quot;  </span><br><span class="line"></span><br><span class="line">81 --&gt;  &quot;KEYCODE_PLUS&quot;  </span><br><span class="line"></span><br><span class="line">82 --&gt;  &quot;KEYCODE_MENU&quot;  </span><br><span class="line"></span><br><span class="line">83 --&gt;  &quot;KEYCODE_NOTIFICATION&quot;  </span><br><span class="line"></span><br><span class="line">84 --&gt;  &quot;KEYCODE_SEARCH&quot;  </span><br><span class="line"></span><br><span class="line">85 --&gt;  &quot;TAG_LAST_KEYCODE&quot;  </span><br><span class="line"></span><br><span class="line">录制屏幕：adb shell screenrecord /sdcard/filename.mp4   </span><br><span class="line"></span><br><span class="line">录制屏幕以 mp4 格式保存到 /sdcard，需要停止时按 Ctrl-C，默认录制时间和最长录制时间都是 180 秒。  </span><br><span class="line"></span><br><span class="line">如果需要导出到电脑：adb pull /sdcard/filename.mp4 .  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 使用python脚本自动运行cmd 命令  </span><br><span class="line"></span><br><span class="line">**在adb文件夹下建立一个python文件**  </span><br><span class="line"></span><br><span class="line">```python3  </span><br><span class="line">#运行脚本，发现与在命令行输入相同语句有同样的效果。  </span><br><span class="line">import os  </span><br><span class="line">os.system(&#x27;adb shell input tap 100 100&#x27;);  </span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>可以使用subprocess.Popen，最简单使用方式如下，设置shell&#x3D;True，就不会弹出cmd框</strong>  </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">process = subprocess.Popen(&#x27;adb shell input tap 14 1402&#x27;,shell=True)  </span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python字符串小技巧</title>
     <url>/2022/09/27/002-Python%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220927171316.jpeg" alt="Free photos of Vintage pocket watch" style="zoom:50%;" />
@@ -80,64 +141,57 @@
       </tags>
   </entry>
   <entry>
-    <title>ADB(Android Debug Bridge)用法总结</title>
-    <url>/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/</url>
-    <content><![CDATA[<p><strong>ADB(Android Debug Bridge)用法总结</strong>  </p>
-<blockquote>
-<p>作用：让win电脑通过命令行控制手机的各种行为。</p>
-<p>亲测有效。</p>
+    <title>dsyncnorize使用教</title>
+    <url>/2022/09/29/003-dsyncnorize%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<blockquote>
+<p>一款自动备份、传递数据的软件，</p>
+<p>支持win to win的定时备份、双向传递。</p>
 </blockquote>
 <span id="more"></span>
 
 
 
-<h2 id="软件资源"><a href="#软件资源" class="headerlink" title="软件资源"></a>软件资源</h2><h3 id="ADB软件资源"><a href="#ADB软件资源" class="headerlink" title="ADB软件资源"></a>ADB软件资源</h3><p>链接：<a href="https://pan.baidu.com/s/1EkmwKrR0sNI1_FpQlObBeg">https://pan.baidu.com/s/1EkmwKrR0sNI1_FpQlObBeg</a>  </p>
-<p>提取码：zcf6  </p>
-<p>注意要设置“系统环境变量”，否则无法使用ADB 命令。</p>
-<h3 id="华为手机驱动软件资源"><a href="#华为手机驱动软件资源" class="headerlink" title="华为手机驱动软件资源"></a>华为手机驱动软件资源</h3><p>链接：<a href="https://pan.baidu.com/s/1xjyV11HKdF-Tj0MB3DbUCQ">https://pan.baidu.com/s/1xjyV11HKdF-Tj0MB3DbUCQ</a>  </p>
-<p>提取码：j3jw  </p>
-<h3 id="参考教程："><a href="#参考教程：" class="headerlink" title="参考教程："></a>参考教程：</h3><p>[adb下载安装及使用]<a href="https://blog.csdn.net/weixin_43927138/article/details/90477966">https://blog.csdn.net/weixin_43927138/article/details/90477966</a>  </p>
-<p>[adb 模拟点击时间的命令]<a href="https://blog.csdn.net/stronking/article/details/100559801">https://blog.csdn.net/stronking/article/details/100559801</a>  </p>
-<h2 id="ADB启动系统命令："><a href="#ADB启动系统命令：" class="headerlink" title="ADB启动系统命令："></a>ADB启动系统命令：</h2><p>启动 adb server 命令：adb start-server  </p>
-<p>停止 adb server 命令：adb kill-server  </p>
-<p>查询已连接设备&#x2F;模拟器：adb devices  </p>
-<h2 id="手机USB连接："><a href="#手机USB连接：" class="headerlink" title="手机USB连接："></a>手机USB连接：</h2><p>在手机“设置”-“关于手机”连续点击“版本号”7 次，可以进入到开发者模式；</p>
-<p>然后可以到“设置”-“开发者选项”-“调试”里打开USB调试以及允许ADB的一些权限；</p>
-<p>连接时手机会弹出“允许HiSuite通过HDB连接设备”点击允许&#x2F;接受即可；   </p>
-<p><strong>查看是否有root权限：</strong></p>
+<h2 id="使用方法-amp-基础设定"><a href="#使用方法-amp-基础设定" class="headerlink" title="使用方法&amp;基础设定"></a>使用方法&amp;基础设定</h2><ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220916112432.png" alt="image-20220916112432857" style="zoom: 50%;" />
+
 <ul>
-<li><p>输入adb shell，</p>
+<li><p>使用前一定要在checkbox上打勾，处于选中状态才能进行同步sync。</p>
 </li>
-<li><p>输入su KaTeX parse error: Expected ‘EOF’, got ‘#’ at position 5: </p>
+<li><p>设定部分参考上面的截图。</p>
 </li>
-<li><p>如果变为#̲则成功，如果仍为则未有root权限；</p>
-</li>
-<li><p>恢复命令：adb unroot</p>
+<li><p>如果需要双向同步，选择：bidirectional sync。</p>
 </li>
 </ul>
-<h2 id="ADB操作手机系统性命令："><a href="#ADB操作手机系统性命令：" class="headerlink" title="ADB操作手机系统性命令："></a>ADB操作手机系统性命令：</h2><p><strong>查看所有应用列表</strong>：adb shell pm list packages </p>
-<p><strong>查看系统应用列表</strong>：adb shell pm list packages -s </p>
-<p><strong>查看第三方应用列表</strong>：adb shell pm list packages -3：  </p>
-<p><strong>安装apk</strong>：adb install “-lrtsdg” “path_to_apk” </p>
-<ul>
-<li><p>&#96;&#96;&#96;<br>  “-lrtsdg”： </p>
-<p>  -l：将应用安装到保护目录 &#x2F;mnt&#x2F;asec； </p>
-<p>  -r：允许覆盖安装； </p>
-<p>  -t：允许安装 AndroidManifest.xml 里 application 指定 android:testOnly&#x3D;“true” 的应用； </p>
-<p>  -s：将应用安装到 sdcard； </p>
-<p>  -d：允许降级覆盖安装； </p>
-<p>  -g：授予所有运行时权限； </p>
-<p>  path_to_apk：apk的绝对路径。</p>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">**示例安装淘宝apk**：adb install -l /data/local/tmp/taobao.apk  </span><br><span class="line"></span><br><span class="line">**卸载apk**：adb uninstall -k “packagename” </span><br><span class="line"></span><br><span class="line">“packagename”：表示应用的包名，以下相同； </span><br><span class="line"></span><br><span class="line">-k 参数可选，表示卸载应用但保留数据和缓存目录。 </span><br><span class="line"></span><br><span class="line">示例卸载 手机淘宝：adb uninstall com.taobao.taobao  </span><br><span class="line"></span><br><span class="line">查看应用详细信息命令：adb shell dumpsys package “packagename” </span><br><span class="line"></span><br><span class="line">调起 Activity命令格式：adb shell am start [options] </span><br><span class="line"></span><br><span class="line">例如：adb shell am start -n com.tencent.mm/.ui.LauncherUI表示调起微信主界面  </span><br><span class="line"></span><br><span class="line">强制停止应用命令：adb shell am force-stop “packagename” </span><br><span class="line"></span><br><span class="line">例如强制停止淘宝：adb shell am force-stop com.taobao.taobao  </span><br><span class="line"></span><br><span class="line">查看设备信息型号命令：adb shell getprop ro.product.model </span><br><span class="line"></span><br><span class="line">电池状况命令：adb shell dumpsys battery </span><br><span class="line"></span><br><span class="line">显示屏参数：adb shell dumpsys window displays </span><br><span class="line"></span><br><span class="line">android_id查看命令：adb shell settings get secure android_id  </span><br><span class="line"></span><br><span class="line">查看Android 系统版本：adb shell getprop ro.build.version.release  </span><br><span class="line"></span><br><span class="line">查看设备ip地址：adb shell ifconfig | grep Mask或者adb shell netcfg  </span><br><span class="line"></span><br><span class="line">查看CPU 信息命令：adb shell cat /proc/cpuinfo  </span><br><span class="line"></span><br><span class="line">查看内存信息命令：adb shell cat /proc/meminfo  </span><br><span class="line"></span><br><span class="line">如果PC要想同时控制多台Android手机，必须在adb 后面添加-s  </span><br><span class="line"></span><br><span class="line">例如：adb -s 13b6e4c4 shell input tap 400 400  </span><br><span class="line"></span><br><span class="line">表示对13b6e4c4这台Android手机进行在屏幕上（400,400）坐标位置进行模拟的点击事件。 </span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## ADB操作手机常用功能：  </span><br><span class="line"></span><br><span class="line">滑动解锁：如果锁屏没有密码，是通过滑动手势解锁，那么可以通过 input swipe 来解锁。  </span><br><span class="line"></span><br><span class="line">命令:adb shell input swipe 300 1000 300 500  </span><br><span class="line"></span><br><span class="line">(其中参数 300 1000 300 500 分别表示起始点x坐标 起始点y坐标 结束点x坐标 结束点y坐标。)  </span><br><span class="line"></span><br><span class="line">adb shell input swipe  </span><br><span class="line"></span><br><span class="line">这条命令模拟Android手机从屏幕坐标（X1,Y1）滑动到坐标（X2,Y2）的操作  </span><br><span class="line"></span><br><span class="line">adb shell input tap  </span><br><span class="line"></span><br><span class="line">这条命令模拟Android手机在屏幕坐标（X,Y）处进行了点击操作。  </span><br><span class="line"></span><br><span class="line">输入文本:在焦点处于某文本框时，可以通过 input 命令来输入文本。  </span><br><span class="line"></span><br><span class="line">命令：adb shell input text *** (***即为输入内容)  </span><br><span class="line"></span><br><span class="line">屏幕分辨率命令：adb shell wm size  </span><br><span class="line"></span><br><span class="line">截图保存到电脑：adb shell screencap -p /sdcard/autojump.png  </span><br><span class="line"></span><br><span class="line">然后将 png 文件导出到电脑：adb pull /sdcard/autojump.png .  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## ADB操作手机不常用功能：  </span><br><span class="line"></span><br><span class="line">模拟按键/输入:adb shell input keyevent keycode 不同的 keycode有不同的功能：  </span><br><span class="line"></span><br><span class="line">keycode	含义  </span><br><span class="line"></span><br><span class="line">3	HOME 键  </span><br><span class="line"></span><br><span class="line">4	返回键  </span><br><span class="line"></span><br><span class="line">5	打开拨号应用  </span><br><span class="line"></span><br><span class="line">6	挂断电话  </span><br><span class="line"></span><br><span class="line">26	电源键  </span><br><span class="line"></span><br><span class="line">27	拍照（需要在相机应用里）  </span><br><span class="line"></span><br><span class="line">61	Tab键  </span><br><span class="line"></span><br><span class="line">64	打开浏览器  </span><br><span class="line"></span><br><span class="line">67	退格键  </span><br><span class="line"></span><br><span class="line">80	拍照对焦键  </span><br><span class="line"></span><br><span class="line">82	菜单键  </span><br><span class="line"></span><br><span class="line">85	播放/暂停  </span><br><span class="line"></span><br><span class="line">86	停止播放  </span><br><span class="line"></span><br><span class="line">92	向上翻页键  </span><br><span class="line"></span><br><span class="line">93	向下翻页键  </span><br><span class="line"></span><br><span class="line">111	ESC键  </span><br><span class="line"></span><br><span class="line">112	删除键  </span><br><span class="line"></span><br><span class="line">122	移动光标到行首或列表顶部  </span><br><span class="line"></span><br><span class="line">123	移动光标到行末或列表底部  </span><br><span class="line"></span><br><span class="line">124	插入键  </span><br><span class="line"></span><br><span class="line">164	静音  </span><br><span class="line"></span><br><span class="line">176	打开系统设置  </span><br><span class="line"></span><br><span class="line">207	打开联系人  </span><br><span class="line"></span><br><span class="line">208	打开日历  </span><br><span class="line"></span><br><span class="line">209	打开音乐  </span><br><span class="line"></span><br><span class="line">220	降低屏幕亮度  </span><br><span class="line"></span><br><span class="line">221	提高屏幕亮度  </span><br><span class="line"></span><br><span class="line">223	系统休眠  </span><br><span class="line"></span><br><span class="line">224	点亮屏幕  </span><br><span class="line"></span><br><span class="line">224	点亮屏幕  </span><br><span class="line"></span><br><span class="line">224	点亮屏幕  </span><br><span class="line"></span><br><span class="line">231	打开语音助手  </span><br><span class="line"></span><br><span class="line">276	如果没有 wakelock 则让系统休眠  </span><br><span class="line"></span><br><span class="line">0 --&gt;  &quot;KEYCODE_UNKNOWN&quot;  </span><br><span class="line"></span><br><span class="line">1 --&gt;  &quot;KEYCODE_MENU&quot;  </span><br><span class="line"></span><br><span class="line">2 --&gt;  &quot;KEYCODE_SOFT_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">3 --&gt;  &quot;KEYCODE_HOME&quot;  </span><br><span class="line"></span><br><span class="line">4 --&gt;  &quot;KEYCODE_BACK&quot;  </span><br><span class="line"></span><br><span class="line">5 --&gt;  &quot;KEYCODE_CALL&quot;  </span><br><span class="line"></span><br><span class="line">6 --&gt;  &quot;KEYCODE_ENDCALL&quot;  </span><br><span class="line"></span><br><span class="line">7 --&gt;  &quot;KEYCODE_0&quot;  </span><br><span class="line"></span><br><span class="line">8 --&gt;  &quot;KEYCODE_1&quot;  </span><br><span class="line"></span><br><span class="line">9 --&gt;  &quot;KEYCODE_2&quot;  </span><br><span class="line"></span><br><span class="line">10 --&gt;  &quot;KEYCODE_3&quot;  </span><br><span class="line"></span><br><span class="line">11 --&gt;  &quot;KEYCODE_4&quot;  </span><br><span class="line"></span><br><span class="line">12 --&gt;  &quot;KEYCODE_5&quot;  </span><br><span class="line"></span><br><span class="line">13 --&gt;  &quot;KEYCODE_6&quot;  </span><br><span class="line"></span><br><span class="line">14 --&gt;  &quot;KEYCODE_7&quot;  </span><br><span class="line"></span><br><span class="line">15 --&gt;  &quot;KEYCODE_8&quot;  </span><br><span class="line"></span><br><span class="line">16 --&gt;  &quot;KEYCODE_9&quot;  </span><br><span class="line"></span><br><span class="line">17 --&gt;  &quot;KEYCODE_STAR&quot;  </span><br><span class="line"></span><br><span class="line">18 --&gt;  &quot;KEYCODE_POUND&quot;  </span><br><span class="line"></span><br><span class="line">19 --&gt;  &quot;KEYCODE_DPAD_UP&quot;  </span><br><span class="line"></span><br><span class="line">20 --&gt;  &quot;KEYCODE_DPAD_DOWN&quot;  </span><br><span class="line"></span><br><span class="line">21 --&gt;  &quot;KEYCODE_DPAD_LEFT&quot;  </span><br><span class="line"></span><br><span class="line">22 --&gt;  &quot;KEYCODE_DPAD_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">23 --&gt;  &quot;KEYCODE_DPAD_CENTER&quot;  </span><br><span class="line"></span><br><span class="line">24 --&gt;  &quot;KEYCODE_VOLUME_UP&quot;  </span><br><span class="line"></span><br><span class="line">25 --&gt;  &quot;KEYCODE_VOLUME_DOWN&quot;  </span><br><span class="line"></span><br><span class="line">26 --&gt;  &quot;KEYCODE_POWER&quot;  </span><br><span class="line"></span><br><span class="line">27 --&gt;  &quot;KEYCODE_CAMERA&quot;  </span><br><span class="line"></span><br><span class="line">28 --&gt;  &quot;KEYCODE_CLEAR&quot;  </span><br><span class="line"></span><br><span class="line">29 --&gt;  &quot;KEYCODE_A&quot;  </span><br><span class="line"></span><br><span class="line">30 --&gt;  &quot;KEYCODE_B&quot;  </span><br><span class="line"></span><br><span class="line">31 --&gt;  &quot;KEYCODE_C&quot;  </span><br><span class="line"></span><br><span class="line">32 --&gt;  &quot;KEYCODE_D&quot;  </span><br><span class="line"></span><br><span class="line">33 --&gt;  &quot;KEYCODE_E&quot;  </span><br><span class="line"></span><br><span class="line">34 --&gt;  &quot;KEYCODE_F&quot;  </span><br><span class="line"></span><br><span class="line">35 --&gt;  &quot;KEYCODE_G&quot;  </span><br><span class="line"></span><br><span class="line">36 --&gt;  &quot;KEYCODE_H&quot;  </span><br><span class="line"></span><br><span class="line">37 --&gt;  &quot;KEYCODE_I&quot;  </span><br><span class="line"></span><br><span class="line">38 --&gt;  &quot;KEYCODE_J&quot;  </span><br><span class="line"></span><br><span class="line">39 --&gt;  &quot;KEYCODE_K&quot;  </span><br><span class="line"></span><br><span class="line">40 --&gt;  &quot;KEYCODE_L&quot;  </span><br><span class="line"></span><br><span class="line">41 --&gt;  &quot;KEYCODE_M&quot;  </span><br><span class="line"></span><br><span class="line">42 --&gt;  &quot;KEYCODE_N&quot;  </span><br><span class="line"></span><br><span class="line">43 --&gt;  &quot;KEYCODE_O&quot;  </span><br><span class="line"></span><br><span class="line">44 --&gt;  &quot;KEYCODE_P&quot;  </span><br><span class="line"></span><br><span class="line">45 --&gt;  &quot;KEYCODE_Q&quot;  </span><br><span class="line"></span><br><span class="line">46 --&gt;  &quot;KEYCODE_R&quot;  </span><br><span class="line"></span><br><span class="line">47 --&gt;  &quot;KEYCODE_S&quot;  </span><br><span class="line"></span><br><span class="line">48 --&gt;  &quot;KEYCODE_T&quot;  </span><br><span class="line"></span><br><span class="line">49 --&gt;  &quot;KEYCODE_U&quot;  </span><br><span class="line"></span><br><span class="line">50 --&gt;  &quot;KEYCODE_V&quot;  </span><br><span class="line"></span><br><span class="line">51 --&gt;  &quot;KEYCODE_W&quot;  </span><br><span class="line"></span><br><span class="line">52 --&gt;  &quot;KEYCODE_X&quot;  </span><br><span class="line"></span><br><span class="line">53 --&gt;  &quot;KEYCODE_Y&quot;  </span><br><span class="line"></span><br><span class="line">54 --&gt;  &quot;KEYCODE_Z&quot;  </span><br><span class="line"></span><br><span class="line">55 --&gt;  &quot;KEYCODE_COMMA&quot;  </span><br><span class="line"></span><br><span class="line">56 --&gt;  &quot;KEYCODE_PERIOD&quot;  </span><br><span class="line"></span><br><span class="line">57 --&gt;  &quot;KEYCODE_ALT_LEFT&quot;  </span><br><span class="line"></span><br><span class="line">58 --&gt;  &quot;KEYCODE_ALT_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">59 --&gt;  &quot;KEYCODE_SHIFT_LEFT&quot;  </span><br><span class="line"></span><br><span class="line">60 --&gt;  &quot;KEYCODE_SHIFT_RIGHT&quot;  </span><br><span class="line"></span><br><span class="line">61 --&gt;  &quot;KEYCODE_TAB&quot;  </span><br><span class="line"></span><br><span class="line">62 --&gt;  &quot;KEYCODE_SPACE&quot;  </span><br><span class="line"></span><br><span class="line">63 --&gt;  &quot;KEYCODE_SYM&quot;  </span><br><span class="line"></span><br><span class="line">64 --&gt;  &quot;KEYCODE_EXPLORER&quot;  </span><br><span class="line"></span><br><span class="line">65 --&gt;  &quot;KEYCODE_ENVELOPE&quot;  </span><br><span class="line"></span><br><span class="line">66 --&gt;  &quot;KEYCODE_ENTER&quot;  </span><br><span class="line"></span><br><span class="line">67 --&gt;  &quot;KEYCODE_DEL&quot;  </span><br><span class="line"></span><br><span class="line">68 --&gt;  &quot;KEYCODE_GRAVE&quot;  </span><br><span class="line"></span><br><span class="line">69 --&gt;  &quot;KEYCODE_MINUS&quot;  </span><br><span class="line"></span><br><span class="line">70 --&gt;  &quot;KEYCODE_EQUALS&quot;  </span><br><span class="line"></span><br><span class="line">71 --&gt;  &quot;KEYCODE_LEFT_BRACKET&quot;  </span><br><span class="line"></span><br><span class="line">72 --&gt;  &quot;KEYCODE_RIGHT_BRACKET&quot;  </span><br><span class="line"></span><br><span class="line">73 --&gt;  &quot;KEYCODE_BACKSLASH&quot;  </span><br><span class="line"></span><br><span class="line">74 --&gt;  &quot;KEYCODE_SEMICOLON&quot;  </span><br><span class="line"></span><br><span class="line">75 --&gt;  &quot;KEYCODE_APOSTROPHE&quot;  </span><br><span class="line"></span><br><span class="line">76 --&gt;  &quot;KEYCODE_SLASH&quot;  </span><br><span class="line"></span><br><span class="line">77 --&gt;  &quot;KEYCODE_AT&quot;  </span><br><span class="line"></span><br><span class="line">78 --&gt;  &quot;KEYCODE_NUM&quot;  </span><br><span class="line"></span><br><span class="line">79 --&gt;  &quot;KEYCODE_HEADSETHOOK&quot;  </span><br><span class="line"></span><br><span class="line">80 --&gt;  &quot;KEYCODE_FOCUS&quot;  </span><br><span class="line"></span><br><span class="line">81 --&gt;  &quot;KEYCODE_PLUS&quot;  </span><br><span class="line"></span><br><span class="line">82 --&gt;  &quot;KEYCODE_MENU&quot;  </span><br><span class="line"></span><br><span class="line">83 --&gt;  &quot;KEYCODE_NOTIFICATION&quot;  </span><br><span class="line"></span><br><span class="line">84 --&gt;  &quot;KEYCODE_SEARCH&quot;  </span><br><span class="line"></span><br><span class="line">85 --&gt;  &quot;TAG_LAST_KEYCODE&quot;  </span><br><span class="line"></span><br><span class="line">录制屏幕：adb shell screenrecord /sdcard/filename.mp4   </span><br><span class="line"></span><br><span class="line">录制屏幕以 mp4 格式保存到 /sdcard，需要停止时按 Ctrl-C，默认录制时间和最长录制时间都是 180 秒。  </span><br><span class="line"></span><br><span class="line">如果需要导出到电脑：adb pull /sdcard/filename.mp4 .  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 使用python脚本自动运行cmd 命令  </span><br><span class="line"></span><br><span class="line">**在adb文件夹下建立一个python文件**  </span><br><span class="line"></span><br><span class="line">```python3  </span><br><span class="line">#运行脚本，发现与在命令行输入相同语句有同样的效果。  </span><br><span class="line">import os  </span><br><span class="line">os.system(&#x27;adb shell input tap 100 100&#x27;);  </span><br></pre></td></tr></table></figure></li>
+</li>
 </ul>
-<p><strong>可以使用subprocess.Popen，最简单使用方式如下，设置shell&#x3D;True，就不会弹出cmd框</strong>  </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">process = subprocess.Popen(&#x27;adb shell input tap 14 1402&#x27;,shell=True)  </span><br></pre></td></tr></table></figure>
+<h2 id="特性分析"><a href="#特性分析" class="headerlink" title="特性分析"></a>特性分析</h2><h3 id="单向同步："><a href="#单向同步：" class="headerlink" title="单向同步："></a>单向同步：</h3><ul>
+<li>过程：同步source的新增、删除。</li>
+<li>结果：目标文件夹会与源文件夹一模一样。</li>
+</ul>
+<h3 id="双向同步："><a href="#双向同步：" class="headerlink" title="双向同步："></a>双向同步：</h3><ul>
+<li>过程：双向同步新增或缺失的文件，不能同步删除动作。</li>
+<li>结果：增量同步，两个文件夹叠加结果。</li>
+</ul>
+<h3 id="如何实现双向同步新增、同步删除？"><a href="#如何实现双向同步新增、同步删除？" class="headerlink" title="如何实现双向同步新增、同步删除？"></a>如何实现双向同步新增、同步删除？</h3><ul>
+<li>平时使用时，选择双向同步。</li>
+<li>如果需要同步删除怎么操作？<ul>
+<li>step1：双向同步一次。</li>
+<li>step2：在source端，删除目标文件夹、文件。</li>
+<li>step3：在source端，单向同步到远端。</li>
+<li>step4：改为双向同步。</li>
+</ul>
+</li>
+</ul>
+<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ul>
+<li>大文件同步的时候，软件会进入假死状态！</li>
+</ul>
 ]]></content>
       <categories>
         <category>软件</category>
       </categories>
       <tags>
         <tag>工具</tag>
+        <tag>NAS相关</tag>
       </tags>
   </entry>
   <entry>
@@ -227,60 +281,6 @@
       </categories>
       <tags>
         <tag>foldersync</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>dsyncnorize使用教</title>
-    <url>/2022/09/29/003-dsyncnorize%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<blockquote>
-<p>一款自动备份、传递数据的软件，</p>
-<p>支持win to win的定时备份、双向传递。</p>
-</blockquote>
-<span id="more"></span>
-
-
-
-<h2 id="使用方法-amp-基础设定"><a href="#使用方法-amp-基础设定" class="headerlink" title="使用方法&amp;基础设定"></a>使用方法&amp;基础设定</h2><ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220916112432.png" alt="image-20220916112432857" style="zoom: 50%;" />
-
-<ul>
-<li><p>使用前一定要在checkbox上打勾，处于选中状态才能进行同步sync。</p>
-</li>
-<li><p>设定部分参考上面的截图。</p>
-</li>
-<li><p>如果需要双向同步，选择：bidirectional sync。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="特性分析"><a href="#特性分析" class="headerlink" title="特性分析"></a>特性分析</h2><h3 id="单向同步："><a href="#单向同步：" class="headerlink" title="单向同步："></a>单向同步：</h3><ul>
-<li>过程：同步source的新增、删除。</li>
-<li>结果：目标文件夹会与源文件夹一模一样。</li>
-</ul>
-<h3 id="双向同步："><a href="#双向同步：" class="headerlink" title="双向同步："></a>双向同步：</h3><ul>
-<li>过程：双向同步新增或缺失的文件，不能同步删除动作。</li>
-<li>结果：增量同步，两个文件夹叠加结果。</li>
-</ul>
-<h3 id="如何实现双向同步新增、同步删除？"><a href="#如何实现双向同步新增、同步删除？" class="headerlink" title="如何实现双向同步新增、同步删除？"></a>如何实现双向同步新增、同步删除？</h3><ul>
-<li>平时使用时，选择双向同步。</li>
-<li>如果需要同步删除怎么操作？<ul>
-<li>step1：双向同步一次。</li>
-<li>step2：在source端，删除目标文件夹、文件。</li>
-<li>step3：在source端，单向同步到远端。</li>
-<li>step4：改为双向同步。</li>
-</ul>
-</li>
-</ul>
-<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ul>
-<li>大文件同步的时候，软件会进入假死状态！</li>
-</ul>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>NAS相关</tag>
       </tags>
   </entry>
   <entry>
@@ -871,6 +871,90 @@ if __name__ == &#39;__main__&#39;:
 ]]></content>
   </entry>
   <entry>
+    <title>hexo 部署填写 github 用户名和密码一次性解决方案</title>
+    <url>/2023/04/20/hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	hexo 部署文章时候，会弹出 github 弹窗填写 username 和 password，填完之后还是无法上传，本文会给出解决方法。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>hexo 博客半年没写了，今天尝试更新，发现 <code>hexo d</code> 之后需要输入 github 的用户名和密码，但是我输入之后没有效果，还是无法推送到 github 上。<br>研究之后发现 rootcause 是：github 已经无法再用密码登陆推送，只能用 token，我的 token 之前只设置了 3 个月的有效期，所以现在失效了。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h4 id="1-重新生成新的-token"><a href="#1-重新生成新的-token" class="headerlink" title="1. 重新生成新的 token"></a>1. 重新生成新的 token</h4><p>新的 token 设置网址：<a href="https://github.com/settings/tokens">Personal Access Tokens (Classic) (github.com)</a><br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101025.png" alt="20230420101025|left"><br>新的 token （%%🔐α 💡ID💡MDO&#x2F;W 4 Cm 9 AJ 4 Ls 8&#x2F;i+yXXM 5 GzNzTJ 0 o 2 u 4 AwfZGVs 5 EqWEESkIf 0+kWt+quYVANDGUCe 4 GJWAxLJnr 7 vIgsi 7 QtSUNma 9 MPz 🔐%%）记得保存好，网页刷新之后就再也看不见了。</p>
+<h4 id="2-配置-hexo-config-yml"><a href="#2-配置-hexo-config-yml" class="headerlink" title="2. 配置 hexo config.yml"></a>2. 配置 hexo config.yml</h4><p>配置 hexo config.yml：<br>原本的配置：<code>repo: https://github.com/weicun581/weicun581.git</code><br>新的配置：<code>repo: https://your token here@github.com/weicun581/weicun581.git</code><br>替换 <code>your token here</code> 替换成上一步的 token 就好了。</p>
+<h2 id="实际使用效果"><a href="#实际使用效果" class="headerlink" title="实际使用效果"></a>实际使用效果</h2><p>在 hexo 根目录下执行：<code>hexo d</code>，之后在 github project 的 action 界面就可以看到 action 动作了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101947.png" alt="20230420101947|left"></p>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a href="https://blog.csdn.net/qq_43340547/article/details/119895671">(75条消息) 命令行输入hexo d后发现不能输入GitHub密码登录_SoberGit的博客-CSDN博客</a></li>
+<li><a href="https://blog.csdn.net/weixin_41010198/article/details/119698015?utm_source=app&app_version=4.12.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">(75条消息) github开发人员在七夕搞事情：remote: Support for password authentication was removed on August 13, 2021._点亮～黑夜的博客-CSDN博客</a></li>
+</ol>
+<p>个人博客地址：<a href="https://weicun.gitee.io/">蓝色单车 (gitee.io)</a></p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>每日文章</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>组件世界-初体验</title>
+    <url>/2023/04/23/obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	逛网站的时候看到的组件库，感觉很漂亮，记录并实验看下效果。<br>    我用的是 obsidian，所以本文是基于 obsidian 来实验组件世界的效果。</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="组件世界-介绍"><a href="#组件世界-介绍" class="headerlink" title="组件世界-介绍"></a>组件世界-介绍</h3><p>一个服务于 <strong>Notion 类</strong>产品、<strong>双链笔记类</strong>产品、<strong>代码托管平台</strong>「GitHub 等」、<strong>博客系统</strong>「WordPress」以及为知笔记等文本编辑器的可嵌入式小组件库。<br>一个辅助用户建立个性化、可视化的<strong>仪表盘</strong>或者<strong>知识库</strong>的工具。<br><strong>官网地址</strong>：<a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a></p>
+<h3 id="组件世界-功能"><a href="#组件世界-功能" class="headerlink" title="组件世界-功能"></a>组件世界-功能</h3><p>目前，「组件世界&#x2F;WidgetStore」提供<strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化、效率时代「博客」</strong>。</p>
+<h3 id="组件世界-支持的平台"><a href="#组件世界-支持的平台" class="headerlink" title="组件世界-支持的平台"></a>组件世界-支持的平台</h3><p><strong>Notion 类笔记软件</strong>：包括 Notion、FlowUs 息流笔记 <a href="https://www.zhihu.com/people/8b64b81de4123ec48f2f75c1b254929c">@FlowUs</a>、Wolai 我来云笔记、ClickUp、Coda、Anytype. 以及将来支持网页嵌入的印象笔记 Verse、微软 Microsoft Loop、妙记多 <a href="https://www.zhihu.com/people/38a9626ec5cde25f8653f9dd082da795">@妙记多Mojidoc</a> ……<br><strong>双链笔记软件</strong>，比如 Roam Research、Obsidian 黑曜石、Logseq、RemNote、思源笔记、Roam Edit、HuluNote 葫芦笔记。<br><strong>其他编辑器</strong>：为知笔记 WizNote<br><strong>代码托管平台</strong>：Github、Gitee、Gitlab<br><strong>博客平台</strong>：Wordpress<br><img src="https://pic4.zhimg.com/80/v2-5395c20620c0ae38d30839b233c44c67_1440w.webp" alt="|475"></p>
+<h3 id="组件世界-特点"><a href="#组件世界-特点" class="headerlink" title="组件世界-特点"></a>组件世界-特点</h3><p><strong>小组件类型丰富</strong>。目前，「组件世界&#x2F;WidgetStore」提供了包括 <strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化</strong> 等多种服务，可以为笔记用户<strong>提供适用于时间管理、任务管理、资讯管理、习惯养成、学习等多种使用场景的解决方案</strong>。比如，在基础组件中包括天气、时钟、番茄钟、倒计时、日历、纪念日、习惯打卡、访客统计、白噪音、热力图、微博热搜、百度统计埋点等多种类型等小组件。<br><strong>小组件服务稳定</strong>。相比国外同类产品，服务稳定，使用十分方便。<br><strong>小组件支持个性化定制</strong>。小组件支持文字字体、颜色、数字等基础信息的组件设置。与此同时，小组件也支持小组件外观背景等公共配置。<br><strong>小组件平台化</strong>。目前，「组件世界&#x2F;WidgetStore」正在快速迭代中。并且，「组件世界&#x2F;WidgetStore」支持第三方开发者参与开发小组件，共建社区生态。</p>
+<h3 id="实际使用体验"><a href="#实际使用体验" class="headerlink" title="实际使用体验"></a>实际使用体验</h3><h4 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h4><p>官网: <a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a><br>微信登陆。免费版 and 付费版的差异：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230423133519.png" alt="20230423133519|left|775"></p>
+<p>免费版用于体验体验还是不错的。39.9 元&#x2F;年那个套餐看起来还不错的，有需要的可以试试。</p>
+<h4 id="天气预报"><a href="#天气预报" class="headerlink" title="天气预报"></a>天气预报</h4><p>创建该组件，获取 url 地址：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f</span><br></pre></td></tr></table></figure>
+
+<p>替换下面的 url 地址：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span>  <span class="attr">src</span>=<span class="string">&quot;https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">width</span>=<span class="string">&quot;300&quot;</span> <span class="attr">height</span>=<span class="string">&quot;300&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>实际效果：</p>
+<iframe  src="https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f" frameborder="0" width="400" height="300" ></iframe>
+
+<h4 id="节假日倒计时"><a href="#节假日倒计时" class="headerlink" title="节假日倒计时"></a>节假日倒计时</h4><p>配置同上，实际效果：</p>
+<iframe  src="https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d" frameborder="0" width="300" height="300" ></iframe>
+#### 动态日历
+<iframe  src="https://swg.notion.pet/s/1923d7786444c5b90003a5f02b42821d" frameborder="0" width="100" height="100" ></iframe>
+
+<h4 id="卡片胶囊倒计时"><a href="#卡片胶囊倒计时" class="headerlink" title="卡片胶囊倒计时"></a>卡片胶囊倒计时</h4><iframe  src="https://swg.notion.pet/s/bg-873d64f46444c657000518ee33dd78b0" frameborder="0" width="500" height="300" ></iframe>
+#### 图表类型
+折线图、饼状图、柱状图等需要 notion 数据库，目前用 obsidian，所以这部分无法尝试。
+
+<h3 id="实际使用感受"><a href="#实际使用感受" class="headerlink" title="实际使用感受"></a>实际使用感受</h3><p>obsidian 使用组件世界基本玩的差不多了，总体感觉：眼睛一亮，后续仍然需要加强。<br>如果说到建议的话：</p>
+<ul>
+<li>免费账户政策 bug： <ul>
+<li>免费账户只可以使用 2 个小组件，这个里面其实是有个政策 bug 的。因为任意一个账号创建的小组件，都可以免费的给任何用。（例如上文中的天气组件，你们都可以随便用）那么，如果我有几个小伙伴，每个人都注册一个这样的账号，然后创建各不相同的组件，然后共享。这样分分钟钟就可以用遍所有小组件。 </li>
+<li>当然我没有这样做，这样做挺没意思的。我们还是要支持正版软件的良性循环。</li>
+</ul>
+</li>
+<li>图表类型组件数据库支持类型太少了：<ul>
+<li>正如官网上所说，目前只支持 notion，这个对 obsidian 不太友好。</li>
+</ul>
+</li>
+<li>网上免费的资源有许多可以实现同等效果：<ul>
+<li>例如：<a href="https://tianqiapi.com/api.php?style=tw&skin=pitaya">苏州天气预报 - TianqiAPI.com</a> 也可以实现同等的效果，所以用户依赖性不是很强。<div>
+<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tw&skin=pitaya" frameborder="0" width="500" height="500" allowtransparency="true"></iframe>
+</div>
+好了，今天就到这里了，有什么想法欢迎给我留言。thanks❤</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/582745338">「组件世界&#x2F;WidgetStore」 ：一个丰富、强大的嵌入式小组件库 - 知乎</a></li>
+<li></li>
+<li></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>FFmpeg用法</title>
     <url>/2023/04/25/Ffmpeg%E7%94%A8%E6%B3%95/</url>
     <content><![CDATA[<blockquote>
@@ -955,90 +1039,6 @@ if __name__ == &#39;__main__&#39;:
         <tag>每日文章</tag>
         <tag>ffmpeg</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>hexo 部署填写 github 用户名和密码一次性解决方案</title>
-    <url>/2023/04/20/hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	hexo 部署文章时候，会弹出 github 弹窗填写 username 和 password，填完之后还是无法上传，本文会给出解决方法。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>hexo 博客半年没写了，今天尝试更新，发现 <code>hexo d</code> 之后需要输入 github 的用户名和密码，但是我输入之后没有效果，还是无法推送到 github 上。<br>研究之后发现 rootcause 是：github 已经无法再用密码登陆推送，只能用 token，我的 token 之前只设置了 3 个月的有效期，所以现在失效了。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h4 id="1-重新生成新的-token"><a href="#1-重新生成新的-token" class="headerlink" title="1. 重新生成新的 token"></a>1. 重新生成新的 token</h4><p>新的 token 设置网址：<a href="https://github.com/settings/tokens">Personal Access Tokens (Classic) (github.com)</a><br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101025.png" alt="20230420101025|left"><br>新的 token （%%🔐α 💡ID💡MDO&#x2F;W 4 Cm 9 AJ 4 Ls 8&#x2F;i+yXXM 5 GzNzTJ 0 o 2 u 4 AwfZGVs 5 EqWEESkIf 0+kWt+quYVANDGUCe 4 GJWAxLJnr 7 vIgsi 7 QtSUNma 9 MPz 🔐%%）记得保存好，网页刷新之后就再也看不见了。</p>
-<h4 id="2-配置-hexo-config-yml"><a href="#2-配置-hexo-config-yml" class="headerlink" title="2. 配置 hexo config.yml"></a>2. 配置 hexo config.yml</h4><p>配置 hexo config.yml：<br>原本的配置：<code>repo: https://github.com/weicun581/weicun581.git</code><br>新的配置：<code>repo: https://your token here@github.com/weicun581/weicun581.git</code><br>替换 <code>your token here</code> 替换成上一步的 token 就好了。</p>
-<h2 id="实际使用效果"><a href="#实际使用效果" class="headerlink" title="实际使用效果"></a>实际使用效果</h2><p>在 hexo 根目录下执行：<code>hexo d</code>，之后在 github project 的 action 界面就可以看到 action 动作了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101947.png" alt="20230420101947|left"></p>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
-<li><a href="https://blog.csdn.net/qq_43340547/article/details/119895671">(75条消息) 命令行输入hexo d后发现不能输入GitHub密码登录_SoberGit的博客-CSDN博客</a></li>
-<li><a href="https://blog.csdn.net/weixin_41010198/article/details/119698015?utm_source=app&app_version=4.12.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">(75条消息) github开发人员在七夕搞事情：remote: Support for password authentication was removed on August 13, 2021._点亮～黑夜的博客-CSDN博客</a></li>
-</ol>
-<p>个人博客地址：<a href="https://weicun.gitee.io/">蓝色单车 (gitee.io)</a></p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-        <tag>每日文章</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>组件世界-初体验</title>
-    <url>/2023/04/23/obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	逛网站的时候看到的组件库，感觉很漂亮，记录并实验看下效果。<br>    我用的是 obsidian，所以本文是基于 obsidian 来实验组件世界的效果。</p>
-</blockquote>
-<span id="more"></span>
-
-<h3 id="组件世界-介绍"><a href="#组件世界-介绍" class="headerlink" title="组件世界-介绍"></a>组件世界-介绍</h3><p>一个服务于 <strong>Notion 类</strong>产品、<strong>双链笔记类</strong>产品、<strong>代码托管平台</strong>「GitHub 等」、<strong>博客系统</strong>「WordPress」以及为知笔记等文本编辑器的可嵌入式小组件库。<br>一个辅助用户建立个性化、可视化的<strong>仪表盘</strong>或者<strong>知识库</strong>的工具。<br><strong>官网地址</strong>：<a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a></p>
-<h3 id="组件世界-功能"><a href="#组件世界-功能" class="headerlink" title="组件世界-功能"></a>组件世界-功能</h3><p>目前，「组件世界&#x2F;WidgetStore」提供<strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化、效率时代「博客」</strong>。</p>
-<h3 id="组件世界-支持的平台"><a href="#组件世界-支持的平台" class="headerlink" title="组件世界-支持的平台"></a>组件世界-支持的平台</h3><p><strong>Notion 类笔记软件</strong>：包括 Notion、FlowUs 息流笔记 <a href="https://www.zhihu.com/people/8b64b81de4123ec48f2f75c1b254929c">@FlowUs</a>、Wolai 我来云笔记、ClickUp、Coda、Anytype. 以及将来支持网页嵌入的印象笔记 Verse、微软 Microsoft Loop、妙记多 <a href="https://www.zhihu.com/people/38a9626ec5cde25f8653f9dd082da795">@妙记多Mojidoc</a> ……<br><strong>双链笔记软件</strong>，比如 Roam Research、Obsidian 黑曜石、Logseq、RemNote、思源笔记、Roam Edit、HuluNote 葫芦笔记。<br><strong>其他编辑器</strong>：为知笔记 WizNote<br><strong>代码托管平台</strong>：Github、Gitee、Gitlab<br><strong>博客平台</strong>：Wordpress<br><img src="https://pic4.zhimg.com/80/v2-5395c20620c0ae38d30839b233c44c67_1440w.webp" alt="|475"></p>
-<h3 id="组件世界-特点"><a href="#组件世界-特点" class="headerlink" title="组件世界-特点"></a>组件世界-特点</h3><p><strong>小组件类型丰富</strong>。目前，「组件世界&#x2F;WidgetStore」提供了包括 <strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化</strong> 等多种服务，可以为笔记用户<strong>提供适用于时间管理、任务管理、资讯管理、习惯养成、学习等多种使用场景的解决方案</strong>。比如，在基础组件中包括天气、时钟、番茄钟、倒计时、日历、纪念日、习惯打卡、访客统计、白噪音、热力图、微博热搜、百度统计埋点等多种类型等小组件。<br><strong>小组件服务稳定</strong>。相比国外同类产品，服务稳定，使用十分方便。<br><strong>小组件支持个性化定制</strong>。小组件支持文字字体、颜色、数字等基础信息的组件设置。与此同时，小组件也支持小组件外观背景等公共配置。<br><strong>小组件平台化</strong>。目前，「组件世界&#x2F;WidgetStore」正在快速迭代中。并且，「组件世界&#x2F;WidgetStore」支持第三方开发者参与开发小组件，共建社区生态。</p>
-<h3 id="实际使用体验"><a href="#实际使用体验" class="headerlink" title="实际使用体验"></a>实际使用体验</h3><h4 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h4><p>官网: <a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a><br>微信登陆。免费版 and 付费版的差异：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230423133519.png" alt="20230423133519|left|775"></p>
-<p>免费版用于体验体验还是不错的。39.9 元&#x2F;年那个套餐看起来还不错的，有需要的可以试试。</p>
-<h4 id="天气预报"><a href="#天气预报" class="headerlink" title="天气预报"></a>天气预报</h4><p>创建该组件，获取 url 地址：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f</span><br></pre></td></tr></table></figure>
-
-<p>替换下面的 url 地址：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span>  <span class="attr">src</span>=<span class="string">&quot;https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">width</span>=<span class="string">&quot;300&quot;</span> <span class="attr">height</span>=<span class="string">&quot;300&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>实际效果：</p>
-<iframe  src="https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f" frameborder="0" width="400" height="300" ></iframe>
-
-<h4 id="节假日倒计时"><a href="#节假日倒计时" class="headerlink" title="节假日倒计时"></a>节假日倒计时</h4><p>配置同上，实际效果：</p>
-<iframe  src="https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d" frameborder="0" width="300" height="300" ></iframe>
-#### 动态日历
-<iframe  src="https://swg.notion.pet/s/1923d7786444c5b90003a5f02b42821d" frameborder="0" width="100" height="100" ></iframe>
-
-<h4 id="卡片胶囊倒计时"><a href="#卡片胶囊倒计时" class="headerlink" title="卡片胶囊倒计时"></a>卡片胶囊倒计时</h4><iframe  src="https://swg.notion.pet/s/bg-873d64f46444c657000518ee33dd78b0" frameborder="0" width="500" height="300" ></iframe>
-#### 图表类型
-折线图、饼状图、柱状图等需要 notion 数据库，目前用 obsidian，所以这部分无法尝试。
-
-<h3 id="实际使用感受"><a href="#实际使用感受" class="headerlink" title="实际使用感受"></a>实际使用感受</h3><p>obsidian 使用组件世界基本玩的差不多了，总体感觉：眼睛一亮，后续仍然需要加强。<br>如果说到建议的话：</p>
-<ul>
-<li>免费账户政策 bug： <ul>
-<li>免费账户只可以使用 2 个小组件，这个里面其实是有个政策 bug 的。因为任意一个账号创建的小组件，都可以免费的给任何用。（例如上文中的天气组件，你们都可以随便用）那么，如果我有几个小伙伴，每个人都注册一个这样的账号，然后创建各不相同的组件，然后共享。这样分分钟钟就可以用遍所有小组件。 </li>
-<li>当然我没有这样做，这样做挺没意思的。我们还是要支持正版软件的良性循环。</li>
-</ul>
-</li>
-<li>图表类型组件数据库支持类型太少了：<ul>
-<li>正如官网上所说，目前只支持 notion，这个对 obsidian 不太友好。</li>
-</ul>
-</li>
-<li>网上免费的资源有许多可以实现同等效果：<ul>
-<li>例如：<a href="https://tianqiapi.com/api.php?style=tw&skin=pitaya">苏州天气预报 - TianqiAPI.com</a> 也可以实现同等的效果，所以用户依赖性不是很强。<div>
-<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tw&skin=pitaya" frameborder="0" width="500" height="500" allowtransparency="true"></iframe>
-</div>
-好了，今天就到这里了，有什么想法欢迎给我留言。thanks❤</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
-<li><a href="https://zhuanlan.zhihu.com/p/582745338">「组件世界&#x2F;WidgetStore」 ：一个丰富、强大的嵌入式小组件库 - 知乎</a></li>
-<li></li>
-<li></li>
-</ol>
-]]></content>
   </entry>
   <entry>
     <title>为Hexo博客next主题添加友链</title>
