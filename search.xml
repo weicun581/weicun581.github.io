@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2022/08/24/000-hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>ADB(Android Debug Bridge)用法总结</title>
     <url>/2022/09/27/001-%E7%94%B5%E8%84%91%E6%8E%A7%E5%88%B6%E6%89%8B%E6%9C%BA%E6%A8%A1%E5%9D%97ADB/</url>
     <content><![CDATA[<p><strong>ADB(Android Debug Bridge)用法总结</strong>  </p>
@@ -121,24 +139,6 @@
         <tag>python</tag>
         <tag>python字符串</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/08/24/000-hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>dsyncnorize使用教</title>
@@ -982,6 +982,98 @@ if __name__ == &#39;__main__&#39;:
       </tags>
   </entry>
   <entry>
+    <title>组件世界-初体验</title>
+    <url>/2023/04/23/obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	逛网站的时候看到的组件库，感觉很漂亮，记录并实验看下效果。<br>    我用的是 obsidian，所以本文是基于 obsidian 来实验组件世界的效果。</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="组件世界-介绍"><a href="#组件世界-介绍" class="headerlink" title="组件世界-介绍"></a>组件世界-介绍</h3><p>一个服务于 <strong>Notion 类</strong>产品、<strong>双链笔记类</strong>产品、<strong>代码托管平台</strong>「GitHub 等」、<strong>博客系统</strong>「WordPress」以及为知笔记等文本编辑器的可嵌入式小组件库。<br>一个辅助用户建立个性化、可视化的<strong>仪表盘</strong>或者<strong>知识库</strong>的工具。<br><strong>官网地址</strong>：<a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a></p>
+<h3 id="组件世界-功能"><a href="#组件世界-功能" class="headerlink" title="组件世界-功能"></a>组件世界-功能</h3><p>目前，「组件世界&#x2F;WidgetStore」提供<strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化、效率时代「博客」</strong>。</p>
+<h3 id="组件世界-支持的平台"><a href="#组件世界-支持的平台" class="headerlink" title="组件世界-支持的平台"></a>组件世界-支持的平台</h3><p><strong>Notion 类笔记软件</strong>：包括 Notion、FlowUs 息流笔记 <a href="https://www.zhihu.com/people/8b64b81de4123ec48f2f75c1b254929c">@FlowUs</a>、Wolai 我来云笔记、ClickUp、Coda、Anytype. 以及将来支持网页嵌入的印象笔记 Verse、微软 Microsoft Loop、妙记多 <a href="https://www.zhihu.com/people/38a9626ec5cde25f8653f9dd082da795">@妙记多Mojidoc</a> ……<br><strong>双链笔记软件</strong>，比如 Roam Research、Obsidian 黑曜石、Logseq、RemNote、思源笔记、Roam Edit、HuluNote 葫芦笔记。<br><strong>其他编辑器</strong>：为知笔记 WizNote<br><strong>代码托管平台</strong>：Github、Gitee、Gitlab<br><strong>博客平台</strong>：Wordpress<br><img src="https://pic4.zhimg.com/80/v2-5395c20620c0ae38d30839b233c44c67_1440w.webp" alt="|475"></p>
+<h3 id="组件世界-特点"><a href="#组件世界-特点" class="headerlink" title="组件世界-特点"></a>组件世界-特点</h3><p><strong>小组件类型丰富</strong>。目前，「组件世界&#x2F;WidgetStore」提供了包括 <strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化</strong> 等多种服务，可以为笔记用户<strong>提供适用于时间管理、任务管理、资讯管理、习惯养成、学习等多种使用场景的解决方案</strong>。比如，在基础组件中包括天气、时钟、番茄钟、倒计时、日历、纪念日、习惯打卡、访客统计、白噪音、热力图、微博热搜、百度统计埋点等多种类型等小组件。<br><strong>小组件服务稳定</strong>。相比国外同类产品，服务稳定，使用十分方便。<br><strong>小组件支持个性化定制</strong>。小组件支持文字字体、颜色、数字等基础信息的组件设置。与此同时，小组件也支持小组件外观背景等公共配置。<br><strong>小组件平台化</strong>。目前，「组件世界&#x2F;WidgetStore」正在快速迭代中。并且，「组件世界&#x2F;WidgetStore」支持第三方开发者参与开发小组件，共建社区生态。</p>
+<h3 id="实际使用体验"><a href="#实际使用体验" class="headerlink" title="实际使用体验"></a>实际使用体验</h3><h4 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h4><p>官网: <a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a><br>微信登陆。免费版 and 付费版的差异：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230423133519.png" alt="20230423133519|left|775"></p>
+<p>免费版用于体验体验还是不错的。39.9 元&#x2F;年那个套餐看起来还不错的，有需要的可以试试。</p>
+<h4 id="天气预报"><a href="#天气预报" class="headerlink" title="天气预报"></a>天气预报</h4><p>创建该组件，获取 url 地址：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f</span><br></pre></td></tr></table></figure>
+
+<p>替换下面的 url 地址：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span>  <span class="attr">src</span>=<span class="string">&quot;https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">width</span>=<span class="string">&quot;300&quot;</span> <span class="attr">height</span>=<span class="string">&quot;300&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>实际效果：</p>
+<iframe  src="https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f" frameborder="0" width="400" height="300" ></iframe>
+
+<h4 id="节假日倒计时"><a href="#节假日倒计时" class="headerlink" title="节假日倒计时"></a>节假日倒计时</h4><p>配置同上，实际效果：</p>
+<iframe  src="https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d" frameborder="0" width="300" height="300" ></iframe>
+#### 动态日历
+<iframe  src="https://swg.notion.pet/s/1923d7786444c5b90003a5f02b42821d" frameborder="0" width="100" height="100" ></iframe>
+
+<h4 id="卡片胶囊倒计时"><a href="#卡片胶囊倒计时" class="headerlink" title="卡片胶囊倒计时"></a>卡片胶囊倒计时</h4><iframe  src="https://swg.notion.pet/s/bg-873d64f46444c657000518ee33dd78b0" frameborder="0" width="500" height="300" ></iframe>
+#### 图表类型
+折线图、饼状图、柱状图等需要 notion 数据库，目前用 obsidian，所以这部分无法尝试。
+
+<h3 id="实际使用感受"><a href="#实际使用感受" class="headerlink" title="实际使用感受"></a>实际使用感受</h3><p>obsidian 使用组件世界基本玩的差不多了，总体感觉：眼睛一亮，后续仍然需要加强。<br>如果说到建议的话：</p>
+<ul>
+<li>免费账户政策 bug： <ul>
+<li>免费账户只可以使用 2 个小组件，这个里面其实是有个政策 bug 的。因为任意一个账号创建的小组件，都可以免费的给任何用。（例如上文中的天气组件，你们都可以随便用）那么，如果我有几个小伙伴，每个人都注册一个这样的账号，然后创建各不相同的组件，然后共享。这样分分钟钟就可以用遍所有小组件。 </li>
+<li>当然我没有这样做，这样做挺没意思的。我们还是要支持正版软件的良性循环。</li>
+</ul>
+</li>
+<li>图表类型组件数据库支持类型太少了：<ul>
+<li>正如官网上所说，目前只支持 notion，这个对 obsidian 不太友好。</li>
+</ul>
+</li>
+<li>网上免费的资源有许多可以实现同等效果：<ul>
+<li>例如：<a href="https://tianqiapi.com/api.php?style=tw&skin=pitaya">苏州天气预报 - TianqiAPI.com</a> 也可以实现同等的效果，所以用户依赖性不是很强。<div>
+<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tw&skin=pitaya" frameborder="0" width="500" height="500" allowtransparency="true"></iframe>
+</div>
+好了，今天就到这里了，有什么想法欢迎给我留言。thanks❤</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/582745338">「组件世界&#x2F;WidgetStore」 ：一个丰富、强大的嵌入式小组件库 - 知乎</a></li>
+<li></li>
+<li></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>为Hexo博客next主题添加友链</title>
+    <url>/2023/04/27/%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE/</url>
+    <content><![CDATA[<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230427153826.png" alt="20230427153826|left"></p>
+<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	本文将介绍如何为Hexo博客next主题添加友链，方便你与其他博主进行联系，同时可以引流。</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><p>先看实际效果，如果感觉ok，就可以继续往下看，否则请节省时间逛逛别的文章：<br><a href="http://localhost:4000/links/">链接在这里</a><br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230427154005.png" alt="20230427154005|left|500"></p>
+<h3 id="添加友链的方法"><a href="#添加友链的方法" class="headerlink" title="添加友链的方法"></a>添加友链的方法</h3><h4 id="修改hexo的next主题配置文件-config-next-yml"><a href="#修改hexo的next主题配置文件-config-next-yml" class="headerlink" title="修改hexo的next主题配置文件_config.next.yml"></a>修改hexo的next主题配置文件_config.next.yml</h4><p>我的_config.next.yml是在根目录下，打开后，在menu节点下，添加这一行：<br><code>link: /links/ || fa fa-link</code></p>
+<h4 id="将配置文件中的link备注中文名称"><a href="#将配置文件中的link备注中文名称" class="headerlink" title="将配置文件中的link备注中文名称"></a>将配置文件中的link备注中文名称</h4><p>打开目录<code>Hexo_Blog\node_modules\hexo-theme-next\languages</code>，打开文件<code>zh-CN.yml</code>，在menu节点下添加这一行：<br><code>link: 友链</code></p>
+<h4 id="添加友链页面"><a href="#添加友链页面" class="headerlink" title="添加友链页面"></a>添加友链页面</h4><p>打开目录<code>Hexo_Blog\source</code>新建文件夹<code>links</code>，在<code>Hexo_Blog\source\links</code>下新建文件<code>index.md</code>，添加如下内容：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 友情链接</span><br><span class="line">date: 2023-04-26 00:34:27</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;post-body&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;links&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">         <span class="selector-class">.links-content</span>&#123;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">margin-top</span>:<span class="number">1rem</span>;</span></span><br><span class="line"><span class="language-css">         &#125;</span></span><br><span class="line"><span class="language-css">         <span class="selector-class">.link-navigation</span><span class="selector-pseudo">::after</span> &#123;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">content</span>: <span class="string">&quot; &quot;</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">display</span>: block;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">clear</span>: both;</span></span><br><span class="line"><span class="language-css">         &#125;</span></span><br><span class="line"><span class="language-css">         <span class="selector-class">.card</span> &#123;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">width</span>: <span class="number">45%</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">font-size</span>: <span class="number">1rem</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">20px</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">transition-duration</span>: <span class="number">0.15s</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">margin-bottom</span>: <span class="number">1rem</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">display</span>:flex;</span></span><br><span class="line"><span class="language-css">         &#125;</span></span><br><span class="line"><span class="language-css">         <span class="selector-class">.card</span><span class="selector-pseudo">:nth-child</span>(odd) &#123;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="language-css">         &#125;</span></span><br><span class="line"><span class="language-css">         <span class="selector-class">.card</span><span class="selector-pseudo">:nth-child</span>(even) &#123;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">float</span>: right;</span></span><br><span class="line"><span class="language-css">         &#125;</span></span><br><span class="line"><span class="language-css">         <span class="selector-class">.card</span><span class="selector-pseudo">:hover</span> &#123;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1.1</span>);</span></span><br><span class="line"><span class="language-css">         <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">2px</span> <span class="number">6px</span> <span class="number">0</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.12</span>), <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> <span class="number">0</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.04</span>);</span></span><br><span class="line"><span class="language-css">         &#125;</span></span><br><span class="line"><span class="language-css">         <span class="selector-class">.card</span> <span class="selector-tag">a</span> &#123;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">border</span>:none;</span></span><br><span class="line"><span class="language-css">         &#125;</span></span><br><span class="line"><span class="language-css">         <span class="selector-class">.card</span> <span class="selector-class">.ava</span> &#123;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">width</span>: <span class="number">3rem</span><span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">height</span>: <span class="number">3rem</span><span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">margin</span>:<span class="number">0</span><span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">margin-right</span>: <span class="number">1em</span><span class="meta">!important</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">border-radius</span>:<span class="number">4px</span>;</span></span><br><span class="line"><span class="language-css">         &#125;</span></span><br><span class="line"><span class="language-css">         <span class="selector-class">.card</span> <span class="selector-class">.card-header</span> &#123;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">font-style</span>: italic;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">overflow</span>: hidden;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">         &#125;</span></span><br><span class="line"><span class="language-css">         <span class="selector-class">.card</span> <span class="selector-class">.card-header</span> <span class="selector-tag">a</span> &#123;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">font-style</span>: normal;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">color</span>: <span class="number">#2bbc8a</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">font-weight</span>: bold;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">text-decoration</span>: none;</span></span><br><span class="line"><span class="language-css">         &#125;</span></span><br><span class="line"><span class="language-css">         <span class="selector-class">.card</span> <span class="selector-class">.card-header</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">color</span>: <span class="number">#d480aa</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">text-decoration</span>: none;</span></span><br><span class="line"><span class="language-css">         &#125;</span></span><br><span class="line"><span class="language-css">         <span class="selector-class">.card</span> <span class="selector-class">.card-header</span> <span class="selector-class">.info</span> &#123;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">font-style</span>:normal;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">color</span>:<span class="number">#a3a3a3</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">font-size</span>:<span class="number">14px</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">min-width</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">overflow</span>: hidden;</span></span><br><span class="line"><span class="language-css">         <span class="attribute">white-space</span>: nowrap;</span></span><br><span class="line"><span class="language-css">         &#125;</span></span><br><span class="line"><span class="language-css">      </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;links-content&quot;</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;link-navigation&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card&quot;</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;ava&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://laosu.ml/images/laosu_wx.jpg&quot;</span> /&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-header&quot;</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                     <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://laosu.ml/&quot;</span>&gt;</span>杨浦老苏<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info&quot;</span>&gt;</span>聚沙成塔，集腋成裘 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card&quot;</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;ava&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://weicun.gitee.io/images/logo.png&quot;</span> /&gt;</span></span><br><span class="line">               <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-header&quot;</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                     <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://weicun.gitee.io/&quot;</span>&gt;</span>蓝色单车<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info&quot;</span>&gt;</span>软件评测、AI、感悟，分享好玩的东东<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">               <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如果你想单车一样用obsidian编辑器对html编辑不友好，建议在VS code或者sublime text里面编辑好在粘贴过来。<br>如果有小伙伴请求添加友链，你只需要在上述代码的技术上添加如下代码块即可：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;ava&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://laosu.ml/images/laosu_wx.jpg&quot;</span> /&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card-header&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://laosu.ml/&quot;</span>&gt;</span>杨浦老苏<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info&quot;</span>&gt;</span>聚沙成塔，集腋成裘 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这里添加了我最喜欢的一个博主：<a href="https://laosu.ml/">老苏的博客</a>，虽然没有经过他的允许，但是我还是很想把他分享给大家，因为他的文章的确是纯纯的干货文章。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>好了，至此我们已经完成了全部工作，回顾下其实就三个步骤：</p>
+<ul>
+<li>修改hexo的next主题配置文件_config.next.yml </li>
+<li>将配置文件中的link备注中文名称</li>
+<li>添加友链页面<br>现在你可以部署你的hexo博客看效果了（<code>hexo clean、hexo g、hexo s、hexo d</code>）,希望能看到你满意的效果。<br>有什么问题欢迎留言。</li>
+</ul>
+<p>对了，如果大家喜欢可以关注我的博客和微信公众号，平时会经常分享一下软件、AI、感悟、好玩的东东。谢谢啦。<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><p>1.<br>2.<br>3. </p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>每日文章</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>有意思的名言警句</title>
     <url>/2022/11/15/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%90%8D%E8%A8%80%E8%AD%A6%E5%8F%A5/</url>
     <content><![CDATA[<center><font size=5>今天看到的名言警句</font></center>
@@ -1047,65 +1139,6 @@ if __name__ == &#39;__main__&#39;:
       <tags>
         <tag>日记</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>组件世界-初体验</title>
-    <url>/2023/04/23/obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	逛网站的时候看到的组件库，感觉很漂亮，记录并实验看下效果。<br>    我用的是 obsidian，所以本文是基于 obsidian 来实验组件世界的效果。</p>
-</blockquote>
-<span id="more"></span>
-
-<h3 id="组件世界-介绍"><a href="#组件世界-介绍" class="headerlink" title="组件世界-介绍"></a>组件世界-介绍</h3><p>一个服务于 <strong>Notion 类</strong>产品、<strong>双链笔记类</strong>产品、<strong>代码托管平台</strong>「GitHub 等」、<strong>博客系统</strong>「WordPress」以及为知笔记等文本编辑器的可嵌入式小组件库。<br>一个辅助用户建立个性化、可视化的<strong>仪表盘</strong>或者<strong>知识库</strong>的工具。<br><strong>官网地址</strong>：<a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a></p>
-<h3 id="组件世界-功能"><a href="#组件世界-功能" class="headerlink" title="组件世界-功能"></a>组件世界-功能</h3><p>目前，「组件世界&#x2F;WidgetStore」提供<strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化、效率时代「博客」</strong>。</p>
-<h3 id="组件世界-支持的平台"><a href="#组件世界-支持的平台" class="headerlink" title="组件世界-支持的平台"></a>组件世界-支持的平台</h3><p><strong>Notion 类笔记软件</strong>：包括 Notion、FlowUs 息流笔记 <a href="https://www.zhihu.com/people/8b64b81de4123ec48f2f75c1b254929c">@FlowUs</a>、Wolai 我来云笔记、ClickUp、Coda、Anytype. 以及将来支持网页嵌入的印象笔记 Verse、微软 Microsoft Loop、妙记多 <a href="https://www.zhihu.com/people/38a9626ec5cde25f8653f9dd082da795">@妙记多Mojidoc</a> ……<br><strong>双链笔记软件</strong>，比如 Roam Research、Obsidian 黑曜石、Logseq、RemNote、思源笔记、Roam Edit、HuluNote 葫芦笔记。<br><strong>其他编辑器</strong>：为知笔记 WizNote<br><strong>代码托管平台</strong>：Github、Gitee、Gitlab<br><strong>博客平台</strong>：Wordpress<br><img src="https://pic4.zhimg.com/80/v2-5395c20620c0ae38d30839b233c44c67_1440w.webp" alt="|475"></p>
-<h3 id="组件世界-特点"><a href="#组件世界-特点" class="headerlink" title="组件世界-特点"></a>组件世界-特点</h3><p><strong>小组件类型丰富</strong>。目前，「组件世界&#x2F;WidgetStore」提供了包括 <strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化</strong> 等多种服务，可以为笔记用户<strong>提供适用于时间管理、任务管理、资讯管理、习惯养成、学习等多种使用场景的解决方案</strong>。比如，在基础组件中包括天气、时钟、番茄钟、倒计时、日历、纪念日、习惯打卡、访客统计、白噪音、热力图、微博热搜、百度统计埋点等多种类型等小组件。<br><strong>小组件服务稳定</strong>。相比国外同类产品，服务稳定，使用十分方便。<br><strong>小组件支持个性化定制</strong>。小组件支持文字字体、颜色、数字等基础信息的组件设置。与此同时，小组件也支持小组件外观背景等公共配置。<br><strong>小组件平台化</strong>。目前，「组件世界&#x2F;WidgetStore」正在快速迭代中。并且，「组件世界&#x2F;WidgetStore」支持第三方开发者参与开发小组件，共建社区生态。</p>
-<h3 id="实际使用体验"><a href="#实际使用体验" class="headerlink" title="实际使用体验"></a>实际使用体验</h3><h4 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h4><p>官网: <a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a><br>微信登陆。免费版 and 付费版的差异：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230423133519.png" alt="20230423133519|left|775"></p>
-<p>免费版用于体验体验还是不错的。39.9 元&#x2F;年那个套餐看起来还不错的，有需要的可以试试。</p>
-<h4 id="天气预报"><a href="#天气预报" class="headerlink" title="天气预报"></a>天气预报</h4><p>创建该组件，获取 url 地址：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f</span><br></pre></td></tr></table></figure>
-
-<p>替换下面的 url 地址：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span>  <span class="attr">src</span>=<span class="string">&quot;https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">width</span>=<span class="string">&quot;300&quot;</span> <span class="attr">height</span>=<span class="string">&quot;300&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>实际效果：</p>
-<iframe  src="https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f" frameborder="0" width="400" height="300" ></iframe>
-
-<h4 id="节假日倒计时"><a href="#节假日倒计时" class="headerlink" title="节假日倒计时"></a>节假日倒计时</h4><p>配置同上，实际效果：</p>
-<iframe  src="https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d" frameborder="0" width="300" height="300" ></iframe>
-#### 动态日历
-<iframe  src="https://swg.notion.pet/s/1923d7786444c5b90003a5f02b42821d" frameborder="0" width="100" height="100" ></iframe>
-
-<h4 id="卡片胶囊倒计时"><a href="#卡片胶囊倒计时" class="headerlink" title="卡片胶囊倒计时"></a>卡片胶囊倒计时</h4><iframe  src="https://swg.notion.pet/s/bg-873d64f46444c657000518ee33dd78b0" frameborder="0" width="500" height="300" ></iframe>
-#### 图表类型
-折线图、饼状图、柱状图等需要 notion 数据库，目前用 obsidian，所以这部分无法尝试。
-
-<h3 id="实际使用感受"><a href="#实际使用感受" class="headerlink" title="实际使用感受"></a>实际使用感受</h3><p>obsidian 使用组件世界基本玩的差不多了，总体感觉：眼睛一亮，后续仍然需要加强。<br>如果说到建议的话：</p>
-<ul>
-<li>免费账户政策 bug： <ul>
-<li>免费账户只可以使用 2 个小组件，这个里面其实是有个政策 bug 的。因为任意一个账号创建的小组件，都可以免费的给任何用。（例如上文中的天气组件，你们都可以随便用）那么，如果我有几个小伙伴，每个人都注册一个这样的账号，然后创建各不相同的组件，然后共享。这样分分钟钟就可以用遍所有小组件。 </li>
-<li>当然我没有这样做，这样做挺没意思的。我们还是要支持正版软件的良性循环。</li>
-</ul>
-</li>
-<li>图表类型组件数据库支持类型太少了：<ul>
-<li>正如官网上所说，目前只支持 notion，这个对 obsidian 不太友好。</li>
-</ul>
-</li>
-<li>网上免费的资源有许多可以实现同等效果：<ul>
-<li>例如：<a href="https://tianqiapi.com/api.php?style=tw&skin=pitaya">苏州天气预报 - TianqiAPI.com</a> 也可以实现同等的效果，所以用户依赖性不是很强。<div>
-<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tw&skin=pitaya" frameborder="0" width="500" height="500" allowtransparency="true"></iframe>
-</div>
-好了，今天就到这里了，有什么想法欢迎给我留言。thanks❤</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
-<li><a href="https://zhuanlan.zhihu.com/p/582745338">「组件世界&#x2F;WidgetStore」 ：一个丰富、强大的嵌入式小组件库 - 知乎</a></li>
-<li></li>
-<li></li>
-</ol>
-]]></content>
   </entry>
   <entry>
     <title>日记怀旧</title>
