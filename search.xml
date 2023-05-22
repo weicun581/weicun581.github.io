@@ -141,60 +141,6 @@
       </tags>
   </entry>
   <entry>
-    <title>dsyncnorize使用教</title>
-    <url>/2022/09/29/003-dsyncnorize%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<blockquote>
-<p>一款自动备份、传递数据的软件，</p>
-<p>支持win to win的定时备份、双向传递。</p>
-</blockquote>
-<span id="more"></span>
-
-
-
-<h2 id="使用方法-amp-基础设定"><a href="#使用方法-amp-基础设定" class="headerlink" title="使用方法&amp;基础设定"></a>使用方法&amp;基础设定</h2><ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220916112432.png" alt="image-20220916112432857" style="zoom: 50%;" />
-
-<ul>
-<li><p>使用前一定要在checkbox上打勾，处于选中状态才能进行同步sync。</p>
-</li>
-<li><p>设定部分参考上面的截图。</p>
-</li>
-<li><p>如果需要双向同步，选择：bidirectional sync。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="特性分析"><a href="#特性分析" class="headerlink" title="特性分析"></a>特性分析</h2><h3 id="单向同步："><a href="#单向同步：" class="headerlink" title="单向同步："></a>单向同步：</h3><ul>
-<li>过程：同步source的新增、删除。</li>
-<li>结果：目标文件夹会与源文件夹一模一样。</li>
-</ul>
-<h3 id="双向同步："><a href="#双向同步：" class="headerlink" title="双向同步："></a>双向同步：</h3><ul>
-<li>过程：双向同步新增或缺失的文件，不能同步删除动作。</li>
-<li>结果：增量同步，两个文件夹叠加结果。</li>
-</ul>
-<h3 id="如何实现双向同步新增、同步删除？"><a href="#如何实现双向同步新增、同步删除？" class="headerlink" title="如何实现双向同步新增、同步删除？"></a>如何实现双向同步新增、同步删除？</h3><ul>
-<li>平时使用时，选择双向同步。</li>
-<li>如果需要同步删除怎么操作？<ul>
-<li>step1：双向同步一次。</li>
-<li>step2：在source端，删除目标文件夹、文件。</li>
-<li>step3：在source端，单向同步到远端。</li>
-<li>step4：改为双向同步。</li>
-</ul>
-</li>
-</ul>
-<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ul>
-<li>大文件同步的时候，软件会进入假死状态！</li>
-</ul>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>NAS相关</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>foldersync同步软件使用介绍</title>
     <url>/2022/10/20/004-foldersync%E5%90%8C%E6%AD%A5%E8%BD%AF%E4%BB%B6/</url>
     <content><![CDATA[<h2 id="foldersync简介"><a href="#foldersync简介" class="headerlink" title="foldersync简介"></a>foldersync简介</h2><blockquote>
@@ -281,6 +227,60 @@
       </categories>
       <tags>
         <tag>foldersync</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>dsyncnorize使用教</title>
+    <url>/2022/09/29/003-dsyncnorize%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<blockquote>
+<p>一款自动备份、传递数据的软件，</p>
+<p>支持win to win的定时备份、双向传递。</p>
+</blockquote>
+<span id="more"></span>
+
+
+
+<h2 id="使用方法-amp-基础设定"><a href="#使用方法-amp-基础设定" class="headerlink" title="使用方法&amp;基础设定"></a>使用方法&amp;基础设定</h2><ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220916112432.png" alt="image-20220916112432857" style="zoom: 50%;" />
+
+<ul>
+<li><p>使用前一定要在checkbox上打勾，处于选中状态才能进行同步sync。</p>
+</li>
+<li><p>设定部分参考上面的截图。</p>
+</li>
+<li><p>如果需要双向同步，选择：bidirectional sync。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="特性分析"><a href="#特性分析" class="headerlink" title="特性分析"></a>特性分析</h2><h3 id="单向同步："><a href="#单向同步：" class="headerlink" title="单向同步："></a>单向同步：</h3><ul>
+<li>过程：同步source的新增、删除。</li>
+<li>结果：目标文件夹会与源文件夹一模一样。</li>
+</ul>
+<h3 id="双向同步："><a href="#双向同步：" class="headerlink" title="双向同步："></a>双向同步：</h3><ul>
+<li>过程：双向同步新增或缺失的文件，不能同步删除动作。</li>
+<li>结果：增量同步，两个文件夹叠加结果。</li>
+</ul>
+<h3 id="如何实现双向同步新增、同步删除？"><a href="#如何实现双向同步新增、同步删除？" class="headerlink" title="如何实现双向同步新增、同步删除？"></a>如何实现双向同步新增、同步删除？</h3><ul>
+<li>平时使用时，选择双向同步。</li>
+<li>如果需要同步删除怎么操作？<ul>
+<li>step1：双向同步一次。</li>
+<li>step2：在source端，删除目标文件夹、文件。</li>
+<li>step3：在source端，单向同步到远端。</li>
+<li>step4：改为双向同步。</li>
+</ul>
+</li>
+</ul>
+<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ul>
+<li>大文件同步的时候，软件会进入假死状态！</li>
+</ul>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>NAS相关</tag>
       </tags>
   </entry>
   <entry>
@@ -860,6 +860,41 @@ if __name__ == &#39;__main__&#39;:
       </tags>
   </entry>
   <entry>
+    <title>AgentGPT-带互联网搜索功能的chatGPT</title>
+    <url>/2023/04/25/AgentGPT-%E5%B8%A6%E4%BA%92%E8%81%94%E7%BD%91%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E7%9A%84chatGPT/</url>
+    <content><![CDATA[<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145426.png" alt="20230425145426|left|475"></p>
+<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	Agent GPT 主要的AI 功能就是建立在原版的AutoGPT 之上，然后再加上图形介面，这样阅读起来比较容易也比较方便。<br>相较于ChatGPT，它具有：互联网搜索查询功能、任务拆解各个执行然后串联能力。<br>它能够根据用户需求，在用户完全不插手的情况下自主执行任务，包括日常的事件分析、营销方案撰写、代码编程、数学运算等事务都能代劳。<br>这里我会按照AgentGPT 官方所建议的步骤，一步一步教搭建安装并体验AgentGPT。</p>
+</blockquote>
+<span id="more"></span>
+<h3 id="如何安装Agent-GPT"><a href="#如何安装Agent-GPT" class="headerlink" title="如何安装Agent GPT"></a>如何安装Agent GPT</h3><ul>
+<li>平台：win10 docker desktop </li>
+<li>安装方法：<ol>
+<li>在github上下载<a href="https://github.com/reworkd/AgentGPT">AgentGPT项目</a>：<code>git clone  git@github.com:reworkd/AgentGPT.git</code></li>
+<li>按照官网推荐的docker安装方式：<code>./setup.sh --docker</code>，当然你也可以在本地安装，不过介于docker安装方式最简单，所以这边就不再本地环境搭建了，有兴趣可以在github agentGPT官网上查询。<a href="https://github.com/reworkd/AgentGPT">GitHub - reworkd&#x2F;AgentGPT: 🤖 Assemble, configure, and deploy autonomous AI Agents in your browser.</a><br><em>这里有个小的知识点，如何在win10上运行.sh脚本文件？答案是：用git bash</em></li>
+<li>用setup脚本安装完成之后，可以用<code>docker ps -a</code>确认下container是否真的安装好并启动：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425144818.png" alt="20230425144818|left|525">可以看到agentgpt已经成功创建成功，并在3000端口运行了。</li>
+<li>访问agentGPT container的web：<a href="http://localhost:3000/">http://localhost:3000/</a>，出现这个界面就表示安装成功了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145027.png" alt="20230425145027|left|475"></li>
+<li>接下来我们设置下AI驱动，点击settings，选择gpt-3.5-turbo，输入你的gpt3.5 kye（这个需要你之前注册好，注册的硬性要求有两个：1. 需要会魔法。 2.需要有国外手机号，用于接收验证码，这类网站有很多，请自行百度）<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145325.png" alt="20230425145325|left|475"></li>
+</ol>
+</li>
+</ul>
+<h3 id="AgentGPT使用体验"><a href="#AgentGPT使用体验" class="headerlink" title="AgentGPT使用体验"></a>AgentGPT使用体验</h3><h4 id="询问系统时间"><a href="#询问系统时间" class="headerlink" title="询问系统时间"></a>询问系统时间</h4><p>这个实验尝试了文agentGPT现在时间是几点？<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145750.png" alt="20230425145750|left|500"><br>在这里可以看到他的分析思路是：</p>
+<ul>
+<li>使用系统时钟获取当前时间</li>
+<li>将当前时间转换为字符串格式</li>
+<li>返回字符串时间作为响应</li>
+<li>将字符串时间转换为数字时间</li>
+<li>返回数字时间作为响应<br>思路是对的，想法也很好，但是在执行第一步骤的时候就失败了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150017.png" alt="20230425150017|left|500">之后就是不停的循环这几个步骤，陷入了死循环。</li>
+</ul>
+<h4 id="统计淘宝网上销量前6的血压仪价格及名称"><a href="#统计淘宝网上销量前6的血压仪价格及名称" class="headerlink" title="统计淘宝网上销量前6的血压仪价格及名称"></a>统计淘宝网上销量前6的血压仪价格及名称</h4><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150456.png" alt="20230425150456|left|675"><br>结果：我很满意，的确是有访问互联网并统计到。<br>但是，我不满意的是它的任务拆解执行能力，我的确是从它的子任务重得到了答案，但是它把任务拆分的方式有问题，还是会陷入死循环。<br>因此，如何跳出死循环，这个是AgentGPT需要加强的地方。当然这也是最难的地方。</p>
+<p>随后我让它用中文回复我，可以看到它的确是有统计到结果，但是一旦遇到某一步骤无法得到结果，它就会不停的陷入死循环：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150901.png" alt="20230425150901|left|500"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>AgetGPT的确是给人眼前一亮的感觉，相较于chatGPT它的互联网搜索能力、任务拆解执行能力，的确是很经验。<br>但是，如何跳出死循环这部分还是需要继续努力。不过介于目前的版本还是beta版本，所以我觉得已经很棒了，加油，希望可以给我们带来更好的产品。</p>
+<p>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><p>1.<br>2.<br>3. </p>
+]]></content>
+  </entry>
+  <entry>
     <title>FFmpeg用法</title>
     <url>/2023/04/25/Ffmpeg%E7%94%A8%E6%B3%95/</url>
     <content><![CDATA[<blockquote>
@@ -959,41 +994,6 @@ if __name__ == &#39;__main__&#39;:
       </tags>
   </entry>
   <entry>
-    <title>AgentGPT-带互联网搜索功能的chatGPT</title>
-    <url>/2023/04/25/AgentGPT-%E5%B8%A6%E4%BA%92%E8%81%94%E7%BD%91%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E7%9A%84chatGPT/</url>
-    <content><![CDATA[<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145426.png" alt="20230425145426|left|475"></p>
-<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	Agent GPT 主要的AI 功能就是建立在原版的AutoGPT 之上，然后再加上图形介面，这样阅读起来比较容易也比较方便。<br>相较于ChatGPT，它具有：互联网搜索查询功能、任务拆解各个执行然后串联能力。<br>它能够根据用户需求，在用户完全不插手的情况下自主执行任务，包括日常的事件分析、营销方案撰写、代码编程、数学运算等事务都能代劳。<br>这里我会按照AgentGPT 官方所建议的步骤，一步一步教搭建安装并体验AgentGPT。</p>
-</blockquote>
-<span id="more"></span>
-<h3 id="如何安装Agent-GPT"><a href="#如何安装Agent-GPT" class="headerlink" title="如何安装Agent GPT"></a>如何安装Agent GPT</h3><ul>
-<li>平台：win10 docker desktop </li>
-<li>安装方法：<ol>
-<li>在github上下载<a href="https://github.com/reworkd/AgentGPT">AgentGPT项目</a>：<code>git clone  git@github.com:reworkd/AgentGPT.git</code></li>
-<li>按照官网推荐的docker安装方式：<code>./setup.sh --docker</code>，当然你也可以在本地安装，不过介于docker安装方式最简单，所以这边就不再本地环境搭建了，有兴趣可以在github agentGPT官网上查询。<a href="https://github.com/reworkd/AgentGPT">GitHub - reworkd&#x2F;AgentGPT: 🤖 Assemble, configure, and deploy autonomous AI Agents in your browser.</a><br><em>这里有个小的知识点，如何在win10上运行.sh脚本文件？答案是：用git bash</em></li>
-<li>用setup脚本安装完成之后，可以用<code>docker ps -a</code>确认下container是否真的安装好并启动：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425144818.png" alt="20230425144818|left|525">可以看到agentgpt已经成功创建成功，并在3000端口运行了。</li>
-<li>访问agentGPT container的web：<a href="http://localhost:3000/">http://localhost:3000/</a>，出现这个界面就表示安装成功了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145027.png" alt="20230425145027|left|475"></li>
-<li>接下来我们设置下AI驱动，点击settings，选择gpt-3.5-turbo，输入你的gpt3.5 kye（这个需要你之前注册好，注册的硬性要求有两个：1. 需要会魔法。 2.需要有国外手机号，用于接收验证码，这类网站有很多，请自行百度）<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145325.png" alt="20230425145325|left|475"></li>
-</ol>
-</li>
-</ul>
-<h3 id="AgentGPT使用体验"><a href="#AgentGPT使用体验" class="headerlink" title="AgentGPT使用体验"></a>AgentGPT使用体验</h3><h4 id="询问系统时间"><a href="#询问系统时间" class="headerlink" title="询问系统时间"></a>询问系统时间</h4><p>这个实验尝试了文agentGPT现在时间是几点？<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145750.png" alt="20230425145750|left|500"><br>在这里可以看到他的分析思路是：</p>
-<ul>
-<li>使用系统时钟获取当前时间</li>
-<li>将当前时间转换为字符串格式</li>
-<li>返回字符串时间作为响应</li>
-<li>将字符串时间转换为数字时间</li>
-<li>返回数字时间作为响应<br>思路是对的，想法也很好，但是在执行第一步骤的时候就失败了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150017.png" alt="20230425150017|left|500">之后就是不停的循环这几个步骤，陷入了死循环。</li>
-</ul>
-<h4 id="统计淘宝网上销量前6的血压仪价格及名称"><a href="#统计淘宝网上销量前6的血压仪价格及名称" class="headerlink" title="统计淘宝网上销量前6的血压仪价格及名称"></a>统计淘宝网上销量前6的血压仪价格及名称</h4><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150456.png" alt="20230425150456|left|675"><br>结果：我很满意，的确是有访问互联网并统计到。<br>但是，我不满意的是它的任务拆解执行能力，我的确是从它的子任务重得到了答案，但是它把任务拆分的方式有问题，还是会陷入死循环。<br>因此，如何跳出死循环，这个是AgentGPT需要加强的地方。当然这也是最难的地方。</p>
-<p>随后我让它用中文回复我，可以看到它的确是有统计到结果，但是一旦遇到某一步骤无法得到结果，它就会不停的陷入死循环：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150901.png" alt="20230425150901|left|500"></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>AgetGPT的确是给人眼前一亮的感觉，相较于chatGPT它的互联网搜索能力、任务拆解执行能力，的确是很经验。<br>但是，如何跳出死循环这部分还是需要继续努力。不过介于目前的版本还是beta版本，所以我觉得已经很棒了，加油，希望可以给我们带来更好的产品。</p>
-<p>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><p>1.<br>2.<br>3. </p>
-]]></content>
-  </entry>
-  <entry>
     <title>Hexo博客next主题添加点击特效</title>
     <url>/2023/05/06/Hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/</url>
     <content><![CDATA[<blockquote>
@@ -1030,7 +1030,7 @@ if __name__ == &#39;__main__&#39;:
   <entry>
     <title>Hexo博客查图片并调整位置&amp;大小</title>
     <url>/2023/05/22/Hexo%E5%8D%9A%E5%AE%A2%E6%9F%A5%E5%9B%BE%E7%89%87%E5%B9%B6%E8%B0%83%E6%95%B4%E4%BD%8D%E7%BD%AE&amp;%E5%A4%A7%E5%B0%8F/</url>
-    <content><![CDATA[<div style="display:inline-block;"><img width="30%" style="float:center; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png" alt="20230522144603"></div>
+    <content><![CDATA[<div style="display:inline-block;"><img width="30%" style="float:center " src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png" alt="20230522144603"></div>
 
 <blockquote>
 <p>🌈<strong>Description</strong>：<br>​	Markdown写文章插入图片，<font color="#ff0000">在hexo博客中，图片的大小似乎没有按照个markdown的语法生效</font>，本文将解决此问题。</p>
