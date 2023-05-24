@@ -819,6 +819,48 @@ if __name__ == &#39;__main__&#39;:
       </tags>
   </entry>
   <entry>
+    <title>日记怀旧</title>
+    <url>/2022/11/15/009-%E6%97%A5%E8%AE%B0%E6%80%80%E6%97%A7/</url>
+    <content><![CDATA[<h3 id="2022-x2F-11-x2F-15-小记"><a href="#2022-x2F-11-x2F-15-小记" class="headerlink" title="2022&#x2F;11&#x2F;15 小记"></a>2022&#x2F;11&#x2F;15 小记</h3><p>很久之前，大概是 2013 年的时候，在人人上听过，惊为天人。<br>快 10 年了，<br>人人网也已经不在，<br>曾经想逃离的过去，现在却成了回不去的记忆。</p>
+<span id="more"></span>
+
+
+ <iframe src="//player.bilibili.com/player.html?aid=254554192&bvid=BV1zY411g7zT&cid=544709836&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=300> </iframe>
+
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>163、QQ邮箱收不到Github的邮件解决方法</title>
+    <url>/2023/05/05/163%E3%80%81QQ%E9%82%AE%E7%AE%B1%E6%94%B6%E4%B8%8D%E5%88%B0Github%E7%9A%84%E9%82%AE%E4%BB%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<div style="display:inline-block;"><img width="40%" style="float:center " src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230505171221.png" alt="20230522144603"></div>
+
+<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	国内的好多邮箱收不到github的mail，无法收到github上的通知、留言，这个让人很苦恼，无法及时沟通，所以本文会给出解决方法。</p>
+</blockquote>
+<span id="more"></span>
+
+<p>注册GitHub需要进行邮箱激活验证，否则不能创建仓库，码笔记发现使用QQ邮箱、163邮箱等国内常见邮箱可能收不到激活邮件，这是什么原因呢？码笔记分享GitHub收不到激活邮件的解决方法：</p>
+<h2 id="GitHub收不到邮件的解决方法"><a href="#GitHub收不到邮件的解决方法" class="headerlink" title="GitHub收不到邮件的解决方法"></a>GitHub收不到邮件的解决方法</h2><p>GitHub需要“Please verify your email address”，否则不能使用GitHub。国内常见的邮箱QQ邮箱或者163邮箱等可能会收不到GitHub发来的激活验证邮件，那么如何解决呢？</p>
+<h3 id="将GitHub设置到邮箱白名单即可"><a href="#将GitHub设置到邮箱白名单即可" class="headerlink" title="将GitHub设置到邮箱白名单即可"></a>将GitHub设置到邮箱白名单即可</h3><p>码笔记以QQ邮箱为例，将GitHub加入到邮箱白名单即可。登录到你的邮箱，点击【设置】-【反垃圾】-【白名单】，将<code>github.com</code>添加到邮箱白名单即可，如下图所示：<br><a href="https://www.mabiji.com/wp-content/uploads/2019/11/baimingdan.jpg"><img src="https://www.mabiji.com/wp-content/uploads/2019/11/baimingdan.jpg" alt="github.com添加到邮箱白名单"></a></p>
+<p>github.com添加到邮箱白名单</p>
+<p>然后在GitHub端，点击重新发送邮件“Resend”，即可收到GitHub发来的邮件，在邮件中点击“verify email address”即可完成邮箱验证。</p>
+<p>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a href="https://www.mabiji.com/github/github-email.html#:~:text=%E5%9B%BD%E5%86%85%E5%B8%B8%E8%A7%81%E7%9A%84%E9%82%AE%E7%AE%B1QQ%E9%82%AE%E7%AE%B1%E6%88%96%E8%80%85163%E9%82%AE%E7%AE%B1%E7%AD%89%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%94%B6%E4%B8%8D%E5%88%B0GitHub%E5%8F%91%E6%9D%A5%E7%9A%84%E6%BF%80%E6%B4%BB%E9%AA%8C%E8%AF%81%E9%82%AE%E4%BB%B6%EF%BC%8C%E9%82%A3%E4%B9%88%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%91%A2%EF%BC%9F%20%E5%B0%86GitHub%E8%AE%BE%E7%BD%AE%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%E5%8D%B3%E5%8F%AF%20%E7%A0%81%E7%AC%94%E8%AE%B0%E4%BB%A5QQ%E9%82%AE%E7%AE%B1%E4%B8%BA%E4%BE%8B%EF%BC%8C%E5%B0%86GitHub%E5%8A%A0%E5%85%A5%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%E5%8D%B3%E5%8F%AF%E3%80%82%20%E7%99%BB%E5%BD%95%E5%88%B0%E4%BD%A0%E7%9A%84%E9%82%AE%E7%AE%B1%EF%BC%8C%E7%82%B9%E5%87%BB%E3%80%90%E8%AE%BE%E7%BD%AE%E3%80%91-%E3%80%90%E5%8F%8D%E5%9E%83%E5%9C%BE%E3%80%91-%E3%80%90%E7%99%BD%E5%90%8D%E5%8D%95%E3%80%91%EF%BC%8C%E5%B0%86github.com%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%E5%8D%B3%E5%8F%AF%EF%BC%8C%E5%A6%82%E4%B8%8B%E5%9B%BE%E6%89%80%E7%A4%BA%EF%BC%9A,github.com%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%20%E7%84%B6%E5%90%8E%E5%9C%A8GitHub%E7%AB%AF%EF%BC%8C%E7%82%B9%E5%87%BB%E9%87%8D%E6%96%B0%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6%E2%80%9CResend%E2%80%9D%EF%BC%8C%E5%8D%B3%E5%8F%AF%E6%94%B6%E5%88%B0GitHub%E5%8F%91%E6%9D%A5%E7%9A%84%E9%82%AE%E4%BB%B6%EF%BC%8C%E5%9C%A8%E9%82%AE%E4%BB%B6%E4%B8%AD%E7%82%B9%E5%87%BB%E2%80%9Cverify%20email%20address%E2%80%9D%E5%8D%B3%E5%8F%AF%E5%AE%8C%E6%88%90%E9%82%AE%E7%AE%B1%E9%AA%8C%E8%AF%81%E3%80%82">GitHub收不到邮件的解决方法 | 码笔记</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>每日文章</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AgentGPT-带互联网搜索功能的chatGPT</title>
     <url>/2023/04/25/AgentGPT-%E5%B8%A6%E4%BA%92%E8%81%94%E7%BD%91%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E7%9A%84chatGPT/</url>
     <content><![CDATA[<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145426.png" alt="20230425145426|left|475"></p>
@@ -852,31 +894,6 @@ if __name__ == &#39;__main__&#39;:
 <hr>
 <h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><p>1.<br>2.<br>3. </p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>163、QQ邮箱收不到Github的邮件解决方法</title>
-    <url>/2023/05/05/163%E3%80%81QQ%E9%82%AE%E7%AE%B1%E6%94%B6%E4%B8%8D%E5%88%B0Github%E7%9A%84%E9%82%AE%E4%BB%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<div style="display:inline-block;"><img width="40%" style="float:center " src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230505171221.png" alt="20230522144603"></div>
-
-<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	国内的好多邮箱收不到github的mail，无法收到github上的通知、留言，这个让人很苦恼，无法及时沟通，所以本文会给出解决方法。</p>
-</blockquote>
-<span id="more"></span>
-
-<p>注册GitHub需要进行邮箱激活验证，否则不能创建仓库，码笔记发现使用QQ邮箱、163邮箱等国内常见邮箱可能收不到激活邮件，这是什么原因呢？码笔记分享GitHub收不到激活邮件的解决方法：</p>
-<h2 id="GitHub收不到邮件的解决方法"><a href="#GitHub收不到邮件的解决方法" class="headerlink" title="GitHub收不到邮件的解决方法"></a>GitHub收不到邮件的解决方法</h2><p>GitHub需要“Please verify your email address”，否则不能使用GitHub。国内常见的邮箱QQ邮箱或者163邮箱等可能会收不到GitHub发来的激活验证邮件，那么如何解决呢？</p>
-<h3 id="将GitHub设置到邮箱白名单即可"><a href="#将GitHub设置到邮箱白名单即可" class="headerlink" title="将GitHub设置到邮箱白名单即可"></a>将GitHub设置到邮箱白名单即可</h3><p>码笔记以QQ邮箱为例，将GitHub加入到邮箱白名单即可。登录到你的邮箱，点击【设置】-【反垃圾】-【白名单】，将<code>github.com</code>添加到邮箱白名单即可，如下图所示：<br><a href="https://www.mabiji.com/wp-content/uploads/2019/11/baimingdan.jpg"><img src="https://www.mabiji.com/wp-content/uploads/2019/11/baimingdan.jpg" alt="github.com添加到邮箱白名单"></a></p>
-<p>github.com添加到邮箱白名单</p>
-<p>然后在GitHub端，点击重新发送邮件“Resend”，即可收到GitHub发来的邮件，在邮件中点击“verify email address”即可完成邮箱验证。</p>
-<p>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
-<li><a href="https://www.mabiji.com/github/github-email.html#:~:text=%E5%9B%BD%E5%86%85%E5%B8%B8%E8%A7%81%E7%9A%84%E9%82%AE%E7%AE%B1QQ%E9%82%AE%E7%AE%B1%E6%88%96%E8%80%85163%E9%82%AE%E7%AE%B1%E7%AD%89%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%94%B6%E4%B8%8D%E5%88%B0GitHub%E5%8F%91%E6%9D%A5%E7%9A%84%E6%BF%80%E6%B4%BB%E9%AA%8C%E8%AF%81%E9%82%AE%E4%BB%B6%EF%BC%8C%E9%82%A3%E4%B9%88%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%91%A2%EF%BC%9F%20%E5%B0%86GitHub%E8%AE%BE%E7%BD%AE%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%E5%8D%B3%E5%8F%AF%20%E7%A0%81%E7%AC%94%E8%AE%B0%E4%BB%A5QQ%E9%82%AE%E7%AE%B1%E4%B8%BA%E4%BE%8B%EF%BC%8C%E5%B0%86GitHub%E5%8A%A0%E5%85%A5%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%E5%8D%B3%E5%8F%AF%E3%80%82%20%E7%99%BB%E5%BD%95%E5%88%B0%E4%BD%A0%E7%9A%84%E9%82%AE%E7%AE%B1%EF%BC%8C%E7%82%B9%E5%87%BB%E3%80%90%E8%AE%BE%E7%BD%AE%E3%80%91-%E3%80%90%E5%8F%8D%E5%9E%83%E5%9C%BE%E3%80%91-%E3%80%90%E7%99%BD%E5%90%8D%E5%8D%95%E3%80%91%EF%BC%8C%E5%B0%86github.com%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%E5%8D%B3%E5%8F%AF%EF%BC%8C%E5%A6%82%E4%B8%8B%E5%9B%BE%E6%89%80%E7%A4%BA%EF%BC%9A,github.com%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%20%E7%84%B6%E5%90%8E%E5%9C%A8GitHub%E7%AB%AF%EF%BC%8C%E7%82%B9%E5%87%BB%E9%87%8D%E6%96%B0%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6%E2%80%9CResend%E2%80%9D%EF%BC%8C%E5%8D%B3%E5%8F%AF%E6%94%B6%E5%88%B0GitHub%E5%8F%91%E6%9D%A5%E7%9A%84%E9%82%AE%E4%BB%B6%EF%BC%8C%E5%9C%A8%E9%82%AE%E4%BB%B6%E4%B8%AD%E7%82%B9%E5%87%BB%E2%80%9Cverify%20email%20address%E2%80%9D%E5%8D%B3%E5%8F%AF%E5%AE%8C%E6%88%90%E9%82%AE%E7%AE%B1%E9%AA%8C%E8%AF%81%E3%80%82">GitHub收不到邮件的解决方法 | 码笔记</a></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>每日文章</tag>
-      </tags>
   </entry>
   <entry>
     <title>FFmpeg用法</title>
@@ -1350,23 +1367,6 @@ PS: 原本的语法：
 <li>分享个人技术成长路线。</li>
 <li>分享技术热点</li>
 </ol>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>日记怀旧</title>
-    <url>/2022/11/15/009-%E6%97%A5%E8%AE%B0%E6%80%80%E6%97%A7/</url>
-    <content><![CDATA[<h3 id="2022-x2F-11-x2F-15-小记"><a href="#2022-x2F-11-x2F-15-小记" class="headerlink" title="2022&#x2F;11&#x2F;15 小记"></a>2022&#x2F;11&#x2F;15 小记</h3><p>很久之前，大概是 2013 年的时候，在人人上听过，惊为天人。<br>快 10 年了，<br>人人网也已经不在，<br>曾经想逃离的过去，现在却成了回不去的记忆。</p>
-<span id="more"></span>
-
-
- <iframe src="//player.bilibili.com/player.html?aid=254554192&bvid=BV1zY411g7zT&cid=544709836&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=300> </iframe>
-
 ]]></content>
       <categories>
         <category>日记</category>
