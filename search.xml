@@ -80,6 +80,60 @@
       </tags>
   </entry>
   <entry>
+    <title>dsyncnorize使用教</title>
+    <url>/2022/09/29/003-dsyncnorize%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<blockquote>
+<p>一款自动备份、传递数据的软件，</p>
+<p>支持win to win的定时备份、双向传递。</p>
+</blockquote>
+<span id="more"></span>
+
+
+
+<h2 id="使用方法-amp-基础设定"><a href="#使用方法-amp-基础设定" class="headerlink" title="使用方法&amp;基础设定"></a>使用方法&amp;基础设定</h2><ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220916112432.png" alt="image-20220916112432857" style="zoom: 50%;" />
+
+<ul>
+<li><p>使用前一定要在checkbox上打勾，处于选中状态才能进行同步sync。</p>
+</li>
+<li><p>设定部分参考上面的截图。</p>
+</li>
+<li><p>如果需要双向同步，选择：bidirectional sync。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="特性分析"><a href="#特性分析" class="headerlink" title="特性分析"></a>特性分析</h2><h3 id="单向同步："><a href="#单向同步：" class="headerlink" title="单向同步："></a>单向同步：</h3><ul>
+<li>过程：同步source的新增、删除。</li>
+<li>结果：目标文件夹会与源文件夹一模一样。</li>
+</ul>
+<h3 id="双向同步："><a href="#双向同步：" class="headerlink" title="双向同步："></a>双向同步：</h3><ul>
+<li>过程：双向同步新增或缺失的文件，不能同步删除动作。</li>
+<li>结果：增量同步，两个文件夹叠加结果。</li>
+</ul>
+<h3 id="如何实现双向同步新增、同步删除？"><a href="#如何实现双向同步新增、同步删除？" class="headerlink" title="如何实现双向同步新增、同步删除？"></a>如何实现双向同步新增、同步删除？</h3><ul>
+<li>平时使用时，选择双向同步。</li>
+<li>如果需要同步删除怎么操作？<ul>
+<li>step1：双向同步一次。</li>
+<li>step2：在source端，删除目标文件夹、文件。</li>
+<li>step3：在source端，单向同步到远端。</li>
+<li>step4：改为双向同步。</li>
+</ul>
+</li>
+</ul>
+<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ul>
+<li>大文件同步的时候，软件会进入假死状态！</li>
+</ul>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>NAS相关</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python字符串小技巧</title>
     <url>/2022/09/27/002-Python%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220927171316.jpeg" alt="Free photos of Vintage pocket watch" style="zoom:50%;" />
@@ -138,60 +192,6 @@
       <tags>
         <tag>python</tag>
         <tag>python字符串</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>dsyncnorize使用教</title>
-    <url>/2022/09/29/003-dsyncnorize%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<blockquote>
-<p>一款自动备份、传递数据的软件，</p>
-<p>支持win to win的定时备份、双向传递。</p>
-</blockquote>
-<span id="more"></span>
-
-
-
-<h2 id="使用方法-amp-基础设定"><a href="#使用方法-amp-基础设定" class="headerlink" title="使用方法&amp;基础设定"></a>使用方法&amp;基础设定</h2><ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220916112432.png" alt="image-20220916112432857" style="zoom: 50%;" />
-
-<ul>
-<li><p>使用前一定要在checkbox上打勾，处于选中状态才能进行同步sync。</p>
-</li>
-<li><p>设定部分参考上面的截图。</p>
-</li>
-<li><p>如果需要双向同步，选择：bidirectional sync。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="特性分析"><a href="#特性分析" class="headerlink" title="特性分析"></a>特性分析</h2><h3 id="单向同步："><a href="#单向同步：" class="headerlink" title="单向同步："></a>单向同步：</h3><ul>
-<li>过程：同步source的新增、删除。</li>
-<li>结果：目标文件夹会与源文件夹一模一样。</li>
-</ul>
-<h3 id="双向同步："><a href="#双向同步：" class="headerlink" title="双向同步："></a>双向同步：</h3><ul>
-<li>过程：双向同步新增或缺失的文件，不能同步删除动作。</li>
-<li>结果：增量同步，两个文件夹叠加结果。</li>
-</ul>
-<h3 id="如何实现双向同步新增、同步删除？"><a href="#如何实现双向同步新增、同步删除？" class="headerlink" title="如何实现双向同步新增、同步删除？"></a>如何实现双向同步新增、同步删除？</h3><ul>
-<li>平时使用时，选择双向同步。</li>
-<li>如果需要同步删除怎么操作？<ul>
-<li>step1：双向同步一次。</li>
-<li>step2：在source端，删除目标文件夹、文件。</li>
-<li>step3：在source端，单向同步到远端。</li>
-<li>step4：改为双向同步。</li>
-</ul>
-</li>
-</ul>
-<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ul>
-<li>大文件同步的时候，软件会进入假死状态！</li>
-</ul>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>NAS相关</tag>
       </tags>
   </entry>
   <entry>
@@ -1122,31 +1122,6 @@ PS: 原本的语法：
       </tags>
   </entry>
   <entry>
-    <title>hexo 部署填写 github 用户名和密码一次性解决方案</title>
-    <url>/2023/04/20/hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	hexo 部署文章时候，会弹出 github 弹窗填写 username 和 password，填完之后还是无法上传，本文会给出解决方法。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>hexo 博客半年没写了，今天尝试更新，发现 <code>hexo d</code> 之后需要输入 github 的用户名和密码，但是我输入之后没有效果，还是无法推送到 github 上。<br>研究之后发现 rootcause 是：github 已经无法再用密码登陆推送，只能用 token，我的 token 之前只设置了 3 个月的有效期，所以现在失效了。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h4 id="1-重新生成新的-token"><a href="#1-重新生成新的-token" class="headerlink" title="1. 重新生成新的 token"></a>1. 重新生成新的 token</h4><p>新的 token 设置网址：<a href="https://github.com/settings/tokens">Personal Access Tokens (Classic) (github.com)</a><br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101025.png" alt="20230420101025|left"><br>新的 token （%%🔐α 💡ID💡MDO&#x2F;W 4 Cm 9 AJ 4 Ls 8&#x2F;i+yXXM 5 GzNzTJ 0 o 2 u 4 AwfZGVs 5 EqWEESkIf 0+kWt+quYVANDGUCe 4 GJWAxLJnr 7 vIgsi 7 QtSUNma 9 MPz 🔐%%）记得保存好，网页刷新之后就再也看不见了。</p>
-<h4 id="2-配置-hexo-config-yml"><a href="#2-配置-hexo-config-yml" class="headerlink" title="2. 配置 hexo config.yml"></a>2. 配置 hexo config.yml</h4><p>配置 hexo config.yml：<br>原本的配置：<code>repo: https://github.com/weicun581/weicun581.git</code><br>新的配置：<code>repo: https://your token here@github.com/weicun581/weicun581.git</code><br>替换 <code>your token here</code> 替换成上一步的 token 就好了。</p>
-<h2 id="实际使用效果"><a href="#实际使用效果" class="headerlink" title="实际使用效果"></a>实际使用效果</h2><p>在 hexo 根目录下执行：<code>hexo d</code>，之后在 github project 的 action 界面就可以看到 action 动作了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101947.png" alt="20230420101947|left"></p>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
-<li><a href="https://blog.csdn.net/qq_43340547/article/details/119895671">(75条消息) 命令行输入hexo d后发现不能输入GitHub密码登录_SoberGit的博客-CSDN博客</a></li>
-<li><a href="https://blog.csdn.net/weixin_41010198/article/details/119698015?utm_source=app&app_version=4.12.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">(75条消息) github开发人员在七夕搞事情：remote: Support for password authentication was removed on August 13, 2021._点亮～黑夜的博客-CSDN博客</a></li>
-</ol>
-<p>个人博客地址：<a href="https://weicun.gitee.io/">蓝色单车 (gitee.io)</a></p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-        <tag>每日文章</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>组件世界-初体验</title>
     <url>/2023/04/23/obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/</url>
     <content><![CDATA[<blockquote>
@@ -1204,6 +1179,31 @@ PS: 原本的语法：
 <li></li>
 </ol>
 ]]></content>
+  </entry>
+  <entry>
+    <title>hexo 部署填写 github 用户名和密码一次性解决方案</title>
+    <url>/2023/04/20/hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	hexo 部署文章时候，会弹出 github 弹窗填写 username 和 password，填完之后还是无法上传，本文会给出解决方法。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>hexo 博客半年没写了，今天尝试更新，发现 <code>hexo d</code> 之后需要输入 github 的用户名和密码，但是我输入之后没有效果，还是无法推送到 github 上。<br>研究之后发现 rootcause 是：github 已经无法再用密码登陆推送，只能用 token，我的 token 之前只设置了 3 个月的有效期，所以现在失效了。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h4 id="1-重新生成新的-token"><a href="#1-重新生成新的-token" class="headerlink" title="1. 重新生成新的 token"></a>1. 重新生成新的 token</h4><p>新的 token 设置网址：<a href="https://github.com/settings/tokens">Personal Access Tokens (Classic) (github.com)</a><br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101025.png" alt="20230420101025|left"><br>新的 token （%%🔐α 💡ID💡MDO&#x2F;W 4 Cm 9 AJ 4 Ls 8&#x2F;i+yXXM 5 GzNzTJ 0 o 2 u 4 AwfZGVs 5 EqWEESkIf 0+kWt+quYVANDGUCe 4 GJWAxLJnr 7 vIgsi 7 QtSUNma 9 MPz 🔐%%）记得保存好，网页刷新之后就再也看不见了。</p>
+<h4 id="2-配置-hexo-config-yml"><a href="#2-配置-hexo-config-yml" class="headerlink" title="2. 配置 hexo config.yml"></a>2. 配置 hexo config.yml</h4><p>配置 hexo config.yml：<br>原本的配置：<code>repo: https://github.com/weicun581/weicun581.git</code><br>新的配置：<code>repo: https://your token here@github.com/weicun581/weicun581.git</code><br>替换 <code>your token here</code> 替换成上一步的 token 就好了。</p>
+<h2 id="实际使用效果"><a href="#实际使用效果" class="headerlink" title="实际使用效果"></a>实际使用效果</h2><p>在 hexo 根目录下执行：<code>hexo d</code>，之后在 github project 的 action 界面就可以看到 action 动作了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101947.png" alt="20230420101947|left"></p>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a href="https://blog.csdn.net/qq_43340547/article/details/119895671">(75条消息) 命令行输入hexo d后发现不能输入GitHub密码登录_SoberGit的博客-CSDN博客</a></li>
+<li><a href="https://blog.csdn.net/weixin_41010198/article/details/119698015?utm_source=app&app_version=4.12.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">(75条消息) github开发人员在七夕搞事情：remote: Support for password authentication was removed on August 13, 2021._点亮～黑夜的博客-CSDN博客</a></li>
+</ol>
+<p>个人博客地址：<a href="https://weicun.gitee.io/">蓝色单车 (gitee.io)</a></p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>每日文章</tag>
+        <tag>github</tag>
+      </tags>
   </entry>
   <entry>
     <title>不用魔法免费使用类chatGPT聊天</title>
@@ -1276,6 +1276,21 @@ PS: 原本的语法：
       </tags>
   </entry>
   <entry>
+    <title>博客评论暂停大陆地区使用公告</title>
+    <url>/2023/05/26/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E6%9A%82%E5%81%9C%E5%A4%A7%E9%99%86%E5%9C%B0%E5%8C%BA%E4%BD%BF%E7%94%A8%E5%85%AC%E5%91%8A/</url>
+    <content><![CDATA[<div style="display:inline-block;"><img width="80%" style="float:center;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230526103407.png" alt="20230526103407"></div>
+> ​由于域名到期，暂时不在支持大陆地区用户使用本博客的评论功能，如果你有魔法or梯子，将不会影响你的使用。
+
+<span id="more"></span>
+
+<p>目前的使用的博客系统是waline，挂载在vercel服务器上，但是vercel域名被挡住了，所以之前有购买一个域名，DNS解析到vercel上，因此国内用户才可以正常评论。<br>但是现在域名到期了，所以将使用vercel自带的域名，因此请大家八仙过海、各显神通，把魔法用起来。<br>欢迎评论你对the great wall的看法？</p>
+<ul>
+<li><input disabled="" type="checkbox"> 支持？外面世界太乱了，ZF是在保护我们。</li>
+<li><input disabled="" type="checkbox"> 反对？阻碍交流</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>有意思的名言警句</title>
     <url>/2022/11/15/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%90%8D%E8%A8%80%E8%AD%A6%E5%8F%A5/</url>
     <content><![CDATA[<center><font size=5>今天看到的名言警句</font></center>
@@ -1343,17 +1358,6 @@ PS: 原本的语法：
       </tags>
   </entry>
   <entry>
-    <title>随便聊两句</title>
-    <url>/2023/05/05/%E9%9A%8F%E4%BE%BF%E8%81%8A%E4%B8%A4%E5%8F%A5/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	进来聊聊天呗…</p>
-</blockquote>
-<span id="more"></span>
-
-<h3 id="话说如果不考虑赚钱，只考虑兴趣爱好，你们还会从事现在的行业吗？"><a href="#话说如果不考虑赚钱，只考虑兴趣爱好，你们还会从事现在的行业吗？" class="headerlink" title="话说如果不考虑赚钱，只考虑兴趣爱好，你们还会从事现在的行业吗？"></a>话说如果不考虑赚钱，只考虑兴趣爱好，你们还会从事现在的行业吗？</h3><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230505113619.png" alt="20230505113619|left|450"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>日记怀旧</title>
     <url>/2023/04/20/%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B/</url>
     <content><![CDATA[<h3 id="2023-04-20小记"><a href="#2023-04-20小记" class="headerlink" title="2023-04-20小记"></a>2023-04-20小记</h3><h4 id="博客停更的原因"><a href="#博客停更的原因" class="headerlink" title="博客停更的原因"></a>博客停更的原因</h4><p>hello 大家好，这个博客网站快有半年没更新了，原因嘛，很好解释，没有人跟我互动，懒得写了，后来就搁置了。<br>其实这半年还有好多事情，导致博客网站没有继续写下去：</p>
@@ -1374,5 +1378,16 @@ PS: 原本的语法：
       <tags>
         <tag>日记</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>随便聊两句</title>
+    <url>/2023/05/05/%E9%9A%8F%E4%BE%BF%E8%81%8A%E4%B8%A4%E5%8F%A5/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	进来聊聊天呗…</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="话说如果不考虑赚钱，只考虑兴趣爱好，你们还会从事现在的行业吗？"><a href="#话说如果不考虑赚钱，只考虑兴趣爱好，你们还会从事现在的行业吗？" class="headerlink" title="话说如果不考虑赚钱，只考虑兴趣爱好，你们还会从事现在的行业吗？"></a>话说如果不考虑赚钱，只考虑兴趣爱好，你们还会从事现在的行业吗？</h3><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230505113619.png" alt="20230505113619|left|450"></p>
+]]></content>
   </entry>
 </search>
