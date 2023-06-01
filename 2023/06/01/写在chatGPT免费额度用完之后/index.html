@@ -22,25 +22,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"weicun581.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.13.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="软件评测、AI、感悟，分享好玩的东东">
-<meta property="og:type" content="website">
-<meta property="og:title" content="蓝色单车">
-<meta property="og:url" content="https://weicun581.github.io/tags/foldersync/index.html">
+    <meta name="description" content="​	今天在用python调用chatGPT API的时候出现了这个错误，openai.error.RateLimitError: You exceeded your current quota, please check your plan and billing details. 唉，这可咋整？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="写在chatGPT免费额度用完之后">
+<meta property="og:url" content="https://weicun581.github.io/2023/06/01/%E5%86%99%E5%9C%A8chatGPT%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%E7%94%A8%E5%AE%8C%E4%B9%8B%E5%90%8E/index.html">
 <meta property="og:site_name" content="蓝色单车">
-<meta property="og:description" content="软件评测、AI、感悟，分享好玩的东东">
+<meta property="og:description" content="​	今天在用python调用chatGPT API的时候出现了这个错误，openai.error.RateLimitError: You exceeded your current quota, please check your plan and billing details. 唉，这可咋整？">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230601111434.png">
+<meta property="og:image" content="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230601112013.png">
+<meta property="article:published_time" content="2023-06-01T03:10:00.000Z">
+<meta property="article:modified_time" content="2023-06-01T07:13:17.525Z">
 <meta property="article:author" content="蓝色单车">
+<meta property="article:tag" content="每日文章">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230601111434.png">
 
 
-<link rel="canonical" href="https://weicun581.github.io/tags/foldersync/">
+<link rel="canonical" href="https://weicun581.github.io/2023/06/01/%E5%86%99%E5%9C%A8chatGPT%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%E7%94%A8%E5%AE%8C%E4%B9%8B%E5%90%8E/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/foldersync/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://weicun581.github.io/2023/06/01/%E5%86%99%E5%9C%A8chatGPT%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%E7%94%A8%E5%AE%8C%E4%B9%8B%E5%90%8E/","path":"2023/06/01/写在chatGPT免费额度用完之后/","title":"写在chatGPT免费额度用完之后"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签: foldersync | 蓝色单车</title>
+<title>写在chatGPT免费额度用完之后 | 蓝色单车</title>
   
 
 
@@ -134,7 +140,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -147,6 +153,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">问题分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%9F%E5%9B%A0"><span class="nav-number">2.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%BB%91%E5%AE%9A%E4%BF%A1%E7%94%A8%E5%8D%A1"><span class="nav-number">3.1.</span> <span class="nav-text">1- 绑定信用卡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8chatGPT%E5%AE%98%E7%BD%91"><span class="nav-number">3.2.</span> <span class="nav-text">2- 使用chatGPT官网</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E2%9A%A1%EF%B8%8FChatGPT-Shortcut"><span class="nav-number">3.2.1.</span> <span class="nav-text">⚡️ChatGPT Shortcut</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#AIPRM-for-ChatGPT"><span class="nav-number">3.2.2.</span> <span class="nav-text">AIPRM for ChatGPT</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%8C%88%E5%8F%82%E8%80%83%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">🌈参考：</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -243,51 +250,185 @@
 </noscript>
 
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">foldersync
-          <small>标签</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://weicun581.github.io/2023/06/01/%E5%86%99%E5%9C%A8chatGPT%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%E7%94%A8%E5%AE%8C%E4%B9%8B%E5%90%8E/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/logo.png">
+      <meta itemprop="name" content="蓝色单车">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蓝色单车">
+      <meta itemprop="description" content="软件评测、AI、感悟，分享好玩的东东">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="写在chatGPT免费额度用完之后 | 蓝色单车">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          写在chatGPT免费额度用完之后
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="创建时间：2023-06-01 11:10:00 / 修改时间：15:13:17" itemprop="dateCreated datePublished" datetime="2023-06-01T11:10:00+08:00">2023-06-01</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2023/06/01/%E5%86%99%E5%9C%A8chatGPT%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%E7%94%A8%E5%AE%8C%E4%B9%8B%E5%90%8E/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2023/06/01/%E5%86%99%E5%9C%A8chatGPT%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%E7%94%A8%E5%AE%8C%E4%B9%8B%E5%90%8E/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote>
+<p>​	今天在用python调用chatGPT API的时候出现了这个错误，<code>openai.error.RateLimitError: You exceeded your current quota, please check your plan and billing details.</code> 唉，这可咋整？</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>第一时间想到去官网查看下余额，因为之前听说过key泄漏，余额哗哗流掉的情况。所我第一时间以为是key泄漏了。<br>到<a target="_blank" rel="noopener" href="https://platform.openai.com/account/usage">官网上查了下余额</a>得到的结果如下：</p>
+<div style="display:inline-block;"><img width="80%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230601111434.png" alt="20230601111434"></div>
+好消息是：余额还有很多没用完，key没有泄漏。
+坏消息是：余额过期了。
+此时，我真想对openAI唱一句：听我说谢谢你，温暖了四季。。。
+
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>查了下<a target="_blank" rel="noopener" href="https://opencat.app/docs/zh-CN/faq">openAI官网说明</a>：</p>
+<div style="display:inline-block;"><img width="80%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230601112013.png" alt="20230601112013"></div>
+看来必须要绑定信用卡才能继续使用chatGPT API.
+
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><h4 id="1-绑定信用卡"><a href="#1-绑定信用卡" class="headerlink" title="1- 绑定信用卡"></a>1- 绑定信用卡</h4><p><font color="#ff0000">过于繁琐、不安全，暂时不搞了。</font></p>
+<h4 id="2-使用chatGPT官网"><a href="#2-使用chatGPT官网" class="headerlink" title="2- 使用chatGPT官网"></a>2- 使用chatGPT官网</h4><p><a target="_blank" rel="noopener" href="https://chat.openai.com/">chatGPT官网</a>还是可以继续使用的。<br>相较于种类繁多的各种chatGPT 二次开发，官网最大的劣势就在于没有<code>提示词</code>，有没有edge浏览器提示词插件呢？<br>答案是：有</p>
+<h5 id="⚡️ChatGPT-Shortcut"><a href="#⚡️ChatGPT-Shortcut" class="headerlink" title="⚡️ChatGPT Shortcut"></a>⚡️ChatGPT Shortcut</h5><p><strong>资源</strong>： <a target="_blank" rel="noopener" href="https://github.com/rockbenben/ChatGPT-Shortcut">github地址</a>  <a target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/chatgpt-shortcut/hnggpalhfjmdhhmgfjpmhlfilnbmjoin">edge插件地址</a><br>（<em>顺便说一句，<a target="_blank" rel="noopener" href="https://newzone.top/blog.html">作者的博客</a>真是宝藏博客，是我喜欢的style，再看看<a target="_blank" rel="noopener" href="https://weicun.gitee.io/">我的博客</a>，唉，努力想强者学习。</em>）<br><strong>使用感受</strong>：的确不错，虽然不能直接调出命令，需要复制粘贴到chatGPT，但是很干净、清爽。<br><strong>优点</strong>：干净清爽、支持中文、免费<br><strong>缺点</strong>：不支持一键嵌入，需要自己复制粘贴</p>
+<h5 id="AIPRM-for-ChatGPT"><a href="#AIPRM-for-ChatGPT" class="headerlink" title="AIPRM for ChatGPT"></a>AIPRM for ChatGPT</h5><p><strong>资源</strong>： <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/aiprm-for-chatgpt/ojnbohmppadfgpejeebfnmnknjdlckgj">edge插件地址</a><br><strong>使用感受</strong>：纯英文，没有实际使用意义<br><strong>优点</strong>：可以一键嵌入命令<br><strong>缺点</strong>：界面繁琐、收费、不支持中文。</p>
+<p><strong>最终结论</strong>：使用⚡️<strong>ChatGPT Shortcut</strong></p>
+<p><strong>顺便说一句:</strong> <font color="#ff0000">Goodbye 各类好用的chatGPT二次开发应用，由于API过期，我将回归chatGPT官网。</font></p>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/620257174">还在为chatgpt的prompt发愁？试试这些插件，让提问变得更有效、更简单~ - 知乎</a></li>
+</ol>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-10-20T18:51:33+08:00"
-              content="2022-10-20">
-          10-20
-        </time>
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="蓝色单车 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="蓝色单车 支付宝">
+        <span>支付宝</span>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/10/20/004-foldersync%E5%90%8C%E6%AD%A5%E8%BD%AF%E4%BB%B6/" itemprop="url">
-            <span itemprop="name">foldersync同步软件使用介绍</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-    </div>
   </div>
-  
-  
-  
+</div>
 
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://www.zhihu.com/people/wang-lei-64-69-87">
+          <span class="icon">
+            <i class="fab fa-zhihu"></i>
+          </span>
+
+          <span class="label">知乎</span>
+        </a>
+      </div>
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://mp.weixin.qq.com/s/cYYE5aWQ2QxHkIKzLz4rxw">
+          <span class="icon">
+            <i class="fab fa-weixin"></i>
+          </span>
+
+          <span class="label">微信</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%AF%8F%E6%97%A5%E6%96%87%E7%AB%A0/" rel="tag"><i class="fa fa-tag"></i> 每日文章</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/05/29/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%BC%80%E6%94%BE%E5%9B%BD%E5%86%85%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/" rel="prev" title="博客评论区开放国内评论功能">
+                  <i class="fa fa-chevron-left"></i> 博客评论区开放国内评论功能
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -370,7 +511,7 @@ setInterval("createtime()",250);
 
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://www.jimmy581.eu.org/","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀","avatar":"mm","meta":["nick","mail"],"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/tags/foldersync/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"https://www.jimmy581.eu.org/","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀","avatar":"mm","meta":["nick","mail"],"visitor":true,"comment_count":true,"requiredFields":["nick","mail"],"el":"#waline","comment":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","path":"/2023/06/01/%E5%86%99%E5%9C%A8chatGPT%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%E7%94%A8%E5%AE%8C%E4%B9%8B%E5%90%8E/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
