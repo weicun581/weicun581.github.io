@@ -195,6 +195,95 @@
       </tags>
   </entry>
   <entry>
+    <title>foldersync同步软件使用介绍</title>
+    <url>/2022/10/20/004-foldersync%E5%90%8C%E6%AD%A5%E8%BD%AF%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="foldersync简介"><a href="#foldersync简介" class="headerlink" title="foldersync简介"></a>foldersync简介</h2><blockquote>
+<p>​       FolderSync pro是一款功能非常强大的设备本地存储(包括SD卡)文件&#x2F;文件夹与云存储同步应用。它可以将手机中的文件自动同步到云端空间，支持包括 FTP、WebDAV、Dropbox、 Google Docs 在内的众多空间。</p>
+<p>  FolderSync Pro 支持各种不同的云服务商和文件协议，并且不断增加对更多平台的支持。在 root 设备上支持根文件访问。这款软件目前支持多个Google Drive，Dropbox，Amazon S3，SugarSync，Box.net，OneDrive，FTP，FTPS，SFTP，WebDAV和Windows共享帐户。</p>
+<p>  FolderSync Pro 支持将音乐、图片和其他重要文件从手机备份到您的云存储或其他方式。使用起来十分舒爽简便。而且借助于 Tasker 和类似程序的自动化支持可对您的同步进行更准确精细的控制。它包含一个完整的文件管理器，使您可以在本地和云中管理文件。复制，移动和删除云&#x2F;远程帐户中的文件。支持在Amazon S3中创建&#x2F;删除存储。从手机上载和下载文件。</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="软件功能"><a href="#软件功能" class="headerlink" title="软件功能"></a>软件功能</h3><blockquote>
+<p>一款同步app，支持windows电脑和安卓手机之间文件夹、文件同步，需要有云盘（坚果云）作为server。</p>
+<p>总体来说，还是一款很不错的软件。</p>
+</blockquote>
+<ul>
+<li>&#x3D;&#x3D;经验总结：&#x3D;&#x3D;<ul>
+<li>坚果云，不可以短时间内多次同步，会出现无法连接的情况（连接持续30s左右后不成功）。</li>
+<li>连接参数配置很关键，出错的话，无法实现双向同步。我的参数配置如下图：<ul>
+<li>TBD(在小米平板上，待补充！)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="支持的云盘"><a href="#支持的云盘" class="headerlink" title="支持的云盘"></a>支持的云盘</h3><ul>
+<li>&#96;&#96;&#96;<br>Amazon S3 Simple Storage Service, Box, CloudMe, Dropbox, Google Drive, HiDrive, Livedrive Premium, MyDrive.ch, MyKolab, NetDocuments, OneDrive, OneDrive for Business, OwnCloud, pCloud, Storegate, SugarSync, WEB.DE, Yandex Disk<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 支持的协议</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  FTP / FTPES / FTPS</span><br><span class="line">  SFTP</span><br><span class="line">  WebDAV</span><br><span class="line">  Samba / SMB / CIFS（仅SMB1）</span><br><span class="line">  SMB2（实验性）</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="foldersync下载"><a href="#foldersync下载" class="headerlink" title="foldersync下载"></a>foldersync下载</h2><ul>
+<li>官网地址：<a href="https://www.tacit.dk/foldersync">https://www.tacit.dk/foldersync</a></li>
+<li>网络资源：<a href="https://pan.qian.blue/share_exp_1ove_ml/Android-APP/FolderSync/">https://pan.qian.blue/share_exp_1ove_ml/Android-APP/FolderSync/</a></li>
+</ul>
+<h2 id="foldersync使用方法"><a href="#foldersync使用方法" class="headerlink" title="foldersync使用方法"></a>foldersync使用方法</h2><h3 id="foldersync配置"><a href="#foldersync配置" class="headerlink" title="foldersync配置"></a>foldersync配置</h3><ul>
+<li><strong>点击【帐户】-【添加账户】-【WebDAV】</strong><ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100314.png" alt="image-20220831112839160" style="zoom:50%;" /></li>
+</ul>
+</li>
+<li><strong>填写服务器信息</strong><ul>
+<li>step1：获取坚果云WebDAV信息、服务器信息、用户名、密码：<ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100315.png" alt="image-20220831154942174"></li>
+</ul>
+</li>
+<li>step2：配置foldersync参数：<ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100316.png" alt="image-20220831155045745"></li>
+<li>点击测试按钮，可以连接成功即可。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="foldersync搭配坚果云"><a href="#foldersync搭配坚果云" class="headerlink" title="foldersync搭配坚果云"></a>foldersync搭配坚果云</h3><ul>
+<li><p>FolderSync主界面，点击右下角的“+”号-选择“坚果云”</p>
+<ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100317.png" alt="image-20220831155202869" style="zoom:50%;" /></li>
+</ul>
+</li>
+<li><p>选择同步类型，设置远程文件夹路径和本地文件夹路径</p>
+<ul>
+<li><p>到远程文件夹（仅上传到云端）</p>
+</li>
+<li><p>到本地文件夹（仅同步到本地）</p>
+</li>
+<li><p>双向（同步文件夹功能）</p>
+<blockquote>
+<p>此处以双向同步</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>选择远程文件夹、本地文件夹（可以自己新建一个）</p>
+</li>
+<li><p>计划任务（定时自动同步sync）可填可不填。</p>
+<ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100318.png" alt="image-20220831155543956"></li>
+<li>点击同步即可进行同步。</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><ul>
+<li><a href="https://content.jianguoyun.com/36693.html">手机与电脑文件同步 - 好用的网盘坚果云 (jianguoyun.com)</a></li>
+<li><a href="https://www.qian.blue/archives/foldersync-pro.html">FolderSync Pro介绍与各版本版集合下载 - 勿埋我心 (qian.blue)</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>foldersync</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>docker hexo评论系统waline服务器及数据库搭建</title>
     <url>/2022/10/12/005-%E5%AE%89%E8%A3%85hexo%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9Fwaline%E7%9A%84%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
     <content><![CDATA[<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20221012171211.png" alt="image-20221012171211527" style="zoom:67%;" />
@@ -288,95 +377,6 @@
         <tag>docker</tag>
         <tag>hexo</tag>
         <tag>waline</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>foldersync同步软件使用介绍</title>
-    <url>/2022/10/20/004-foldersync%E5%90%8C%E6%AD%A5%E8%BD%AF%E4%BB%B6/</url>
-    <content><![CDATA[<h2 id="foldersync简介"><a href="#foldersync简介" class="headerlink" title="foldersync简介"></a>foldersync简介</h2><blockquote>
-<p>​       FolderSync pro是一款功能非常强大的设备本地存储(包括SD卡)文件&#x2F;文件夹与云存储同步应用。它可以将手机中的文件自动同步到云端空间，支持包括 FTP、WebDAV、Dropbox、 Google Docs 在内的众多空间。</p>
-<p>  FolderSync Pro 支持各种不同的云服务商和文件协议，并且不断增加对更多平台的支持。在 root 设备上支持根文件访问。这款软件目前支持多个Google Drive，Dropbox，Amazon S3，SugarSync，Box.net，OneDrive，FTP，FTPS，SFTP，WebDAV和Windows共享帐户。</p>
-<p>  FolderSync Pro 支持将音乐、图片和其他重要文件从手机备份到您的云存储或其他方式。使用起来十分舒爽简便。而且借助于 Tasker 和类似程序的自动化支持可对您的同步进行更准确精细的控制。它包含一个完整的文件管理器，使您可以在本地和云中管理文件。复制，移动和删除云&#x2F;远程帐户中的文件。支持在Amazon S3中创建&#x2F;删除存储。从手机上载和下载文件。</p>
-</blockquote>
-<span id="more"></span>
-
-<h3 id="软件功能"><a href="#软件功能" class="headerlink" title="软件功能"></a>软件功能</h3><blockquote>
-<p>一款同步app，支持windows电脑和安卓手机之间文件夹、文件同步，需要有云盘（坚果云）作为server。</p>
-<p>总体来说，还是一款很不错的软件。</p>
-</blockquote>
-<ul>
-<li>&#x3D;&#x3D;经验总结：&#x3D;&#x3D;<ul>
-<li>坚果云，不可以短时间内多次同步，会出现无法连接的情况（连接持续30s左右后不成功）。</li>
-<li>连接参数配置很关键，出错的话，无法实现双向同步。我的参数配置如下图：<ul>
-<li>TBD(在小米平板上，待补充！)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="支持的云盘"><a href="#支持的云盘" class="headerlink" title="支持的云盘"></a>支持的云盘</h3><ul>
-<li>&#96;&#96;&#96;<br>Amazon S3 Simple Storage Service, Box, CloudMe, Dropbox, Google Drive, HiDrive, Livedrive Premium, MyDrive.ch, MyKolab, NetDocuments, OneDrive, OneDrive for Business, OwnCloud, pCloud, Storegate, SugarSync, WEB.DE, Yandex Disk<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 支持的协议</span><br><span class="line"></span><br><span class="line">- ```</span><br><span class="line">  FTP / FTPES / FTPS</span><br><span class="line">  SFTP</span><br><span class="line">  WebDAV</span><br><span class="line">  Samba / SMB / CIFS（仅SMB1）</span><br><span class="line">  SMB2（实验性）</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="foldersync下载"><a href="#foldersync下载" class="headerlink" title="foldersync下载"></a>foldersync下载</h2><ul>
-<li>官网地址：<a href="https://www.tacit.dk/foldersync">https://www.tacit.dk/foldersync</a></li>
-<li>网络资源：<a href="https://pan.qian.blue/share_exp_1ove_ml/Android-APP/FolderSync/">https://pan.qian.blue/share_exp_1ove_ml/Android-APP/FolderSync/</a></li>
-</ul>
-<h2 id="foldersync使用方法"><a href="#foldersync使用方法" class="headerlink" title="foldersync使用方法"></a>foldersync使用方法</h2><h3 id="foldersync配置"><a href="#foldersync配置" class="headerlink" title="foldersync配置"></a>foldersync配置</h3><ul>
-<li><strong>点击【帐户】-【添加账户】-【WebDAV】</strong><ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100314.png" alt="image-20220831112839160" style="zoom:50%;" /></li>
-</ul>
-</li>
-<li><strong>填写服务器信息</strong><ul>
-<li>step1：获取坚果云WebDAV信息、服务器信息、用户名、密码：<ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100315.png" alt="image-20220831154942174"></li>
-</ul>
-</li>
-<li>step2：配置foldersync参数：<ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100316.png" alt="image-20220831155045745"></li>
-<li>点击测试按钮，可以连接成功即可。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="foldersync搭配坚果云"><a href="#foldersync搭配坚果云" class="headerlink" title="foldersync搭配坚果云"></a>foldersync搭配坚果云</h3><ul>
-<li><p>FolderSync主界面，点击右下角的“+”号-选择“坚果云”</p>
-<ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100317.png" alt="image-20220831155202869" style="zoom:50%;" /></li>
-</ul>
-</li>
-<li><p>选择同步类型，设置远程文件夹路径和本地文件夹路径</p>
-<ul>
-<li><p>到远程文件夹（仅上传到云端）</p>
-</li>
-<li><p>到本地文件夹（仅同步到本地）</p>
-</li>
-<li><p>双向（同步文件夹功能）</p>
-<blockquote>
-<p>此处以双向同步</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>选择远程文件夹、本地文件夹（可以自己新建一个）</p>
-</li>
-<li><p>计划任务（定时自动同步sync）可填可不填。</p>
-<ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100318.png" alt="image-20220831155543956"></li>
-<li>点击同步即可进行同步。</li>
-</ul>
-</li>
-</ul>
-<h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><ul>
-<li><a href="https://content.jianguoyun.com/36693.html">手机与电脑文件同步 - 好用的网盘坚果云 (jianguoyun.com)</a></li>
-<li><a href="https://www.qian.blue/archives/foldersync-pro.html">FolderSync Pro介绍与各版本版集合下载 - 勿埋我心 (qian.blue)</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>foldersync</tag>
       </tags>
   </entry>
   <entry>
@@ -861,20 +861,6 @@ if __name__ == &#39;__main__&#39;:
       </tags>
   </entry>
   <entry>
-    <title>2024年夏天</title>
-    <url>/2024/08/18/2024%E5%B9%B4%E7%9A%84%E5%A4%8F%E5%A4%A9/</url>
-    <content><![CDATA[<blockquote>
-<p>​	夏天快要结束了，是吗？</p>
-</blockquote>
-<span id="more"></span>
-
-<p>hello：</p>
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1556353901&bvid=BV1Z14214729&cid=1647648630&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>]]></content>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>AgentGPT-带互联网搜索功能的chatGPT</title>
     <url>/2023/04/25/AgentGPT-%E5%B8%A6%E4%BA%92%E8%81%94%E7%BD%91%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E7%9A%84chatGPT/</url>
     <content><![CDATA[<blockquote>
@@ -911,57 +897,17 @@ if __name__ == &#39;__main__&#39;:
 ]]></content>
   </entry>
   <entry>
-    <title>Hexo博客查图片并调整位置&amp;大小</title>
-    <url>/2023/05/22/Hexo%E5%8D%9A%E5%AE%A2%E6%9F%A5%E5%9B%BE%E7%89%87%E5%B9%B6%E8%B0%83%E6%95%B4%E4%BD%8D%E7%BD%AE&amp;%E5%A4%A7%E5%B0%8F/</url>
+    <title>2024年夏天</title>
+    <url>/2024/08/18/2024%E5%B9%B4%E7%9A%84%E5%A4%8F%E5%A4%A9/</url>
     <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	Markdown写文章插入图片，<font color="#ff0000">在hexo博客中，图片的大小似乎没有按照个markdown的语法生效</font>，本文将解决此问题。</p>
+<p>​	夏天快要结束了，是吗？</p>
 </blockquote>
 <span id="more"></span>
-<div style="display:inline-block;"><img width="50%" style="float:center " src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png" alt="20230522144603"></div>
 
-<h3 id="现有问题描述"><a href="#现有问题描述" class="headerlink" title="现有问题描述"></a><font color="#ff0000">现有问题描述</font></h3><p>obsidian中插入图片的语法：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">![20230522135434|left](https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522135434.png)</span><br></pre></td></tr></table></figure>
-
-<p>优点：</p>
-<ul>
-<li>默认靠左显示。</li>
-<li>可以利用ob的插件快速调整大小：alt + 鼠标滚轮调整大小。<br>缺点：</li>
-<li>ob中调整的大小，在hexo博客中无法正确显示。</li>
-</ul>
-<h3 id="Hexo博客插入图片的方法"><a href="#Hexo博客插入图片的方法" class="headerlink" title="Hexo博客插入图片的方法"></a>Hexo博客插入图片的方法</h3><p>首先说下hexo插入图片的方式有哪些，hexo默认集成了markdown语法，这里我们就markdown里显示图片的方式引入html方法,两种方法有优有劣，关键看自己的习惯了</p>
-<ul>
-<li>第一种是直接引用markdown插入</li>
-<li>第二种是使用html来引用插入</li>
-</ul>
-<h4 id="1-直接引用markdown插入"><a href="#1-直接引用markdown插入" class="headerlink" title="1-直接引用markdown插入"></a>1-直接引用markdown插入</h4><p>首先是直接引用的方法需要在images目录里放入需要引入的图片<br><code>![lena](https://alexcld.com/images/pengyuyan.jpg)</code><br>我这里就直接引用之前的图片了，图片链接自己可以在网上找，<br>本地图片的话可以直接使用路径来引用<br>这种方法可以是可以，有点小缺点：图片就会靠在左侧，大小也不由自己决定</p>
-<h4 id="2-使用html方法引入"><a href="#2-使用html方法引入" class="headerlink" title="2-使用html方法引入"></a>2-使用html方法引入</h4><p>第二种就是使用html来引用插入的图片<br><code>&lt;img src=&quot;https://alexcld.com/images/pengyuyan.jpg&quot; width=256 height=256 /&gt;</code><br>固定图片大小：width&#x3D;256,height&#x3D;256设置的是显示图像的尺寸，src后面接的就是图像对象<br>还可以使用百分比的方式来给width,height传参<br><code>&lt;img src=&quot;https://alexcld.com/images/pengyuyan.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;</code><br>其中width和height后面的50%就是根据窗口的大小以一定的比例显示图片。值得一说的是，这种按照百分比显示方法，是以width方向为准，并保持纵横比的，换句话说，把设置width的部分去掉，height的值改为任<br>意百分比，显示的图像都是原图大小（个人觉得这根博客窗口有关，毕竟现实截面的宽度相对是固定的，而高度&#x2F;长度却是变化着的）。因此用此方法的时候，可以把height设置缺省</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><font color="#ff0000">总结</font></h3><p>最后使用的hexo插入图片语法：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">style</span>=<span class="string">&quot;float: left; margin-right: 10px;&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这种方法虽然有效果，但是会使图片处在悬浮状态，影响体验，解决方法是：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;display:inline-block;&quot;</span>&gt;</span> <span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">&quot;10%&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Your Image&quot;</span> <span class="attr">style</span>=<span class="string">&quot;float: left; margin-right: 10px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>实际效果：</p>
-<div style="display: inline-block;"> <img  width="10%" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png" alt="Your Image" style="float: left; margin-right: 10px;"> </div>
-PS: 原本的语法：
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">![20230522141323|left|400](https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png)</span><br></pre></td></tr></table></figure>
-
-<p>效果对比（左边是原本的，右边是修改后的）：</p>
-<div style="display:inline-block;"><img width="100%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522151213.png" alt="20230522151213"></div>
-
-
-<h3 id="如何实际使用"><a href="#如何实际使用" class="headerlink" title="如何实际使用"></a><font color="#ff0000">如何实际使用</font></h3><p>需要修改Picgo图床的自定义链接格式，原本的自定义链接格式：<br><code>![$fileName|left]($url)</code><br>修改后的自定义链接格式：<br><code>&lt;div style=&quot;display:inline-block;&quot;&gt;&lt;img width=&quot;100%&quot; style=&quot;float:left; margin-right: 10px;&quot; src=&quot;$url&quot; alt=&quot;$fileName&quot;&gt;&lt;/div&gt;</code><br>实际效果： </p>
-<ul>
-<li>靠左显示：<div style="display:inline-block;"><img width="15%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522144603.png" alt="20230522144603"></div></li>
-<li>居中显示：<div style="display:inline-block;"><img width="15%" style="float:center; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522144603.png" alt="20230522144603"></div></li>
-<li>靠右显示：<div style="display:inline-block;"><img width="15%" style="float:right; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522144603.png" alt="20230522144603"></div></li>
-</ul>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
-<li><a href="https://blog.csdn.net/weixin_45509582/article/details/108582689">hexo插入图片及控制大小_AlexClownfish的博客-CSDN博客</a></li>
-</ol>
-]]></content>
+<p>hello：</p>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1556353901&bvid=BV1Z14214729&cid=1647648630&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>]]></content>
       <tags>
-        <tag>hexo</tag>
-        <tag>每日文章</tag>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
@@ -1098,6 +1044,60 @@ PS: 原本的语法：
       </tags>
   </entry>
   <entry>
+    <title>Hexo博客查图片并调整位置&amp;大小</title>
+    <url>/2023/05/22/Hexo%E5%8D%9A%E5%AE%A2%E6%9F%A5%E5%9B%BE%E7%89%87%E5%B9%B6%E8%B0%83%E6%95%B4%E4%BD%8D%E7%BD%AE&amp;%E5%A4%A7%E5%B0%8F/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	Markdown写文章插入图片，<font color="#ff0000">在hexo博客中，图片的大小似乎没有按照个markdown的语法生效</font>，本文将解决此问题。</p>
+</blockquote>
+<span id="more"></span>
+<div style="display:inline-block;"><img width="50%" style="float:center " src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png" alt="20230522144603"></div>
+
+<h3 id="现有问题描述"><a href="#现有问题描述" class="headerlink" title="现有问题描述"></a><font color="#ff0000">现有问题描述</font></h3><p>obsidian中插入图片的语法：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">![20230522135434|left](https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522135434.png)</span><br></pre></td></tr></table></figure>
+
+<p>优点：</p>
+<ul>
+<li>默认靠左显示。</li>
+<li>可以利用ob的插件快速调整大小：alt + 鼠标滚轮调整大小。<br>缺点：</li>
+<li>ob中调整的大小，在hexo博客中无法正确显示。</li>
+</ul>
+<h3 id="Hexo博客插入图片的方法"><a href="#Hexo博客插入图片的方法" class="headerlink" title="Hexo博客插入图片的方法"></a>Hexo博客插入图片的方法</h3><p>首先说下hexo插入图片的方式有哪些，hexo默认集成了markdown语法，这里我们就markdown里显示图片的方式引入html方法,两种方法有优有劣，关键看自己的习惯了</p>
+<ul>
+<li>第一种是直接引用markdown插入</li>
+<li>第二种是使用html来引用插入</li>
+</ul>
+<h4 id="1-直接引用markdown插入"><a href="#1-直接引用markdown插入" class="headerlink" title="1-直接引用markdown插入"></a>1-直接引用markdown插入</h4><p>首先是直接引用的方法需要在images目录里放入需要引入的图片<br><code>![lena](https://alexcld.com/images/pengyuyan.jpg)</code><br>我这里就直接引用之前的图片了，图片链接自己可以在网上找，<br>本地图片的话可以直接使用路径来引用<br>这种方法可以是可以，有点小缺点：图片就会靠在左侧，大小也不由自己决定</p>
+<h4 id="2-使用html方法引入"><a href="#2-使用html方法引入" class="headerlink" title="2-使用html方法引入"></a>2-使用html方法引入</h4><p>第二种就是使用html来引用插入的图片<br><code>&lt;img src=&quot;https://alexcld.com/images/pengyuyan.jpg&quot; width=256 height=256 /&gt;</code><br>固定图片大小：width&#x3D;256,height&#x3D;256设置的是显示图像的尺寸，src后面接的就是图像对象<br>还可以使用百分比的方式来给width,height传参<br><code>&lt;img src=&quot;https://alexcld.com/images/pengyuyan.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;</code><br>其中width和height后面的50%就是根据窗口的大小以一定的比例显示图片。值得一说的是，这种按照百分比显示方法，是以width方向为准，并保持纵横比的，换句话说，把设置width的部分去掉，height的值改为任<br>意百分比，显示的图像都是原图大小（个人觉得这根博客窗口有关，毕竟现实截面的宽度相对是固定的，而高度&#x2F;长度却是变化着的）。因此用此方法的时候，可以把height设置缺省</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><font color="#ff0000">总结</font></h3><p>最后使用的hexo插入图片语法：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">style</span>=<span class="string">&quot;float: left; margin-right: 10px;&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这种方法虽然有效果，但是会使图片处在悬浮状态，影响体验，解决方法是：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;display:inline-block;&quot;</span>&gt;</span> <span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">&quot;10%&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Your Image&quot;</span> <span class="attr">style</span>=<span class="string">&quot;float: left; margin-right: 10px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>实际效果：</p>
+<div style="display: inline-block;"> <img  width="10%" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png" alt="Your Image" style="float: left; margin-right: 10px;"> </div>
+PS: 原本的语法：
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">![20230522141323|left|400](https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png)</span><br></pre></td></tr></table></figure>
+
+<p>效果对比（左边是原本的，右边是修改后的）：</p>
+<div style="display:inline-block;"><img width="100%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522151213.png" alt="20230522151213"></div>
+
+
+<h3 id="如何实际使用"><a href="#如何实际使用" class="headerlink" title="如何实际使用"></a><font color="#ff0000">如何实际使用</font></h3><p>需要修改Picgo图床的自定义链接格式，原本的自定义链接格式：<br><code>![$fileName|left]($url)</code><br>修改后的自定义链接格式：<br><code>&lt;div style=&quot;display:inline-block;&quot;&gt;&lt;img width=&quot;100%&quot; style=&quot;float:left; margin-right: 10px;&quot; src=&quot;$url&quot; alt=&quot;$fileName&quot;&gt;&lt;/div&gt;</code><br>实际效果： </p>
+<ul>
+<li>靠左显示：<div style="display:inline-block;"><img width="15%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522144603.png" alt="20230522144603"></div></li>
+<li>居中显示：<div style="display:inline-block;"><img width="15%" style="float:center; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522144603.png" alt="20230522144603"></div></li>
+<li>靠右显示：<div style="display:inline-block;"><img width="15%" style="float:right; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522144603.png" alt="20230522144603"></div></li>
+</ul>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a href="https://blog.csdn.net/weixin_45509582/article/details/108582689">hexo插入图片及控制大小_AlexClownfish的博客-CSDN博客</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>每日文章</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>OpenAI ChatGPT3.5-turbo实际解决问题能力评测</title>
     <url>/2023/05/22/OpenAI%20ChatGPT3.5-turbo%E5%AE%9E%E9%99%85%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E8%83%BD%E5%8A%9B%E8%AF%84%E6%B5%8B/</url>
     <content><![CDATA[<blockquote>
@@ -1132,6 +1132,31 @@ PS: 原本的语法：
       <tags>
         <tag>每日文章</tag>
         <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo 部署填写 github 用户名和密码一次性解决方案</title>
+    <url>/2023/04/20/hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	hexo 部署文章时候，会弹出 github 弹窗填写 username 和 password，填完之后还是无法上传，本文会给出解决方法。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>hexo 博客半年没写了，今天尝试更新，发现 <code>hexo d</code> 之后需要输入 github 的用户名和密码，但是我输入之后没有效果，还是无法推送到 github 上。<br>研究之后发现 rootcause 是：github 已经无法再用密码登陆推送，只能用 token，我的 token 之前只设置了 3 个月的有效期，所以现在失效了。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h4 id="1-重新生成新的-token"><a href="#1-重新生成新的-token" class="headerlink" title="1. 重新生成新的 token"></a>1. 重新生成新的 token</h4><p>新的 token 设置网址：<a href="https://github.com/settings/tokens">Personal Access Tokens (Classic) (github.com)</a><br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101025.png" alt="20230420101025|left"><br>新的 token （%%🔐α 💡ID💡MDO&#x2F;W 4 Cm 9 AJ 4 Ls 8&#x2F;i+yXXM 5 GzNzTJ 0 o 2 u 4 AwfZGVs 5 EqWEESkIf 0+kWt+quYVANDGUCe 4 GJWAxLJnr 7 vIgsi 7 QtSUNma 9 MPz 🔐%%）记得保存好，网页刷新之后就再也看不见了。</p>
+<h4 id="2-配置-hexo-config-yml"><a href="#2-配置-hexo-config-yml" class="headerlink" title="2. 配置 hexo config.yml"></a>2. 配置 hexo config.yml</h4><p>配置 hexo config.yml：<br>原本的配置：<code>repo: https://github.com/weicun581/weicun581.git</code><br>新的配置：<code>repo: https://your token here@github.com/weicun581/weicun581.git</code><br>替换 <code>your token here</code> 替换成上一步的 token 就好了。</p>
+<h2 id="实际使用效果"><a href="#实际使用效果" class="headerlink" title="实际使用效果"></a>实际使用效果</h2><p>在 hexo 根目录下执行：<code>hexo d</code>，之后在 github project 的 action 界面就可以看到 action 动作了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101947.png" alt="20230420101947|left"></p>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a href="https://blog.csdn.net/qq_43340547/article/details/119895671">(75条消息) 命令行输入hexo d后发现不能输入GitHub密码登录_SoberGit的博客-CSDN博客</a></li>
+<li><a href="https://blog.csdn.net/weixin_41010198/article/details/119698015?utm_source=app&app_version=4.12.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">(75条消息) github开发人员在七夕搞事情：remote: Support for password authentication was removed on August 13, 2021._点亮～黑夜的博客-CSDN博客</a></li>
+</ol>
+<p>个人博客地址：<a href="https://weicun.gitee.io/">蓝色单车 (gitee.io)</a></p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>每日文章</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -1227,31 +1252,6 @@ PS: 原本的语法：
 ]]></content>
   </entry>
   <entry>
-    <title>hexo 部署填写 github 用户名和密码一次性解决方案</title>
-    <url>/2023/04/20/hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	hexo 部署文章时候，会弹出 github 弹窗填写 username 和 password，填完之后还是无法上传，本文会给出解决方法。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>hexo 博客半年没写了，今天尝试更新，发现 <code>hexo d</code> 之后需要输入 github 的用户名和密码，但是我输入之后没有效果，还是无法推送到 github 上。<br>研究之后发现 rootcause 是：github 已经无法再用密码登陆推送，只能用 token，我的 token 之前只设置了 3 个月的有效期，所以现在失效了。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h4 id="1-重新生成新的-token"><a href="#1-重新生成新的-token" class="headerlink" title="1. 重新生成新的 token"></a>1. 重新生成新的 token</h4><p>新的 token 设置网址：<a href="https://github.com/settings/tokens">Personal Access Tokens (Classic) (github.com)</a><br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101025.png" alt="20230420101025|left"><br>新的 token （%%🔐α 💡ID💡MDO&#x2F;W 4 Cm 9 AJ 4 Ls 8&#x2F;i+yXXM 5 GzNzTJ 0 o 2 u 4 AwfZGVs 5 EqWEESkIf 0+kWt+quYVANDGUCe 4 GJWAxLJnr 7 vIgsi 7 QtSUNma 9 MPz 🔐%%）记得保存好，网页刷新之后就再也看不见了。</p>
-<h4 id="2-配置-hexo-config-yml"><a href="#2-配置-hexo-config-yml" class="headerlink" title="2. 配置 hexo config.yml"></a>2. 配置 hexo config.yml</h4><p>配置 hexo config.yml：<br>原本的配置：<code>repo: https://github.com/weicun581/weicun581.git</code><br>新的配置：<code>repo: https://your token here@github.com/weicun581/weicun581.git</code><br>替换 <code>your token here</code> 替换成上一步的 token 就好了。</p>
-<h2 id="实际使用效果"><a href="#实际使用效果" class="headerlink" title="实际使用效果"></a>实际使用效果</h2><p>在 hexo 根目录下执行：<code>hexo d</code>，之后在 github project 的 action 界面就可以看到 action 动作了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101947.png" alt="20230420101947|left"></p>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
-<li><a href="https://blog.csdn.net/qq_43340547/article/details/119895671">(75条消息) 命令行输入hexo d后发现不能输入GitHub密码登录_SoberGit的博客-CSDN博客</a></li>
-<li><a href="https://blog.csdn.net/weixin_41010198/article/details/119698015?utm_source=app&app_version=4.12.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">(75条消息) github开发人员在七夕搞事情：remote: Support for password authentication was removed on August 13, 2021._点亮～黑夜的博客-CSDN博客</a></li>
-</ol>
-<p>个人博客地址：<a href="https://weicun.gitee.io/">蓝色单车 (gitee.io)</a></p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-        <tag>每日文章</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为Hexo博客next主题添加友链</title>
     <url>/2023/04/27/%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE/</url>
     <content><![CDATA[<blockquote>
@@ -1281,6 +1281,30 @@ PS: 原本的语法：
 ]]></content>
       <tags>
         <tag>hexo</tag>
+        <tag>每日文章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>免费域名申请</title>
+    <url>/2023/04/28/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	本文将介绍如何免费申请域名，在最近的折腾中发现，域名真的很重要，不然好多服务是无法访问的。</p>
+</blockquote>
+<span id="more"></span>
+<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230428153405.png" alt="20230428153405|left|500"></p>
+<p><strong>备注</strong>：由于freenom基于技术原因，暂时停止免费域名的申请，所以最后作者是在阿里云里面花了6块钱申请了域名。</p>
+<h3 id="Freenom注册域名"><a href="#Freenom注册域名" class="headerlink" title="Freenom注册域名"></a>Freenom注册域名</h3><ul>
+<li>官网：<a href="https://www.freenom.com/zh/index.html?lang=zh">Freenom - 人人都熟悉的名字</a></li>
+<li>实测无法注册新的免费域名了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230428104025.png" alt="20230428104025|left|500"></li>
+</ul>
+<h3 id="阿里云申请域名"><a href="#阿里云申请域名" class="headerlink" title="阿里云申请域名"></a>阿里云申请域名</h3><ul>
+<li>官网：<a href="https://wanwang.aliyun.com/domain/searchresult/?keyword=helloworld&suffix=.com#?keyword=lansedanche&suffix=life">域名查询结果_域名信息_域名交易-万网-阿里云旗下品牌</a></li>
+<li>找到比较便宜的域名：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230428110130.png" alt="20230428110130|left"></li>
+</ul>
+<h3 id="域名比价查询网站"><a href="#域名比价查询网站" class="headerlink" title="域名比价查询网站"></a>域名比价查询网站</h3><p>对比域名价格的网站（需要挂梯子）：<br><a href="https://www.nazhumi.com/">哪煮米 - 全网域名,一站比价</a></p>
+<h3 id="如果你有教育邮箱的话"><a href="#如果你有教育邮箱的话" class="headerlink" title="如果你有教育邮箱的话"></a>如果你有教育邮箱的话</h3><p><a href="https://nc.me/">Site Unreachable</a> ，倒是可以免费注册.me，不过需要那边认可的教育邮箱。</p>
+]]></content>
+      <tags>
         <tag>每日文章</tag>
       </tags>
   </entry>
@@ -1320,30 +1344,6 @@ PS: 原本的语法：
       </tags>
   </entry>
   <entry>
-    <title>免费域名申请</title>
-    <url>/2023/04/28/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	本文将介绍如何免费申请域名，在最近的折腾中发现，域名真的很重要，不然好多服务是无法访问的。</p>
-</blockquote>
-<span id="more"></span>
-<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230428153405.png" alt="20230428153405|left|500"></p>
-<p><strong>备注</strong>：由于freenom基于技术原因，暂时停止免费域名的申请，所以最后作者是在阿里云里面花了6块钱申请了域名。</p>
-<h3 id="Freenom注册域名"><a href="#Freenom注册域名" class="headerlink" title="Freenom注册域名"></a>Freenom注册域名</h3><ul>
-<li>官网：<a href="https://www.freenom.com/zh/index.html?lang=zh">Freenom - 人人都熟悉的名字</a></li>
-<li>实测无法注册新的免费域名了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230428104025.png" alt="20230428104025|left|500"></li>
-</ul>
-<h3 id="阿里云申请域名"><a href="#阿里云申请域名" class="headerlink" title="阿里云申请域名"></a>阿里云申请域名</h3><ul>
-<li>官网：<a href="https://wanwang.aliyun.com/domain/searchresult/?keyword=helloworld&suffix=.com#?keyword=lansedanche&suffix=life">域名查询结果_域名信息_域名交易-万网-阿里云旗下品牌</a></li>
-<li>找到比较便宜的域名：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230428110130.png" alt="20230428110130|left"></li>
-</ul>
-<h3 id="域名比价查询网站"><a href="#域名比价查询网站" class="headerlink" title="域名比价查询网站"></a>域名比价查询网站</h3><p>对比域名价格的网站（需要挂梯子）：<br><a href="https://www.nazhumi.com/">哪煮米 - 全网域名,一站比价</a></p>
-<h3 id="如果你有教育邮箱的话"><a href="#如果你有教育邮箱的话" class="headerlink" title="如果你有教育邮箱的话"></a>如果你有教育邮箱的话</h3><p><a href="https://nc.me/">Site Unreachable</a> ，倒是可以免费注册.me，不过需要那边认可的教育邮箱。</p>
-]]></content>
-      <tags>
-        <tag>每日文章</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>博客评论区开放国内评论功能</title>
     <url>/2023/05/29/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%BC%80%E6%94%BE%E5%9B%BD%E5%86%85%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
     <content><![CDATA[<blockquote>
@@ -1371,28 +1371,6 @@ PS: 原本的语法：
 <li><input disabled="" type="checkbox"> 反对？阻碍交流</li>
 </ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>日记怀旧</title>
-    <url>/2023/04/20/%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B/</url>
-    <content><![CDATA[<h3 id="2023-04-20小记"><a href="#2023-04-20小记" class="headerlink" title="2023-04-20小记"></a>2023-04-20小记</h3><h4 id="博客停更的原因"><a href="#博客停更的原因" class="headerlink" title="博客停更的原因"></a>博客停更的原因</h4><p>hello 大家好，这个博客网站快有半年没更新了，原因嘛，很好解释，没有人跟我互动，懒得写了，后来就搁置了。<br>其实这半年还有好多事情，导致博客网站没有继续写下去：</p>
-<ul>
-<li>疫情的爆发</li>
-<li>工作量突然加重</li>
-<li>内心的浮躁<br>我觉得客观原因都是小事情，关键是内心浮躁了，总是想着赚钱、赚钱、赚钱。结果啥也没干成。<br>所以想了下，还是要沉下心来，努力做事情，而不是天天想着搞钱，做事浅尝辄止、做人浮浮躁躁。<span id="more"></span></li>
-</ul>
-<h4 id="关于博客日后的规划"><a href="#关于博客日后的规划" class="headerlink" title="关于博客日后的规划"></a>关于博客日后的规划</h4><ol>
-<li>记录日常感悟，分享人生经历，总结生活。</li>
-<li>分享个人技术成长路线。</li>
-<li>分享技术热点</li>
-</ol>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-      </tags>
   </entry>
   <entry>
     <title>有意思的名言警句</title>
@@ -1457,6 +1435,28 @@ PS: 原本的语法：
 </li>
 </ul>
 ]]></content>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日记怀旧</title>
+    <url>/2023/04/20/%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B/</url>
+    <content><![CDATA[<h3 id="2023-04-20小记"><a href="#2023-04-20小记" class="headerlink" title="2023-04-20小记"></a>2023-04-20小记</h3><h4 id="博客停更的原因"><a href="#博客停更的原因" class="headerlink" title="博客停更的原因"></a>博客停更的原因</h4><p>hello 大家好，这个博客网站快有半年没更新了，原因嘛，很好解释，没有人跟我互动，懒得写了，后来就搁置了。<br>其实这半年还有好多事情，导致博客网站没有继续写下去：</p>
+<ul>
+<li>疫情的爆发</li>
+<li>工作量突然加重</li>
+<li>内心的浮躁<br>我觉得客观原因都是小事情，关键是内心浮躁了，总是想着赚钱、赚钱、赚钱。结果啥也没干成。<br>所以想了下，还是要沉下心来，努力做事情，而不是天天想着搞钱，做事浅尝辄止、做人浮浮躁躁。<span id="more"></span></li>
+</ul>
+<h4 id="关于博客日后的规划"><a href="#关于博客日后的规划" class="headerlink" title="关于博客日后的规划"></a>关于博客日后的规划</h4><ol>
+<li>记录日常感悟，分享人生经历，总结生活。</li>
+<li>分享个人技术成长路线。</li>
+<li>分享技术热点</li>
+</ol>
+]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
       <tags>
         <tag>日记</tag>
       </tags>
