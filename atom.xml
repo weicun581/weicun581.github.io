@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>蓝色单车</title>
+  
+  <subtitle>小扇引微凉，悠悠夏日长</subtitle>
+  <link href="https://weicun581.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://weicun581.github.io/"/>
+  <updated>2024-08-19T09:57:22.868Z</updated>
+  <id>https://weicun581.github.io/</id>
+  
+  <author>
+    <name>蓝色单车</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2024年夏天</title>
+    <link href="https://weicun581.github.io/2024/08/18/2024%E5%B9%B4%E7%9A%84%E5%A4%8F%E5%A4%A9/"/>
+    <id>https://weicun581.github.io/2024/08/18/2024%E5%B9%B4%E7%9A%84%E5%A4%8F%E5%A4%A9/</id>
+    <published>2024-08-18T07:54:00.000Z</published>
+    <updated>2024-08-19T09:57:22.868Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;​	夏天快要结束了，是吗？&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="日常" scheme="https://weicun581.github.io/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>写在chatGPT免费额度用完之后</title>
+    <link href="https://weicun581.github.io/2023/06/01/%E5%86%99%E5%9C%A8chatGPT%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%E7%94%A8%E5%AE%8C%E4%B9%8B%E5%90%8E/"/>
+    <id>https://weicun581.github.io/2023/06/01/%E5%86%99%E5%9C%A8chatGPT%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%E7%94%A8%E5%AE%8C%E4%B9%8B%E5%90%8E/</id>
+    <published>2023-06-01T03:10:00.000Z</published>
+    <updated>2023-06-06T06:14:50.438Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;​	今天在用python调用chatGPT API的时候出现了这个错误，&lt;code&gt;openai.error.RateLimitError: You exceeded your current quota, please check your plan and billing details.&lt;/code&gt; 唉，这可咋整？&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="每日文章" scheme="https://weicun581.github.io/tags/%E6%AF%8F%E6%97%A5%E6%96%87%E7%AB%A0/"/>
+    
+    <category term="AI" scheme="https://weicun581.github.io/tags/AI/"/>
+    
+    <category term="chatGPT" scheme="https://weicun581.github.io/tags/chatGPT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客评论区开放国内评论功能</title>
+    <link href="https://weicun581.github.io/2023/05/29/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%BC%80%E6%94%BE%E5%9B%BD%E5%86%85%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/"/>
+    <id>https://weicun581.github.io/2023/05/29/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%BC%80%E6%94%BE%E5%9B%BD%E5%86%85%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</id>
+    <published>2023-05-29T03:03:00.000Z</published>
+    <updated>2023-06-01T08:54:14.522Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;域名已经重新申请了，目前也可以支持大陆地区用户使用了。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="hexo" scheme="https://weicun581.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【快乐游戏】-荒野吃鸡</title>
+    <link href="https://weicun581.github.io/2023/05/26/%E3%80%90%E5%BF%AB%E4%B9%90%E6%B8%B8%E6%88%8F%E3%80%91-%E8%8D%92%E9%87%8E%E5%90%83%E9%B8%A1/"/>
+    <id>https://weicun581.github.io/2023/05/26/%E3%80%90%E5%BF%AB%E4%B9%90%E6%B8%B8%E6%88%8F%E3%80%91-%E8%8D%92%E9%87%8E%E5%90%83%E9%B8%A1/</id>
+    <published>2023-05-26T07:05:00.000Z</published>
+    <updated>2023-05-26T07:11:47.200Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;​今天中午休息时候打了一局荒野行动，7杀吃鸡，记录下精彩瞬间。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="游戏" scheme="https://weicun581.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客评论暂停大陆地区使用公告</title>
+    <link href="https://weicun581.github.io/2023/05/26/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E6%9A%82%E5%81%9C%E5%A4%A7%E9%99%86%E5%9C%B0%E5%8C%BA%E4%BD%BF%E7%94%A8%E5%85%AC%E5%91%8A/"/>
+    <id>https://weicun581.github.io/2023/05/26/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E6%9A%82%E5%81%9C%E5%A4%A7%E9%99%86%E5%9C%B0%E5%8C%BA%E4%BD%BF%E7%94%A8%E5%85%AC%E5%91%8A/</id>
+    <published>2023-05-26T02:26:00.000Z</published>
+    <updated>2023-06-01T08:35:45.780Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;由于域名到期，暂时不在支持大陆地区用户使用本博客的评论功能，如果你有魔法or梯子，将不会影响你的使用。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>OpenAI ChatGPT3.5-turbo实际解决问题能力评测</title>
+    <link href="https://weicun581.github.io/2023/05/22/OpenAI%20ChatGPT3.5-turbo%E5%AE%9E%E9%99%85%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E8%83%BD%E5%8A%9B%E8%AF%84%E6%B5%8B/"/>
+    <id>https://weicun581.github.io/2023/05/22/OpenAI%20ChatGPT3.5-turbo%E5%AE%9E%E9%99%85%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E8%83%BD%E5%8A%9B%E8%AF%84%E6%B5%8B/</id>
+    <published>2023-05-22T07:19:00.000Z</published>
+    <updated>2023-06-01T08:35:57.060Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;​	程序员在coding的时候会经常遇到需要查阅资料的情况，最好的结果是直接能拿到一份好用的demo版本code，本次我们来评测：bing搜索和chatGPT3.5，解决实际问题：“html 图片靠左”的效果。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="每日文章" scheme="https://weicun581.github.io/tags/%E6%AF%8F%E6%97%A5%E6%96%87%E7%AB%A0/"/>
+    
+    <category term="AI" scheme="https://weicun581.github.io/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客查图片并调整位置&amp;大小</title>
+    <link href="https://weicun581.github.io/2023/05/22/Hexo%E5%8D%9A%E5%AE%A2%E6%9F%A5%E5%9B%BE%E7%89%87%E5%B9%B6%E8%B0%83%E6%95%B4%E4%BD%8D%E7%BD%AE&amp;%E5%A4%A7%E5%B0%8F/"/>
+    <id>https://weicun581.github.io/2023/05/22/Hexo%E5%8D%9A%E5%AE%A2%E6%9F%A5%E5%9B%BE%E7%89%87%E5%B9%B6%E8%B0%83%E6%95%B4%E4%BD%8D%E7%BD%AE&amp;%E5%A4%A7%E5%B0%8F/</id>
+    <published>2023-05-22T06:02:00.000Z</published>
+    <updated>2023-06-01T08:36:12.888Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	Markdown写文章插入图片，&lt;font color=&quot;#ff0000&quot;&gt;在hexo博客中，图片的大小似乎没有按照个markdown的语法生效&lt;/font&gt;，本文将解决此问题。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="hexo" scheme="https://weicun581.github.io/tags/hexo/"/>
+    
+    <category term="每日文章" scheme="https://weicun581.github.io/tags/%E6%AF%8F%E6%97%A5%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客next主题添加点击特效</title>
+    <link href="https://weicun581.github.io/2023/05/06/Hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/"/>
+    <id>https://weicun581.github.io/2023/05/06/Hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/</id>
+    <published>2023-05-06T02:00:00.000Z</published>
+    <updated>2023-06-01T08:36:23.066Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	博客折腾的差不多了，开始整一些花活了，这次就给博客添加下点击特效，基本效果如下：&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="hexo" scheme="https://weicun581.github.io/tags/hexo/"/>
+    
+    <category term="每日文章" scheme="https://weicun581.github.io/tags/%E6%AF%8F%E6%97%A5%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>163、QQ邮箱收不到Github的邮件解决方法</title>
+    <link href="https://weicun581.github.io/2023/05/05/163%E3%80%81QQ%E9%82%AE%E7%AE%B1%E6%94%B6%E4%B8%8D%E5%88%B0Github%E7%9A%84%E9%82%AE%E4%BB%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>https://weicun581.github.io/2023/05/05/163%E3%80%81QQ%E9%82%AE%E7%AE%B1%E6%94%B6%E4%B8%8D%E5%88%B0Github%E7%9A%84%E9%82%AE%E4%BB%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</id>
+    <published>2023-05-05T09:09:00.000Z</published>
+    <updated>2023-06-01T08:38:36.695Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	国内的好多邮箱收不到github的mail，无法收到github上的通知、留言，这个让人很苦恼，无法及时沟通，所以本文会给出解决方法。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="每日文章" scheme="https://weicun581.github.io/tags/%E6%AF%8F%E6%97%A5%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>不用魔法免费使用类chatGPT聊天</title>
+    <link href="https://weicun581.github.io/2023/05/05/%E4%B8%8D%E7%94%A8%E9%AD%94%E6%B3%95%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8%E7%B1%BBchatGPT%E8%81%8A%E5%A4%A9/"/>
+    <id>https://weicun581.github.io/2023/05/05/%E4%B8%8D%E7%94%A8%E9%AD%94%E6%B3%95%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8%E7%B1%BBchatGPT%E8%81%8A%E5%A4%A9/</id>
+    <published>2023-05-05T05:55:00.000Z</published>
+    <updated>2023-05-05T08:41:31.990Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	不需要魔法，不用搭梯子，免费不受限制的使用类 chatGPT 聊天。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>随便聊两句</title>
+    <link href="https://weicun581.github.io/2023/05/05/%E9%9A%8F%E4%BE%BF%E8%81%8A%E4%B8%A4%E5%8F%A5/"/>
+    <id>https://weicun581.github.io/2023/05/05/%E9%9A%8F%E4%BE%BF%E8%81%8A%E4%B8%A4%E5%8F%A5/</id>
+    <published>2023-05-05T03:34:00.000Z</published>
+    <updated>2023-05-05T08:44:39.643Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	进来聊聊天呗…&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>免费域名申请</title>
+    <link href="https://weicun581.github.io/2023/04/28/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7/"/>
+    <id>https://weicun581.github.io/2023/04/28/%E5%85%8D%E8%B4%B9%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7/</id>
+    <published>2023-04-28T02:16:00.000Z</published>
+    <updated>2023-06-01T08:38:53.644Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	本文将介绍如何免费申请域名，在最近的折腾中发现，域名真的很重要，不然好多服务是无法访问的。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="每日文章" scheme="https://weicun581.github.io/tags/%E6%AF%8F%E6%97%A5%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为Hexo博客next主题添加友链</title>
+    <link href="https://weicun581.github.io/2023/04/27/%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE/"/>
+    <id>https://weicun581.github.io/2023/04/27/%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE/</id>
+    <published>2023-04-27T07:34:00.000Z</published>
+    <updated>2023-06-01T08:39:01.096Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	本文将介绍如何为Hexo博客next主题添加友链，方便你与其他博主进行联系，同时可以引流。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="hexo" scheme="https://weicun581.github.io/tags/hexo/"/>
+    
+    <category term="每日文章" scheme="https://weicun581.github.io/tags/%E6%AF%8F%E6%97%A5%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FFmpeg用法</title>
+    <link href="https://weicun581.github.io/2023/04/25/Ffmpeg%E7%94%A8%E6%B3%95/"/>
+    <id>https://weicun581.github.io/2023/04/25/Ffmpeg%E7%94%A8%E6%B3%95/</id>
+    <published>2023-04-25T08:44:00.000Z</published>
+    <updated>2023-05-05T02:46:12.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	本文主要介绍ffmpeg的各种用法，纯纯干货，请慢慢咀嚼，管饱。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="每日文章" scheme="https://weicun581.github.io/tags/%E6%AF%8F%E6%97%A5%E6%96%87%E7%AB%A0/"/>
+    
+    <category term="ffmpeg" scheme="https://weicun581.github.io/tags/ffmpeg/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AgentGPT-带互联网搜索功能的chatGPT</title>
+    <link href="https://weicun581.github.io/2023/04/25/AgentGPT-%E5%B8%A6%E4%BA%92%E8%81%94%E7%BD%91%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E7%9A%84chatGPT/"/>
+    <id>https://weicun581.github.io/2023/04/25/AgentGPT-%E5%B8%A6%E4%BA%92%E8%81%94%E7%BD%91%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E7%9A%84chatGPT/</id>
+    <published>2023-04-25T06:35:00.000Z</published>
+    <updated>2023-06-01T08:39:19.237Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	Agent GPT 主要的AI 功能就是建立在原版的AutoGPT 之上，然后再加上图形介面，这样阅读起来比较容易也比较方便。&lt;br&gt;相较于ChatGPT，它具有：互联网搜索查询功能、任务拆解各个执行然后串联能力。&lt;br&gt;它能够根据用户需求，在用户完全不插手的情况下自主执行任务，包括日常的事件分析、营销方案撰写、代码编程、数学运算等事务都能代劳。&lt;br&gt;这里我会按照AgentGPT 官方所建议的步骤，一步一步教搭建安装并体验AgentGPT。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>组件世界-初体验</title>
+    <link href="https://weicun581.github.io/2023/04/23/obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/"/>
+    <id>https://weicun581.github.io/2023/04/23/obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/</id>
+    <published>2023-04-23T05:23:00.000Z</published>
+    <updated>2023-04-23T06:04:20.616Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	逛网站的时候看到的组件库，感觉很漂亮，记录并实验看下效果。&lt;br&gt;    我用的是 obsidian，所以本文是基于 obsidian 来实验组件世界的效果。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 部署填写 github 用户名和密码一次性解决方案</title>
+    <link href="https://weicun581.github.io/2023/04/20/hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://weicun581.github.io/2023/04/20/hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <published>2023-04-20T11:37:00.000Z</published>
+    <updated>2023-04-20T07:31:50.620Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	hexo 部署文章时候，会弹出 github 弹窗填写 username 和 password，填完之后还是无法上传，本文会给出解决方法。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="hexo" scheme="https://weicun581.github.io/tags/hexo/"/>
+    
+    <category term="每日文章" scheme="https://weicun581.github.io/tags/%E6%AF%8F%E6%97%A5%E6%96%87%E7%AB%A0/"/>
+    
+    <category term="github" scheme="https://weicun581.github.io/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日记怀旧</title>
+    <link href="https://weicun581.github.io/2023/04/20/%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B/"/>
+    <id>https://weicun581.github.io/2023/04/20/%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B/</id>
+    <published>2023-04-20T10:51:33.000Z</published>
+    <updated>2023-04-20T03:18:16.421Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;2023-04-20小记&quot;&gt;&lt;a href=&quot;#2023-04-20小记&quot; class=&quot;headerlink&quot; title=&quot;2023-04-20小记&quot;&gt;&lt;/a&gt;2023-04-20小记&lt;/h3&gt;&lt;h4 id=&quot;博客停更的原因&quot;&gt;&lt;a href=&quot;#博客停更的原因&quot; class=&quot;headerlink&quot; title=&quot;博客停更的原因&quot;&gt;&lt;/a&gt;博客停更的原因&lt;/h4&gt;&lt;p&gt;hello 大家好，这个博客网站快有半年没更新了，原因嘛，很好解释，没有人跟我互动，懒得写了，后来就搁置了。&lt;br&gt;其实这半年还有好多事情，导致博客网站没有继续写下去：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;疫情的爆发&lt;/li&gt;
+&lt;li&gt;工作量突然加重&lt;/li&gt;
+&lt;li&gt;内心的浮躁&lt;br&gt;我觉得客观原因都是小事情，关键是内心浮躁了，总是想着赚钱、赚钱、赚钱。结果啥也没干成。&lt;br&gt;所以想了下，还是要沉下心来，努力做事情，而不是天天想着搞钱，做事浅尝辄止、做人浮浮躁躁。</summary>
+    
+    
+    
+    <category term="日记" scheme="https://weicun581.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="日记" scheme="https://weicun581.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日记怀旧</title>
+    <link href="https://weicun581.github.io/2022/11/15/009-%E6%97%A5%E8%AE%B0%E6%80%80%E6%97%A7/"/>
+    <id>https://weicun581.github.io/2022/11/15/009-%E6%97%A5%E8%AE%B0%E6%80%80%E6%97%A7/</id>
+    <published>2022-11-15T10:51:33.000Z</published>
+    <updated>2023-04-27T01:18:13.128Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;2022-x2F-11-x2F-15-小记&quot;&gt;&lt;a href=&quot;#2022-x2F-11-x2F-15-小记&quot; class=&quot;headerlink&quot; title=&quot;2022&amp;#x2F;11&amp;#x2F;15 小记&quot;&gt;&lt;/a&gt;2022&amp;#x2F;11&amp;#x2F;15 小记&lt;/h3&gt;&lt;p&gt;很久之前，大概是 2013 年的时候，在人人上听过，惊为天人。&lt;br&gt;快 10 年了，&lt;br&gt;人人网也已经不在，&lt;br&gt;曾经想逃离的过去，现在却成了回不去的记忆。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="日记" scheme="https://weicun581.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="日记" scheme="https://weicun581.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>有意思的名言警句</title>
+    <link href="https://weicun581.github.io/2022/11/15/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%90%8D%E8%A8%80%E8%AD%A6%E5%8F%A5/"/>
+    <id>https://weicun581.github.io/2022/11/15/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%90%8D%E8%A8%80%E8%AD%A6%E5%8F%A5/</id>
+    <published>2022-11-15T05:41:30.000Z</published>
+    <updated>2022-11-15T06:01:51.835Z</updated>
+    
+    
+    <summary type="html">&lt;center&gt;&lt;font size=5&gt;今天看到的名言警句&lt;/font&gt;&lt;/center&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.apachecn.org/#/&quot;&gt;名言警句&lt;/a&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;渣男除了渣没其他缺点，舔狗除了舔没其他优点。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;既然我们做什么都会被喷，____________。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;搞钱的大原则就是信息不对称。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;风口可能有很多个，但是对应的技术可能就那么点，所以，尽早储备一个通用的技术栈。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="日记" scheme="https://weicun581.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+</feed>
