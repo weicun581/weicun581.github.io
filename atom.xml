@@ -6,7 +6,7 @@
   <link href="https://weicun581.github.io/atom.xml" rel="self"/>
   
   <link href="https://weicun581.github.io/"/>
-  <updated>2024-08-29T08:19:15.424Z</updated>
+  <updated>2024-08-19T09:57:22.868Z</updated>
   <id>https://weicun581.github.io/</id>
   
   <author>
@@ -15,29 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://weicun581.github.io/2024/08/29/000-hello-world/"/>
-    <id>https://weicun581.github.io/2024/08/29/000-hello-world/</id>
-    <published>2024-08-29T08:18:39.832Z</published>
-    <updated>2024-08-29T08:19:15.424Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>2024年夏天</title>
@@ -444,6 +421,36 @@
     
     
     <category term="日记" scheme="https://weicun581.github.io/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+    <category term="日记" scheme="https://weicun581.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>有意思的名言警句</title>
+    <link href="https://weicun581.github.io/2022/11/15/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%90%8D%E8%A8%80%E8%AD%A6%E5%8F%A5/"/>
+    <id>https://weicun581.github.io/2022/11/15/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%90%8D%E8%A8%80%E8%AD%A6%E5%8F%A5/</id>
+    <published>2022-11-15T05:41:30.000Z</published>
+    <updated>2022-11-15T06:01:51.835Z</updated>
+    
+    <content type="html"><![CDATA[<center><font size=5>今天看到的名言警句</font></center><ul><li><p><a href="https://www.apachecn.org/#/">名言警句</a>：</p><ol><li><p>渣男除了渣没其他缺点，舔狗除了舔没其他优点。</p></li><li><p>既然我们做什么都会被喷，____________。</p></li><li><p>搞钱的大原则就是信息不对称。</p></li><li><p>风口可能有很多个，但是对应的技术可能就那么点，所以，尽早储备一个通用的技术栈。</p><span id="more"></span></li><li><p>资本家为了奴役你给你挖了很多坑，比如消费主义，比如训练你当螺丝钉，还有最重要的就是榨干你的空闲时间。</p></li><li><p>打工的钱都是棺材费，自己从市场赚的才叫钱。尽早摆脱打工人的困境比啥都重要。</p></li><li><p>在体验一样的情况下，选成本低的，但不要为此牺牲体验。</p></li><li><p>如果花在开源上的时间和刷牙洗脸一样，那么可持续性就不是问题。</p></li><li><p>宣传应当是你的产品的不可分割的一部分，它和内容同等重要，并且可以借助技术做得更好。五分内容五分宣传，这就是五五开定律。</p></li><li><p>冗余：一、预估时间的时候，将极限时间x2就是最终时间（侯世达定律）。二、重要资料做好备份，本地至少两份在不同介质上。</p></li><li><p>第一性原理：完成一个目标只有少数几个必要条件。只需要专注他们，不要总是有奇奇怪怪的无效假设。不要被乌合之众的观点&#x2F;做法绑架。</p></li><li><p>热插拔：保证自己是个独立完整的系统，与别人合作但不依赖别人。优先磨练自己的议价能力而不是协作能力来增加选择面，保证自己可以随时中止合作关系，防止受限于任何人。遇到问题优先考虑终止合作并换人，而不是改善合作关系。</p></li><li><p>专注、迭代、极致：一次只专注于一件事情，允许不足，在多个迭代中反复改进，尽可能达到极致。</p></li><li><p>大数据：（1）大数据不仅仅指数字和表格本身，也包含情报，经验，教程，方法论这些非结构化数据。（2）收集数据来遍历每一种可能性，对抗不确定性，避免认知偏差，好处是无需亲身实践直接借助他人经验。（3）注意收集你暂时用不到，但是大家都需要的数据，并且改造你的存储设施来存的下更多数据。</p></li><li><p>跨界：用数字化改造一切，程序员的使命就是先消灭其它行业再消灭自身。</p></li></ol></li><li><p>感悟：</p><ol><li><p>渣男好像真的只是渣，其他都是有点，舔狗唯一的特点舔貌似也不是什么有点，只会招人烦。</p></li><li><p>所以，宁愿做渣男也不要做舔狗。</p></li><li><p>既然做任何事情都会被喷，那我还在乎你喷不喷？</p></li><li><p>通用技术栈一定要精通、熟练掌握。（写软件、网站开发、小程序）</p></li><li><p>空闲时间，利用好了就是我自大的资本；利用不好，只会消耗自己。</p></li><li><p>副业很重要。</p></li><li><p>合理规划目标，每次只focus on一个计划，时间要预留充足。</p></li><li><p>数字化everything。</p></li></ol></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;center&gt;&lt;font size=5&gt;今天看到的名言警句&lt;/font&gt;&lt;/center&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://www.apachecn.org/#/&quot;&gt;名言警句&lt;/a&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;渣男除了渣没其他缺点，舔狗除了舔没其他优点。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;既然我们做什么都会被喷，____________。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;搞钱的大原则就是信息不对称。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;风口可能有很多个，但是对应的技术可能就那么点，所以，尽早储备一个通用的技术栈。&lt;/p&gt;</summary>
+    
+    
     
     
     <category term="日记" scheme="https://weicun581.github.io/tags/%E6%97%A5%E8%AE%B0/"/>
