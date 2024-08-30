@@ -30,12 +30,12 @@
 <meta property="og:description" content="win10电脑上开启Copilot教程，开机自启动。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20240830154937.png">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/XMuli/xmuliPic@pic/2023/202402021518406.png">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/XMuli/xmuliPic@pic/2023/202402021524465.png">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/XMuli/xmuliPic@pic/2023/202402021527371.png">
-<meta property="og:image" content="https://fastly.jsdelivr.net/gh/XMuli/xmuliPic@pic/2023/202402021531962.png">
+<meta property="og:image" content="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20240830210353.png">
+<meta property="og:image" content="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20240830210416.png">
+<meta property="og:image" content="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20240830210433.png">
+<meta property="og:image" content="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20240830210454.png">
 <meta property="article:published_time" content="2024-08-26T07:57:00.000Z">
-<meta property="article:modified_time" content="2024-08-30T08:46:05.899Z">
+<meta property="article:modified_time" content="2024-08-30T13:05:01.298Z">
 <meta property="article:author" content="蓝色单车">
 <meta property="article:tag" content="每日文章">
 <meta property="article:tag" content="AI">
@@ -305,7 +305,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-08-30 16:46:05" itemprop="dateModified" datetime="2024-08-30T16:46:05+08:00">2024-08-30</time>
+      <time title="修改时间：2024-08-30 21:05:01" itemprop="dateModified" datetime="2024-08-30T21:05:01+08:00">2024-08-30</time>
     </span>
 
   
@@ -360,7 +360,7 @@
 <li>需要先打开浏览器并访问该网站。这一步骤虽然不复杂，但每次都要重复，确实有些麻烦。</li>
 <li>无法按回车键发送消息。这一点对我来说尤其不便，因为我习惯了用回车键快速发送消息，这个限制让我感到非常不适应。<br>尤其是第二个问题，真是让人抓狂，简直逼死强迫症。不过今天不同了，有了新的解决方案。通过在 Windows 10 上进行简单的设置，就可以直接在桌面上使用 Copilot。这不仅省去了打开浏览器的步骤，还解决了无法按回车键发送消息的问题。<br>总的来说，这个新方法让使用 Copilot 变得更加便捷和高效。我非常期待在日常生活中更多地使用它，享受 AI 带来的便利和乐趣。</li>
 </ol>
-<h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><p>电脑桌面右下角Copilot图标展示，点击后随问随答。<br>可以聊天、可以生成图片、可以生成文件、可以上传文件、分析文件。<br>除此之外，还可以润色文章、提供视频脚本。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20240830154937.png"/><br>不等不说，效果很不错。</p>
+<h3 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h3><p>电脑桌面右下角Copilot图标展示，点击后随问随答。<br>可以聊天、可以生成图片、可以生成文件、可以上传文件、分析文件。<br>除此之外，还可以润色文章、提供视频脚本。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20240830154937.png"/><br>不得不说，效果很不错。</p>
 <h3 id="开启教程"><a href="#开启教程" class="headerlink" title="开启教程"></a>开启教程</h3><ul>
 <li><strong>地区限制</strong>：目前 Windows Copilot 仅限于美国、北美、英国，以及部分亚洲，南美国家的用户可正常使用（国内目前<strong>无法直接使用</strong></li>
 <li><strong>硬件限制</strong>：微软已确认 Windows Copilot 只能在内存为 4GB及以上 ，屏幕分辨率为 720P以上。</li>
@@ -369,13 +369,13 @@
 <h3 id="开启-Copilot-入口"><a href="#开启-Copilot-入口" class="headerlink" title="开启 Copilot 入口"></a>开启 Copilot 入口</h3><ol>
 <li><strong>“设置” &gt; “系统” &gt; “关于”</strong>，确保操作系统内部版本号为 Build 19045.3754 (KB5032278) 或更高<br> 若有需要亦可手动下载 <a target="_blank" rel="noopener" href="https://www.catalog.update.microsoft.com/Search.aspx?q=KB5032278">KB5032278</a> 这个包，实测版本大于即可，没这个 KB 也可以成功。</li>
 <li>Github下载 <a target="_blank" rel="noopener" href="https://github.com/thebookisclosed/ViVe/releases">ViveTool</a> 并将其解压，用于开启 Windows 设备上启用隐藏的实验性功能。<br> 进入下载目录，管理员执行如下： <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vivetool /enable /id:46686174,47530616,44755019</span><br></pre></td></tr></table></figure>
- 执行成功提示如下<img src="https://fastly.jsdelivr.net/gh/XMuli/xmuliPic@pic/2023/202402021518406.png" alt="L|475"></li>
+ 执行成功提示如下<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20240830210353.png"/></li>
 <li>重启系统后。观察 Windows Copilot 出现于右下角通知处？若未出现，也可右键任务栏，看是否有Windows Copilot相关的字样，启用即可。</li>
-<li>若是步骤 3 失败，则打开注册表，进入 <code>Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\Shell\Copilot\BingChat</code> 后，将 IsUserEligible 数值修改为 1，再重复步骤3，即可看到 Copilot 图标<img src="https://fastly.jsdelivr.net/gh/XMuli/xmuliPic@pic/2023/202402021524465.png" alt="L|450"></li>
-<li>开启成功<img src="https://fastly.jsdelivr.net/gh/XMuli/xmuliPic@pic/2023/202402021527371.png" alt="L|350"></li>
+<li>若是步骤 3 失败，则打开注册表，进入 <code>Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\Shell\Copilot\BingChat</code> 后，将 IsUserEligible 数值修改为 1，再重复步骤3，即可看到 Copilot 图标<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20240830210416.png"/></li>
+<li>开启成功<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20240830210433.png"/></li>
 </ol>
 <h3 id="启用-Copilot-功能"><a href="#启用-Copilot-功能" class="headerlink" title="启用 Copilot 功能"></a>启用 Copilot 功能</h3><ol>
-<li>“Settings - Data &amp; time - Region”，将 “Country or region” 设置为 US；最后本机 “ Language” 设置如下.语言应该不是必须的。<img src="https://fastly.jsdelivr.net/gh/XMuli/xmuliPic@pic/2023/202402021531962.png" alt="L|474"><br>实测，只需要设置 “Country or region” ，其他都不用设置。</li>
+<li>“Settings - Data &amp; time - Region”，将 “Country or region” 设置为 US；最后本机 “ Language” 设置如下.语言应该不是必须的。<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20240830210454.png"/><br>实测，只需要设置 “Country or region” ，其他都不用设置。</li>
 </ol>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>实测效果非常好，我更喜欢直接点击桌面右下角的图标，然后就可以开始对话。这样使用起来非常方便和直观。不过请注意，<font color="#ff0000">所有功能都需要挂梯子使用</font>，否则会显示“您所在的地区不支持”。唉，怎么说呢，一切尽在不言中吧。希望未来能够更方便地使用这些功能。<br>最后说明一下，桌面版的 Copilot 可以通过 <code>Win + C</code> 快速呼叫和隐藏。这使得操作更加快捷和高效。😉</p>
 <h3 id="后续问题"><a href="#后续问题" class="headerlink" title="后续问题"></a>后续问题</h3><h4 id="1-该服务在你所在的地区不可用"><a href="#1-该服务在你所在的地区不可用" class="headerlink" title="1-该服务在你所在的地区不可用"></a>1-该服务在你所在的地区不可用</h4><p>这里可以检测你的IP地址： <a target="_blank" rel="noopener" href="https://iplark.com/">IPLark - 查看本机IP地址 - 我的IP归属地</a><br>解决方法：</p>
@@ -547,7 +547,7 @@ setInterval("createtime()",250);
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共21.6k字</span>
+  <span class="post-count">博客全站共21k字</span>
 </div>
     </div>
   </footer>
