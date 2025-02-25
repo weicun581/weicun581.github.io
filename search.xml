@@ -62,60 +62,6 @@
       </tags>
   </entry>
   <entry>
-    <title>dsyncnorize使用教</title>
-    <url>/2022/09/29/003-dsyncnorize%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<blockquote>
-<p>一款自动备份、传递数据的软件，</p>
-<p>支持win to win的定时备份、双向传递。</p>
-</blockquote>
-<span id="more"></span>
-
-
-
-<h2 id="使用方法-amp-基础设定"><a href="#使用方法-amp-基础设定" class="headerlink" title="使用方法&amp;基础设定"></a>使用方法&amp;基础设定</h2><ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220916112432.png" alt="image-20220916112432857" style="zoom: 50%;" />
-
-<ul>
-<li><p>使用前一定要在checkbox上打勾，处于选中状态才能进行同步sync。</p>
-</li>
-<li><p>设定部分参考上面的截图。</p>
-</li>
-<li><p>如果需要双向同步，选择：bidirectional sync。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="特性分析"><a href="#特性分析" class="headerlink" title="特性分析"></a>特性分析</h2><h3 id="单向同步："><a href="#单向同步：" class="headerlink" title="单向同步："></a>单向同步：</h3><ul>
-<li>过程：同步source的新增、删除。</li>
-<li>结果：目标文件夹会与源文件夹一模一样。</li>
-</ul>
-<h3 id="双向同步："><a href="#双向同步：" class="headerlink" title="双向同步："></a>双向同步：</h3><ul>
-<li>过程：双向同步新增或缺失的文件，不能同步删除动作。</li>
-<li>结果：增量同步，两个文件夹叠加结果。</li>
-</ul>
-<h3 id="如何实现双向同步新增、同步删除？"><a href="#如何实现双向同步新增、同步删除？" class="headerlink" title="如何实现双向同步新增、同步删除？"></a>如何实现双向同步新增、同步删除？</h3><ul>
-<li>平时使用时，选择双向同步。</li>
-<li>如果需要同步删除怎么操作？<ul>
-<li>step1：双向同步一次。</li>
-<li>step2：在source端，删除目标文件夹、文件。</li>
-<li>step3：在source端，单向同步到远端。</li>
-<li>step4：改为双向同步。</li>
-</ul>
-</li>
-</ul>
-<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ul>
-<li>大文件同步的时候，软件会进入假死状态！</li>
-</ul>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>工具</tag>
-        <tag>NAS相关</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python字符串小技巧</title>
     <url>/2022/09/27/002-Python%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220927171316.jpeg" alt="Free photos of Vintage pocket watch" style="zoom:50%;" />
@@ -263,6 +209,156 @@
       </categories>
       <tags>
         <tag>foldersync</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>dsyncnorize使用教</title>
+    <url>/2022/09/29/003-dsyncnorize%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<blockquote>
+<p>一款自动备份、传递数据的软件，</p>
+<p>支持win to win的定时备份、双向传递。</p>
+</blockquote>
+<span id="more"></span>
+
+
+
+<h2 id="使用方法-amp-基础设定"><a href="#使用方法-amp-基础设定" class="headerlink" title="使用方法&amp;基础设定"></a>使用方法&amp;基础设定</h2><ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220916112432.png" alt="image-20220916112432857" style="zoom: 50%;" />
+
+<ul>
+<li><p>使用前一定要在checkbox上打勾，处于选中状态才能进行同步sync。</p>
+</li>
+<li><p>设定部分参考上面的截图。</p>
+</li>
+<li><p>如果需要双向同步，选择：bidirectional sync。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="特性分析"><a href="#特性分析" class="headerlink" title="特性分析"></a>特性分析</h2><h3 id="单向同步："><a href="#单向同步：" class="headerlink" title="单向同步："></a>单向同步：</h3><ul>
+<li>过程：同步source的新增、删除。</li>
+<li>结果：目标文件夹会与源文件夹一模一样。</li>
+</ul>
+<h3 id="双向同步："><a href="#双向同步：" class="headerlink" title="双向同步："></a>双向同步：</h3><ul>
+<li>过程：双向同步新增或缺失的文件，不能同步删除动作。</li>
+<li>结果：增量同步，两个文件夹叠加结果。</li>
+</ul>
+<h3 id="如何实现双向同步新增、同步删除？"><a href="#如何实现双向同步新增、同步删除？" class="headerlink" title="如何实现双向同步新增、同步删除？"></a>如何实现双向同步新增、同步删除？</h3><ul>
+<li>平时使用时，选择双向同步。</li>
+<li>如果需要同步删除怎么操作？<ul>
+<li>step1：双向同步一次。</li>
+<li>step2：在source端，删除目标文件夹、文件。</li>
+<li>step3：在source端，单向同步到远端。</li>
+<li>step4：改为双向同步。</li>
+</ul>
+</li>
+</ul>
+<h2 id="使用感受"><a href="#使用感受" class="headerlink" title="使用感受"></a>使用感受</h2><ul>
+<li>大文件同步的时候，软件会进入假死状态！</li>
+</ul>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+        <tag>NAS相关</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker hexo评论系统waline服务器及数据库搭建</title>
+    <url>/2022/10/12/005-%E5%AE%89%E8%A3%85hexo%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9Fwaline%E7%9A%84%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20221012171211.png" alt="image-20221012171211527" style="zoom:67%;" />
+
+<p>先吐槽一下<a href="https://waline.js.org/guide/server/databases.html">waline官网教程</a>，浪费了我3day时间去debug。</p>
+<p>目前，官网推荐的：</p>
+<ul>
+<li>vercel（服务器）<!--NG--></li>
+<li>leancloud（数据库）NG</li>
+</ul>
+<p>我目前使用的方法：docker服务器端 + sqlite数据库，下面分享下我的做法。</p>
+<span id="more"></span>
+
+
+
+<h2 id="安装docker、docker-compose环境123"><a href="#安装docker、docker-compose环境123" class="headerlink" title="安装docker、docker compose环境123"></a>安装docker、docker compose环境123</h2><ul>
+<li><p><strong>安装docker：</strong></p>
+<ul>
+<li>国内：<code>curl -sSL https://get.daocloud.io/docker | sh</code></li>
+<li>国外：<code>curl -sSL https://get.docker.com/ | sh</code></li>
+</ul>
+</li>
+<li><p><strong>安装docker compose：</strong></p>
+<ul>
+<li><p>国内：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -L https://get.daocloud.io/docker/compose/releases/download/v2.2.2/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose</span><br><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>国外：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -L &quot;https://github.com/docker/compose/releases/download/2.2.2/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</span><br><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>检查是否安装成功：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker -v</span><br><span class="line">docker-compose -v</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>docker compose作用：</p>
+<blockquote>
+<p>用来负责对Docker容器集群的快速编排，</p>
+<p>由一组关联的应用容器组成的一个完整业务单元，在docker-compose.yml文件当中进行定义</p>
+</blockquote>
+</blockquote>
+<ul>
+<li><p><strong>最小docker compse使用范例：</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建目录</span></span><br><span class="line">mkdir hello</span><br><span class="line">cd hello</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">新建docker-compose.yml文件</span></span><br><span class="line">vim docker-compose.yml</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">写入内容（这里在vim当中编辑yml文件挺难受的，可以在idea当中编辑远程主机的文件）</span></span><br><span class="line">version: &quot;3.0&quot;    # 指定compose的版本</span><br><span class="line">services:         # 指定服务</span><br><span class="line">  tomcat:         # 单个服务</span><br><span class="line">    image: tomcat:9.0.27-jdk8     # 服务镜像</span><br><span class="line">    ports:</span><br><span class="line">      - 8081:8080                 # 暴露对应的端口</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">保持文件内容后进行启动compose</span></span><br><span class="line">docker-compose up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">服务启动之后，可以直接进行访问8081端口</span></span><br><span class="line">http://远程主机ip/8081</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参考：<a href="https://blog.csdn.net/qq_44973159/article/details/121357388">https://blog.csdn.net/qq_44973159/article/details/121357388</a></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="安装waline服务器及数据库"><a href="#安装waline服务器及数据库" class="headerlink" title="安装waline服务器及数据库"></a>安装waline服务器及数据库</h2><h4 id="step1：创建测试目录："><a href="#step1：创建测试目录：" class="headerlink" title="step1：创建测试目录："></a><strong>step1：创建测试目录：</strong></h4><ul>
+<li><p>执行如下命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /root</span><br><span class="line">mkdir composetest</span><br><span class="line">cd composetest</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="step2：拉取镜像："><a href="#step2：拉取镜像：" class="headerlink" title="step2：拉取镜像："></a><strong>step2：拉取镜像：</strong></h4><ul>
+<li><code>docker pull lizheming/waline</code></li>
+</ul>
+<h4 id="step3：在-composetest-目录下创建docker-compose-yml文件，内容如下："><a href="#step3：在-composetest-目录下创建docker-compose-yml文件，内容如下：" class="headerlink" title="step3：在 composetest 目录下创建docker-compose.yml文件，内容如下："></a><strong>step3：在 composetest 目录下创建docker-compose.yml文件，内容如下：</strong></h4><ul>
+<li><p>写入如下内容：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">version: &#x27;3&#x27;</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  waline:</span><br><span class="line">    container_name: waline</span><br><span class="line">    image: lizheming/waline:latest</span><br><span class="line">    restart: always</span><br><span class="line">    ports:</span><br><span class="line">      - 8360:8360</span><br><span class="line">    volumes:</span><br><span class="line">      - $&#123;PWD&#125;/data:/app/data</span><br><span class="line">    environment:</span><br><span class="line">      TZ: &#x27;Asia/Shanghai&#x27;</span><br><span class="line">      SQLITE_PATH: &#x27;/app/data&#x27;</span><br><span class="line">      JWT_TOKEN: &#x27;Your token&#x27;</span><br><span class="line">      SITE_NAME: &#x27;Your site name&#x27;</span><br><span class="line">      SITE_URL: &#x27;https://example.com&#x27;</span><br><span class="line">      SECURE_DOMAINS: &#x27;example.com&#x27;</span><br><span class="line">      AUTHOR_EMAIL: &#x27;mail@example.com&#x27;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="step4：在-composetest-目录下创建-data-目录，下载-waline-sqlite-这个数据库文件："><a href="#step4：在-composetest-目录下创建-data-目录，下载-waline-sqlite-这个数据库文件：" class="headerlink" title="step4：在 composetest 目录下创建 data 目录，下载 waline.sqlite 这个数据库文件："></a><strong>step4：在 composetest 目录下创建 data 目录，下载 <a href="https://github.com/walinejs/waline/blob/main/assets/waline.sqlite">waline.sqlite</a> 这个数据库文件：</strong></h4><ul>
+<li><p>命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /root/composetest</span><br><span class="line">mkdir data</span><br><span class="line">cd data</span><br><span class="line">wget https://raw.githubusercontent.com/walinejs/waline/main/assets/waline.sqlite</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="step5：使用-Compose-命令构建和运行"><a href="#step5：使用-Compose-命令构建和运行" class="headerlink" title="step5：使用 Compose 命令构建和运行"></a><strong>step5：使用 Compose 命令构建和运行</strong></h4><ul>
+<li><p>命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /root/composetest</span><br><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列出所有运行的容器：<code>docker-compose ps</code></p>
+</li>
+</ul>
+<h4 id="step6：-访问-ip-端口："><a href="#step6：-访问-ip-端口：" class="headerlink" title="step6： 访问 ip:端口："></a><strong>step6： 访问 <code>ip:端口</code>：</strong></h4><ul>
+<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20221012173410.png" alt="image-20221012173410742" style="zoom:50%;" /></li>
+</ul>
+<h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><blockquote>
+<ol>
+<li><p><a href="https://blog.csdn.net/weixin_43943642/article/details/126678317">Waline评论服务docker自部署手册 + 无需备案域名配置</a></p>
+</li>
+<li><p><a href="https://009898.xyz/post/docker-ji-lu/">Docker 记录 | Mark (009898.xyz)</a></p>
+</li>
+<li><p><a href="https://waline.js.org/guide/server/databases.html">多数据库服务支持 | Waline</a></p>
+</li>
+</ol>
+</blockquote>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+        <tag>hexo</tag>
+        <tag>waline</tag>
       </tags>
   </entry>
   <entry>
@@ -517,102 +613,6 @@
       </tags>
   </entry>
   <entry>
-    <title>docker hexo评论系统waline服务器及数据库搭建</title>
-    <url>/2022/10/12/005-%E5%AE%89%E8%A3%85hexo%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9Fwaline%E7%9A%84%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
-    <content><![CDATA[<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20221012171211.png" alt="image-20221012171211527" style="zoom:67%;" />
-
-<p>先吐槽一下<a href="https://waline.js.org/guide/server/databases.html">waline官网教程</a>，浪费了我3day时间去debug。</p>
-<p>目前，官网推荐的：</p>
-<ul>
-<li>vercel（服务器）<!--NG--></li>
-<li>leancloud（数据库）NG</li>
-</ul>
-<p>我目前使用的方法：docker服务器端 + sqlite数据库，下面分享下我的做法。</p>
-<span id="more"></span>
-
-
-
-<h2 id="安装docker、docker-compose环境123"><a href="#安装docker、docker-compose环境123" class="headerlink" title="安装docker、docker compose环境123"></a>安装docker、docker compose环境123</h2><ul>
-<li><p><strong>安装docker：</strong></p>
-<ul>
-<li>国内：<code>curl -sSL https://get.daocloud.io/docker | sh</code></li>
-<li>国外：<code>curl -sSL https://get.docker.com/ | sh</code></li>
-</ul>
-</li>
-<li><p><strong>安装docker compose：</strong></p>
-<ul>
-<li><p>国内：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -L https://get.daocloud.io/docker/compose/releases/download/v2.2.2/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose</span><br><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>国外：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -L &quot;https://github.com/docker/compose/releases/download/2.2.2/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</span><br><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>检查是否安装成功：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker -v</span><br><span class="line">docker-compose -v</span><br></pre></td></tr></table></figure></li>
-</ul>
-<blockquote>
-<p>docker compose作用：</p>
-<blockquote>
-<p>用来负责对Docker容器集群的快速编排，</p>
-<p>由一组关联的应用容器组成的一个完整业务单元，在docker-compose.yml文件当中进行定义</p>
-</blockquote>
-</blockquote>
-<ul>
-<li><p><strong>最小docker compse使用范例：</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建目录</span></span><br><span class="line">mkdir hello</span><br><span class="line">cd hello</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">新建docker-compose.yml文件</span></span><br><span class="line">vim docker-compose.yml</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">写入内容（这里在vim当中编辑yml文件挺难受的，可以在idea当中编辑远程主机的文件）</span></span><br><span class="line">version: &quot;3.0&quot;    # 指定compose的版本</span><br><span class="line">services:         # 指定服务</span><br><span class="line">  tomcat:         # 单个服务</span><br><span class="line">    image: tomcat:9.0.27-jdk8     # 服务镜像</span><br><span class="line">    ports:</span><br><span class="line">      - 8081:8080                 # 暴露对应的端口</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">保持文件内容后进行启动compose</span></span><br><span class="line">docker-compose up</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">服务启动之后，可以直接进行访问8081端口</span></span><br><span class="line">http://远程主机ip/8081</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>参考：<a href="https://blog.csdn.net/qq_44973159/article/details/121357388">https://blog.csdn.net/qq_44973159/article/details/121357388</a></p>
-</blockquote>
-</li>
-</ul>
-<h2 id="安装waline服务器及数据库"><a href="#安装waline服务器及数据库" class="headerlink" title="安装waline服务器及数据库"></a>安装waline服务器及数据库</h2><h4 id="step1：创建测试目录："><a href="#step1：创建测试目录：" class="headerlink" title="step1：创建测试目录："></a><strong>step1：创建测试目录：</strong></h4><ul>
-<li><p>执行如下命令：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /root</span><br><span class="line">mkdir composetest</span><br><span class="line">cd composetest</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="step2：拉取镜像："><a href="#step2：拉取镜像：" class="headerlink" title="step2：拉取镜像："></a><strong>step2：拉取镜像：</strong></h4><ul>
-<li><code>docker pull lizheming/waline</code></li>
-</ul>
-<h4 id="step3：在-composetest-目录下创建docker-compose-yml文件，内容如下："><a href="#step3：在-composetest-目录下创建docker-compose-yml文件，内容如下：" class="headerlink" title="step3：在 composetest 目录下创建docker-compose.yml文件，内容如下："></a><strong>step3：在 composetest 目录下创建docker-compose.yml文件，内容如下：</strong></h4><ul>
-<li><p>写入如下内容：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">version: &#x27;3&#x27;</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  waline:</span><br><span class="line">    container_name: waline</span><br><span class="line">    image: lizheming/waline:latest</span><br><span class="line">    restart: always</span><br><span class="line">    ports:</span><br><span class="line">      - 8360:8360</span><br><span class="line">    volumes:</span><br><span class="line">      - $&#123;PWD&#125;/data:/app/data</span><br><span class="line">    environment:</span><br><span class="line">      TZ: &#x27;Asia/Shanghai&#x27;</span><br><span class="line">      SQLITE_PATH: &#x27;/app/data&#x27;</span><br><span class="line">      JWT_TOKEN: &#x27;Your token&#x27;</span><br><span class="line">      SITE_NAME: &#x27;Your site name&#x27;</span><br><span class="line">      SITE_URL: &#x27;https://example.com&#x27;</span><br><span class="line">      SECURE_DOMAINS: &#x27;example.com&#x27;</span><br><span class="line">      AUTHOR_EMAIL: &#x27;mail@example.com&#x27;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="step4：在-composetest-目录下创建-data-目录，下载-waline-sqlite-这个数据库文件："><a href="#step4：在-composetest-目录下创建-data-目录，下载-waline-sqlite-这个数据库文件：" class="headerlink" title="step4：在 composetest 目录下创建 data 目录，下载 waline.sqlite 这个数据库文件："></a><strong>step4：在 composetest 目录下创建 data 目录，下载 <a href="https://github.com/walinejs/waline/blob/main/assets/waline.sqlite">waline.sqlite</a> 这个数据库文件：</strong></h4><ul>
-<li><p>命令如下：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /root/composetest</span><br><span class="line">mkdir data</span><br><span class="line">cd data</span><br><span class="line">wget https://raw.githubusercontent.com/walinejs/waline/main/assets/waline.sqlite</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="step5：使用-Compose-命令构建和运行"><a href="#step5：使用-Compose-命令构建和运行" class="headerlink" title="step5：使用 Compose 命令构建和运行"></a><strong>step5：使用 Compose 命令构建和运行</strong></h4><ul>
-<li><p>命令如下：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /root/composetest</span><br><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>列出所有运行的容器：<code>docker-compose ps</code></p>
-</li>
-</ul>
-<h4 id="step6：-访问-ip-端口："><a href="#step6：-访问-ip-端口：" class="headerlink" title="step6： 访问 ip:端口："></a><strong>step6： 访问 <code>ip:端口</code>：</strong></h4><ul>
-<li><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20221012173410.png" alt="image-20221012173410742" style="zoom:50%;" /></li>
-</ul>
-<h2 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h2><blockquote>
-<ol>
-<li><p><a href="https://blog.csdn.net/weixin_43943642/article/details/126678317">Waline评论服务docker自部署手册 + 无需备案域名配置</a></p>
-</li>
-<li><p><a href="https://009898.xyz/post/docker-ji-lu/">Docker 记录 | Mark (009898.xyz)</a></p>
-</li>
-<li><p><a href="https://waline.js.org/guide/server/databases.html">多数据库服务支持 | Waline</a></p>
-</li>
-</ol>
-</blockquote>
-]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-        <tag>hexo</tag>
-        <tag>waline</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python多线程</title>
     <url>/2022/10/26/007-Python%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
     <content><![CDATA[<h2 id="多线程介绍"><a href="#多线程介绍" class="headerlink" title="多线程介绍"></a>多线程介绍</h2><h4 id="什么是线程"><a href="#什么是线程" class="headerlink" title="什么是线程"></a>什么是线程</h4><p>​		线程（Thread）也叫轻量级进程，是操作系统能够进行运算调度的最小单位，它被包涵在进程之中，是进程中的实际运作单位。</p>
@@ -695,6 +695,31 @@
       </categories>
       <tags>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>163、QQ邮箱收不到Github的邮件解决方法</title>
+    <url>/2023/05/05/163%E3%80%81QQ%E9%82%AE%E7%AE%B1%E6%94%B6%E4%B8%8D%E5%88%B0Github%E7%9A%84%E9%82%AE%E4%BB%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	国内的好多邮箱收不到github的mail，无法收到github上的通知、留言，这个让人很苦恼，无法及时沟通，所以本文会给出解决方法。</p>
+</blockquote>
+<span id="more"></span>
+
+<div style="display:inline-block;"><img width="40%" style="float:center " src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230505171221.png" alt="20230522144603"></div>
+
+<p>注册GitHub需要进行邮箱激活验证，否则不能创建仓库，码笔记发现使用QQ邮箱、163邮箱等国内常见邮箱可能收不到激活邮件，这是什么原因呢？码笔记分享GitHub收不到激活邮件的解决方法：</p>
+<h2 id="GitHub收不到邮件的解决方法"><a href="#GitHub收不到邮件的解决方法" class="headerlink" title="GitHub收不到邮件的解决方法"></a>GitHub收不到邮件的解决方法</h2><p>GitHub需要“Please verify your email address”，否则不能使用GitHub。国内常见的邮箱QQ邮箱或者163邮箱等可能会收不到GitHub发来的激活验证邮件，那么如何解决呢？</p>
+<h3 id="将GitHub设置到邮箱白名单即可"><a href="#将GitHub设置到邮箱白名单即可" class="headerlink" title="将GitHub设置到邮箱白名单即可"></a>将GitHub设置到邮箱白名单即可</h3><p>码笔记以QQ邮箱为例，将GitHub加入到邮箱白名单即可。登录到你的邮箱，点击【设置】-【反垃圾】-【白名单】，将<code>github.com</code>添加到邮箱白名单即可，如下图所示：<br><a href="https://www.mabiji.com/wp-content/uploads/2019/11/baimingdan.jpg"><img src="https://www.mabiji.com/wp-content/uploads/2019/11/baimingdan.jpg" alt="github.com添加到邮箱白名单"></a></p>
+<p>github.com添加到邮箱白名单</p>
+<p>然后在GitHub端，点击重新发送邮件“Resend”，即可收到GitHub发来的邮件，在邮件中点击“verify email address”即可完成邮箱验证。</p>
+<p>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a href="https://www.mabiji.com/github/github-email.html#:~:text=%E5%9B%BD%E5%86%85%E5%B8%B8%E8%A7%81%E7%9A%84%E9%82%AE%E7%AE%B1QQ%E9%82%AE%E7%AE%B1%E6%88%96%E8%80%85163%E9%82%AE%E7%AE%B1%E7%AD%89%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%94%B6%E4%B8%8D%E5%88%B0GitHub%E5%8F%91%E6%9D%A5%E7%9A%84%E6%BF%80%E6%B4%BB%E9%AA%8C%E8%AF%81%E9%82%AE%E4%BB%B6%EF%BC%8C%E9%82%A3%E4%B9%88%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%91%A2%EF%BC%9F%20%E5%B0%86GitHub%E8%AE%BE%E7%BD%AE%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%E5%8D%B3%E5%8F%AF%20%E7%A0%81%E7%AC%94%E8%AE%B0%E4%BB%A5QQ%E9%82%AE%E7%AE%B1%E4%B8%BA%E4%BE%8B%EF%BC%8C%E5%B0%86GitHub%E5%8A%A0%E5%85%A5%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%E5%8D%B3%E5%8F%AF%E3%80%82%20%E7%99%BB%E5%BD%95%E5%88%B0%E4%BD%A0%E7%9A%84%E9%82%AE%E7%AE%B1%EF%BC%8C%E7%82%B9%E5%87%BB%E3%80%90%E8%AE%BE%E7%BD%AE%E3%80%91-%E3%80%90%E5%8F%8D%E5%9E%83%E5%9C%BE%E3%80%91-%E3%80%90%E7%99%BD%E5%90%8D%E5%8D%95%E3%80%91%EF%BC%8C%E5%B0%86github.com%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%E5%8D%B3%E5%8F%AF%EF%BC%8C%E5%A6%82%E4%B8%8B%E5%9B%BE%E6%89%80%E7%A4%BA%EF%BC%9A,github.com%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%20%E7%84%B6%E5%90%8E%E5%9C%A8GitHub%E7%AB%AF%EF%BC%8C%E7%82%B9%E5%87%BB%E9%87%8D%E6%96%B0%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6%E2%80%9CResend%E2%80%9D%EF%BC%8C%E5%8D%B3%E5%8F%AF%E6%94%B6%E5%88%B0GitHub%E5%8F%91%E6%9D%A5%E7%9A%84%E9%82%AE%E4%BB%B6%EF%BC%8C%E5%9C%A8%E9%82%AE%E4%BB%B6%E4%B8%AD%E7%82%B9%E5%87%BB%E2%80%9Cverify%20email%20address%E2%80%9D%E5%8D%B3%E5%8F%AF%E5%AE%8C%E6%88%90%E9%82%AE%E7%AE%B1%E9%AA%8C%E8%AF%81%E3%80%82">GitHub收不到邮件的解决方法 | 码笔记</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>每日文章</tag>
       </tags>
   </entry>
   <entry>
@@ -801,37 +826,6 @@ if __name__ == &#39;__main__&#39;:
       </tags>
   </entry>
   <entry>
-    <title>日记怀旧</title>
-    <url>/2022/11/15/009-%E6%97%A5%E8%AE%B0%E6%80%80%E6%97%A7/</url>
-    <content><![CDATA[<h3 id="2022-x2F-11-x2F-15-小记"><a href="#2022-x2F-11-x2F-15-小记" class="headerlink" title="2022&#x2F;11&#x2F;15 小记"></a>2022&#x2F;11&#x2F;15 小记</h3><p>很久之前，大概是 2013 年的时候，在人人上听过，惊为天人。<br>快 10 年了，<br>人人网也已经不在，<br>曾经想逃离的过去，现在却成了回不去的记忆。</p>
-<span id="more"></span>
-
-
- <iframe src="//player.bilibili.com/player.html?aid=254554192&bvid=BV1zY411g7zT&cid=544709836&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height=300> </iframe>
-
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2024年夏天</title>
-    <url>/2024/08/18/2024%E5%B9%B4%E7%9A%84%E5%A4%8F%E5%A4%A9/</url>
-    <content><![CDATA[<blockquote>
-<p>​	夏天快要结束了，是吗？</p>
-</blockquote>
-<span id="more"></span>
-
-<p>hello：</p>
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1556353901&bvid=BV1Z14214729&cid=1647648630&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>]]></content>
-      <tags>
-        <tag>日常</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>AgentGPT-带互联网搜索功能的chatGPT</title>
     <url>/2023/04/25/AgentGPT-%E5%B8%A6%E4%BA%92%E8%81%94%E7%BD%91%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E7%9A%84chatGPT/</url>
     <content><![CDATA[<blockquote>
@@ -866,31 +860,6 @@ if __name__ == &#39;__main__&#39;:
 <hr>
 <h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><p>1.<br>2.<br>3. </p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>163、QQ邮箱收不到Github的邮件解决方法</title>
-    <url>/2023/05/05/163%E3%80%81QQ%E9%82%AE%E7%AE%B1%E6%94%B6%E4%B8%8D%E5%88%B0Github%E7%9A%84%E9%82%AE%E4%BB%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	国内的好多邮箱收不到github的mail，无法收到github上的通知、留言，这个让人很苦恼，无法及时沟通，所以本文会给出解决方法。</p>
-</blockquote>
-<span id="more"></span>
-
-<div style="display:inline-block;"><img width="40%" style="float:center " src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230505171221.png" alt="20230522144603"></div>
-
-<p>注册GitHub需要进行邮箱激活验证，否则不能创建仓库，码笔记发现使用QQ邮箱、163邮箱等国内常见邮箱可能收不到激活邮件，这是什么原因呢？码笔记分享GitHub收不到激活邮件的解决方法：</p>
-<h2 id="GitHub收不到邮件的解决方法"><a href="#GitHub收不到邮件的解决方法" class="headerlink" title="GitHub收不到邮件的解决方法"></a>GitHub收不到邮件的解决方法</h2><p>GitHub需要“Please verify your email address”，否则不能使用GitHub。国内常见的邮箱QQ邮箱或者163邮箱等可能会收不到GitHub发来的激活验证邮件，那么如何解决呢？</p>
-<h3 id="将GitHub设置到邮箱白名单即可"><a href="#将GitHub设置到邮箱白名单即可" class="headerlink" title="将GitHub设置到邮箱白名单即可"></a>将GitHub设置到邮箱白名单即可</h3><p>码笔记以QQ邮箱为例，将GitHub加入到邮箱白名单即可。登录到你的邮箱，点击【设置】-【反垃圾】-【白名单】，将<code>github.com</code>添加到邮箱白名单即可，如下图所示：<br><a href="https://www.mabiji.com/wp-content/uploads/2019/11/baimingdan.jpg"><img src="https://www.mabiji.com/wp-content/uploads/2019/11/baimingdan.jpg" alt="github.com添加到邮箱白名单"></a></p>
-<p>github.com添加到邮箱白名单</p>
-<p>然后在GitHub端，点击重新发送邮件“Resend”，即可收到GitHub发来的邮件，在邮件中点击“verify email address”即可完成邮箱验证。</p>
-<p>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
-<li><a href="https://www.mabiji.com/github/github-email.html#:~:text=%E5%9B%BD%E5%86%85%E5%B8%B8%E8%A7%81%E7%9A%84%E9%82%AE%E7%AE%B1QQ%E9%82%AE%E7%AE%B1%E6%88%96%E8%80%85163%E9%82%AE%E7%AE%B1%E7%AD%89%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%94%B6%E4%B8%8D%E5%88%B0GitHub%E5%8F%91%E6%9D%A5%E7%9A%84%E6%BF%80%E6%B4%BB%E9%AA%8C%E8%AF%81%E9%82%AE%E4%BB%B6%EF%BC%8C%E9%82%A3%E4%B9%88%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E5%91%A2%EF%BC%9F%20%E5%B0%86GitHub%E8%AE%BE%E7%BD%AE%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%E5%8D%B3%E5%8F%AF%20%E7%A0%81%E7%AC%94%E8%AE%B0%E4%BB%A5QQ%E9%82%AE%E7%AE%B1%E4%B8%BA%E4%BE%8B%EF%BC%8C%E5%B0%86GitHub%E5%8A%A0%E5%85%A5%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%E5%8D%B3%E5%8F%AF%E3%80%82%20%E7%99%BB%E5%BD%95%E5%88%B0%E4%BD%A0%E7%9A%84%E9%82%AE%E7%AE%B1%EF%BC%8C%E7%82%B9%E5%87%BB%E3%80%90%E8%AE%BE%E7%BD%AE%E3%80%91-%E3%80%90%E5%8F%8D%E5%9E%83%E5%9C%BE%E3%80%91-%E3%80%90%E7%99%BD%E5%90%8D%E5%8D%95%E3%80%91%EF%BC%8C%E5%B0%86github.com%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%E5%8D%B3%E5%8F%AF%EF%BC%8C%E5%A6%82%E4%B8%8B%E5%9B%BE%E6%89%80%E7%A4%BA%EF%BC%9A,github.com%E6%B7%BB%E5%8A%A0%E5%88%B0%E9%82%AE%E7%AE%B1%E7%99%BD%E5%90%8D%E5%8D%95%20%E7%84%B6%E5%90%8E%E5%9C%A8GitHub%E7%AB%AF%EF%BC%8C%E7%82%B9%E5%87%BB%E9%87%8D%E6%96%B0%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6%E2%80%9CResend%E2%80%9D%EF%BC%8C%E5%8D%B3%E5%8F%AF%E6%94%B6%E5%88%B0GitHub%E5%8F%91%E6%9D%A5%E7%9A%84%E9%82%AE%E4%BB%B6%EF%BC%8C%E5%9C%A8%E9%82%AE%E4%BB%B6%E4%B8%AD%E7%82%B9%E5%87%BB%E2%80%9Cverify%20email%20address%E2%80%9D%E5%8D%B3%E5%8F%AF%E5%AE%8C%E6%88%90%E9%82%AE%E7%AE%B1%E9%AA%8C%E8%AF%81%E3%80%82">GitHub收不到邮件的解决方法 | 码笔记</a></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>每日文章</tag>
-      </tags>
   </entry>
   <entry>
     <title>FFmpeg用法</title>
@@ -992,6 +961,42 @@ if __name__ == &#39;__main__&#39;:
       </tags>
   </entry>
   <entry>
+    <title>Hexo博客next主题添加点击特效</title>
+    <url>/2023/05/06/Hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	博客折腾的差不多了，开始整一些花活了，这次就给博客添加下点击特效，基本效果如下：</p>
+</blockquote>
+<span id="more"></span>
+<div style="display:inline-block;"><img width="40%" style="float:center " src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230506100148.png" alt="20230522144603"></div>
+
+<p>好了闲言少叙，直接上干货：</p>
+<ol>
+<li><p>在<code>E:\2_Git\Hexo_Blog\node_modules\hexo-theme-next\source\js</code>下新建文件<code>fireworks.js</code>并写入以下内容：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="meta">&quot;use strict&quot;</span>;<span class="keyword">function</span> <span class="title function_">updateCoords</span>(<span class="params">e</span>)&#123;pointerX=(e.<span class="property">clientX</span>||e.<span class="property">touches</span>[<span class="number">0</span>].<span class="property">clientX</span>)-canvasEl.<span class="title function_">getBoundingClientRect</span>().<span class="property">left</span>,pointerY=e.<span class="property">clientY</span>||e.<span class="property">touches</span>[<span class="number">0</span>].<span class="property">clientY</span>-canvasEl.<span class="title function_">getBoundingClientRect</span>().<span class="property">top</span>&#125;<span class="keyword">function</span> <span class="title function_">setParticuleDirection</span>(<span class="params">e</span>)&#123;<span class="keyword">var</span> t=anime.<span class="title function_">random</span>(<span class="number">0</span>,<span class="number">360</span>)*<span class="title class_">Math</span>.<span class="property">PI</span>/<span class="number">180</span>,a=anime.<span class="title function_">random</span>(<span class="number">50</span>,<span class="number">180</span>),n=[-<span class="number">1</span>,<span class="number">1</span>][anime.<span class="title function_">random</span>(<span class="number">0</span>,<span class="number">1</span>)]*a;<span class="keyword">return</span>&#123;<span class="attr">x</span>:e.<span class="property">x</span>+n*<span class="title class_">Math</span>.<span class="title function_">cos</span>(t),<span class="attr">y</span>:e.<span class="property">y</span>+n*<span class="title class_">Math</span>.<span class="title function_">sin</span>(t)&#125;&#125;<span class="keyword">function</span> <span class="title function_">createParticule</span>(<span class="params">e,t</span>)&#123;<span class="keyword">var</span> a=&#123;&#125;;<span class="keyword">return</span> a.<span class="property">x</span>=e,a.<span class="property">y</span>=t,a.<span class="property">color</span>=colors[anime.<span class="title function_">random</span>(<span class="number">0</span>,colors.<span class="property">length</span>-<span class="number">1</span>)],a.<span class="property">radius</span>=anime.<span class="title function_">random</span>(<span class="number">16</span>,<span class="number">32</span>),a.<span class="property">endPos</span>=<span class="title function_">setParticuleDirection</span>(a),a.<span class="property">draw</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;ctx.<span class="title function_">beginPath</span>(),ctx.<span class="title function_">arc</span>(a.<span class="property">x</span>,a.<span class="property">y</span>,a.<span class="property">radius</span>,<span class="number">0</span>,<span class="number">2</span>*<span class="title class_">Math</span>.<span class="property">PI</span>,!<span class="number">0</span>),ctx.<span class="property">fillStyle</span>=a.<span class="property">color</span>,ctx.<span class="title function_">fill</span>()&#125;,a&#125;<span class="keyword">function</span> <span class="title function_">createCircle</span>(<span class="params">e,t</span>)&#123;<span class="keyword">var</span> a=&#123;&#125;;<span class="keyword">return</span> a.<span class="property">x</span>=e,a.<span class="property">y</span>=t,a.<span class="property">color</span>=<span class="string">&quot;#F00&quot;</span>,a.<span class="property">radius</span>=<span class="number">0.1</span>,a.<span class="property">alpha</span>=<span class="number">0.5</span>,a.<span class="property">lineWidth</span>=<span class="number">6</span>,a.<span class="property">draw</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;ctx.<span class="property">globalAlpha</span>=a.<span class="property">alpha</span>,ctx.<span class="title function_">beginPath</span>(),ctx.<span class="title function_">arc</span>(a.<span class="property">x</span>,a.<span class="property">y</span>,a.<span class="property">radius</span>,<span class="number">0</span>,<span class="number">2</span>*<span class="title class_">Math</span>.<span class="property">PI</span>,!<span class="number">0</span>),ctx.<span class="property">lineWidth</span>=a.<span class="property">lineWidth</span>,ctx.<span class="property">strokeStyle</span>=a.<span class="property">color</span>,ctx.<span class="title function_">stroke</span>(),ctx.<span class="property">globalAlpha</span>=<span class="number">1</span>&#125;,a&#125;<span class="keyword">function</span> <span class="title function_">renderParticule</span>(<span class="params">e</span>)&#123;<span class="keyword">for</span>(<span class="keyword">var</span> t=<span class="number">0</span>;t&lt;e.<span class="property">animatables</span>.<span class="property">length</span>;t++)&#123;e.<span class="property">animatables</span>[t].<span class="property">target</span>.<span class="title function_">draw</span>()&#125;&#125;<span class="keyword">function</span> <span class="title function_">animateParticules</span>(<span class="params">e,t</span>)&#123;<span class="keyword">for</span>(<span class="keyword">var</span> a=<span class="title function_">createCircle</span>(e,t),n=[],i=<span class="number">0</span>;i&lt;numberOfParticules;i++)&#123;n.<span class="title function_">push</span>(<span class="title function_">createParticule</span>(e,t))&#125;anime.<span class="title function_">timeline</span>().<span class="title function_">add</span>(&#123;<span class="attr">targets</span>:n,<span class="attr">x</span>:<span class="keyword">function</span>(<span class="params">e</span>)&#123;<span class="keyword">return</span> e.<span class="property">endPos</span>.<span class="property">x</span>&#125;,<span class="attr">y</span>:<span class="keyword">function</span>(<span class="params">e</span>)&#123;<span class="keyword">return</span> e.<span class="property">endPos</span>.<span class="property">y</span>&#125;,<span class="attr">radius</span>:<span class="number">0.1</span>,<span class="attr">duration</span>:anime.<span class="title function_">random</span>(<span class="number">1200</span>,<span class="number">1800</span>),<span class="attr">easing</span>:<span class="string">&quot;easeOutExpo&quot;</span>,<span class="attr">update</span>:renderParticule&#125;).<span class="title function_">add</span>(&#123;<span class="attr">targets</span>:a,<span class="attr">radius</span>:anime.<span class="title function_">random</span>(<span class="number">80</span>,<span class="number">160</span>),<span class="attr">lineWidth</span>:<span class="number">0</span>,<span class="attr">alpha</span>:&#123;<span class="attr">value</span>:<span class="number">0</span>,<span class="attr">easing</span>:<span class="string">&quot;linear&quot;</span>,<span class="attr">duration</span>:anime.<span class="title function_">random</span>(<span class="number">600</span>,<span class="number">800</span>)&#125;,<span class="attr">duration</span>:anime.<span class="title function_">random</span>(<span class="number">1200</span>,<span class="number">1800</span>),<span class="attr">easing</span>:<span class="string">&quot;easeOutExpo&quot;</span>,<span class="attr">update</span>:renderParticule,<span class="attr">offset</span>:<span class="number">0</span>&#125;)&#125;<span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">e,t</span>)&#123;<span class="keyword">var</span> a;<span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="keyword">var</span> n=<span class="variable language_">this</span>,i=<span class="variable language_">arguments</span>;<span class="built_in">clearTimeout</span>(a),a=<span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;e.<span class="title function_">apply</span>(n,i)&#125;,t)&#125;&#125;<span class="keyword">var</span> canvasEl=<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;.fireworks&quot;</span>);<span class="keyword">if</span>(canvasEl)&#123;<span class="keyword">var</span> ctx=canvasEl.<span class="title function_">getContext</span>(<span class="string">&quot;2d&quot;</span>),numberOfParticules=<span class="number">30</span>,pointerX=<span class="number">0</span>,pointerY=<span class="number">0</span>,tap=<span class="string">&quot;mousedown&quot;</span>,colors=[<span class="string">&quot;#FF1461&quot;</span>,<span class="string">&quot;#18FF92&quot;</span>,<span class="string">&quot;#5A87FF&quot;</span>,<span class="string">&quot;#FBF38C&quot;</span>],setCanvasSize=<span class="title function_">debounce</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;canvasEl.<span class="property">width</span>=<span class="number">2</span>*<span class="variable language_">window</span>.<span class="property">innerWidth</span>,canvasEl.<span class="property">height</span>=<span class="number">2</span>*<span class="variable language_">window</span>.<span class="property">innerHeight</span>,canvasEl.<span class="property">style</span>.<span class="property">width</span>=<span class="variable language_">window</span>.<span class="property">innerWidth</span>+<span class="string">&quot;px&quot;</span>,canvasEl.<span class="property">style</span>.<span class="property">height</span>=<span class="variable language_">window</span>.<span class="property">innerHeight</span>+<span class="string">&quot;px&quot;</span>,canvasEl.<span class="title function_">getContext</span>(<span class="string">&quot;2d&quot;</span>).<span class="title function_">scale</span>(<span class="number">2</span>,<span class="number">2</span>)&#125;,<span class="number">500</span>),render=<span class="title function_">anime</span>(&#123;<span class="attr">duration</span>:<span class="number">1</span>/<span class="number">0</span>,<span class="attr">update</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;ctx.<span class="title function_">clearRect</span>(<span class="number">0</span>,<span class="number">0</span>,canvasEl.<span class="property">width</span>,canvasEl.<span class="property">height</span>)&#125;&#125;);<span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(tap,<span class="keyword">function</span>(<span class="params">e</span>)&#123;<span class="string">&quot;sidebar&quot;</span>!==e.<span class="property">target</span>.<span class="property">id</span>&amp;&amp;<span class="string">&quot;toggle-sidebar&quot;</span>!==e.<span class="property">target</span>.<span class="property">id</span>&amp;&amp;<span class="string">&quot;A&quot;</span>!==e.<span class="property">target</span>.<span class="property">nodeName</span>&amp;&amp;<span class="string">&quot;IMG&quot;</span>!==e.<span class="property">target</span>.<span class="property">nodeName</span>&amp;&amp;(render.<span class="title function_">play</span>(),<span class="title function_">updateCoords</span>(e),<span class="title function_">animateParticules</span>(pointerX,pointerY))&#125;,!<span class="number">1</span>),<span class="title function_">setCanvasSize</span>(),<span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;resize&quot;</span>,setCanvasSize,!<span class="number">1</span>)&#125;<span class="string">&quot;use strict&quot;</span>;<span class="keyword">function</span> <span class="title function_">updateCoords</span>(<span class="params">e</span>)&#123;pointerX=(e.<span class="property">clientX</span>||e.<span class="property">touches</span>[<span class="number">0</span>].<span class="property">clientX</span>)-canvasEl.<span class="title function_">getBoundingClientRect</span>().<span class="property">left</span>,pointerY=e.<span class="property">clientY</span>||e.<span class="property">touches</span>[<span class="number">0</span>].<span class="property">clientY</span>-canvasEl.<span class="title function_">getBoundingClientRect</span>().<span class="property">top</span>&#125;<span class="keyword">function</span> <span class="title function_">setParticuleDirection</span>(<span class="params">e</span>)&#123;<span class="keyword">var</span> t=anime.<span class="title function_">random</span>(<span class="number">0</span>,<span class="number">360</span>)*<span class="title class_">Math</span>.<span class="property">PI</span>/<span class="number">180</span>,a=anime.<span class="title function_">random</span>(<span class="number">50</span>,<span class="number">180</span>),n=[-<span class="number">1</span>,<span class="number">1</span>][anime.<span class="title function_">random</span>(<span class="number">0</span>,<span class="number">1</span>)]*a;<span class="keyword">return</span>&#123;<span class="attr">x</span>:e.<span class="property">x</span>+n*<span class="title class_">Math</span>.<span class="title function_">cos</span>(t),<span class="attr">y</span>:e.<span class="property">y</span>+n*<span class="title class_">Math</span>.<span class="title function_">sin</span>(t)&#125;&#125;<span class="keyword">function</span> <span class="title function_">createParticule</span>(<span class="params">e,t</span>)&#123;<span class="keyword">var</span> a=&#123;&#125;;<span class="keyword">return</span> a.<span class="property">x</span>=e,a.<span class="property">y</span>=t,a.<span class="property">color</span>=colors[anime.<span class="title function_">random</span>(<span class="number">0</span>,colors.<span class="property">length</span>-<span class="number">1</span>)],a.<span class="property">radius</span>=anime.<span class="title function_">random</span>(<span class="number">16</span>,<span class="number">32</span>),a.<span class="property">endPos</span>=<span class="title function_">setParticuleDirection</span>(a),a.<span class="property">draw</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;ctx.<span class="title function_">beginPath</span>(),ctx.<span class="title function_">arc</span>(a.<span class="property">x</span>,a.<span class="property">y</span>,a.<span class="property">radius</span>,<span class="number">0</span>,<span class="number">2</span>*<span class="title class_">Math</span>.<span class="property">PI</span>,!<span class="number">0</span>),ctx.<span class="property">fillStyle</span>=a.<span class="property">color</span>,ctx.<span class="title function_">fill</span>()&#125;,a&#125;<span class="keyword">function</span> <span class="title function_">createCircle</span>(<span class="params">e,t</span>)&#123;<span class="keyword">var</span> a=&#123;&#125;;<span class="keyword">return</span> a.<span class="property">x</span>=e,a.<span class="property">y</span>=t,a.<span class="property">color</span>=<span class="string">&quot;#F00&quot;</span>,a.<span class="property">radius</span>=<span class="number">0.1</span>,a.<span class="property">alpha</span>=<span class="number">0.5</span>,a.<span class="property">lineWidth</span>=<span class="number">6</span>,a.<span class="property">draw</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;ctx.<span class="property">globalAlpha</span>=a.<span class="property">alpha</span>,ctx.<span class="title function_">beginPath</span>(),ctx.<span class="title function_">arc</span>(a.<span class="property">x</span>,a.<span class="property">y</span>,a.<span class="property">radius</span>,<span class="number">0</span>,<span class="number">2</span>*<span class="title class_">Math</span>.<span class="property">PI</span>,!<span class="number">0</span>),ctx.<span class="property">lineWidth</span>=a.<span class="property">lineWidth</span>,ctx.<span class="property">strokeStyle</span>=a.<span class="property">color</span>,ctx.<span class="title function_">stroke</span>(),ctx.<span class="property">globalAlpha</span>=<span class="number">1</span>&#125;,a&#125;<span class="keyword">function</span> <span class="title function_">renderParticule</span>(<span class="params">e</span>)&#123;<span class="keyword">for</span>(<span class="keyword">var</span> t=<span class="number">0</span>;t&lt;e.<span class="property">animatables</span>.<span class="property">length</span>;t++)&#123;e.<span class="property">animatables</span>[t].<span class="property">target</span>.<span class="title function_">draw</span>()&#125;&#125;<span class="keyword">function</span> <span class="title function_">animateParticules</span>(<span class="params">e,t</span>)&#123;<span class="keyword">for</span>(<span class="keyword">var</span> a=<span class="title function_">createCircle</span>(e,t),n=[],i=<span class="number">0</span>;i&lt;numberOfParticules;i++)&#123;n.<span class="title function_">push</span>(<span class="title function_">createParticule</span>(e,t))&#125;anime.<span class="title function_">timeline</span>().<span class="title function_">add</span>(&#123;<span class="attr">targets</span>:n,<span class="attr">x</span>:<span class="keyword">function</span>(<span class="params">e</span>)&#123;<span class="keyword">return</span> e.<span class="property">endPos</span>.<span class="property">x</span>&#125;,<span class="attr">y</span>:<span class="keyword">function</span>(<span class="params">e</span>)&#123;<span class="keyword">return</span> e.<span class="property">endPos</span>.<span class="property">y</span>&#125;,<span class="attr">radius</span>:<span class="number">0.1</span>,<span class="attr">duration</span>:anime.<span class="title function_">random</span>(<span class="number">1200</span>,<span class="number">1800</span>),<span class="attr">easing</span>:<span class="string">&quot;easeOutExpo&quot;</span>,<span class="attr">update</span>:renderParticule&#125;).<span class="title function_">add</span>(&#123;<span class="attr">targets</span>:a,<span class="attr">radius</span>:anime.<span class="title function_">random</span>(<span class="number">80</span>,<span class="number">160</span>),<span class="attr">lineWidth</span>:<span class="number">0</span>,<span class="attr">alpha</span>:&#123;<span class="attr">value</span>:<span class="number">0</span>,<span class="attr">easing</span>:<span class="string">&quot;linear&quot;</span>,<span class="attr">duration</span>:anime.<span class="title function_">random</span>(<span class="number">600</span>,<span class="number">800</span>)&#125;,<span class="attr">duration</span>:anime.<span class="title function_">random</span>(<span class="number">1200</span>,<span class="number">1800</span>),<span class="attr">easing</span>:<span class="string">&quot;easeOutExpo&quot;</span>,<span class="attr">update</span>:renderParticule,<span class="attr">offset</span>:<span class="number">0</span>&#125;)&#125;<span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">e,t</span>)&#123;<span class="keyword">var</span> a;<span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="keyword">var</span> n=<span class="variable language_">this</span>,i=<span class="variable language_">arguments</span>;<span class="built_in">clearTimeout</span>(a),a=<span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;e.<span class="title function_">apply</span>(n,i)&#125;,t)&#125;&#125;<span class="keyword">var</span> canvasEl=<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;.fireworks&quot;</span>);<span class="keyword">if</span>(canvasEl)&#123;<span class="keyword">var</span> ctx=canvasEl.<span class="title function_">getContext</span>(<span class="string">&quot;2d&quot;</span>),numberOfParticules=<span class="number">30</span>,pointerX=<span class="number">0</span>,pointerY=<span class="number">0</span>,tap=<span class="string">&quot;mousedown&quot;</span>,colors=[<span class="string">&quot;#FF1461&quot;</span>,<span class="string">&quot;#18FF92&quot;</span>,<span class="string">&quot;#5A87FF&quot;</span>,<span class="string">&quot;#FBF38C&quot;</span>],setCanvasSize=<span class="title function_">debounce</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;canvasEl.<span class="property">width</span>=<span class="number">2</span>*<span class="variable language_">window</span>.<span class="property">innerWidth</span>,canvasEl.<span class="property">height</span>=<span class="number">2</span>*<span class="variable language_">window</span>.<span class="property">innerHeight</span>,canvasEl.<span class="property">style</span>.<span class="property">width</span>=<span class="variable language_">window</span>.<span class="property">innerWidth</span>+<span class="string">&quot;px&quot;</span>,canvasEl.<span class="property">style</span>.<span class="property">height</span>=<span class="variable language_">window</span>.<span class="property">innerHeight</span>+<span class="string">&quot;px&quot;</span>,canvasEl.<span class="title function_">getContext</span>(<span class="string">&quot;2d&quot;</span>).<span class="title function_">scale</span>(<span class="number">2</span>,<span class="number">2</span>)&#125;,<span class="number">500</span>),render=<span class="title function_">anime</span>(&#123;<span class="attr">duration</span>:<span class="number">1</span>/<span class="number">0</span>,<span class="attr">update</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;ctx.<span class="title function_">clearRect</span>(<span class="number">0</span>,<span class="number">0</span>,canvasEl.<span class="property">width</span>,canvasEl.<span class="property">height</span>)&#125;&#125;);<span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(tap,<span class="keyword">function</span>(<span class="params">e</span>)&#123;<span class="string">&quot;sidebar&quot;</span>!==e.<span class="property">target</span>.<span class="property">id</span>&amp;&amp;<span class="string">&quot;toggle-sidebar&quot;</span>!==e.<span class="property">target</span>.<span class="property">id</span>&amp;&amp;<span class="string">&quot;A&quot;</span>!==e.<span class="property">target</span>.<span class="property">nodeName</span>&amp;&amp;<span class="string">&quot;IMG&quot;</span>!==e.<span class="property">target</span>.<span class="property">nodeName</span>&amp;&amp;(render.<span class="title function_">play</span>(),<span class="title function_">updateCoords</span>(e),<span class="title function_">animateParticules</span>(pointerX,pointerY))&#125;,!<span class="number">1</span>),<span class="title function_">setCanvasSize</span>(),<span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;resize&quot;</span>,setCanvasSize,!<span class="number">1</span>)&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>E:\2_Git\Hexo_Blog\node_modules\hexo-theme-next\layout\_layout.njk</code>中的<code>&lt;body&gt;</code>块中添加如下内容：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">   &#123;% if theme.fireworks %&#125;</span><br><span class="line">   <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">class</span>=<span class="string">&quot;fireworks&quot;</span> <span class="attr">style</span>=<span class="string">&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span> </span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.bootcss.com/animejs/2.2.0/anime.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/js/fireworks.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>E:\2_Git\Hexo_Blog\_config.next.yml</code>文末添加：<br><code>fireworks: true</code></p>
+</li>
+<li><p>重启hexo博客就任意位置点击就可以看到这个效果啦<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230506100148.png" alt="20230506100148|left|450"></p>
+</li>
+</ol>
+<hr>
+<p><font color="#ff0000">2024-8-27 回来说一下</font><br>这个特效会严重拖慢网速，打开网站打开的时候卡顿验证，所以我已经不用了，关掉之后网站刷新速度明显快了很多。</p>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a href="https://blog.csdn.net/Awt_FuDongLai/article/details/107463289">hexo笔记十三：next主题增加点击特效_小镇攻城狮的博客-CSDN博客</a></li>
+<li><a href="https://nuosferatu.github.io/2020/06/12/NexT-Click-Effect/">NexT 主题博客添加鼠标点击烟花特效 | Nuosferatu’s Blog</a></li>
+<li></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>每日文章</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客查图片并调整位置&amp;大小</title>
     <url>/2023/05/22/Hexo%E5%8D%9A%E5%AE%A2%E6%9F%A5%E5%9B%BE%E7%89%87%E5%B9%B6%E8%B0%83%E6%95%B4%E4%BD%8D%E7%BD%AE&amp;%E5%A4%A7%E5%B0%8F/</url>
     <content><![CDATA[<blockquote>
@@ -1046,42 +1051,6 @@ PS: 原本的语法：
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客next主题添加点击特效</title>
-    <url>/2023/05/06/Hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	博客折腾的差不多了，开始整一些花活了，这次就给博客添加下点击特效，基本效果如下：</p>
-</blockquote>
-<span id="more"></span>
-<div style="display:inline-block;"><img width="40%" style="float:center " src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230506100148.png" alt="20230522144603"></div>
-
-<p>好了闲言少叙，直接上干货：</p>
-<ol>
-<li><p>在<code>E:\2_Git\Hexo_Blog\node_modules\hexo-theme-next\source\js</code>下新建文件<code>fireworks.js</code>并写入以下内容：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="meta">&quot;use strict&quot;</span>;<span class="keyword">function</span> <span class="title function_">updateCoords</span>(<span class="params">e</span>)&#123;pointerX=(e.<span class="property">clientX</span>||e.<span class="property">touches</span>[<span class="number">0</span>].<span class="property">clientX</span>)-canvasEl.<span class="title function_">getBoundingClientRect</span>().<span class="property">left</span>,pointerY=e.<span class="property">clientY</span>||e.<span class="property">touches</span>[<span class="number">0</span>].<span class="property">clientY</span>-canvasEl.<span class="title function_">getBoundingClientRect</span>().<span class="property">top</span>&#125;<span class="keyword">function</span> <span class="title function_">setParticuleDirection</span>(<span class="params">e</span>)&#123;<span class="keyword">var</span> t=anime.<span class="title function_">random</span>(<span class="number">0</span>,<span class="number">360</span>)*<span class="title class_">Math</span>.<span class="property">PI</span>/<span class="number">180</span>,a=anime.<span class="title function_">random</span>(<span class="number">50</span>,<span class="number">180</span>),n=[-<span class="number">1</span>,<span class="number">1</span>][anime.<span class="title function_">random</span>(<span class="number">0</span>,<span class="number">1</span>)]*a;<span class="keyword">return</span>&#123;<span class="attr">x</span>:e.<span class="property">x</span>+n*<span class="title class_">Math</span>.<span class="title function_">cos</span>(t),<span class="attr">y</span>:e.<span class="property">y</span>+n*<span class="title class_">Math</span>.<span class="title function_">sin</span>(t)&#125;&#125;<span class="keyword">function</span> <span class="title function_">createParticule</span>(<span class="params">e,t</span>)&#123;<span class="keyword">var</span> a=&#123;&#125;;<span class="keyword">return</span> a.<span class="property">x</span>=e,a.<span class="property">y</span>=t,a.<span class="property">color</span>=colors[anime.<span class="title function_">random</span>(<span class="number">0</span>,colors.<span class="property">length</span>-<span class="number">1</span>)],a.<span class="property">radius</span>=anime.<span class="title function_">random</span>(<span class="number">16</span>,<span class="number">32</span>),a.<span class="property">endPos</span>=<span class="title function_">setParticuleDirection</span>(a),a.<span class="property">draw</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;ctx.<span class="title function_">beginPath</span>(),ctx.<span class="title function_">arc</span>(a.<span class="property">x</span>,a.<span class="property">y</span>,a.<span class="property">radius</span>,<span class="number">0</span>,<span class="number">2</span>*<span class="title class_">Math</span>.<span class="property">PI</span>,!<span class="number">0</span>),ctx.<span class="property">fillStyle</span>=a.<span class="property">color</span>,ctx.<span class="title function_">fill</span>()&#125;,a&#125;<span class="keyword">function</span> <span class="title function_">createCircle</span>(<span class="params">e,t</span>)&#123;<span class="keyword">var</span> a=&#123;&#125;;<span class="keyword">return</span> a.<span class="property">x</span>=e,a.<span class="property">y</span>=t,a.<span class="property">color</span>=<span class="string">&quot;#F00&quot;</span>,a.<span class="property">radius</span>=<span class="number">0.1</span>,a.<span class="property">alpha</span>=<span class="number">0.5</span>,a.<span class="property">lineWidth</span>=<span class="number">6</span>,a.<span class="property">draw</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;ctx.<span class="property">globalAlpha</span>=a.<span class="property">alpha</span>,ctx.<span class="title function_">beginPath</span>(),ctx.<span class="title function_">arc</span>(a.<span class="property">x</span>,a.<span class="property">y</span>,a.<span class="property">radius</span>,<span class="number">0</span>,<span class="number">2</span>*<span class="title class_">Math</span>.<span class="property">PI</span>,!<span class="number">0</span>),ctx.<span class="property">lineWidth</span>=a.<span class="property">lineWidth</span>,ctx.<span class="property">strokeStyle</span>=a.<span class="property">color</span>,ctx.<span class="title function_">stroke</span>(),ctx.<span class="property">globalAlpha</span>=<span class="number">1</span>&#125;,a&#125;<span class="keyword">function</span> <span class="title function_">renderParticule</span>(<span class="params">e</span>)&#123;<span class="keyword">for</span>(<span class="keyword">var</span> t=<span class="number">0</span>;t&lt;e.<span class="property">animatables</span>.<span class="property">length</span>;t++)&#123;e.<span class="property">animatables</span>[t].<span class="property">target</span>.<span class="title function_">draw</span>()&#125;&#125;<span class="keyword">function</span> <span class="title function_">animateParticules</span>(<span class="params">e,t</span>)&#123;<span class="keyword">for</span>(<span class="keyword">var</span> a=<span class="title function_">createCircle</span>(e,t),n=[],i=<span class="number">0</span>;i&lt;numberOfParticules;i++)&#123;n.<span class="title function_">push</span>(<span class="title function_">createParticule</span>(e,t))&#125;anime.<span class="title function_">timeline</span>().<span class="title function_">add</span>(&#123;<span class="attr">targets</span>:n,<span class="attr">x</span>:<span class="keyword">function</span>(<span class="params">e</span>)&#123;<span class="keyword">return</span> e.<span class="property">endPos</span>.<span class="property">x</span>&#125;,<span class="attr">y</span>:<span class="keyword">function</span>(<span class="params">e</span>)&#123;<span class="keyword">return</span> e.<span class="property">endPos</span>.<span class="property">y</span>&#125;,<span class="attr">radius</span>:<span class="number">0.1</span>,<span class="attr">duration</span>:anime.<span class="title function_">random</span>(<span class="number">1200</span>,<span class="number">1800</span>),<span class="attr">easing</span>:<span class="string">&quot;easeOutExpo&quot;</span>,<span class="attr">update</span>:renderParticule&#125;).<span class="title function_">add</span>(&#123;<span class="attr">targets</span>:a,<span class="attr">radius</span>:anime.<span class="title function_">random</span>(<span class="number">80</span>,<span class="number">160</span>),<span class="attr">lineWidth</span>:<span class="number">0</span>,<span class="attr">alpha</span>:&#123;<span class="attr">value</span>:<span class="number">0</span>,<span class="attr">easing</span>:<span class="string">&quot;linear&quot;</span>,<span class="attr">duration</span>:anime.<span class="title function_">random</span>(<span class="number">600</span>,<span class="number">800</span>)&#125;,<span class="attr">duration</span>:anime.<span class="title function_">random</span>(<span class="number">1200</span>,<span class="number">1800</span>),<span class="attr">easing</span>:<span class="string">&quot;easeOutExpo&quot;</span>,<span class="attr">update</span>:renderParticule,<span class="attr">offset</span>:<span class="number">0</span>&#125;)&#125;<span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">e,t</span>)&#123;<span class="keyword">var</span> a;<span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="keyword">var</span> n=<span class="variable language_">this</span>,i=<span class="variable language_">arguments</span>;<span class="built_in">clearTimeout</span>(a),a=<span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;e.<span class="title function_">apply</span>(n,i)&#125;,t)&#125;&#125;<span class="keyword">var</span> canvasEl=<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;.fireworks&quot;</span>);<span class="keyword">if</span>(canvasEl)&#123;<span class="keyword">var</span> ctx=canvasEl.<span class="title function_">getContext</span>(<span class="string">&quot;2d&quot;</span>),numberOfParticules=<span class="number">30</span>,pointerX=<span class="number">0</span>,pointerY=<span class="number">0</span>,tap=<span class="string">&quot;mousedown&quot;</span>,colors=[<span class="string">&quot;#FF1461&quot;</span>,<span class="string">&quot;#18FF92&quot;</span>,<span class="string">&quot;#5A87FF&quot;</span>,<span class="string">&quot;#FBF38C&quot;</span>],setCanvasSize=<span class="title function_">debounce</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;canvasEl.<span class="property">width</span>=<span class="number">2</span>*<span class="variable language_">window</span>.<span class="property">innerWidth</span>,canvasEl.<span class="property">height</span>=<span class="number">2</span>*<span class="variable language_">window</span>.<span class="property">innerHeight</span>,canvasEl.<span class="property">style</span>.<span class="property">width</span>=<span class="variable language_">window</span>.<span class="property">innerWidth</span>+<span class="string">&quot;px&quot;</span>,canvasEl.<span class="property">style</span>.<span class="property">height</span>=<span class="variable language_">window</span>.<span class="property">innerHeight</span>+<span class="string">&quot;px&quot;</span>,canvasEl.<span class="title function_">getContext</span>(<span class="string">&quot;2d&quot;</span>).<span class="title function_">scale</span>(<span class="number">2</span>,<span class="number">2</span>)&#125;,<span class="number">500</span>),render=<span class="title function_">anime</span>(&#123;<span class="attr">duration</span>:<span class="number">1</span>/<span class="number">0</span>,<span class="attr">update</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;ctx.<span class="title function_">clearRect</span>(<span class="number">0</span>,<span class="number">0</span>,canvasEl.<span class="property">width</span>,canvasEl.<span class="property">height</span>)&#125;&#125;);<span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(tap,<span class="keyword">function</span>(<span class="params">e</span>)&#123;<span class="string">&quot;sidebar&quot;</span>!==e.<span class="property">target</span>.<span class="property">id</span>&amp;&amp;<span class="string">&quot;toggle-sidebar&quot;</span>!==e.<span class="property">target</span>.<span class="property">id</span>&amp;&amp;<span class="string">&quot;A&quot;</span>!==e.<span class="property">target</span>.<span class="property">nodeName</span>&amp;&amp;<span class="string">&quot;IMG&quot;</span>!==e.<span class="property">target</span>.<span class="property">nodeName</span>&amp;&amp;(render.<span class="title function_">play</span>(),<span class="title function_">updateCoords</span>(e),<span class="title function_">animateParticules</span>(pointerX,pointerY))&#125;,!<span class="number">1</span>),<span class="title function_">setCanvasSize</span>(),<span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;resize&quot;</span>,setCanvasSize,!<span class="number">1</span>)&#125;<span class="string">&quot;use strict&quot;</span>;<span class="keyword">function</span> <span class="title function_">updateCoords</span>(<span class="params">e</span>)&#123;pointerX=(e.<span class="property">clientX</span>||e.<span class="property">touches</span>[<span class="number">0</span>].<span class="property">clientX</span>)-canvasEl.<span class="title function_">getBoundingClientRect</span>().<span class="property">left</span>,pointerY=e.<span class="property">clientY</span>||e.<span class="property">touches</span>[<span class="number">0</span>].<span class="property">clientY</span>-canvasEl.<span class="title function_">getBoundingClientRect</span>().<span class="property">top</span>&#125;<span class="keyword">function</span> <span class="title function_">setParticuleDirection</span>(<span class="params">e</span>)&#123;<span class="keyword">var</span> t=anime.<span class="title function_">random</span>(<span class="number">0</span>,<span class="number">360</span>)*<span class="title class_">Math</span>.<span class="property">PI</span>/<span class="number">180</span>,a=anime.<span class="title function_">random</span>(<span class="number">50</span>,<span class="number">180</span>),n=[-<span class="number">1</span>,<span class="number">1</span>][anime.<span class="title function_">random</span>(<span class="number">0</span>,<span class="number">1</span>)]*a;<span class="keyword">return</span>&#123;<span class="attr">x</span>:e.<span class="property">x</span>+n*<span class="title class_">Math</span>.<span class="title function_">cos</span>(t),<span class="attr">y</span>:e.<span class="property">y</span>+n*<span class="title class_">Math</span>.<span class="title function_">sin</span>(t)&#125;&#125;<span class="keyword">function</span> <span class="title function_">createParticule</span>(<span class="params">e,t</span>)&#123;<span class="keyword">var</span> a=&#123;&#125;;<span class="keyword">return</span> a.<span class="property">x</span>=e,a.<span class="property">y</span>=t,a.<span class="property">color</span>=colors[anime.<span class="title function_">random</span>(<span class="number">0</span>,colors.<span class="property">length</span>-<span class="number">1</span>)],a.<span class="property">radius</span>=anime.<span class="title function_">random</span>(<span class="number">16</span>,<span class="number">32</span>),a.<span class="property">endPos</span>=<span class="title function_">setParticuleDirection</span>(a),a.<span class="property">draw</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;ctx.<span class="title function_">beginPath</span>(),ctx.<span class="title function_">arc</span>(a.<span class="property">x</span>,a.<span class="property">y</span>,a.<span class="property">radius</span>,<span class="number">0</span>,<span class="number">2</span>*<span class="title class_">Math</span>.<span class="property">PI</span>,!<span class="number">0</span>),ctx.<span class="property">fillStyle</span>=a.<span class="property">color</span>,ctx.<span class="title function_">fill</span>()&#125;,a&#125;<span class="keyword">function</span> <span class="title function_">createCircle</span>(<span class="params">e,t</span>)&#123;<span class="keyword">var</span> a=&#123;&#125;;<span class="keyword">return</span> a.<span class="property">x</span>=e,a.<span class="property">y</span>=t,a.<span class="property">color</span>=<span class="string">&quot;#F00&quot;</span>,a.<span class="property">radius</span>=<span class="number">0.1</span>,a.<span class="property">alpha</span>=<span class="number">0.5</span>,a.<span class="property">lineWidth</span>=<span class="number">6</span>,a.<span class="property">draw</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;ctx.<span class="property">globalAlpha</span>=a.<span class="property">alpha</span>,ctx.<span class="title function_">beginPath</span>(),ctx.<span class="title function_">arc</span>(a.<span class="property">x</span>,a.<span class="property">y</span>,a.<span class="property">radius</span>,<span class="number">0</span>,<span class="number">2</span>*<span class="title class_">Math</span>.<span class="property">PI</span>,!<span class="number">0</span>),ctx.<span class="property">lineWidth</span>=a.<span class="property">lineWidth</span>,ctx.<span class="property">strokeStyle</span>=a.<span class="property">color</span>,ctx.<span class="title function_">stroke</span>(),ctx.<span class="property">globalAlpha</span>=<span class="number">1</span>&#125;,a&#125;<span class="keyword">function</span> <span class="title function_">renderParticule</span>(<span class="params">e</span>)&#123;<span class="keyword">for</span>(<span class="keyword">var</span> t=<span class="number">0</span>;t&lt;e.<span class="property">animatables</span>.<span class="property">length</span>;t++)&#123;e.<span class="property">animatables</span>[t].<span class="property">target</span>.<span class="title function_">draw</span>()&#125;&#125;<span class="keyword">function</span> <span class="title function_">animateParticules</span>(<span class="params">e,t</span>)&#123;<span class="keyword">for</span>(<span class="keyword">var</span> a=<span class="title function_">createCircle</span>(e,t),n=[],i=<span class="number">0</span>;i&lt;numberOfParticules;i++)&#123;n.<span class="title function_">push</span>(<span class="title function_">createParticule</span>(e,t))&#125;anime.<span class="title function_">timeline</span>().<span class="title function_">add</span>(&#123;<span class="attr">targets</span>:n,<span class="attr">x</span>:<span class="keyword">function</span>(<span class="params">e</span>)&#123;<span class="keyword">return</span> e.<span class="property">endPos</span>.<span class="property">x</span>&#125;,<span class="attr">y</span>:<span class="keyword">function</span>(<span class="params">e</span>)&#123;<span class="keyword">return</span> e.<span class="property">endPos</span>.<span class="property">y</span>&#125;,<span class="attr">radius</span>:<span class="number">0.1</span>,<span class="attr">duration</span>:anime.<span class="title function_">random</span>(<span class="number">1200</span>,<span class="number">1800</span>),<span class="attr">easing</span>:<span class="string">&quot;easeOutExpo&quot;</span>,<span class="attr">update</span>:renderParticule&#125;).<span class="title function_">add</span>(&#123;<span class="attr">targets</span>:a,<span class="attr">radius</span>:anime.<span class="title function_">random</span>(<span class="number">80</span>,<span class="number">160</span>),<span class="attr">lineWidth</span>:<span class="number">0</span>,<span class="attr">alpha</span>:&#123;<span class="attr">value</span>:<span class="number">0</span>,<span class="attr">easing</span>:<span class="string">&quot;linear&quot;</span>,<span class="attr">duration</span>:anime.<span class="title function_">random</span>(<span class="number">600</span>,<span class="number">800</span>)&#125;,<span class="attr">duration</span>:anime.<span class="title function_">random</span>(<span class="number">1200</span>,<span class="number">1800</span>),<span class="attr">easing</span>:<span class="string">&quot;easeOutExpo&quot;</span>,<span class="attr">update</span>:renderParticule,<span class="attr">offset</span>:<span class="number">0</span>&#125;)&#125;<span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">e,t</span>)&#123;<span class="keyword">var</span> a;<span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;<span class="keyword">var</span> n=<span class="variable language_">this</span>,i=<span class="variable language_">arguments</span>;<span class="built_in">clearTimeout</span>(a),a=<span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;e.<span class="title function_">apply</span>(n,i)&#125;,t)&#125;&#125;<span class="keyword">var</span> canvasEl=<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;.fireworks&quot;</span>);<span class="keyword">if</span>(canvasEl)&#123;<span class="keyword">var</span> ctx=canvasEl.<span class="title function_">getContext</span>(<span class="string">&quot;2d&quot;</span>),numberOfParticules=<span class="number">30</span>,pointerX=<span class="number">0</span>,pointerY=<span class="number">0</span>,tap=<span class="string">&quot;mousedown&quot;</span>,colors=[<span class="string">&quot;#FF1461&quot;</span>,<span class="string">&quot;#18FF92&quot;</span>,<span class="string">&quot;#5A87FF&quot;</span>,<span class="string">&quot;#FBF38C&quot;</span>],setCanvasSize=<span class="title function_">debounce</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;canvasEl.<span class="property">width</span>=<span class="number">2</span>*<span class="variable language_">window</span>.<span class="property">innerWidth</span>,canvasEl.<span class="property">height</span>=<span class="number">2</span>*<span class="variable language_">window</span>.<span class="property">innerHeight</span>,canvasEl.<span class="property">style</span>.<span class="property">width</span>=<span class="variable language_">window</span>.<span class="property">innerWidth</span>+<span class="string">&quot;px&quot;</span>,canvasEl.<span class="property">style</span>.<span class="property">height</span>=<span class="variable language_">window</span>.<span class="property">innerHeight</span>+<span class="string">&quot;px&quot;</span>,canvasEl.<span class="title function_">getContext</span>(<span class="string">&quot;2d&quot;</span>).<span class="title function_">scale</span>(<span class="number">2</span>,<span class="number">2</span>)&#125;,<span class="number">500</span>),render=<span class="title function_">anime</span>(&#123;<span class="attr">duration</span>:<span class="number">1</span>/<span class="number">0</span>,<span class="attr">update</span>:<span class="keyword">function</span>(<span class="params"></span>)&#123;ctx.<span class="title function_">clearRect</span>(<span class="number">0</span>,<span class="number">0</span>,canvasEl.<span class="property">width</span>,canvasEl.<span class="property">height</span>)&#125;&#125;);<span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(tap,<span class="keyword">function</span>(<span class="params">e</span>)&#123;<span class="string">&quot;sidebar&quot;</span>!==e.<span class="property">target</span>.<span class="property">id</span>&amp;&amp;<span class="string">&quot;toggle-sidebar&quot;</span>!==e.<span class="property">target</span>.<span class="property">id</span>&amp;&amp;<span class="string">&quot;A&quot;</span>!==e.<span class="property">target</span>.<span class="property">nodeName</span>&amp;&amp;<span class="string">&quot;IMG&quot;</span>!==e.<span class="property">target</span>.<span class="property">nodeName</span>&amp;&amp;(render.<span class="title function_">play</span>(),<span class="title function_">updateCoords</span>(e),<span class="title function_">animateParticules</span>(pointerX,pointerY))&#125;,!<span class="number">1</span>),<span class="title function_">setCanvasSize</span>(),<span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;resize&quot;</span>,setCanvasSize,!<span class="number">1</span>)&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在<code>E:\2_Git\Hexo_Blog\node_modules\hexo-theme-next\layout\_layout.njk</code>中的<code>&lt;body&gt;</code>块中添加如下内容：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">   &#123;% if theme.fireworks %&#125;</span><br><span class="line">   <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">class</span>=<span class="string">&quot;fireworks&quot;</span> <span class="attr">style</span>=<span class="string">&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span> </span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.bootcss.com/animejs/2.2.0/anime.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/js/fireworks.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在<code>E:\2_Git\Hexo_Blog\_config.next.yml</code>文末添加：<br><code>fireworks: true</code></p>
-</li>
-<li><p>重启hexo博客就任意位置点击就可以看到这个效果啦<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230506100148.png" alt="20230506100148|left|450"></p>
-</li>
-</ol>
-<hr>
-<p><font color="#ff0000">2024-8-27 回来说一下</font><br>这个特效会严重拖慢网速，打开网站打开的时候卡顿验证，所以我已经不用了，关掉之后网站刷新速度明显快了很多。</p>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
-<li><a href="https://blog.csdn.net/Awt_FuDongLai/article/details/107463289">hexo笔记十三：next主题增加点击特效_小镇攻城狮的博客-CSDN博客</a></li>
-<li><a href="https://nuosferatu.github.io/2020/06/12/NexT-Click-Effect/">NexT 主题博客添加鼠标点击烟花特效 | Nuosferatu’s Blog</a></li>
-<li></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-        <tag>每日文章</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>OpenAI ChatGPT3.5-turbo实际解决问题能力评测</title>
     <url>/2023/05/22/OpenAI%20ChatGPT3.5-turbo%E5%AE%9E%E9%99%85%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E8%83%BD%E5%8A%9B%E8%AF%84%E6%B5%8B/</url>
     <content><![CDATA[<blockquote>
@@ -1116,6 +1085,31 @@ PS: 原本的语法：
       <tags>
         <tag>每日文章</tag>
         <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo 部署填写 github 用户名和密码一次性解决方案</title>
+    <url>/2023/04/20/hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	hexo 部署文章时候，会弹出 github 弹窗填写 username 和 password，填完之后还是无法上传，本文会给出解决方法。</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>hexo 博客半年没写了，今天尝试更新，发现 <code>hexo d</code> 之后需要输入 github 的用户名和密码，但是我输入之后没有效果，还是无法推送到 github 上。<br>研究之后发现 rootcause 是：github 已经无法再用密码登陆推送，只能用 token，我的 token 之前只设置了 3 个月的有效期，所以现在失效了。</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h4 id="1-重新生成新的-token"><a href="#1-重新生成新的-token" class="headerlink" title="1. 重新生成新的 token"></a>1. 重新生成新的 token</h4><p>新的 token 设置网址：<a href="https://github.com/settings/tokens">Personal Access Tokens (Classic) (github.com)</a><br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101025.png" alt="20230420101025|left"><br>新的 token （%%🔐α 💡ID💡MDO&#x2F;W 4 Cm 9 AJ 4 Ls 8&#x2F;i+yXXM 5 GzNzTJ 0 o 2 u 4 AwfZGVs 5 EqWEESkIf 0+kWt+quYVANDGUCe 4 GJWAxLJnr 7 vIgsi 7 QtSUNma 9 MPz 🔐%%）记得保存好，网页刷新之后就再也看不见了。</p>
+<h4 id="2-配置-hexo-config-yml"><a href="#2-配置-hexo-config-yml" class="headerlink" title="2. 配置 hexo config.yml"></a>2. 配置 hexo config.yml</h4><p>配置 hexo config.yml：<br>原本的配置：<code>repo: https://github.com/weicun581/weicun581.git</code><br>新的配置：<code>repo: https://your token here@github.com/weicun581/weicun581.git</code><br>替换 <code>your token here</code> 替换成上一步的 token 就好了。</p>
+<h2 id="实际使用效果"><a href="#实际使用效果" class="headerlink" title="实际使用效果"></a>实际使用效果</h2><p>在 hexo 根目录下执行：<code>hexo d</code>，之后在 github project 的 action 界面就可以看到 action 动作了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101947.png" alt="20230420101947|left"></p>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a href="https://blog.csdn.net/qq_43340547/article/details/119895671">(75条消息) 命令行输入hexo d后发现不能输入GitHub密码登录_SoberGit的博客-CSDN博客</a></li>
+<li><a href="https://blog.csdn.net/weixin_41010198/article/details/119698015?utm_source=app&app_version=4.12.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">(75条消息) github开发人员在七夕搞事情：remote: Support for password authentication was removed on August 13, 2021._点亮～黑夜的博客-CSDN博客</a></li>
+</ol>
+<p>个人博客地址：<a href="https://weicun.gitee.io/">蓝色单车 (gitee.io)</a></p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>每日文章</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -1178,54 +1172,6 @@ PS: 原本的语法：
 ]]></content>
   </entry>
   <entry>
-    <title>hexo 部署填写 github 用户名和密码一次性解决方案</title>
-    <url>/2023/04/20/hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	hexo 部署文章时候，会弹出 github 弹窗填写 username 和 password，填完之后还是无法上传，本文会给出解决方法。</p>
-</blockquote>
-<span id="more"></span>
-
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>hexo 博客半年没写了，今天尝试更新，发现 <code>hexo d</code> 之后需要输入 github 的用户名和密码，但是我输入之后没有效果，还是无法推送到 github 上。<br>研究之后发现 rootcause 是：github 已经无法再用密码登陆推送，只能用 token，我的 token 之前只设置了 3 个月的有效期，所以现在失效了。</p>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h4 id="1-重新生成新的-token"><a href="#1-重新生成新的-token" class="headerlink" title="1. 重新生成新的 token"></a>1. 重新生成新的 token</h4><p>新的 token 设置网址：<a href="https://github.com/settings/tokens">Personal Access Tokens (Classic) (github.com)</a><br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101025.png" alt="20230420101025|left"><br>新的 token （%%🔐α 💡ID💡MDO&#x2F;W 4 Cm 9 AJ 4 Ls 8&#x2F;i+yXXM 5 GzNzTJ 0 o 2 u 4 AwfZGVs 5 EqWEESkIf 0+kWt+quYVANDGUCe 4 GJWAxLJnr 7 vIgsi 7 QtSUNma 9 MPz 🔐%%）记得保存好，网页刷新之后就再也看不见了。</p>
-<h4 id="2-配置-hexo-config-yml"><a href="#2-配置-hexo-config-yml" class="headerlink" title="2. 配置 hexo config.yml"></a>2. 配置 hexo config.yml</h4><p>配置 hexo config.yml：<br>原本的配置：<code>repo: https://github.com/weicun581/weicun581.git</code><br>新的配置：<code>repo: https://your token here@github.com/weicun581/weicun581.git</code><br>替换 <code>your token here</code> 替换成上一步的 token 就好了。</p>
-<h2 id="实际使用效果"><a href="#实际使用效果" class="headerlink" title="实际使用效果"></a>实际使用效果</h2><p>在 hexo 根目录下执行：<code>hexo d</code>，之后在 github project 的 action 界面就可以看到 action 动作了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101947.png" alt="20230420101947|left"></p>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
-<li><a href="https://blog.csdn.net/qq_43340547/article/details/119895671">(75条消息) 命令行输入hexo d后发现不能输入GitHub密码登录_SoberGit的博客-CSDN博客</a></li>
-<li><a href="https://blog.csdn.net/weixin_41010198/article/details/119698015?utm_source=app&app_version=4.12.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">(75条消息) github开发人员在七夕搞事情：remote: Support for password authentication was removed on August 13, 2021._点亮～黑夜的博客-CSDN博客</a></li>
-</ol>
-<p>个人博客地址：<a href="https://weicun.gitee.io/">蓝色单车 (gitee.io)</a></p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-        <tag>每日文章</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【快乐游戏】-荒野吃鸡</title>
-    <url>/2023/05/26/%E3%80%90%E5%BF%AB%E4%B9%90%E6%B8%B8%E6%88%8F%E3%80%91-%E8%8D%92%E9%87%8E%E5%90%83%E9%B8%A1/</url>
-    <content><![CDATA[<blockquote>
-<p>​今天中午休息时候打了一局荒野行动，7杀吃鸡，记录下精彩瞬间。</p>
-</blockquote>
-<span id="more"></span>
-
-
-<iframe src="//player.bilibili.com/player.html?aid=741613700&bvid=BV1Kk4y1W76k&cid=1142458449&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-
-<h3 id="经验总结"><a href="#经验总结" class="headerlink" title="经验总结"></a>经验总结</h3><ol>
-<li>苟一苟进前九。</li>
-<li>好的兵器，不要节省子弹。</li>
-<li>任何时候都要找好掩体。</li>
-<li>最重要的是搞清楚敌人的方向。</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>游戏</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>不用魔法免费使用类chatGPT聊天</title>
     <url>/2023/05/05/%E4%B8%8D%E7%94%A8%E9%AD%94%E6%B3%95%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8%E7%B1%BBchatGPT%E8%81%8A%E5%A4%A9/</url>
     <content><![CDATA[<blockquote>
@@ -1234,20 +1180,6 @@ PS: 原本的语法：
 <span id="more"></span>
 <p>我们将类 chatGPT 接入到了微信公众号，你可以跟他聊天，询问天气，甚至是骂它俩句，他绝对不会还嘴的，哈哈哈。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a><br><font color="#ff0000">关注公众号，直接发消息就可以愉快的聊天啦。</font><br>放几张聊天截图，感受喜爱它的小脾气吧：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230505135849.png" alt="20230505135849|100|left|300"><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230505140136.png" alt="20230505140136|left|300"></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>博客评论区开放国内评论功能</title>
-    <url>/2023/05/29/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%BC%80%E6%94%BE%E5%9B%BD%E5%86%85%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<blockquote>
-<p>域名已经重新申请了，目前也可以支持大陆地区用户使用了。</p>
-</blockquote>
-<span id="more"></span>
-
-<p>欢迎下面评论留言，会第一时间回复您的。</p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
   </entry>
   <entry>
     <title>为Hexo博客next主题添加友链</title>
@@ -1342,92 +1274,17 @@ PS: 原本的语法：
       </tags>
   </entry>
   <entry>
-    <title>有意思的名言警句</title>
-    <url>/2022/11/15/%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E5%90%8D%E8%A8%80%E8%AD%A6%E5%8F%A5/</url>
-    <content><![CDATA[<center><font size=5>今天看到的名言警句</font></center>
-
-<ul>
-<li><p><a href="https://www.apachecn.org/#/">名言警句</a>：</p>
-<ol>
-<li><p>渣男除了渣没其他缺点，舔狗除了舔没其他优点。</p>
-</li>
-<li><p>既然我们做什么都会被喷，____________。</p>
-</li>
-<li><p>搞钱的大原则就是信息不对称。</p>
-</li>
-<li><p>风口可能有很多个，但是对应的技术可能就那么点，所以，尽早储备一个通用的技术栈。</p>
+    <title>博客评论区开放国内评论功能</title>
+    <url>/2023/05/29/%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%BC%80%E6%94%BE%E5%9B%BD%E5%86%85%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<blockquote>
+<p>域名已经重新申请了，目前也可以支持大陆地区用户使用了。</p>
+</blockquote>
 <span id="more"></span>
-</li>
-<li><p>资本家为了奴役你给你挖了很多坑，比如消费主义，比如训练你当螺丝钉，还有最重要的就是榨干你的空闲时间。</p>
-</li>
-<li><p>打工的钱都是棺材费，自己从市场赚的才叫钱。尽早摆脱打工人的困境比啥都重要。</p>
-</li>
-<li><p>在体验一样的情况下，选成本低的，但不要为此牺牲体验。</p>
-</li>
-<li><p>如果花在开源上的时间和刷牙洗脸一样，那么可持续性就不是问题。</p>
-</li>
-<li><p>宣传应当是你的产品的不可分割的一部分，它和内容同等重要，并且可以借助技术做得更好。五分内容五分宣传，这就是五五开定律。</p>
-</li>
-<li><p>冗余：一、预估时间的时候，将极限时间x2就是最终时间（侯世达定律）。二、重要资料做好备份，本地至少两份在不同介质上。</p>
-</li>
-<li><p>第一性原理：完成一个目标只有少数几个必要条件。只需要专注他们，不要总是有奇奇怪怪的无效假设。不要被乌合之众的观点&#x2F;做法绑架。</p>
-</li>
-<li><p>热插拔：保证自己是个独立完整的系统，与别人合作但不依赖别人。优先磨练自己的议价能力而不是协作能力来增加选择面，保证自己可以随时中止合作关系，防止受限于任何人。遇到问题优先考虑终止合作并换人，而不是改善合作关系。</p>
-</li>
-<li><p>专注、迭代、极致：一次只专注于一件事情，允许不足，在多个迭代中反复改进，尽可能达到极致。</p>
-</li>
-<li><p>大数据：（1）大数据不仅仅指数字和表格本身，也包含情报，经验，教程，方法论这些非结构化数据。（2）收集数据来遍历每一种可能性，对抗不确定性，避免认知偏差，好处是无需亲身实践直接借助他人经验。（3）注意收集你暂时用不到，但是大家都需要的数据，并且改造你的存储设施来存的下更多数据。</p>
-</li>
-<li><p>跨界：用数字化改造一切，程序员的使命就是先消灭其它行业再消灭自身。</p>
-</li>
-</ol>
-</li>
-<li><p>感悟：</p>
-<ol>
-<li><p>渣男好像真的只是渣，其他都是有点，舔狗唯一的特点舔貌似也不是什么有点，只会招人烦。</p>
-</li>
-<li><p>所以，宁愿做渣男也不要做舔狗。</p>
-</li>
-<li><p>既然做任何事情都会被喷，那我还在乎你喷不喷？</p>
-</li>
-<li><p>通用技术栈一定要精通、熟练掌握。（写软件、网站开发、小程序）</p>
-</li>
-<li><p>空闲时间，利用好了就是我自大的资本；利用不好，只会消耗自己。</p>
-</li>
-<li><p>副业很重要。</p>
-</li>
-<li><p>合理规划目标，每次只focus on一个计划，时间要预留充足。</p>
-</li>
-<li><p>数字化everything。</p>
-</li>
-</ol>
-</li>
-</ul>
+
+<p>欢迎下面评论留言，会第一时间回复您的。</p>
 ]]></content>
       <tags>
-        <tag>日记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>日记怀旧</title>
-    <url>/2023/04/20/%E9%87%8D%E6%96%B0%E5%BC%80%E5%A7%8B/</url>
-    <content><![CDATA[<h3 id="2023-04-20小记"><a href="#2023-04-20小记" class="headerlink" title="2023-04-20小记"></a>2023-04-20小记</h3><h4 id="博客停更的原因"><a href="#博客停更的原因" class="headerlink" title="博客停更的原因"></a>博客停更的原因</h4><p>hello 大家好，这个博客网站快有半年没更新了，原因嘛，很好解释，没有人跟我互动，懒得写了，后来就搁置了。<br>其实这半年还有好多事情，导致博客网站没有继续写下去：</p>
-<ul>
-<li>疫情的爆发</li>
-<li>工作量突然加重</li>
-<li>内心的浮躁<br>我觉得客观原因都是小事情，关键是内心浮躁了，总是想着赚钱、赚钱、赚钱。结果啥也没干成。<br>所以想了下，还是要沉下心来，努力做事情，而不是天天想着搞钱，做事浅尝辄止、做人浮浮躁躁。<span id="more"></span></li>
-</ul>
-<h4 id="关于博客日后的规划"><a href="#关于博客日后的规划" class="headerlink" title="关于博客日后的规划"></a>关于博客日后的规划</h4><ol>
-<li>记录日常感悟，分享人生经历，总结生活。</li>
-<li>分享个人技术成长路线。</li>
-<li>分享技术热点</li>
-</ol>
-]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1446,14 +1303,18 @@ PS: 原本的语法：
 ]]></content>
   </entry>
   <entry>
-    <title>随便聊两句</title>
-    <url>/2023/05/05/%E9%9A%8F%E4%BE%BF%E8%81%8A%E4%B8%A4%E5%8F%A5/</url>
+    <title>测试</title>
+    <url>/2025/02/25/%E6%B5%8B%E8%AF%95/</url>
     <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	进来聊聊天呗…</p>
+<p>​	this is a description about this item.</p>
 </blockquote>
 <span id="more"></span>
 
-<h3 id="话说如果不考虑赚钱，只考虑兴趣爱好，你们还会从事现在的行业吗？"><a href="#话说如果不考虑赚钱，只考虑兴趣爱好，你们还会从事现在的行业吗？" class="headerlink" title="话说如果不考虑赚钱，只考虑兴趣爱好，你们还会从事现在的行业吗？"></a>话说如果不考虑赚钱，只考虑兴趣爱好，你们还会从事现在的行业吗？</h3><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230505113619.png" alt="20230505113619|left|450"></p>
+
+
+
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><p>1.<br>2.<br>3. </p>
 ]]></content>
   </entry>
 </search>
