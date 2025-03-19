@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>蓝色单车</title>
+  <title>创意码头</title>
   
-  <subtitle>小扇引微凉，悠悠夏日长</subtitle>
+  
   <link href="https://weicun581.github.io/atom.xml" rel="self"/>
   
   <link href="https://weicun581.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://weicun581.github.io/</id>
   
   <author>
-    <name>蓝色单车</name>
+    <name>程序员小哥</name>
     
   </author>
   
