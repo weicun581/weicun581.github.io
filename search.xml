@@ -840,6 +840,21 @@ if __name__ == &#39;__main__&#39;:
       </tags>
   </entry>
   <entry>
+    <title>博客评论暂停大陆地区使用公告</title>
+    <url>/2023/05/26/13%20%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E6%9A%82%E5%81%9C%E5%A4%A7%E9%99%86%E5%9C%B0%E5%8C%BA%E4%BD%BF%E7%94%A8%E5%85%AC%E5%91%8A/</url>
+    <content><![CDATA[<blockquote>
+<p>由于域名到期，暂时不在支持大陆地区用户使用本博客的评论功能，如果你有魔法or梯子，将不会影响你的使用。</p>
+</blockquote>
+<span id="more"></span>
+
+<p>目前的使用的博客系统是waline，挂载在vercel服务器上，但是vercel域名被挡住了，所以之前有购买一个域名，DNS解析到vercel上，因此国内用户才可以正常评论。<br>但是现在域名到期了，所以将使用vercel自带的域名，因此请大家八仙过海、各显神通，把魔法用起来。<br>欢迎评论你对the great wall的看法？</p>
+<ul>
+<li><input disabled="" type="checkbox"> 支持？外面世界太乱了，ZF是在保护我们。</li>
+<li><input disabled="" type="checkbox"> 反对？阻碍交流</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>不用魔法免费使用类chatGPT聊天</title>
     <url>/2023/05/05/14%20%E4%B8%8D%E7%94%A8%E9%AD%94%E6%B3%95%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8%E7%B1%BBchatGPT%E8%81%8A%E5%A4%A9/</url>
     <content><![CDATA[<blockquote>
@@ -872,21 +887,6 @@ if __name__ == &#39;__main__&#39;:
       <tags>
         <tag>每日文章</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>博客评论暂停大陆地区使用公告</title>
-    <url>/2023/05/26/13%20%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E6%9A%82%E5%81%9C%E5%A4%A7%E9%99%86%E5%9C%B0%E5%8C%BA%E4%BD%BF%E7%94%A8%E5%85%AC%E5%91%8A/</url>
-    <content><![CDATA[<blockquote>
-<p>由于域名到期，暂时不在支持大陆地区用户使用本博客的评论功能，如果你有魔法or梯子，将不会影响你的使用。</p>
-</blockquote>
-<span id="more"></span>
-
-<p>目前的使用的博客系统是waline，挂载在vercel服务器上，但是vercel域名被挡住了，所以之前有购买一个域名，DNS解析到vercel上，因此国内用户才可以正常评论。<br>但是现在域名到期了，所以将使用vercel自带的域名，因此请大家八仙过海、各显神通，把魔法用起来。<br>欢迎评论你对the great wall的看法？</p>
-<ul>
-<li><input disabled="" type="checkbox"> 支持？外面世界太乱了，ZF是在保护我们。</li>
-<li><input disabled="" type="checkbox"> 反对？阻碍交流</li>
-</ul>
-]]></content>
   </entry>
   <entry>
     <title>为Hexo博客next主题添加友链</title>
@@ -1173,43 +1173,6 @@ PS: 原本的语法：
       </tags>
   </entry>
   <entry>
-    <title>OpenAI ChatGPT3.5-turbo实际解决问题能力评测</title>
-    <url>/2023/05/22/26%20OpenAI%20ChatGPT3.5-turbo%E5%AE%9E%E9%99%85%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E8%83%BD%E5%8A%9B%E8%AF%84%E6%B5%8B/</url>
-    <content><![CDATA[<blockquote>
-<p>​	程序员在coding的时候会经常遇到需要查阅资料的情况，最好的结果是直接能拿到一份好用的demo版本code，本次我们来评测：bing搜索和chatGPT3.5，解决实际问题：“html 图片靠左”的效果。</p>
-</blockquote>
-<span id="more"></span>
-
-<div style="display:inline-block;"><img width="80%" style="float:center;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522152417.png" alt="20230522152417"></div>   
-
-<h3 id="bing搜索的表现"><a href="#bing搜索的表现" class="headerlink" title="bing搜索的表现"></a>bing搜索的表现</h3><ul>
-<li>搜索关键字：<font color="#ff0000">html 图片靠左</font></li>
-<li>得到的结果如下： <div style="display:inline-block;"><img width="100%" style="float:left;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522152828.png" alt="20230522152828"></div></li>
-<li>每个结果我都点击进去看了，并没有我想要的demo code。</li>
-<li>每个搜索结果，demo code也无法运行，有的可以，有的不可以。</li>
-</ul>
-<h3 id="chatGPT3-5的表现"><a href="#chatGPT3-5的表现" class="headerlink" title="chatGPT3.5的表现"></a>chatGPT3.5的表现</h3><p>第一次询问：<font color="#ff0000">html中img如何靠左显示</font><br>答：</p>
-<div style="display:inline-block;"><img width="60%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522153101.png" alt="20230522153101"></div>
-
-<p>第二次询问：<font color="#ff0000">如何在当行语句中设置图片靠左</font><br><font color="#00b0f0">注意看，我还写了一个错别字，chatGPT完美的理解了我的意思。</font><br>答：</p>
-<div style="display:inline-block;"><img width="60%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522153221.png" alt="20230522153221"></div>
-
-<p>第三次询问：<font color="#ff0000">看上去他是悬浮在段落里了，如何能让他不是悬浮在段落里?</font><br>答：</p>
-<div style="display:inline-block;"><img width="60%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522153449.png" alt="20230522153449"></div>
-
-<p>经过三次询问，我得到了想要的答案：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;your-image.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Your Image&quot;</span> <span class="attr">style</span>=<span class="string">&quot;vertical-align: middle; margin-right: 10px;&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>chatGPT明显强于bing搜索，其<font color="#ff0000">最大的亮点就是上下午语境联系能力</font>，我仅仅通过三个问题就得到了答案，而且还解决了一个问题。<br>所以，chatGPT在解决问题上的确给人眼前一亮的感觉，如果你能好好利用它，它一定能给你助力不少。<br>对于搜索行业来说，chatGPT绝对是颠覆性的。</p>
-<hr>
-<p>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
-]]></content>
-      <tags>
-        <tag>每日文章</tag>
-        <tag>AI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>组件世界-初体验</title>
     <url>/2023/04/23/25%20obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/</url>
     <content><![CDATA[<blockquote>
@@ -1267,6 +1230,43 @@ PS: 原本的语法：
 <li></li>
 </ol>
 ]]></content>
+  </entry>
+  <entry>
+    <title>OpenAI ChatGPT3.5-turbo实际解决问题能力评测</title>
+    <url>/2023/05/22/26%20OpenAI%20ChatGPT3.5-turbo%E5%AE%9E%E9%99%85%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98%E8%83%BD%E5%8A%9B%E8%AF%84%E6%B5%8B/</url>
+    <content><![CDATA[<blockquote>
+<p>​	程序员在coding的时候会经常遇到需要查阅资料的情况，最好的结果是直接能拿到一份好用的demo版本code，本次我们来评测：bing搜索和chatGPT3.5，解决实际问题：“html 图片靠左”的效果。</p>
+</blockquote>
+<span id="more"></span>
+
+<div style="display:inline-block;"><img width="80%" style="float:center;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522152417.png" alt="20230522152417"></div>   
+
+<h3 id="bing搜索的表现"><a href="#bing搜索的表现" class="headerlink" title="bing搜索的表现"></a>bing搜索的表现</h3><ul>
+<li>搜索关键字：<font color="#ff0000">html 图片靠左</font></li>
+<li>得到的结果如下： <div style="display:inline-block;"><img width="100%" style="float:left;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522152828.png" alt="20230522152828"></div></li>
+<li>每个结果我都点击进去看了，并没有我想要的demo code。</li>
+<li>每个搜索结果，demo code也无法运行，有的可以，有的不可以。</li>
+</ul>
+<h3 id="chatGPT3-5的表现"><a href="#chatGPT3-5的表现" class="headerlink" title="chatGPT3.5的表现"></a>chatGPT3.5的表现</h3><p>第一次询问：<font color="#ff0000">html中img如何靠左显示</font><br>答：</p>
+<div style="display:inline-block;"><img width="60%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522153101.png" alt="20230522153101"></div>
+
+<p>第二次询问：<font color="#ff0000">如何在当行语句中设置图片靠左</font><br><font color="#00b0f0">注意看，我还写了一个错别字，chatGPT完美的理解了我的意思。</font><br>答：</p>
+<div style="display:inline-block;"><img width="60%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522153221.png" alt="20230522153221"></div>
+
+<p>第三次询问：<font color="#ff0000">看上去他是悬浮在段落里了，如何能让他不是悬浮在段落里?</font><br>答：</p>
+<div style="display:inline-block;"><img width="60%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522153449.png" alt="20230522153449"></div>
+
+<p>经过三次询问，我得到了想要的答案：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;your-image.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Your Image&quot;</span> <span class="attr">style</span>=<span class="string">&quot;vertical-align: middle; margin-right: 10px;&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>chatGPT明显强于bing搜索，其<font color="#ff0000">最大的亮点就是上下午语境联系能力</font>，我仅仅通过三个问题就得到了答案，而且还解决了一个问题。<br>所以，chatGPT在解决问题上的确给人眼前一亮的感觉，如果你能好好利用它，它一定能给你助力不少。<br>对于搜索行业来说，chatGPT绝对是颠覆性的。</p>
+<hr>
+<p>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
+]]></content>
+      <tags>
+        <tag>每日文章</tag>
+        <tag>AI</tag>
+      </tags>
   </entry>
   <entry>
     <title>写在chatGPT免费额度用完之后</title>
