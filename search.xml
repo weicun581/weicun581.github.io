@@ -826,20 +826,6 @@ if __name__ == &#39;__main__&#39;:
       </tags>
   </entry>
   <entry>
-    <title>博客评论区开放国内评论功能</title>
-    <url>/2023/05/29/12%20%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%BC%80%E6%94%BE%E5%9B%BD%E5%86%85%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<blockquote>
-<p>域名已经重新申请了，目前也可以支持大陆地区用户使用了。</p>
-</blockquote>
-<span id="more"></span>
-
-<p>欢迎下面评论留言，会第一时间回复您的。</p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>博客评论暂停大陆地区使用公告</title>
     <url>/2023/05/26/13%20%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E6%9A%82%E5%81%9C%E5%A4%A7%E9%99%86%E5%9C%B0%E5%8C%BA%E4%BD%BF%E7%94%A8%E5%85%AC%E5%91%8A/</url>
     <content><![CDATA[<blockquote>
@@ -853,6 +839,20 @@ if __name__ == &#39;__main__&#39;:
 <li><input disabled="" type="checkbox"> 反对？阻碍交流</li>
 </ul>
 ]]></content>
+  </entry>
+  <entry>
+    <title>博客评论区开放国内评论功能</title>
+    <url>/2023/05/29/12%20%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E5%8C%BA%E5%BC%80%E6%94%BE%E5%9B%BD%E5%86%85%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<blockquote>
+<p>域名已经重新申请了，目前也可以支持大陆地区用户使用了。</p>
+</blockquote>
+<span id="more"></span>
+
+<p>欢迎下面评论留言，会第一时间回复您的。</p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title>不用魔法免费使用类chatGPT聊天</title>
@@ -915,96 +915,6 @@ if __name__ == &#39;__main__&#39;:
 <p>对了，如果大家喜欢可以关注我的博客和微信公众号，平时会经常分享一下软件、AI、感悟、好玩的东东。谢谢啦。<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
 <hr>
 <h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><p>1.<br>2.<br>3. </p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-        <tag>每日文章</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AgentGPT-带互联网搜索功能的chatGPT</title>
-    <url>/2023/04/25/20%20AgentGPT-%E5%B8%A6%E4%BA%92%E8%81%94%E7%BD%91%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E7%9A%84chatGPT/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	Agent GPT 主要的AI 功能就是建立在原版的AutoGPT 之上，然后再加上图形介面，这样阅读起来比较容易也比较方便。<br>相较于ChatGPT，它具有：互联网搜索查询功能、任务拆解各个执行然后串联能力。<br>它能够根据用户需求，在用户完全不插手的情况下自主执行任务，包括日常的事件分析、营销方案撰写、代码编程、数学运算等事务都能代劳。<br>这里我会按照AgentGPT 官方所建议的步骤，一步一步教搭建安装并体验AgentGPT。</p>
-</blockquote>
-<span id="more"></span>
-
-<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145426.png" alt="20230425145426|left|475"></p>
-<h3 id="如何安装Agent-GPT"><a href="#如何安装Agent-GPT" class="headerlink" title="如何安装Agent GPT"></a>如何安装Agent GPT</h3><ul>
-<li>平台：win10 docker desktop </li>
-<li>安装方法：<ol>
-<li>在github上下载<a href="https://github.com/reworkd/AgentGPT">AgentGPT项目</a>：<code>git clone  git@github.com:reworkd/AgentGPT.git</code></li>
-<li>按照官网推荐的docker安装方式：<code>./setup.sh --docker</code>，当然你也可以在本地安装，不过介于docker安装方式最简单，所以这边就不再本地环境搭建了，有兴趣可以在github agentGPT官网上查询。<a href="https://github.com/reworkd/AgentGPT">GitHub - reworkd&#x2F;AgentGPT: 🤖 Assemble, configure, and deploy autonomous AI Agents in your browser.</a><br><em>这里有个小的知识点，如何在win10上运行.sh脚本文件？答案是：用git bash</em></li>
-<li>用setup脚本安装完成之后，可以用<code>docker ps -a</code>确认下container是否真的安装好并启动：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425144818.png" alt="20230425144818|left|525">可以看到agentgpt已经成功创建成功，并在3000端口运行了。</li>
-<li>访问agentGPT container的web：<a href="http://localhost:3000/">http://localhost:3000/</a>，出现这个界面就表示安装成功了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145027.png" alt="20230425145027|left|475"></li>
-<li>接下来我们设置下AI驱动，点击settings，选择gpt-3.5-turbo，输入你的gpt3.5 kye（这个需要你之前注册好，注册的硬性要求有两个：1. 需要会魔法。 2.需要有国外手机号，用于接收验证码，这类网站有很多，请自行百度）<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145325.png" alt="20230425145325|left|475"></li>
-</ol>
-</li>
-</ul>
-<h3 id="AgentGPT使用体验"><a href="#AgentGPT使用体验" class="headerlink" title="AgentGPT使用体验"></a>AgentGPT使用体验</h3><h4 id="询问系统时间"><a href="#询问系统时间" class="headerlink" title="询问系统时间"></a>询问系统时间</h4><p>这个实验尝试了文agentGPT现在时间是几点？<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145750.png" alt="20230425145750|left|500"><br>在这里可以看到他的分析思路是：</p>
-<ul>
-<li>使用系统时钟获取当前时间</li>
-<li>将当前时间转换为字符串格式</li>
-<li>返回字符串时间作为响应</li>
-<li>将字符串时间转换为数字时间</li>
-<li>返回数字时间作为响应<br>思路是对的，想法也很好，但是在执行第一步骤的时候就失败了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150017.png" alt="20230425150017|left|500">之后就是不停的循环这几个步骤，陷入了死循环。</li>
-</ul>
-<h4 id="统计淘宝网上销量前6的血压仪价格及名称"><a href="#统计淘宝网上销量前6的血压仪价格及名称" class="headerlink" title="统计淘宝网上销量前6的血压仪价格及名称"></a>统计淘宝网上销量前6的血压仪价格及名称</h4><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150456.png" alt="20230425150456|left|675"><br>结果：我很满意，的确是有访问互联网并统计到。<br>但是，我不满意的是它的任务拆解执行能力，我的确是从它的子任务重得到了答案，但是它把任务拆分的方式有问题，还是会陷入死循环。<br>因此，如何跳出死循环，这个是AgentGPT需要加强的地方。当然这也是最难的地方。</p>
-<p>随后我让它用中文回复我，可以看到它的确是有统计到结果，但是一旦遇到某一步骤无法得到结果，它就会不停的陷入死循环：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150901.png" alt="20230425150901|left|500"></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>AgetGPT的确是给人眼前一亮的感觉，相较于chatGPT它的互联网搜索能力、任务拆解执行能力，的确是很经验。<br>但是，如何跳出死循环这部分还是需要继续努力。不过介于目前的版本还是beta版本，所以我觉得已经很棒了，加油，希望可以给我们带来更好的产品。</p>
-<p>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><p>1.<br>2.<br>3. </p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hexo博客查图片并调整位置&amp;大小</title>
-    <url>/2023/05/22/22%20Hexo%E5%8D%9A%E5%AE%A2%E6%9F%A5%E5%9B%BE%E7%89%87%E5%B9%B6%E8%B0%83%E6%95%B4%E4%BD%8D%E7%BD%AE&amp;%E5%A4%A7%E5%B0%8F/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	Markdown写文章插入图片，<font color="#ff0000">在hexo博客中，图片的大小似乎没有按照个markdown的语法生效</font>，本文将解决此问题。</p>
-</blockquote>
-<span id="more"></span>
-<div style="display:inline-block;"><img width="50%" style="float:center " src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png" alt="20230522144603"></div>
-
-<h3 id="现有问题描述"><a href="#现有问题描述" class="headerlink" title="现有问题描述"></a><font color="#ff0000">现有问题描述</font></h3><p>obsidian中插入图片的语法：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">![20230522135434|left](https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522135434.png)</span><br></pre></td></tr></table></figure>
-
-<p>优点：</p>
-<ul>
-<li>默认靠左显示。</li>
-<li>可以利用ob的插件快速调整大小：alt + 鼠标滚轮调整大小。<br>缺点：</li>
-<li>ob中调整的大小，在hexo博客中无法正确显示。</li>
-</ul>
-<h3 id="Hexo博客插入图片的方法"><a href="#Hexo博客插入图片的方法" class="headerlink" title="Hexo博客插入图片的方法"></a>Hexo博客插入图片的方法</h3><p>首先说下hexo插入图片的方式有哪些，hexo默认集成了markdown语法，这里我们就markdown里显示图片的方式引入html方法,两种方法有优有劣，关键看自己的习惯了</p>
-<ul>
-<li>第一种是直接引用markdown插入</li>
-<li>第二种是使用html来引用插入</li>
-</ul>
-<h4 id="1-直接引用markdown插入"><a href="#1-直接引用markdown插入" class="headerlink" title="1-直接引用markdown插入"></a>1-直接引用markdown插入</h4><p>首先是直接引用的方法需要在images目录里放入需要引入的图片<br><code>![lena](https://alexcld.com/images/pengyuyan.jpg)</code><br>我这里就直接引用之前的图片了，图片链接自己可以在网上找，<br>本地图片的话可以直接使用路径来引用<br>这种方法可以是可以，有点小缺点：图片就会靠在左侧，大小也不由自己决定</p>
-<h4 id="2-使用html方法引入"><a href="#2-使用html方法引入" class="headerlink" title="2-使用html方法引入"></a>2-使用html方法引入</h4><p>第二种就是使用html来引用插入的图片<br><code>&lt;img src=&quot;https://alexcld.com/images/pengyuyan.jpg&quot; width=256 height=256 /&gt;</code><br>固定图片大小：width&#x3D;256,height&#x3D;256设置的是显示图像的尺寸，src后面接的就是图像对象<br>还可以使用百分比的方式来给width,height传参<br><code>&lt;img src=&quot;https://alexcld.com/images/pengyuyan.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;</code><br>其中width和height后面的50%就是根据窗口的大小以一定的比例显示图片。值得一说的是，这种按照百分比显示方法，是以width方向为准，并保持纵横比的，换句话说，把设置width的部分去掉，height的值改为任<br>意百分比，显示的图像都是原图大小（个人觉得这根博客窗口有关，毕竟现实截面的宽度相对是固定的，而高度&#x2F;长度却是变化着的）。因此用此方法的时候，可以把height设置缺省</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><font color="#ff0000">总结</font></h3><p>最后使用的hexo插入图片语法：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">style</span>=<span class="string">&quot;float: left; margin-right: 10px;&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这种方法虽然有效果，但是会使图片处在悬浮状态，影响体验，解决方法是：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;display:inline-block;&quot;</span>&gt;</span> <span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">&quot;10%&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Your Image&quot;</span> <span class="attr">style</span>=<span class="string">&quot;float: left; margin-right: 10px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>实际效果：</p>
-<div style="display: inline-block;"> <img  width="10%" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png" alt="Your Image" style="float: left; margin-right: 10px;"> </div>
-PS: 原本的语法：
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">![20230522141323|left|400](https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png)</span><br></pre></td></tr></table></figure>
-
-<p>效果对比（左边是原本的，右边是修改后的）：</p>
-<div style="display:inline-block;"><img width="100%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522151213.png" alt="20230522151213"></div>
-
-
-<h3 id="如何实际使用"><a href="#如何实际使用" class="headerlink" title="如何实际使用"></a><font color="#ff0000">如何实际使用</font></h3><p>需要修改Picgo图床的自定义链接格式，原本的自定义链接格式：<br><code>![$fileName|left]($url)</code><br>修改后的自定义链接格式：<br><code>&lt;div style=&quot;display:inline-block;&quot;&gt;&lt;img width=&quot;100%&quot; style=&quot;float:left; margin-right: 10px;&quot; src=&quot;$url&quot; alt=&quot;$fileName&quot;&gt;&lt;/div&gt;</code><br>实际效果： </p>
-<ul>
-<li>靠左显示：<div style="display:inline-block;"><img width="15%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522144603.png" alt="20230522144603"></div></li>
-<li>居中显示：<div style="display:inline-block;"><img width="15%" style="float:center; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522144603.png" alt="20230522144603"></div></li>
-<li>靠右显示：<div style="display:inline-block;"><img width="15%" style="float:right; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522144603.png" alt="20230522144603"></div></li>
-</ul>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
-<li><a href="https://blog.csdn.net/weixin_45509582/article/details/108582689">hexo插入图片及控制大小_AlexClownfish的博客-CSDN博客</a></li>
-</ol>
 ]]></content>
       <tags>
         <tag>hexo</tag>
@@ -1111,6 +1021,96 @@ PS: 原本的语法：
       </tags>
   </entry>
   <entry>
+    <title>AgentGPT-带互联网搜索功能的chatGPT</title>
+    <url>/2023/04/25/20%20AgentGPT-%E5%B8%A6%E4%BA%92%E8%81%94%E7%BD%91%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%E7%9A%84chatGPT/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	Agent GPT 主要的AI 功能就是建立在原版的AutoGPT 之上，然后再加上图形介面，这样阅读起来比较容易也比较方便。<br>相较于ChatGPT，它具有：互联网搜索查询功能、任务拆解各个执行然后串联能力。<br>它能够根据用户需求，在用户完全不插手的情况下自主执行任务，包括日常的事件分析、营销方案撰写、代码编程、数学运算等事务都能代劳。<br>这里我会按照AgentGPT 官方所建议的步骤，一步一步教搭建安装并体验AgentGPT。</p>
+</blockquote>
+<span id="more"></span>
+
+<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145426.png" alt="20230425145426|left|475"></p>
+<h3 id="如何安装Agent-GPT"><a href="#如何安装Agent-GPT" class="headerlink" title="如何安装Agent GPT"></a>如何安装Agent GPT</h3><ul>
+<li>平台：win10 docker desktop </li>
+<li>安装方法：<ol>
+<li>在github上下载<a href="https://github.com/reworkd/AgentGPT">AgentGPT项目</a>：<code>git clone  git@github.com:reworkd/AgentGPT.git</code></li>
+<li>按照官网推荐的docker安装方式：<code>./setup.sh --docker</code>，当然你也可以在本地安装，不过介于docker安装方式最简单，所以这边就不再本地环境搭建了，有兴趣可以在github agentGPT官网上查询。<a href="https://github.com/reworkd/AgentGPT">GitHub - reworkd&#x2F;AgentGPT: 🤖 Assemble, configure, and deploy autonomous AI Agents in your browser.</a><br><em>这里有个小的知识点，如何在win10上运行.sh脚本文件？答案是：用git bash</em></li>
+<li>用setup脚本安装完成之后，可以用<code>docker ps -a</code>确认下container是否真的安装好并启动：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425144818.png" alt="20230425144818|left|525">可以看到agentgpt已经成功创建成功，并在3000端口运行了。</li>
+<li>访问agentGPT container的web：<a href="http://localhost:3000/">http://localhost:3000/</a>，出现这个界面就表示安装成功了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145027.png" alt="20230425145027|left|475"></li>
+<li>接下来我们设置下AI驱动，点击settings，选择gpt-3.5-turbo，输入你的gpt3.5 kye（这个需要你之前注册好，注册的硬性要求有两个：1. 需要会魔法。 2.需要有国外手机号，用于接收验证码，这类网站有很多，请自行百度）<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145325.png" alt="20230425145325|left|475"></li>
+</ol>
+</li>
+</ul>
+<h3 id="AgentGPT使用体验"><a href="#AgentGPT使用体验" class="headerlink" title="AgentGPT使用体验"></a>AgentGPT使用体验</h3><h4 id="询问系统时间"><a href="#询问系统时间" class="headerlink" title="询问系统时间"></a>询问系统时间</h4><p>这个实验尝试了文agentGPT现在时间是几点？<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425145750.png" alt="20230425145750|left|500"><br>在这里可以看到他的分析思路是：</p>
+<ul>
+<li>使用系统时钟获取当前时间</li>
+<li>将当前时间转换为字符串格式</li>
+<li>返回字符串时间作为响应</li>
+<li>将字符串时间转换为数字时间</li>
+<li>返回数字时间作为响应<br>思路是对的，想法也很好，但是在执行第一步骤的时候就失败了：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150017.png" alt="20230425150017|left|500">之后就是不停的循环这几个步骤，陷入了死循环。</li>
+</ul>
+<h4 id="统计淘宝网上销量前6的血压仪价格及名称"><a href="#统计淘宝网上销量前6的血压仪价格及名称" class="headerlink" title="统计淘宝网上销量前6的血压仪价格及名称"></a>统计淘宝网上销量前6的血压仪价格及名称</h4><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150456.png" alt="20230425150456|left|675"><br>结果：我很满意，的确是有访问互联网并统计到。<br>但是，我不满意的是它的任务拆解执行能力，我的确是从它的子任务重得到了答案，但是它把任务拆分的方式有问题，还是会陷入死循环。<br>因此，如何跳出死循环，这个是AgentGPT需要加强的地方。当然这也是最难的地方。</p>
+<p>随后我让它用中文回复我，可以看到它的确是有统计到结果，但是一旦遇到某一步骤无法得到结果，它就会不停的陷入死循环：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230425150901.png" alt="20230425150901|left|500"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>AgetGPT的确是给人眼前一亮的感觉，相较于chatGPT它的互联网搜索能力、任务拆解执行能力，的确是很经验。<br>但是，如何跳出死循环这部分还是需要继续努力。不过介于目前的版本还是beta版本，所以我觉得已经很棒了，加油，希望可以给我们带来更好的产品。</p>
+<p>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a></p>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><p>1.<br>2.<br>3. </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hexo博客查图片并调整位置&amp;大小</title>
+    <url>/2023/05/22/22%20Hexo%E5%8D%9A%E5%AE%A2%E6%9F%A5%E5%9B%BE%E7%89%87%E5%B9%B6%E8%B0%83%E6%95%B4%E4%BD%8D%E7%BD%AE&amp;%E5%A4%A7%E5%B0%8F/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	Markdown写文章插入图片，<font color="#ff0000">在hexo博客中，图片的大小似乎没有按照个markdown的语法生效</font>，本文将解决此问题。</p>
+</blockquote>
+<span id="more"></span>
+<div style="display:inline-block;"><img width="50%" style="float:center " src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png" alt="20230522144603"></div>
+
+<h3 id="现有问题描述"><a href="#现有问题描述" class="headerlink" title="现有问题描述"></a><font color="#ff0000">现有问题描述</font></h3><p>obsidian中插入图片的语法：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">![20230522135434|left](https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522135434.png)</span><br></pre></td></tr></table></figure>
+
+<p>优点：</p>
+<ul>
+<li>默认靠左显示。</li>
+<li>可以利用ob的插件快速调整大小：alt + 鼠标滚轮调整大小。<br>缺点：</li>
+<li>ob中调整的大小，在hexo博客中无法正确显示。</li>
+</ul>
+<h3 id="Hexo博客插入图片的方法"><a href="#Hexo博客插入图片的方法" class="headerlink" title="Hexo博客插入图片的方法"></a>Hexo博客插入图片的方法</h3><p>首先说下hexo插入图片的方式有哪些，hexo默认集成了markdown语法，这里我们就markdown里显示图片的方式引入html方法,两种方法有优有劣，关键看自己的习惯了</p>
+<ul>
+<li>第一种是直接引用markdown插入</li>
+<li>第二种是使用html来引用插入</li>
+</ul>
+<h4 id="1-直接引用markdown插入"><a href="#1-直接引用markdown插入" class="headerlink" title="1-直接引用markdown插入"></a>1-直接引用markdown插入</h4><p>首先是直接引用的方法需要在images目录里放入需要引入的图片<br><code>![lena](https://alexcld.com/images/pengyuyan.jpg)</code><br>我这里就直接引用之前的图片了，图片链接自己可以在网上找，<br>本地图片的话可以直接使用路径来引用<br>这种方法可以是可以，有点小缺点：图片就会靠在左侧，大小也不由自己决定</p>
+<h4 id="2-使用html方法引入"><a href="#2-使用html方法引入" class="headerlink" title="2-使用html方法引入"></a>2-使用html方法引入</h4><p>第二种就是使用html来引用插入的图片<br><code>&lt;img src=&quot;https://alexcld.com/images/pengyuyan.jpg&quot; width=256 height=256 /&gt;</code><br>固定图片大小：width&#x3D;256,height&#x3D;256设置的是显示图像的尺寸，src后面接的就是图像对象<br>还可以使用百分比的方式来给width,height传参<br><code>&lt;img src=&quot;https://alexcld.com/images/pengyuyan.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot; /&gt;</code><br>其中width和height后面的50%就是根据窗口的大小以一定的比例显示图片。值得一说的是，这种按照百分比显示方法，是以width方向为准，并保持纵横比的，换句话说，把设置width的部分去掉，height的值改为任<br>意百分比，显示的图像都是原图大小（个人觉得这根博客窗口有关，毕竟现实截面的宽度相对是固定的，而高度&#x2F;长度却是变化着的）。因此用此方法的时候，可以把height设置缺省</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><font color="#ff0000">总结</font></h3><p>最后使用的hexo插入图片语法：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">style</span>=<span class="string">&quot;float: left; margin-right: 10px;&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png&quot;</span> <span class="attr">width</span>=<span class="string">&quot;50%&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这种方法虽然有效果，但是会使图片处在悬浮状态，影响体验，解决方法是：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;display:inline-block;&quot;</span>&gt;</span> <span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">&quot;10%&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Your Image&quot;</span> <span class="attr">style</span>=<span class="string">&quot;float: left; margin-right: 10px;&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>实际效果：</p>
+<div style="display: inline-block;"> <img  width="10%" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png" alt="Your Image" style="float: left; margin-right: 10px;"> </div>
+PS: 原本的语法：
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">![20230522141323|left|400](https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522141323.png)</span><br></pre></td></tr></table></figure>
+
+<p>效果对比（左边是原本的，右边是修改后的）：</p>
+<div style="display:inline-block;"><img width="100%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522151213.png" alt="20230522151213"></div>
+
+
+<h3 id="如何实际使用"><a href="#如何实际使用" class="headerlink" title="如何实际使用"></a><font color="#ff0000">如何实际使用</font></h3><p>需要修改Picgo图床的自定义链接格式，原本的自定义链接格式：<br><code>![$fileName|left]($url)</code><br>修改后的自定义链接格式：<br><code>&lt;div style=&quot;display:inline-block;&quot;&gt;&lt;img width=&quot;100%&quot; style=&quot;float:left; margin-right: 10px;&quot; src=&quot;$url&quot; alt=&quot;$fileName&quot;&gt;&lt;/div&gt;</code><br>实际效果： </p>
+<ul>
+<li>靠左显示：<div style="display:inline-block;"><img width="15%" style="float:left; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522144603.png" alt="20230522144603"></div></li>
+<li>居中显示：<div style="display:inline-block;"><img width="15%" style="float:center; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522144603.png" alt="20230522144603"></div></li>
+<li>靠右显示：<div style="display:inline-block;"><img width="15%" style="float:right; margin-right: 10px;" src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230522144603.png" alt="20230522144603"></div></li>
+</ul>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a href="https://blog.csdn.net/weixin_45509582/article/details/108582689">hexo插入图片及控制大小_AlexClownfish的博客-CSDN博客</a></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>每日文章</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客next主题添加点击特效</title>
     <url>/2023/05/06/23%20Hexo%E5%8D%9A%E5%AE%A2next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88/</url>
     <content><![CDATA[<blockquote>
@@ -1171,65 +1171,6 @@ PS: 原本的语法：
         <tag>每日文章</tag>
         <tag>github</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>组件世界-初体验</title>
-    <url>/2023/04/23/25%20obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/</url>
-    <content><![CDATA[<blockquote>
-<p>🌈<strong>Description</strong>：<br>​	逛网站的时候看到的组件库，感觉很漂亮，记录并实验看下效果。<br>    我用的是 obsidian，所以本文是基于 obsidian 来实验组件世界的效果。</p>
-</blockquote>
-<span id="more"></span>
-
-<h3 id="组件世界-介绍"><a href="#组件世界-介绍" class="headerlink" title="组件世界-介绍"></a>组件世界-介绍</h3><p>一个服务于 <strong>Notion 类</strong>产品、<strong>双链笔记类</strong>产品、<strong>代码托管平台</strong>「GitHub 等」、<strong>博客系统</strong>「WordPress」以及为知笔记等文本编辑器的可嵌入式小组件库。<br>一个辅助用户建立个性化、可视化的<strong>仪表盘</strong>或者<strong>知识库</strong>的工具。<br><strong>官网地址</strong>：<a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a></p>
-<h3 id="组件世界-功能"><a href="#组件世界-功能" class="headerlink" title="组件世界-功能"></a>组件世界-功能</h3><p>目前，「组件世界&#x2F;WidgetStore」提供<strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化、效率时代「博客」</strong>。</p>
-<h3 id="组件世界-支持的平台"><a href="#组件世界-支持的平台" class="headerlink" title="组件世界-支持的平台"></a>组件世界-支持的平台</h3><p><strong>Notion 类笔记软件</strong>：包括 Notion、FlowUs 息流笔记 <a href="https://www.zhihu.com/people/8b64b81de4123ec48f2f75c1b254929c">@FlowUs</a>、Wolai 我来云笔记、ClickUp、Coda、Anytype. 以及将来支持网页嵌入的印象笔记 Verse、微软 Microsoft Loop、妙记多 <a href="https://www.zhihu.com/people/38a9626ec5cde25f8653f9dd082da795">@妙记多Mojidoc</a> ……<br><strong>双链笔记软件</strong>，比如 Roam Research、Obsidian 黑曜石、Logseq、RemNote、思源笔记、Roam Edit、HuluNote 葫芦笔记。<br><strong>其他编辑器</strong>：为知笔记 WizNote<br><strong>代码托管平台</strong>：Github、Gitee、Gitlab<br><strong>博客平台</strong>：Wordpress<br><img src="https://pic4.zhimg.com/80/v2-5395c20620c0ae38d30839b233c44c67_1440w.webp" alt="|475"></p>
-<h3 id="组件世界-特点"><a href="#组件世界-特点" class="headerlink" title="组件世界-特点"></a>组件世界-特点</h3><p><strong>小组件类型丰富</strong>。目前，「组件世界&#x2F;WidgetStore」提供了包括 <strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化</strong> 等多种服务，可以为笔记用户<strong>提供适用于时间管理、任务管理、资讯管理、习惯养成、学习等多种使用场景的解决方案</strong>。比如，在基础组件中包括天气、时钟、番茄钟、倒计时、日历、纪念日、习惯打卡、访客统计、白噪音、热力图、微博热搜、百度统计埋点等多种类型等小组件。<br><strong>小组件服务稳定</strong>。相比国外同类产品，服务稳定，使用十分方便。<br><strong>小组件支持个性化定制</strong>。小组件支持文字字体、颜色、数字等基础信息的组件设置。与此同时，小组件也支持小组件外观背景等公共配置。<br><strong>小组件平台化</strong>。目前，「组件世界&#x2F;WidgetStore」正在快速迭代中。并且，「组件世界&#x2F;WidgetStore」支持第三方开发者参与开发小组件，共建社区生态。</p>
-<h3 id="实际使用体验"><a href="#实际使用体验" class="headerlink" title="实际使用体验"></a>实际使用体验</h3><h4 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h4><p>官网: <a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a><br>微信登陆。免费版 and 付费版的差异：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230423133519.png" alt="20230423133519|left|775"></p>
-<p>免费版用于体验体验还是不错的。39.9 元&#x2F;年那个套餐看起来还不错的，有需要的可以试试。</p>
-<h4 id="天气预报"><a href="#天气预报" class="headerlink" title="天气预报"></a>天气预报</h4><p>创建该组件，获取 url 地址：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f</span><br></pre></td></tr></table></figure>
-
-<p>替换下面的 url 地址：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span>  <span class="attr">src</span>=<span class="string">&quot;https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">width</span>=<span class="string">&quot;300&quot;</span> <span class="attr">height</span>=<span class="string">&quot;300&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>实际效果：</p>
-<iframe  src="https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f" frameborder="0" width="400" height="300" ></iframe>
-
-<h4 id="节假日倒计时"><a href="#节假日倒计时" class="headerlink" title="节假日倒计时"></a>节假日倒计时</h4><p>配置同上，实际效果：</p>
-<iframe  src="https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d" frameborder="0" width="300" height="300" ></iframe>
-#### 动态日历
-<iframe  src="https://swg.notion.pet/s/1923d7786444c5b90003a5f02b42821d" frameborder="0" width="100" height="100" ></iframe>
-
-<h4 id="卡片胶囊倒计时"><a href="#卡片胶囊倒计时" class="headerlink" title="卡片胶囊倒计时"></a>卡片胶囊倒计时</h4><iframe  src="https://swg.notion.pet/s/bg-873d64f46444c657000518ee33dd78b0" frameborder="0" width="500" height="300" ></iframe>
-#### 图表类型
-折线图、饼状图、柱状图等需要 notion 数据库，目前用 obsidian，所以这部分无法尝试。
-
-<h3 id="实际使用感受"><a href="#实际使用感受" class="headerlink" title="实际使用感受"></a>实际使用感受</h3><p>obsidian 使用组件世界基本玩的差不多了，总体感觉：眼睛一亮，后续仍然需要加强。<br>如果说到建议的话：</p>
-<ul>
-<li>免费账户政策 bug： <ul>
-<li>免费账户只可以使用 2 个小组件，这个里面其实是有个政策 bug 的。因为任意一个账号创建的小组件，都可以免费的给任何用。（例如上文中的天气组件，你们都可以随便用）那么，如果我有几个小伙伴，每个人都注册一个这样的账号，然后创建各不相同的组件，然后共享。这样分分钟钟就可以用遍所有小组件。 </li>
-<li>当然我没有这样做，这样做挺没意思的。我们还是要支持正版软件的良性循环。</li>
-</ul>
-</li>
-<li>图表类型组件数据库支持类型太少了：<ul>
-<li>正如官网上所说，目前只支持 notion，这个对 obsidian 不太友好。</li>
-</ul>
-</li>
-<li>网上免费的资源有许多可以实现同等效果：<ul>
-<li>例如：<a href="https://tianqiapi.com/api.php?style=tw&skin=pitaya">苏州天气预报 - TianqiAPI.com</a> 也可以实现同等的效果，所以用户依赖性不是很强。<div>
-<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tw&skin=pitaya" frameborder="0" width="500" height="500" allowtransparency="true"></iframe>
-</div>
-好了，今天就到这里了，有什么想法欢迎给我留言。thanks❤</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
-<li><a href="https://zhuanlan.zhihu.com/p/582745338">「组件世界&#x2F;WidgetStore」 ：一个丰富、强大的嵌入式小组件库 - 知乎</a></li>
-<li></li>
-<li></li>
-</ol>
-]]></content>
   </entry>
   <entry>
     <title>OpenAI ChatGPT3.5-turbo实际解决问题能力评测</title>
@@ -1304,6 +1245,65 @@ PS: 原本的语法：
       </tags>
   </entry>
   <entry>
+    <title>组件世界-初体验</title>
+    <url>/2023/04/23/25%20obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/</url>
+    <content><![CDATA[<blockquote>
+<p>🌈<strong>Description</strong>：<br>​	逛网站的时候看到的组件库，感觉很漂亮，记录并实验看下效果。<br>    我用的是 obsidian，所以本文是基于 obsidian 来实验组件世界的效果。</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="组件世界-介绍"><a href="#组件世界-介绍" class="headerlink" title="组件世界-介绍"></a>组件世界-介绍</h3><p>一个服务于 <strong>Notion 类</strong>产品、<strong>双链笔记类</strong>产品、<strong>代码托管平台</strong>「GitHub 等」、<strong>博客系统</strong>「WordPress」以及为知笔记等文本编辑器的可嵌入式小组件库。<br>一个辅助用户建立个性化、可视化的<strong>仪表盘</strong>或者<strong>知识库</strong>的工具。<br><strong>官网地址</strong>：<a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a></p>
+<h3 id="组件世界-功能"><a href="#组件世界-功能" class="headerlink" title="组件世界-功能"></a>组件世界-功能</h3><p>目前，「组件世界&#x2F;WidgetStore」提供<strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化、效率时代「博客」</strong>。</p>
+<h3 id="组件世界-支持的平台"><a href="#组件世界-支持的平台" class="headerlink" title="组件世界-支持的平台"></a>组件世界-支持的平台</h3><p><strong>Notion 类笔记软件</strong>：包括 Notion、FlowUs 息流笔记 <a href="https://www.zhihu.com/people/8b64b81de4123ec48f2f75c1b254929c">@FlowUs</a>、Wolai 我来云笔记、ClickUp、Coda、Anytype. 以及将来支持网页嵌入的印象笔记 Verse、微软 Microsoft Loop、妙记多 <a href="https://www.zhihu.com/people/38a9626ec5cde25f8653f9dd082da795">@妙记多Mojidoc</a> ……<br><strong>双链笔记软件</strong>，比如 Roam Research、Obsidian 黑曜石、Logseq、RemNote、思源笔记、Roam Edit、HuluNote 葫芦笔记。<br><strong>其他编辑器</strong>：为知笔记 WizNote<br><strong>代码托管平台</strong>：Github、Gitee、Gitlab<br><strong>博客平台</strong>：Wordpress<br><img src="https://pic4.zhimg.com/80/v2-5395c20620c0ae38d30839b233c44c67_1440w.webp" alt="|475"></p>
+<h3 id="组件世界-特点"><a href="#组件世界-特点" class="headerlink" title="组件世界-特点"></a>组件世界-特点</h3><p><strong>小组件类型丰富</strong>。目前，「组件世界&#x2F;WidgetStore」提供了包括 <strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化</strong> 等多种服务，可以为笔记用户<strong>提供适用于时间管理、任务管理、资讯管理、习惯养成、学习等多种使用场景的解决方案</strong>。比如，在基础组件中包括天气、时钟、番茄钟、倒计时、日历、纪念日、习惯打卡、访客统计、白噪音、热力图、微博热搜、百度统计埋点等多种类型等小组件。<br><strong>小组件服务稳定</strong>。相比国外同类产品，服务稳定，使用十分方便。<br><strong>小组件支持个性化定制</strong>。小组件支持文字字体、颜色、数字等基础信息的组件设置。与此同时，小组件也支持小组件外观背景等公共配置。<br><strong>小组件平台化</strong>。目前，「组件世界&#x2F;WidgetStore」正在快速迭代中。并且，「组件世界&#x2F;WidgetStore」支持第三方开发者参与开发小组件，共建社区生态。</p>
+<h3 id="实际使用体验"><a href="#实际使用体验" class="headerlink" title="实际使用体验"></a>实际使用体验</h3><h4 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h4><p>官网: <a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a><br>微信登陆。免费版 and 付费版的差异：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230423133519.png" alt="20230423133519|left|775"></p>
+<p>免费版用于体验体验还是不错的。39.9 元&#x2F;年那个套餐看起来还不错的，有需要的可以试试。</p>
+<h4 id="天气预报"><a href="#天气预报" class="headerlink" title="天气预报"></a>天气预报</h4><p>创建该组件，获取 url 地址：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f</span><br></pre></td></tr></table></figure>
+
+<p>替换下面的 url 地址：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span>  <span class="attr">src</span>=<span class="string">&quot;https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">width</span>=<span class="string">&quot;300&quot;</span> <span class="attr">height</span>=<span class="string">&quot;300&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>实际效果：</p>
+<iframe  src="https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f" frameborder="0" width="400" height="300" ></iframe>
+
+<h4 id="节假日倒计时"><a href="#节假日倒计时" class="headerlink" title="节假日倒计时"></a>节假日倒计时</h4><p>配置同上，实际效果：</p>
+<iframe  src="https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d" frameborder="0" width="300" height="300" ></iframe>
+#### 动态日历
+<iframe  src="https://swg.notion.pet/s/1923d7786444c5b90003a5f02b42821d" frameborder="0" width="100" height="100" ></iframe>
+
+<h4 id="卡片胶囊倒计时"><a href="#卡片胶囊倒计时" class="headerlink" title="卡片胶囊倒计时"></a>卡片胶囊倒计时</h4><iframe  src="https://swg.notion.pet/s/bg-873d64f46444c657000518ee33dd78b0" frameborder="0" width="500" height="300" ></iframe>
+#### 图表类型
+折线图、饼状图、柱状图等需要 notion 数据库，目前用 obsidian，所以这部分无法尝试。
+
+<h3 id="实际使用感受"><a href="#实际使用感受" class="headerlink" title="实际使用感受"></a>实际使用感受</h3><p>obsidian 使用组件世界基本玩的差不多了，总体感觉：眼睛一亮，后续仍然需要加强。<br>如果说到建议的话：</p>
+<ul>
+<li>免费账户政策 bug： <ul>
+<li>免费账户只可以使用 2 个小组件，这个里面其实是有个政策 bug 的。因为任意一个账号创建的小组件，都可以免费的给任何用。（例如上文中的天气组件，你们都可以随便用）那么，如果我有几个小伙伴，每个人都注册一个这样的账号，然后创建各不相同的组件，然后共享。这样分分钟钟就可以用遍所有小组件。 </li>
+<li>当然我没有这样做，这样做挺没意思的。我们还是要支持正版软件的良性循环。</li>
+</ul>
+</li>
+<li>图表类型组件数据库支持类型太少了：<ul>
+<li>正如官网上所说，目前只支持 notion，这个对 obsidian 不太友好。</li>
+</ul>
+</li>
+<li>网上免费的资源有许多可以实现同等效果：<ul>
+<li>例如：<a href="https://tianqiapi.com/api.php?style=tw&skin=pitaya">苏州天气预报 - TianqiAPI.com</a> 也可以实现同等的效果，所以用户依赖性不是很强。<div>
+<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tw&skin=pitaya" frameborder="0" width="500" height="500" allowtransparency="true"></iframe>
+</div>
+好了，今天就到这里了，有什么想法欢迎给我留言。thanks❤</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/582745338">「组件世界&#x2F;WidgetStore」 ：一个丰富、强大的嵌入式小组件库 - 知乎</a></li>
+<li></li>
+<li></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>Python爬虫下载听风的蚕电子战全集视频</title>
     <url>/2025/04/14/30%20Python%E7%88%AC%E8%99%AB%E4%B8%8B%E8%BD%BD%E5%90%AC%E9%A3%8E%E7%9A%84%E8%9A%95%E7%94%B5%E5%AD%90%E6%88%98%E5%85%A8%E9%9B%86%E8%A7%86%E9%A2%91/</url>
     <content><![CDATA[<span id="more"></span>
@@ -1331,7 +1331,7 @@ PS: 原本的语法：
 ]]></content>
   </entry>
   <entry>
-    <title>21 Python桌面软件接入Deepseek</title>
+    <title>Python桌面软件接入Deepseek</title>
     <url>/2025/04/21/Python%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%85%A5Deepseek/</url>
     <content><![CDATA[<span id="more"></span>
 
