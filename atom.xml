@@ -18,8 +18,8 @@
   
   <entry>
     <title>深度评测：腾讯元宝AI助手的全面体验</title>
-    <link href="https://weicun581.github.io/2025/04/22/AI%20%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D%E8%AF%84%E6%B5%8B_AI/"/>
-    <id>https://weicun581.github.io/2025/04/22/AI%20%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D%E8%AF%84%E6%B5%8B_AI/</id>
+    <link href="https://weicun581.github.io/2025/04/22/AI%20%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D%E8%AF%84%E6%B5%8B/"/>
+    <id>https://weicun581.github.io/2025/04/22/AI%20%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D%E8%AF%84%E6%B5%8B/</id>
     <published>2025-04-22T03:19:00.000Z</published>
     <updated>2025-04-22T03:25:22.438Z</updated>
     
@@ -32,25 +32,6 @@
     
     
     <category term="AI" scheme="https://weicun581.github.io/tags/AI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>15 AI 腾讯元宝评测</title>
-    <link href="https://weicun581.github.io/2025/04/22/AI%20%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D%E8%AF%84%E6%B5%8B/"/>
-    <id>https://weicun581.github.io/2025/04/22/AI%20%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D%E8%AF%84%E6%B5%8B/</id>
-    <published>2025-04-22T01:16:00.000Z</published>
-    <updated>2025-04-22T03:17:36.336Z</updated>
-    
-    <content type="html"><![CDATA[<span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>今日打开微信的时候，发现可以使用插件功能了，也许是我落伍了，刚发现可以使用这个功能。<br>于是，就打开了插件：腾讯元宝，下载页面：<a href="https://yuanbao.tencent.com/evt/dl?tridChannel=wx.wxplug.x&pkgChId=10014">前往元宝</a></p><h3 id="功能简述"><a href="#功能简述" class="headerlink" title="功能简述"></a>功能简述</h3><p>根据官网的描述特殊功能主要有：</p><ul><li>高速专线 稳定体验</li><li>联网搜索 公众号信源</li><li>智能识图 搜索万物</li><li>文件秒读 全面解析</li></ul><p>看起来还蛮有吸引力的，待会逐个评测一下试试。</p><h3 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h3><p>下载安装包： <code>yuanbao_10014_x64.exe</code>，双击运行进行安装。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111348.jpg" alt="Pasted image 20250422092543.png">我一般会安装在D盘，避免C盘放太多东西，这样可以节省很多麻烦。<br>安装完成后，微信账户登录即可。<br>首次使用需要手机号验证，当然，你也可以跳过。</p><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111352.jpg" alt="Pasted image 20250422092847.png"></p><h3 id="具体功能评测"><a href="#具体功能评测" class="headerlink" title="具体功能评测"></a>具体功能评测</h3><h4 id="1、划词工具栏"><a href="#1、划词工具栏" class="headerlink" title="1、划词工具栏"></a>1、划词工具栏</h4><p>坦白说，之前有过很多划词工具，主要的需求还是：翻译功能。<br>但是，后来因为种种原因都被我禁用了，要么是效果不好，要么是有广告，那么元宝的划词工具栏怎么样呢？<br>我们来试试吧。</p><h5 id="翻译功能"><a href="#翻译功能" class="headerlink" title="翻译功能"></a>翻译功能</h5><p>整句翻译功：能还不错！<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111355.jpg" alt="Pasted image 20250422095554.png"><br>单个词组翻译：只有意思解释，没有发音、音标。一般！<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111358.jpg" alt="Pasted image 20250422095742.png">##### 搜索功能<br>整体使用下来，感觉跟deepseek非常相似，非常不错的一点是：</p><ol><li>即滑即用。</li><li>按esc可以快速退出，避免影响阅读体验。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111401.jpg" alt="Pasted image 20250422100038.png"><br>总结：还不错，没有惊喜，也没有槽点。</li></ol><h4 id="2、高速专线-稳定体验"><a href="#2、高速专线-稳定体验" class="headerlink" title="2、高速专线 稳定体验"></a>2、高速专线 稳定体验</h4><p>总结：告诉没感觉到，稳定性倒是不错。哈哈哈</p><h4 id="3、联网搜索-公众号信源"><a href="#3、联网搜索-公众号信源" class="headerlink" title="3、联网搜索 公众号信源"></a>3、联网搜索 公众号信源</h4><p>这里搜索一篇 <code>干货满满小客栈</code>的文章：<code>《小白玩转YOLO第一篇：最简单的效果》</code><br>搜索效果还可以：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111405.jpg" alt="Pasted image 20250422102157.png">但是，当我尝试从搜索结果中的链接打开时，却得到了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111409.jpg" alt="Pasted image 20250422102232.png"><br>总结：有总比没有强吧。</p><h4 id="4、智能识图-搜索万物"><a href="#4、智能识图-搜索万物" class="headerlink" title="4、智能识图 搜索万物"></a>4、智能识图 搜索万物</h4><p>图片搜索测试：</p><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111412.jpg" alt="Pasted image 20250422102451.png"><br>文字生成图片：</p><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111415.jpg" alt="Pasted image 20250422102608.png"><br>总结：优异，符合预期，超过其它AI工具。</p><h4 id="5、文件秒读-全面解析"><a href="#5、文件秒读-全面解析" class="headerlink" title="5、文件秒读 全面解析"></a>5、文件秒读 全面解析</h4><p>上传一份文件：<code>《优雅的编译ui文件到py文件.md》</code><br>测试效果：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111419.jpg" alt="Pasted image 20250422104012.png"><br>测试结果：的确可以解析文档。<br>但是在，这种读取文件、理解文件，回答用户问题，感觉是需要大量文件投喂，然后才能从宏观上看到效果。<br>单一文件测试感觉一般般啦。</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul><li>高速专线 稳定体验      （一般）⭐⭐⭐</li><li>联网搜索 公众号信源   （一般）⭐⭐⭐</li><li>智能识图 搜索万物      （良好）⭐⭐⭐⭐</li><li>文件秒读 全面解析      （良好）⭐⭐⭐⭐</li></ul><p>腾讯元宝整体评价：（良好）⭐⭐⭐⭐</p>]]></content>
-    
-    
-    <summary type="html"></summary>
-    
-    
-    
-    
-    <category term="每日文章" scheme="https://weicun581.github.io/tags/%E6%AF%8F%E6%97%A5%E6%96%87%E7%AB%A0/"/>
     
   </entry>
   
@@ -415,6 +396,25 @@
     
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	Agent GPT 主要的AI 功能就是建立在原版的AutoGPT 之上，然后再加上图形介面，这样阅读起来比较容易也比较方便。&lt;br&gt;相较于ChatGPT，它具有：互联网搜索查询功能、任务拆解各个执行然后串联能力。&lt;br&gt;它能够根据用户需求，在用户完全不插手的情况下自主执行任务，包括日常的事件分析、营销方案撰写、代码编程、数学运算等事务都能代劳。&lt;br&gt;这里我会按照AgentGPT 官方所建议的步骤，一步一步教搭建安装并体验AgentGPT。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>组件世界-初体验</title>
+    <link href="https://weicun581.github.io/2023/04/23/25%20obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/"/>
+    <id>https://weicun581.github.io/2023/04/23/25%20obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/</id>
+    <published>2023-04-23T05:23:00.000Z</published>
+    <updated>2023-04-23T06:04:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>🌈<strong>Description</strong>：<br>​逛网站的时候看到的组件库，感觉很漂亮，记录并实验看下效果。<br>    我用的是 obsidian，所以本文是基于 obsidian 来实验组件世界的效果。</p></blockquote><span id="more"></span><h3 id="组件世界-介绍"><a href="#组件世界-介绍" class="headerlink" title="组件世界-介绍"></a>组件世界-介绍</h3><p>一个服务于 <strong>Notion 类</strong>产品、<strong>双链笔记类</strong>产品、<strong>代码托管平台</strong>「GitHub 等」、<strong>博客系统</strong>「WordPress」以及为知笔记等文本编辑器的可嵌入式小组件库。<br>一个辅助用户建立个性化、可视化的<strong>仪表盘</strong>或者<strong>知识库</strong>的工具。<br><strong>官网地址</strong>：<a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a></p><h3 id="组件世界-功能"><a href="#组件世界-功能" class="headerlink" title="组件世界-功能"></a>组件世界-功能</h3><p>目前，「组件世界&#x2F;WidgetStore」提供<strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化、效率时代「博客」</strong>。</p><h3 id="组件世界-支持的平台"><a href="#组件世界-支持的平台" class="headerlink" title="组件世界-支持的平台"></a>组件世界-支持的平台</h3><p><strong>Notion 类笔记软件</strong>：包括 Notion、FlowUs 息流笔记 <a href="https://www.zhihu.com/people/8b64b81de4123ec48f2f75c1b254929c">@FlowUs</a>、Wolai 我来云笔记、ClickUp、Coda、Anytype. 以及将来支持网页嵌入的印象笔记 Verse、微软 Microsoft Loop、妙记多 <a href="https://www.zhihu.com/people/38a9626ec5cde25f8653f9dd082da795">@妙记多Mojidoc</a> ……<br><strong>双链笔记软件</strong>，比如 Roam Research、Obsidian 黑曜石、Logseq、RemNote、思源笔记、Roam Edit、HuluNote 葫芦笔记。<br><strong>其他编辑器</strong>：为知笔记 WizNote<br><strong>代码托管平台</strong>：Github、Gitee、Gitlab<br><strong>博客平台</strong>：Wordpress<br><img src="https://pic4.zhimg.com/80/v2-5395c20620c0ae38d30839b233c44c67_1440w.webp" alt="|475"></p><h3 id="组件世界-特点"><a href="#组件世界-特点" class="headerlink" title="组件世界-特点"></a>组件世界-特点</h3><p><strong>小组件类型丰富</strong>。目前，「组件世界&#x2F;WidgetStore」提供了包括 <strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化</strong> 等多种服务，可以为笔记用户<strong>提供适用于时间管理、任务管理、资讯管理、习惯养成、学习等多种使用场景的解决方案</strong>。比如，在基础组件中包括天气、时钟、番茄钟、倒计时、日历、纪念日、习惯打卡、访客统计、白噪音、热力图、微博热搜、百度统计埋点等多种类型等小组件。<br><strong>小组件服务稳定</strong>。相比国外同类产品，服务稳定，使用十分方便。<br><strong>小组件支持个性化定制</strong>。小组件支持文字字体、颜色、数字等基础信息的组件设置。与此同时，小组件也支持小组件外观背景等公共配置。<br><strong>小组件平台化</strong>。目前，「组件世界&#x2F;WidgetStore」正在快速迭代中。并且，「组件世界&#x2F;WidgetStore」支持第三方开发者参与开发小组件，共建社区生态。</p><h3 id="实际使用体验"><a href="#实际使用体验" class="headerlink" title="实际使用体验"></a>实际使用体验</h3><h4 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h4><p>官网: <a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a><br>微信登陆。免费版 and 付费版的差异：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230423133519.png" alt="20230423133519|left|775"></p><p>免费版用于体验体验还是不错的。39.9 元&#x2F;年那个套餐看起来还不错的，有需要的可以试试。</p><h4 id="天气预报"><a href="#天气预报" class="headerlink" title="天气预报"></a>天气预报</h4><p>创建该组件，获取 url 地址：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f</span><br></pre></td></tr></table></figure><p>替换下面的 url 地址：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span>  <span class="attr">src</span>=<span class="string">&quot;https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">width</span>=<span class="string">&quot;300&quot;</span> <span class="attr">height</span>=<span class="string">&quot;300&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><p>实际效果：</p><iframe  src="https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f" frameborder="0" width="400" height="300" ></iframe><h4 id="节假日倒计时"><a href="#节假日倒计时" class="headerlink" title="节假日倒计时"></a>节假日倒计时</h4><p>配置同上，实际效果：</p><iframe  src="https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d" frameborder="0" width="300" height="300" ></iframe>#### 动态日历<iframe  src="https://swg.notion.pet/s/1923d7786444c5b90003a5f02b42821d" frameborder="0" width="100" height="100" ></iframe><h4 id="卡片胶囊倒计时"><a href="#卡片胶囊倒计时" class="headerlink" title="卡片胶囊倒计时"></a>卡片胶囊倒计时</h4><iframe  src="https://swg.notion.pet/s/bg-873d64f46444c657000518ee33dd78b0" frameborder="0" width="500" height="300" ></iframe>#### 图表类型折线图、饼状图、柱状图等需要 notion 数据库，目前用 obsidian，所以这部分无法尝试。<h3 id="实际使用感受"><a href="#实际使用感受" class="headerlink" title="实际使用感受"></a>实际使用感受</h3><p>obsidian 使用组件世界基本玩的差不多了，总体感觉：眼睛一亮，后续仍然需要加强。<br>如果说到建议的话：</p><ul><li>免费账户政策 bug： <ul><li>免费账户只可以使用 2 个小组件，这个里面其实是有个政策 bug 的。因为任意一个账号创建的小组件，都可以免费的给任何用。（例如上文中的天气组件，你们都可以随便用）那么，如果我有几个小伙伴，每个人都注册一个这样的账号，然后创建各不相同的组件，然后共享。这样分分钟钟就可以用遍所有小组件。 </li><li>当然我没有这样做，这样做挺没意思的。我们还是要支持正版软件的良性循环。</li></ul></li><li>图表类型组件数据库支持类型太少了：<ul><li>正如官网上所说，目前只支持 notion，这个对 obsidian 不太友好。</li></ul></li><li>网上免费的资源有许多可以实现同等效果：<ul><li>例如：<a href="https://tianqiapi.com/api.php?style=tw&skin=pitaya">苏州天气预报 - TianqiAPI.com</a> 也可以实现同等的效果，所以用户依赖性不是很强。<div><iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tw&skin=pitaya" frameborder="0" width="500" height="500" allowtransparency="true"></iframe></div>好了，今天就到这里了，有什么想法欢迎给我留言。thanks❤</li></ul></li></ul><hr><h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol><li><a href="https://zhuanlan.zhihu.com/p/582745338">「组件世界&#x2F;WidgetStore」 ：一个丰富、强大的嵌入式小组件库 - 知乎</a></li><li></li><li></li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	逛网站的时候看到的组件库，感觉很漂亮，记录并实验看下效果。&lt;br&gt;    我用的是 obsidian，所以本文是基于 obsidian 来实验组件世界的效果。&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
