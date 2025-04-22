@@ -1304,6 +1304,137 @@ PS: 原本的语法：
       </tags>
   </entry>
   <entry>
+    <title>15 AI 腾讯元宝评测</title>
+    <url>/2025/04/22/AI%20%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D%E8%AF%84%E6%B5%8B/</url>
+    <content><![CDATA[<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>今日打开微信的时候，发现可以使用插件功能了，也许是我落伍了，刚发现可以使用这个功能。<br>于是，就打开了插件：腾讯元宝，下载页面：<a href="https://yuanbao.tencent.com/evt/dl?tridChannel=wx.wxplug.x&pkgChId=10014">前往元宝</a></p>
+<h3 id="功能简述"><a href="#功能简述" class="headerlink" title="功能简述"></a>功能简述</h3><p>根据官网的描述特殊功能主要有：</p>
+<ul>
+<li>高速专线 稳定体验</li>
+<li>联网搜索 公众号信源</li>
+<li>智能识图 搜索万物</li>
+<li>文件秒读 全面解析</li>
+</ul>
+<p>看起来还蛮有吸引力的，待会逐个评测一下试试。</p>
+<h3 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h3><p>下载安装包： <code>yuanbao_10014_x64.exe</code>，双击运行进行安装。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111348.jpg" alt="Pasted image 20250422092543.png">我一般会安装在D盘，避免C盘放太多东西，这样可以节省很多麻烦。<br>安装完成后，微信账户登录即可。<br>首次使用需要手机号验证，当然，你也可以跳过。</p>
+<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111352.jpg" alt="Pasted image 20250422092847.png"></p>
+<h3 id="具体功能评测"><a href="#具体功能评测" class="headerlink" title="具体功能评测"></a>具体功能评测</h3><h4 id="1、划词工具栏"><a href="#1、划词工具栏" class="headerlink" title="1、划词工具栏"></a>1、划词工具栏</h4><p>坦白说，之前有过很多划词工具，主要的需求还是：翻译功能。<br>但是，后来因为种种原因都被我禁用了，要么是效果不好，要么是有广告，那么元宝的划词工具栏怎么样呢？<br>我们来试试吧。</p>
+<h5 id="翻译功能"><a href="#翻译功能" class="headerlink" title="翻译功能"></a>翻译功能</h5><p>整句翻译功：能还不错！<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111355.jpg" alt="Pasted image 20250422095554.png"><br>单个词组翻译：只有意思解释，没有发音、音标。一般！<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111358.jpg" alt="Pasted image 20250422095742.png">##### 搜索功能<br>整体使用下来，感觉跟deepseek非常相似，非常不错的一点是：</p>
+<ol>
+<li>即滑即用。</li>
+<li>按esc可以快速退出，避免影响阅读体验。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111401.jpg" alt="Pasted image 20250422100038.png"><br>总结：还不错，没有惊喜，也没有槽点。</li>
+</ol>
+<h4 id="2、高速专线-稳定体验"><a href="#2、高速专线-稳定体验" class="headerlink" title="2、高速专线 稳定体验"></a>2、高速专线 稳定体验</h4><p>总结：告诉没感觉到，稳定性倒是不错。哈哈哈</p>
+<h4 id="3、联网搜索-公众号信源"><a href="#3、联网搜索-公众号信源" class="headerlink" title="3、联网搜索 公众号信源"></a>3、联网搜索 公众号信源</h4><p>这里搜索一篇 <code>干货满满小客栈</code>的文章：<code>《小白玩转YOLO第一篇：最简单的效果》</code><br>搜索效果还可以：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111405.jpg" alt="Pasted image 20250422102157.png">但是，当我尝试从搜索结果中的链接打开时，却得到了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111409.jpg" alt="Pasted image 20250422102232.png"><br>总结：有总比没有强吧。</p>
+<h4 id="4、智能识图-搜索万物"><a href="#4、智能识图-搜索万物" class="headerlink" title="4、智能识图 搜索万物"></a>4、智能识图 搜索万物</h4><p>图片搜索测试：</p>
+<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111412.jpg" alt="Pasted image 20250422102451.png"><br>文字生成图片：</p>
+<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111415.jpg" alt="Pasted image 20250422102608.png"><br>总结：优异，符合预期，超过其它AI工具。</p>
+<h4 id="5、文件秒读-全面解析"><a href="#5、文件秒读-全面解析" class="headerlink" title="5、文件秒读 全面解析"></a>5、文件秒读 全面解析</h4><p>上传一份文件：<code>《优雅的编译ui文件到py文件.md》</code><br>测试效果：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111419.jpg" alt="Pasted image 20250422104012.png"><br>测试结果：的确可以解析文档。<br>但是在，这种读取文件、理解文件，回答用户问题，感觉是需要大量文件投喂，然后才能从宏观上看到效果。<br>单一文件测试感觉一般般啦。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>高速专线 稳定体验      （一般）⭐⭐⭐</li>
+<li>联网搜索 公众号信源   （一般）⭐⭐⭐</li>
+<li>智能识图 搜索万物      （良好）⭐⭐⭐⭐</li>
+<li>文件秒读 全面解析      （良好）⭐⭐⭐⭐</li>
+</ul>
+<p>腾讯元宝整体评价：（良好）⭐⭐⭐⭐</p>
+]]></content>
+      <tags>
+        <tag>每日文章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度评测：腾讯元宝AI助手的全面体验</title>
+    <url>/2025/04/22/AI%20%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D%E8%AF%84%E6%B5%8B_AI/</url>
+    <content><![CDATA[<span id="more"></span>
+
+
+
+
+<h1 id="深度评测：腾讯元宝AI助手的全面体验"><a href="#深度评测：腾讯元宝AI助手的全面体验" class="headerlink" title="深度评测：腾讯元宝AI助手的全面体验"></a>深度评测：腾讯元宝AI助手的全面体验</h1><h2 id="前言：我与AI的初次邂逅"><a href="#前言：我与AI的初次邂逅" class="headerlink" title="前言：我与AI的初次邂逅"></a>前言：我与AI的初次邂逅</h2><p>在这个人工智能时代，各种AI工具如雨后春笋般涌现。作为一个对新技术充满好奇的用户，我总是迫不及待地想体验各种AI产品。某天打开微信时，我意外发现已经可以使用插件功能了（或许我有些落伍，现在才发现这个功能）。在众多插件中，”腾讯元宝”引起了我的注意。它的官网宣称这是一款集结多项强大功能的AI助手，这激发了我浓厚的兴趣。于是，我决定亲自下载体验，并将使用感受记录下来与大家分享。</p>
+<p>官网下载页面：<a href="https://yuanbao.tencent.com/evt/dl?tridChannel=wx.wxplug.x&pkgChId=10014">腾讯元宝</a></p>
+<h2 id="功能概览：四大核心亮点"><a href="#功能概览：四大核心亮点" class="headerlink" title="功能概览：四大核心亮点"></a>功能概览：四大核心亮点</h2><p>根据官网介绍，腾讯元宝主要具有以下四个特色功能，每个功能都令人心动：</p>
+<ol>
+<li><strong>高速专线 稳定体验</strong>：承诺提供流畅无阻的使用体验</li>
+<li><strong>联网搜索 公众号信源</strong>：突破传统AI的局限性，可直接获取最新网络信息和微信生态内容</li>
+<li><strong>智能识图 搜索万物</strong>：强大的图片识别与分析能力</li>
+<li><strong>文件秒读 全面解析</strong>：对上传文件进行智能化处理的能力</li>
+</ol>
+<p>这些宣传点构筑起了我的期待，接下来我将通过实际使用来验证这些功能的真实表现。</p>
+<h2 id="安装体验：简单快捷，但非尽善尽美"><a href="#安装体验：简单快捷，但非尽善尽美" class="headerlink" title="安装体验：简单快捷，但非尽善尽美"></a>安装体验：简单快捷，但非尽善尽美</h2><h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><p>首先下载安装包<code>yuanbao_10014_x64.exe</code>，安装过程如同大多数Windows软件一样简单。出于个人习惯，我选择将软件安装在D盘以避免C盘空间不足的问题。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111348.jpg" alt="Pasted image 20250422092543.png|450"><br>安装完成后，通过微信账户直接登录即可使用。首次登录时需要进行手机号验证，不过用户可以选择跳过这一步骤。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111352.jpg" alt="Pasted image 20250422092847.png|285"></p>
+<h3 id="界面第一印象"><a href="#界面第一印象" class="headerlink" title="界面第一印象"></a>界面第一印象</h3><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422112338.png" alt="|425"><br>元宝的界面设计简洁大方，配色以蓝色为主，视觉效果干净专业。主界面分区明确，核心功能一目了然，整体布局符合现代软件设计的审美标准。</p>
+<h2 id="功能深度评测：亮点与不足并存"><a href="#功能深度评测：亮点与不足并存" class="headerlink" title="功能深度评测：亮点与不足并存"></a>功能深度评测：亮点与不足并存</h2><h3 id="1-划词工具栏：高效但有提升空间"><a href="#1-划词工具栏：高效但有提升空间" class="headerlink" title="1. 划词工具栏：高效但有提升空间"></a>1. 划词工具栏：高效但有提升空间</h3><p>划词工具是日常使用频率极高的功能，我曾尝试过多种类似工具，最终都因体验不佳或广告过多而放弃。腾讯元宝的表现究竟如何？</p>
+<h4 id="翻译功能评测"><a href="#翻译功能评测" class="headerlink" title="翻译功能评测"></a>翻译功能评测</h4><ul>
+<li><strong>整句翻译</strong>：<br>表现令人满意，翻译结果准确自然，几乎可以媲美专业翻译软件。在测试中，无论简单句子还是复杂段落，元宝都能给出符合语境的翻译结果。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111355.jpg" alt="Pasted image 20250422095554.png|300"></li>
+<li><strong>单词翻译</strong>：<br>相比之下略显简单，仅提供基础释义，缺乏音标、发音等语言学习者关注的关键信息。对于一个AI工具而言，这点确实有待改进。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111358.jpg" alt="Pasted image 20250422095742.png|300"></li>
+</ul>
+<h4 id="搜索功能体验"><a href="#搜索功能体验" class="headerlink" title="搜索功能体验"></a>搜索功能体验</h4><p>腾讯元宝的即划即用功能相当便捷，完全省去了传统复制粘贴的繁琐步骤。特别值得一提的是，用户可以通过简单的ESC键操作快速退出搜索界面，这一细节设计非常人性化，不会打断阅读体验。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111401.jpg" alt="Pasted image 20250422100038.png|500"><br>整体而言，划词工具栏的表现令人满意但没有特别惊艳之处，处于AI工具的”标准水平”。</p>
+<h3 id="2-高速专线：稳定胜过速度"><a href="#2-高速专线：稳定胜过速度" class="headerlink" title="2. 高速专线：稳定胜过速度"></a>2. 高速专线：稳定胜过速度</h3><p>官网宣传的”高速专线”功能在实际使用中感知并不明显。在连续使用的几小时测试中，系统确实保持稳定，没有出现卡顿或崩溃现象。响应速度上，与主流AI工具基本相当，没有感觉到明显的速度优势。</p>
+<p>这可能是因为：</p>
+<ol>
+<li>目前用户基数较小，服务器负载不高</li>
+<li>网络优化有待加强</li>
+<li>AI运算本就耗时，速度瓶颈难以突破</li>
+</ol>
+<h3 id="3-联网搜索：突破与局限并存"><a href="#3-联网搜索：突破与局限并存" class="headerlink" title="3. 联网搜索：突破与局限并存"></a>3. 联网搜索：突破与局限并存</h3><p>作为特色功能之一，联网搜索确实拓展了AI的能力边界。测试时，我专门搜索了一篇来自”干货满满小客栈”的文章《小白玩转YOLO第一篇：最简单的效果》，结果显示元宝能够准确定位到相关公众号内容。</p>
+<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111405.jpg" alt="联网搜索结果"></p>
+<p>然而尴尬的是，当尝试点击搜索结果中的链接时，却遭遇了”请在微信客户端打开链接”的限制提示。</p>
+<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111409.jpg" alt="链接打开失败"></p>
+<p>这种体验确实让人有些失落。不过客观来说，在当前技术条件下，能够实现微信内容检索已属难得。</p>
+<h3 id="4-智能识图：表现优异的亮点功能"><a href="#4-智能识图：表现优异的亮点功能" class="headerlink" title="4. 智能识图：表现优异的亮点功能"></a>4. 智能识图：表现优异的亮点功能</h3><p>腾讯元宝在图片处理能力上确实展示出了较高水准：</p>
+<ul>
+<li><p><strong>图片搜索</strong>：<br>上传一张包含多种元素的风景照片，AI能够准确识别图片中的主要物体、建筑类型，甚至能判断出大致拍摄季节。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111412.jpg" alt="Pasted image 20250422102451.png|450"></p>
+</li>
+<li><p><strong>文字生成图片</strong>：<br>输入简单描述后，生成的图片质量稳定，风格多样，能够较好地理解用户描述的意象。</p>
+</li>
+</ul>
+<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111415.jpg" alt="图片生成效果|450"></p>
+<p>这一功能的完成度远超同期其他AI工具，堪称元宝的”杀手锏”功能。</p>
+<h3 id="5-文件解析：潜力巨大但单次体验有限"><a href="#5-文件解析：潜力巨大但单次体验有限" class="headerlink" title="5. 文件解析：潜力巨大但单次体验有限"></a>5. 文件解析：潜力巨大但单次体验有限</h3><p>上传一份技术文档《优雅的编译ui文件到py文件.md》进行测试，AI确实能够准确理解文档内容并回答相关问题。</p>
+<p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111419.jpg" alt="文件解析界面|525"></p>
+<p>但值得注意的是，这种文档处理功能的价值往往需要在长期、大量文档处理中才能充分体现。对于单个文档测试，虽然能看出其解析能力，但难以全面评估真正的实用价值。</p>
+<h2 id="综合评分与使用建议"><a href="#综合评分与使用建议" class="headerlink" title="综合评分与使用建议"></a>综合评分与使用建议</h2><p>经过全面测试，我对腾讯元宝各项功能做出如下评价：</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>评分</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>高速专线 稳定体验</td>
+<td>⭐⭐⭐</td>
+<td>体验平稳但速度不突出</td>
+</tr>
+<tr>
+<td>联网搜索 公众号信源</td>
+<td>⭐⭐⭐</td>
+<td>突破性功能但受到微信生态限制</td>
+</tr>
+<tr>
+<td>智能识图 搜索万物</td>
+<td>⭐⭐⭐⭐</td>
+<td>表现优异，超过大多数同类产品</td>
+</tr>
+<tr>
+<td>文件秒读 全面解析</td>
+<td>⭐⭐⭐⭐</td>
+<td>功能实用但价值需长期使用才能体现</td>
+</tr>
+</tbody></table>
+<p><strong>整体评价：⭐⭐⭐⭐（良好）</strong></p>
+<p>腾讯元宝作为一款新兴AI工具，已经在多个方面展现出竞争力。特别是在图片处理方面确有独到之处，值得相关需求的用户尝试。虽然部分功能还有提升空间，但其整体完成度已经令人满意。随着持续迭代更新，相信会成为AI领域的强力选手。</p>
+<p>对于寻求稳定体验和创新功能的用户，腾讯元宝是一个值得考虑的选择。建议可以从最具优势的智能识图功能开始体验，逐步探索其他模块。</p>
+]]></content>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python桌面软件接入Deepseek</title>
     <url>/2025/04/21/Python%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%85%A5Deepseek/</url>
     <content><![CDATA[<span id="more"></span>
@@ -1368,33 +1499,6 @@ PS: 原本的语法：
       <tags>
         <tag>每日文章</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Python爬虫下载听风的蚕电子战全集视频</title>
-    <url>/2025/04/14/30%20Python%E7%88%AC%E8%99%AB%E4%B8%8B%E8%BD%BD%E5%90%AC%E9%A3%8E%E7%9A%84%E8%9A%95%E7%94%B5%E5%AD%90%E6%88%98%E5%85%A8%E9%9B%86%E8%A7%86%E9%A2%91/</url>
-    <content><![CDATA[<span id="more"></span>
-
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 需求</span><br><span class="line">本人是老蚕的粉丝，特别喜欢他的电子《电子战》，奈何最近他的《电子战》系列全部下架了，为了能够收藏这部视频，所以想借助各种工具及python爬虫代码，将该系列视频全部下载下来。</span><br><span class="line">主要技术路线，如下：（如果你知识想拿视频，请看最后，视频会免费分享出来）</span><br><span class="line">1. 哔哩哔哩上有网友转载的《电子战》系列，获取每一集对应的链接。</span><br><span class="line">2. 第一步的链接，无法直接下载，将其放到小程序上转换成可以下载的链接。</span><br><span class="line">3. 将35集的下载链接、文件名，放到python爬虫中，逐个下载成mp4文件。</span><br><span class="line">4. 将mp4文件通过python程序转成mp3文件。</span><br><span class="line"></span><br><span class="line">下面开始逐步详细介绍做法！</span><br><span class="line"></span><br><span class="line">#### step1 ： 获取b站分享地址</span><br><span class="line">《电子战》b站地址：[听风的蚕说评书——电子战01【一切从南海撞机开始】\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1cdQ9YdE5M/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=7fcee9c8f7f97cef2c1f6f2f8c891159)</span><br><span class="line">逐个每一集点击分享，就可以获得每一集的链接。</span><br><span class="line">![image.png|400](https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250414171731.png)</span><br><span class="line"></span><br><span class="line">```text</span><br><span class="line">【听风的蚕说评书——电子战01【一切从南海撞机开始】】 https://www.bilibili.com/video/BV1cdQ9YdE5M/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战02【哑巴吃黄连】】 https://www.bilibili.com/video/BV1ixQ9YjEb1/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战03【铭记先驱】】 https://www.bilibili.com/video/BV1LtQdYXE2T/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战04【日本雷达屏幕飘雪花】】 https://www.bilibili.com/video/BV1j4QdYWERg/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战05【兔子千里眼】】 https://www.bilibili.com/video/BV1KSQdYBEGW/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战06【美帝不敢应战】】 https://www.bilibili.com/video/BV1tPQdYuEyP/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战07【鹰酱C4系统如何】】 https://www.bilibili.com/video/BV1d2QRYDEUe/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战08【南昌舰单刀赴会】】 https://www.bilibili.com/video/BV1BkQRYWEnN/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战09【南海潜艇撞击】】 https://www.bilibili.com/video/BV1adQRYyEJ6/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战10【巴铁邻居互掐】】 https://www.bilibili.com/video/BV18fQRYkEvc/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战11【美国人懂面子吗？】】 https://www.bilibili.com/video/BV1UnQRYBEbw/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战11【美国人懂面子吗？】】 https://www.bilibili.com/video/BV1UnQRYBEbw/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战13【大毛打二毛】】 https://www.bilibili.com/video/BV1UbQfYUEMj/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战14【打起来了？】】 https://www.bilibili.com/video/BV1mhQfY7Eso/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战15【斗争纪实】】 https://www.bilibili.com/video/BV1rYXPYHE4v/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战16【接着唱接着舞】】 https://www.bilibili.com/video/BV1neXPYDEQf/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战17【战斗指数】】 https://www.bilibili.com/video/BV1p8XPYWEqu/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战18【高手过招点到为止】】 https://www.bilibili.com/video/BV1zdXAY2EB7/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战19【心潮澎湃】】 https://www.bilibili.com/video/BV1BfXAYyEMi/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战20【美帝核心本质】】 https://www.bilibili.com/video/BV1agXPYTE6w/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战21【地球往事】】 https://www.bilibili.com/video/BV1xtXKYYEk8/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战22【水门事件】】 https://www.bilibili.com/video/BV1FfXNYWEvJ/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战23【教员重塑秩序】】 https://www.bilibili.com/video/BV16oXNY9EDA/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战24【石油美元越战】】 https://www.bilibili.com/video/BV1kXXNY4EZV/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战25【阿富汗连环计】】 https://www.bilibili.com/video/BV1rdXNYsE8Y/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战25【阿富汗连环计】】 https://www.bilibili.com/video/BV1rdXNYsE8Y/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战27【中美对抗历史】】 https://www.bilibili.com/video/BV1tYXHYLENZ/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战28 【大战序幕】】 https://www.bilibili.com/video/BV1utXHYUEmS/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战29【英雄无畏】】 https://www.bilibili.com/video/BV1c2XHYiELX/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战30【残骸里的线索】】 https://www.bilibili.com/video/BV1P6XHYrE95/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战31【2022年的连环计】】 https://www.bilibili.com/video/BV11HXsYJE1d/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战32【安倍晋三之死】】 https://www.bilibili.com/video/BV1neZvYSEFy/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战32A【伊朗和巴铁】】 https://www.bilibili.com/video/BV1vrZHYqETK/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战32A【伊朗和巴铁】】 https://www.bilibili.com/video/BV1vrZHYqETK/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战34【致命任务之区域拒止】】 https://www.bilibili.com/video/BV1LJdkYxEme/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="step2：-获取下载地址"><a href="#step2：-获取下载地址" class="headerlink" title="step2： 获取下载地址"></a>step2： 获取下载地址</h4><p>第一步的链接，是无法直接下载的（貌似下载也是很短的一部分）<br>需要透过微信小程序去解析出下载链接：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250414171747.png" alt="image.png|375"></p>
-<p>按照1、2、3去点击，就可以获得下载链接了。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250414171803.png" alt="image.png|500"></p>
-<h4 id="step3：python爬虫批量下载"><a href="#step3：python爬虫批量下载" class="headerlink" title="step3：python爬虫批量下载"></a>step3：python爬虫批量下载</h4><p>python代码如下：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download_video</span>(<span class="params">url, file_name</span>):</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&quot;User-Agent&quot;</span>: <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment"># 发送 GET 请求到 URL</span></span><br><span class="line">        response = requests.get(url, headers=headers, stream=<span class="literal">True</span>)</span><br><span class="line">        response.raise_for_status()  <span class="comment"># 检查请求是否成功</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 打开文件写入内容</span></span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(file_name, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">            <span class="keyword">for</span> chunk <span class="keyword">in</span> response.iter_content(chunk_size=<span class="number">8192</span>):</span><br><span class="line">                file.write(chunk)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;视频下载成功并保存为 <span class="subst">&#123;file_name&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">except</span> requests.exceptions.RequestException <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;发生错误: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>with open(file_name, &#39;wb&#39;) as file</code>：使用 <code>with</code> 语句以二进制写入模式（<code>&#39;wb&#39;</code>）打开一个文件，这样可以确保文件在使用完毕后会被自动关闭。</li>
-<li><code>response.iter_content(chunk_size = 8192)</code>：这是一个迭代器，它会将响应内容按每块 8192 字节（即 8KB）的大小进行分割，逐块返回。</li>
-<li><code>file.write(chunk)</code>：将每一块内容写入到打开的文件中。</li>
-</ul>
-<h4 id="step4：mp4批量转mp3"><a href="#step4：mp4批量转mp3" class="headerlink" title="step4：mp4批量转mp3"></a>step4：mp4批量转mp3</h4><p>python代码： </p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> moviepy <span class="keyword">import</span> VideoFileClip</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">extract_audio_from_mp4</span>(<span class="params">mp4_file_path, mp3_file_path</span>):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        video = VideoFileClip(mp4_file_path)</span><br><span class="line">        audio = video.audio</span><br><span class="line">        audio.write_audiofile(mp3_file_path)</span><br><span class="line">        audio.close()</span><br><span class="line">        video.close()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;音频已成功提取并保存为 <span class="subst">&#123;mp3_file_path&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;提取音频时出现错误: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line"></span><br><span class="line">    mp4_file = <span class="string">r&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">C:\Users\  \Desktop\爬虫-电子战视频下载\mp4_全集\33_伊朗和巴铁.mp4</span></span><br><span class="line"><span class="string">C:\Users\  \Desktop\爬虫-电子战视频下载\mp4_全集\34_伊朗和巴铁.mp4</span></span><br><span class="line"><span class="string">C:\Users\  \Desktop\爬虫-电子战视频下载\mp4_全集\35_致命任务之区域拒止.mp4</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    my_list = mp4_file.split(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    new_list = [item <span class="keyword">for</span> item <span class="keyword">in</span> my_list <span class="keyword">if</span> item.strip()]</span><br><span class="line">    totalCnt = <span class="built_in">len</span>(new_list)</span><br><span class="line">    idx = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> mp4_file.split(<span class="string">&#x27;\n&#x27;</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(item.strip()) != <span class="number">0</span>:</span><br><span class="line">            idx += <span class="number">1</span></span><br><span class="line">            mp4_file = item</span><br><span class="line">            mp3_file = mp4_file.split(<span class="string">&#x27;.mp4&#x27;</span>)[<span class="number">0</span>]+<span class="string">&quot;.mp3&quot;</span></span><br><span class="line">            extract_audio_from_mp4(mp4_file, mp3_file)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;[%02d / %02d]&#x27;</span>%(idx,totalCnt))</span><br></pre></td></tr></table></figure>
-
-<p>moviepy 部分的核心代码是：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">video = VideoFileClip(mp4_file_path)</span><br><span class="line">audio = video.audio</span><br><span class="line">audio.write_audiofile(mp3_file_path)</span><br></pre></td></tr></table></figure>
-
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>至此，已经把《电子战》系列视频全部下载成mp4、mp3文件了：<br>有需要的，请直接微信公众号回复：电子战，免费领取！纯纯免费！<br>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a><br>如果你也喜欢编程、免费文件共享，请加群！<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250414171821.png" alt="image.png|350"></p>
-]]></content>
   </entry>
   <entry>
     <title>Python玩转免费Deepseek-免费送代码</title>
@@ -1491,6 +1595,33 @@ PS: 原本的语法：
       <tags>
         <tag>每日文章</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Python爬虫下载听风的蚕电子战全集视频</title>
+    <url>/2025/04/14/30%20Python%E7%88%AC%E8%99%AB%E4%B8%8B%E8%BD%BD%E5%90%AC%E9%A3%8E%E7%9A%84%E8%9A%95%E7%94%B5%E5%AD%90%E6%88%98%E5%85%A8%E9%9B%86%E8%A7%86%E9%A2%91/</url>
+    <content><![CDATA[<span id="more"></span>
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 需求</span><br><span class="line">本人是老蚕的粉丝，特别喜欢他的电子《电子战》，奈何最近他的《电子战》系列全部下架了，为了能够收藏这部视频，所以想借助各种工具及python爬虫代码，将该系列视频全部下载下来。</span><br><span class="line">主要技术路线，如下：（如果你知识想拿视频，请看最后，视频会免费分享出来）</span><br><span class="line">1. 哔哩哔哩上有网友转载的《电子战》系列，获取每一集对应的链接。</span><br><span class="line">2. 第一步的链接，无法直接下载，将其放到小程序上转换成可以下载的链接。</span><br><span class="line">3. 将35集的下载链接、文件名，放到python爬虫中，逐个下载成mp4文件。</span><br><span class="line">4. 将mp4文件通过python程序转成mp3文件。</span><br><span class="line"></span><br><span class="line">下面开始逐步详细介绍做法！</span><br><span class="line"></span><br><span class="line">#### step1 ： 获取b站分享地址</span><br><span class="line">《电子战》b站地址：[听风的蚕说评书——电子战01【一切从南海撞机开始】\_哔哩哔哩\_bilibili](https://www.bilibili.com/video/BV1cdQ9YdE5M/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=7fcee9c8f7f97cef2c1f6f2f8c891159)</span><br><span class="line">逐个每一集点击分享，就可以获得每一集的链接。</span><br><span class="line">![image.png|400](https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250414171731.png)</span><br><span class="line"></span><br><span class="line">```text</span><br><span class="line">【听风的蚕说评书——电子战01【一切从南海撞机开始】】 https://www.bilibili.com/video/BV1cdQ9YdE5M/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战02【哑巴吃黄连】】 https://www.bilibili.com/video/BV1ixQ9YjEb1/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战03【铭记先驱】】 https://www.bilibili.com/video/BV1LtQdYXE2T/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战04【日本雷达屏幕飘雪花】】 https://www.bilibili.com/video/BV1j4QdYWERg/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战05【兔子千里眼】】 https://www.bilibili.com/video/BV1KSQdYBEGW/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战06【美帝不敢应战】】 https://www.bilibili.com/video/BV1tPQdYuEyP/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战07【鹰酱C4系统如何】】 https://www.bilibili.com/video/BV1d2QRYDEUe/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战08【南昌舰单刀赴会】】 https://www.bilibili.com/video/BV1BkQRYWEnN/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战09【南海潜艇撞击】】 https://www.bilibili.com/video/BV1adQRYyEJ6/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战10【巴铁邻居互掐】】 https://www.bilibili.com/video/BV18fQRYkEvc/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战11【美国人懂面子吗？】】 https://www.bilibili.com/video/BV1UnQRYBEbw/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战11【美国人懂面子吗？】】 https://www.bilibili.com/video/BV1UnQRYBEbw/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战13【大毛打二毛】】 https://www.bilibili.com/video/BV1UbQfYUEMj/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战14【打起来了？】】 https://www.bilibili.com/video/BV1mhQfY7Eso/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战15【斗争纪实】】 https://www.bilibili.com/video/BV1rYXPYHE4v/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战16【接着唱接着舞】】 https://www.bilibili.com/video/BV1neXPYDEQf/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战17【战斗指数】】 https://www.bilibili.com/video/BV1p8XPYWEqu/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战18【高手过招点到为止】】 https://www.bilibili.com/video/BV1zdXAY2EB7/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战19【心潮澎湃】】 https://www.bilibili.com/video/BV1BfXAYyEMi/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战20【美帝核心本质】】 https://www.bilibili.com/video/BV1agXPYTE6w/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战21【地球往事】】 https://www.bilibili.com/video/BV1xtXKYYEk8/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战22【水门事件】】 https://www.bilibili.com/video/BV1FfXNYWEvJ/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战23【教员重塑秩序】】 https://www.bilibili.com/video/BV16oXNY9EDA/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战24【石油美元越战】】 https://www.bilibili.com/video/BV1kXXNY4EZV/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战25【阿富汗连环计】】 https://www.bilibili.com/video/BV1rdXNYsE8Y/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战25【阿富汗连环计】】 https://www.bilibili.com/video/BV1rdXNYsE8Y/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战27【中美对抗历史】】 https://www.bilibili.com/video/BV1tYXHYLENZ/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战28 【大战序幕】】 https://www.bilibili.com/video/BV1utXHYUEmS/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战29【英雄无畏】】 https://www.bilibili.com/video/BV1c2XHYiELX/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战30【残骸里的线索】】 https://www.bilibili.com/video/BV1P6XHYrE95/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战31【2022年的连环计】】 https://www.bilibili.com/video/BV11HXsYJE1d/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战32【安倍晋三之死】】 https://www.bilibili.com/video/BV1neZvYSEFy/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战32A【伊朗和巴铁】】 https://www.bilibili.com/video/BV1vrZHYqETK/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战32A【伊朗和巴铁】】 https://www.bilibili.com/video/BV1vrZHYqETK/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line">【听风的蚕说评书——电子战34【致命任务之区域拒止】】 https://www.bilibili.com/video/BV1LJdkYxEme/?share_source=copy_web&amp;vd_source=43b0b245485ae3aab815b812bcca34ff</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="step2：-获取下载地址"><a href="#step2：-获取下载地址" class="headerlink" title="step2： 获取下载地址"></a>step2： 获取下载地址</h4><p>第一步的链接，是无法直接下载的（貌似下载也是很短的一部分）<br>需要透过微信小程序去解析出下载链接：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250414171747.png" alt="image.png|375"></p>
+<p>按照1、2、3去点击，就可以获得下载链接了。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250414171803.png" alt="image.png|500"></p>
+<h4 id="step3：python爬虫批量下载"><a href="#step3：python爬虫批量下载" class="headerlink" title="step3：python爬虫批量下载"></a>step3：python爬虫批量下载</h4><p>python代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download_video</span>(<span class="params">url, file_name</span>):</span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&quot;User-Agent&quot;</span>: <span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment"># 发送 GET 请求到 URL</span></span><br><span class="line">        response = requests.get(url, headers=headers, stream=<span class="literal">True</span>)</span><br><span class="line">        response.raise_for_status()  <span class="comment"># 检查请求是否成功</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 打开文件写入内容</span></span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(file_name, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">            <span class="keyword">for</span> chunk <span class="keyword">in</span> response.iter_content(chunk_size=<span class="number">8192</span>):</span><br><span class="line">                file.write(chunk)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;视频下载成功并保存为 <span class="subst">&#123;file_name&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">except</span> requests.exceptions.RequestException <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;发生错误: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>with open(file_name, &#39;wb&#39;) as file</code>：使用 <code>with</code> 语句以二进制写入模式（<code>&#39;wb&#39;</code>）打开一个文件，这样可以确保文件在使用完毕后会被自动关闭。</li>
+<li><code>response.iter_content(chunk_size = 8192)</code>：这是一个迭代器，它会将响应内容按每块 8192 字节（即 8KB）的大小进行分割，逐块返回。</li>
+<li><code>file.write(chunk)</code>：将每一块内容写入到打开的文件中。</li>
+</ul>
+<h4 id="step4：mp4批量转mp3"><a href="#step4：mp4批量转mp3" class="headerlink" title="step4：mp4批量转mp3"></a>step4：mp4批量转mp3</h4><p>python代码： </p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">from</span> moviepy <span class="keyword">import</span> VideoFileClip</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">extract_audio_from_mp4</span>(<span class="params">mp4_file_path, mp3_file_path</span>):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        video = VideoFileClip(mp4_file_path)</span><br><span class="line">        audio = video.audio</span><br><span class="line">        audio.write_audiofile(mp3_file_path)</span><br><span class="line">        audio.close()</span><br><span class="line">        video.close()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;音频已成功提取并保存为 <span class="subst">&#123;mp3_file_path&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;提取音频时出现错误: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line"></span><br><span class="line">    mp4_file = <span class="string">r&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">C:\Users\  \Desktop\爬虫-电子战视频下载\mp4_全集\33_伊朗和巴铁.mp4</span></span><br><span class="line"><span class="string">C:\Users\  \Desktop\爬虫-电子战视频下载\mp4_全集\34_伊朗和巴铁.mp4</span></span><br><span class="line"><span class="string">C:\Users\  \Desktop\爬虫-电子战视频下载\mp4_全集\35_致命任务之区域拒止.mp4</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    my_list = mp4_file.split(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    new_list = [item <span class="keyword">for</span> item <span class="keyword">in</span> my_list <span class="keyword">if</span> item.strip()]</span><br><span class="line">    totalCnt = <span class="built_in">len</span>(new_list)</span><br><span class="line">    idx = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> mp4_file.split(<span class="string">&#x27;\n&#x27;</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(item.strip()) != <span class="number">0</span>:</span><br><span class="line">            idx += <span class="number">1</span></span><br><span class="line">            mp4_file = item</span><br><span class="line">            mp3_file = mp4_file.split(<span class="string">&#x27;.mp4&#x27;</span>)[<span class="number">0</span>]+<span class="string">&quot;.mp3&quot;</span></span><br><span class="line">            extract_audio_from_mp4(mp4_file, mp3_file)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;[%02d / %02d]&#x27;</span>%(idx,totalCnt))</span><br></pre></td></tr></table></figure>
+
+<p>moviepy 部分的核心代码是：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">video = VideoFileClip(mp4_file_path)</span><br><span class="line">audio = video.audio</span><br><span class="line">audio.write_audiofile(mp3_file_path)</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>至此，已经把《电子战》系列视频全部下载成mp4、mp3文件了：<br>有需要的，请直接微信公众号回复：电子战，免费领取！纯纯免费！<br>对了，如果大家对AI、新技术、软件评测感兴趣，可以关注我的微信公众号：<img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20220901100734.png" alt="image-20220328170047757|left" style="zoom: 12.5%;" />或者个人博客：<a href="https://weicun.gitee.io/">https://weicun.gitee.io/</a>  <a href="https://weicun.gitee.io/">蓝色单车</a><br>如果你也喜欢编程、免费文件共享，请加群！<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250414171821.png" alt="image.png|350"></p>
+]]></content>
   </entry>
   <entry>
     <title>小白玩转YOLO 第二篇 YOLO环境搭建</title>

@@ -6,7 +6,7 @@
   <link href="https://weicun581.github.io/atom.xml" rel="self"/>
   
   <link href="https://weicun581.github.io/"/>
-  <updated>2025-04-21T09:26:52.082Z</updated>
+  <updated>2025-04-22T03:25:22.438Z</updated>
   <id>https://weicun581.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深度评测：腾讯元宝AI助手的全面体验</title>
+    <link href="https://weicun581.github.io/2025/04/22/AI%20%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D%E8%AF%84%E6%B5%8B_AI/"/>
+    <id>https://weicun581.github.io/2025/04/22/AI%20%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D%E8%AF%84%E6%B5%8B_AI/</id>
+    <published>2025-04-22T03:19:00.000Z</published>
+    <updated>2025-04-22T03:25:22.438Z</updated>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h1 id="深度评测：腾讯元宝AI助手的全面体验"><a href="#深度评测：腾讯元宝AI助手的全面体验" class="headerlink" title="深度评测：腾讯元宝AI助手的全面体验"></a>深度评测：腾讯元宝AI助手的全面体验</h1><h2 id="前言：我与AI的初次邂逅"><a href="#前言：我与AI的初次邂逅" class="headerlink" title="前言：我与AI的初次邂逅"></a>前言：我与AI的初次邂逅</h2><p>在这个人工智能时代，各种AI工具如雨后春笋般涌现。作为一个对新技术充满好奇的用户，我总是迫不及待地想体验各种AI产品。某天打开微信时，我意外发现已经可以使用插件功能了（或许我有些落伍，现在才发现这个功能）。在众多插件中，”腾讯元宝”引起了我的注意。它的官网宣称这是一款集结多项强大功能的AI助手，这激发了我浓厚的兴趣。于是，我决定亲自下载体验，并将使用感受记录下来与大家分享。</p><p>官网下载页面：<a href="https://yuanbao.tencent.com/evt/dl?tridChannel=wx.wxplug.x&pkgChId=10014">腾讯元宝</a></p><h2 id="功能概览：四大核心亮点"><a href="#功能概览：四大核心亮点" class="headerlink" title="功能概览：四大核心亮点"></a>功能概览：四大核心亮点</h2><p>根据官网介绍，腾讯元宝主要具有以下四个特色功能，每个功能都令人心动：</p><ol><li><strong>高速专线 稳定体验</strong>：承诺提供流畅无阻的使用体验</li><li><strong>联网搜索 公众号信源</strong>：突破传统AI的局限性，可直接获取最新网络信息和微信生态内容</li><li><strong>智能识图 搜索万物</strong>：强大的图片识别与分析能力</li><li><strong>文件秒读 全面解析</strong>：对上传文件进行智能化处理的能力</li></ol><p>这些宣传点构筑起了我的期待，接下来我将通过实际使用来验证这些功能的真实表现。</p><h2 id="安装体验：简单快捷，但非尽善尽美"><a href="#安装体验：简单快捷，但非尽善尽美" class="headerlink" title="安装体验：简单快捷，但非尽善尽美"></a>安装体验：简单快捷，但非尽善尽美</h2><h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><p>首先下载安装包<code>yuanbao_10014_x64.exe</code>，安装过程如同大多数Windows软件一样简单。出于个人习惯，我选择将软件安装在D盘以避免C盘空间不足的问题。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111348.jpg" alt="Pasted image 20250422092543.png|450"><br>安装完成后，通过微信账户直接登录即可使用。首次登录时需要进行手机号验证，不过用户可以选择跳过这一步骤。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111352.jpg" alt="Pasted image 20250422092847.png|285"></p><h3 id="界面第一印象"><a href="#界面第一印象" class="headerlink" title="界面第一印象"></a>界面第一印象</h3><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422112338.png" alt="|425"><br>元宝的界面设计简洁大方，配色以蓝色为主，视觉效果干净专业。主界面分区明确，核心功能一目了然，整体布局符合现代软件设计的审美标准。</p><h2 id="功能深度评测：亮点与不足并存"><a href="#功能深度评测：亮点与不足并存" class="headerlink" title="功能深度评测：亮点与不足并存"></a>功能深度评测：亮点与不足并存</h2><h3 id="1-划词工具栏：高效但有提升空间"><a href="#1-划词工具栏：高效但有提升空间" class="headerlink" title="1. 划词工具栏：高效但有提升空间"></a>1. 划词工具栏：高效但有提升空间</h3><p>划词工具是日常使用频率极高的功能，我曾尝试过多种类似工具，最终都因体验不佳或广告过多而放弃。腾讯元宝的表现究竟如何？</p><h4 id="翻译功能评测"><a href="#翻译功能评测" class="headerlink" title="翻译功能评测"></a>翻译功能评测</h4><ul><li><strong>整句翻译</strong>：<br>表现令人满意，翻译结果准确自然，几乎可以媲美专业翻译软件。在测试中，无论简单句子还是复杂段落，元宝都能给出符合语境的翻译结果。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111355.jpg" alt="Pasted image 20250422095554.png|300"></li><li><strong>单词翻译</strong>：<br>相比之下略显简单，仅提供基础释义，缺乏音标、发音等语言学习者关注的关键信息。对于一个AI工具而言，这点确实有待改进。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111358.jpg" alt="Pasted image 20250422095742.png|300"></li></ul><h4 id="搜索功能体验"><a href="#搜索功能体验" class="headerlink" title="搜索功能体验"></a>搜索功能体验</h4><p>腾讯元宝的即划即用功能相当便捷，完全省去了传统复制粘贴的繁琐步骤。特别值得一提的是，用户可以通过简单的ESC键操作快速退出搜索界面，这一细节设计非常人性化，不会打断阅读体验。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111401.jpg" alt="Pasted image 20250422100038.png|500"><br>整体而言，划词工具栏的表现令人满意但没有特别惊艳之处，处于AI工具的”标准水平”。</p><h3 id="2-高速专线：稳定胜过速度"><a href="#2-高速专线：稳定胜过速度" class="headerlink" title="2. 高速专线：稳定胜过速度"></a>2. 高速专线：稳定胜过速度</h3><p>官网宣传的”高速专线”功能在实际使用中感知并不明显。在连续使用的几小时测试中，系统确实保持稳定，没有出现卡顿或崩溃现象。响应速度上，与主流AI工具基本相当，没有感觉到明显的速度优势。</p><p>这可能是因为：</p><ol><li>目前用户基数较小，服务器负载不高</li><li>网络优化有待加强</li><li>AI运算本就耗时，速度瓶颈难以突破</li></ol><h3 id="3-联网搜索：突破与局限并存"><a href="#3-联网搜索：突破与局限并存" class="headerlink" title="3. 联网搜索：突破与局限并存"></a>3. 联网搜索：突破与局限并存</h3><p>作为特色功能之一，联网搜索确实拓展了AI的能力边界。测试时，我专门搜索了一篇来自”干货满满小客栈”的文章《小白玩转YOLO第一篇：最简单的效果》，结果显示元宝能够准确定位到相关公众号内容。</p><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111405.jpg" alt="联网搜索结果"></p><p>然而尴尬的是，当尝试点击搜索结果中的链接时，却遭遇了”请在微信客户端打开链接”的限制提示。</p><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111409.jpg" alt="链接打开失败"></p><p>这种体验确实让人有些失落。不过客观来说，在当前技术条件下，能够实现微信内容检索已属难得。</p><h3 id="4-智能识图：表现优异的亮点功能"><a href="#4-智能识图：表现优异的亮点功能" class="headerlink" title="4. 智能识图：表现优异的亮点功能"></a>4. 智能识图：表现优异的亮点功能</h3><p>腾讯元宝在图片处理能力上确实展示出了较高水准：</p><ul><li><p><strong>图片搜索</strong>：<br>上传一张包含多种元素的风景照片，AI能够准确识别图片中的主要物体、建筑类型，甚至能判断出大致拍摄季节。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111412.jpg" alt="Pasted image 20250422102451.png|450"></p></li><li><p><strong>文字生成图片</strong>：<br>输入简单描述后，生成的图片质量稳定，风格多样，能够较好地理解用户描述的意象。</p></li></ul><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111415.jpg" alt="图片生成效果|450"></p><p>这一功能的完成度远超同期其他AI工具，堪称元宝的”杀手锏”功能。</p><h3 id="5-文件解析：潜力巨大但单次体验有限"><a href="#5-文件解析：潜力巨大但单次体验有限" class="headerlink" title="5. 文件解析：潜力巨大但单次体验有限"></a>5. 文件解析：潜力巨大但单次体验有限</h3><p>上传一份技术文档《优雅的编译ui文件到py文件.md》进行测试，AI确实能够准确理解文档内容并回答相关问题。</p><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111419.jpg" alt="文件解析界面|525"></p><p>但值得注意的是，这种文档处理功能的价值往往需要在长期、大量文档处理中才能充分体现。对于单个文档测试，虽然能看出其解析能力，但难以全面评估真正的实用价值。</p><h2 id="综合评分与使用建议"><a href="#综合评分与使用建议" class="headerlink" title="综合评分与使用建议"></a>综合评分与使用建议</h2><p>经过全面测试，我对腾讯元宝各项功能做出如下评价：</p><table><thead><tr><th>功能</th><th>评分</th><th>评价</th></tr></thead><tbody><tr><td>高速专线 稳定体验</td><td>⭐⭐⭐</td><td>体验平稳但速度不突出</td></tr><tr><td>联网搜索 公众号信源</td><td>⭐⭐⭐</td><td>突破性功能但受到微信生态限制</td></tr><tr><td>智能识图 搜索万物</td><td>⭐⭐⭐⭐</td><td>表现优异，超过大多数同类产品</td></tr><tr><td>文件秒读 全面解析</td><td>⭐⭐⭐⭐</td><td>功能实用但价值需长期使用才能体现</td></tr></tbody></table><p><strong>整体评价：⭐⭐⭐⭐（良好）</strong></p><p>腾讯元宝作为一款新兴AI工具，已经在多个方面展现出竞争力。特别是在图片处理方面确有独到之处，值得相关需求的用户尝试。虽然部分功能还有提升空间，但其整体完成度已经令人满意。随着持续迭代更新，相信会成为AI领域的强力选手。</p><p>对于寻求稳定体验和创新功能的用户，腾讯元宝是一个值得考虑的选择。建议可以从最具优势的智能识图功能开始体验，逐步探索其他模块。</p>]]></content>
+    
+    
+    <summary type="html">腾讯元宝AI助手的全面体验</summary>
+    
+    
+    
+    
+    <category term="AI" scheme="https://weicun581.github.io/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>15 AI 腾讯元宝评测</title>
+    <link href="https://weicun581.github.io/2025/04/22/AI%20%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D%E8%AF%84%E6%B5%8B/"/>
+    <id>https://weicun581.github.io/2025/04/22/AI%20%E8%85%BE%E8%AE%AF%E5%85%83%E5%AE%9D%E8%AF%84%E6%B5%8B/</id>
+    <published>2025-04-22T01:16:00.000Z</published>
+    <updated>2025-04-22T03:17:36.336Z</updated>
+    
+    <content type="html"><![CDATA[<span id="more"></span><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>今日打开微信的时候，发现可以使用插件功能了，也许是我落伍了，刚发现可以使用这个功能。<br>于是，就打开了插件：腾讯元宝，下载页面：<a href="https://yuanbao.tencent.com/evt/dl?tridChannel=wx.wxplug.x&pkgChId=10014">前往元宝</a></p><h3 id="功能简述"><a href="#功能简述" class="headerlink" title="功能简述"></a>功能简述</h3><p>根据官网的描述特殊功能主要有：</p><ul><li>高速专线 稳定体验</li><li>联网搜索 公众号信源</li><li>智能识图 搜索万物</li><li>文件秒读 全面解析</li></ul><p>看起来还蛮有吸引力的，待会逐个评测一下试试。</p><h3 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h3><p>下载安装包： <code>yuanbao_10014_x64.exe</code>，双击运行进行安装。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111348.jpg" alt="Pasted image 20250422092543.png">我一般会安装在D盘，避免C盘放太多东西，这样可以节省很多麻烦。<br>安装完成后，微信账户登录即可。<br>首次使用需要手机号验证，当然，你也可以跳过。</p><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111352.jpg" alt="Pasted image 20250422092847.png"></p><h3 id="具体功能评测"><a href="#具体功能评测" class="headerlink" title="具体功能评测"></a>具体功能评测</h3><h4 id="1、划词工具栏"><a href="#1、划词工具栏" class="headerlink" title="1、划词工具栏"></a>1、划词工具栏</h4><p>坦白说，之前有过很多划词工具，主要的需求还是：翻译功能。<br>但是，后来因为种种原因都被我禁用了，要么是效果不好，要么是有广告，那么元宝的划词工具栏怎么样呢？<br>我们来试试吧。</p><h5 id="翻译功能"><a href="#翻译功能" class="headerlink" title="翻译功能"></a>翻译功能</h5><p>整句翻译功：能还不错！<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111355.jpg" alt="Pasted image 20250422095554.png"><br>单个词组翻译：只有意思解释，没有发音、音标。一般！<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111358.jpg" alt="Pasted image 20250422095742.png">##### 搜索功能<br>整体使用下来，感觉跟deepseek非常相似，非常不错的一点是：</p><ol><li>即滑即用。</li><li>按esc可以快速退出，避免影响阅读体验。<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111401.jpg" alt="Pasted image 20250422100038.png"><br>总结：还不错，没有惊喜，也没有槽点。</li></ol><h4 id="2、高速专线-稳定体验"><a href="#2、高速专线-稳定体验" class="headerlink" title="2、高速专线 稳定体验"></a>2、高速专线 稳定体验</h4><p>总结：告诉没感觉到，稳定性倒是不错。哈哈哈</p><h4 id="3、联网搜索-公众号信源"><a href="#3、联网搜索-公众号信源" class="headerlink" title="3、联网搜索 公众号信源"></a>3、联网搜索 公众号信源</h4><p>这里搜索一篇 <code>干货满满小客栈</code>的文章：<code>《小白玩转YOLO第一篇：最简单的效果》</code><br>搜索效果还可以：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111405.jpg" alt="Pasted image 20250422102157.png">但是，当我尝试从搜索结果中的链接打开时，却得到了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111409.jpg" alt="Pasted image 20250422102232.png"><br>总结：有总比没有强吧。</p><h4 id="4、智能识图-搜索万物"><a href="#4、智能识图-搜索万物" class="headerlink" title="4、智能识图 搜索万物"></a>4、智能识图 搜索万物</h4><p>图片搜索测试：</p><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111412.jpg" alt="Pasted image 20250422102451.png"><br>文字生成图片：</p><p><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111415.jpg" alt="Pasted image 20250422102608.png"><br>总结：优异，符合预期，超过其它AI工具。</p><h4 id="5、文件秒读-全面解析"><a href="#5、文件秒读-全面解析" class="headerlink" title="5、文件秒读 全面解析"></a>5、文件秒读 全面解析</h4><p>上传一份文件：<code>《优雅的编译ui文件到py文件.md》</code><br>测试效果：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20250422111419.jpg" alt="Pasted image 20250422104012.png"><br>测试结果：的确可以解析文档。<br>但是在，这种读取文件、理解文件，回答用户问题，感觉是需要大量文件投喂，然后才能从宏观上看到效果。<br>单一文件测试感觉一般般啦。</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul><li>高速专线 稳定体验      （一般）⭐⭐⭐</li><li>联网搜索 公众号信源   （一般）⭐⭐⭐</li><li>智能识图 搜索万物      （良好）⭐⭐⭐⭐</li><li>文件秒读 全面解析      （良好）⭐⭐⭐⭐</li></ul><p>腾讯元宝整体评价：（良好）⭐⭐⭐⭐</p>]]></content>
+    
+    
+    <summary type="html"></summary>
+    
+    
+    
+    
+    <category term="每日文章" scheme="https://weicun581.github.io/tags/%E6%AF%8F%E6%97%A5%E6%96%87%E7%AB%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Python桌面软件接入Deepseek</title>
@@ -381,50 +419,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>组件世界-初体验</title>
-    <link href="https://weicun581.github.io/2023/04/23/25%20obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/"/>
-    <id>https://weicun581.github.io/2023/04/23/25%20obsidian%E4%BD%93%E9%AA%8C%E7%BB%84%E4%BB%B6%E4%B8%96%E7%95%8C/</id>
-    <published>2023-04-23T05:23:00.000Z</published>
-    <updated>2023-04-23T06:04:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>🌈<strong>Description</strong>：<br>​逛网站的时候看到的组件库，感觉很漂亮，记录并实验看下效果。<br>    我用的是 obsidian，所以本文是基于 obsidian 来实验组件世界的效果。</p></blockquote><span id="more"></span><h3 id="组件世界-介绍"><a href="#组件世界-介绍" class="headerlink" title="组件世界-介绍"></a>组件世界-介绍</h3><p>一个服务于 <strong>Notion 类</strong>产品、<strong>双链笔记类</strong>产品、<strong>代码托管平台</strong>「GitHub 等」、<strong>博客系统</strong>「WordPress」以及为知笔记等文本编辑器的可嵌入式小组件库。<br>一个辅助用户建立个性化、可视化的<strong>仪表盘</strong>或者<strong>知识库</strong>的工具。<br><strong>官网地址</strong>：<a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a></p><h3 id="组件世界-功能"><a href="#组件世界-功能" class="headerlink" title="组件世界-功能"></a>组件世界-功能</h3><p>目前，「组件世界&#x2F;WidgetStore」提供<strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化、效率时代「博客」</strong>。</p><h3 id="组件世界-支持的平台"><a href="#组件世界-支持的平台" class="headerlink" title="组件世界-支持的平台"></a>组件世界-支持的平台</h3><p><strong>Notion 类笔记软件</strong>：包括 Notion、FlowUs 息流笔记 <a href="https://www.zhihu.com/people/8b64b81de4123ec48f2f75c1b254929c">@FlowUs</a>、Wolai 我来云笔记、ClickUp、Coda、Anytype. 以及将来支持网页嵌入的印象笔记 Verse、微软 Microsoft Loop、妙记多 <a href="https://www.zhihu.com/people/38a9626ec5cde25f8653f9dd082da795">@妙记多Mojidoc</a> ……<br><strong>双链笔记软件</strong>，比如 Roam Research、Obsidian 黑曜石、Logseq、RemNote、思源笔记、Roam Edit、HuluNote 葫芦笔记。<br><strong>其他编辑器</strong>：为知笔记 WizNote<br><strong>代码托管平台</strong>：Github、Gitee、Gitlab<br><strong>博客平台</strong>：Wordpress<br><img src="https://pic4.zhimg.com/80/v2-5395c20620c0ae38d30839b233c44c67_1440w.webp" alt="|475"></p><h3 id="组件世界-特点"><a href="#组件世界-特点" class="headerlink" title="组件世界-特点"></a>组件世界-特点</h3><p><strong>小组件类型丰富</strong>。目前，「组件世界&#x2F;WidgetStore」提供了包括 <strong>基础组件、动态图标、动态背景、可视化图表、Notion 汉化</strong> 等多种服务，可以为笔记用户<strong>提供适用于时间管理、任务管理、资讯管理、习惯养成、学习等多种使用场景的解决方案</strong>。比如，在基础组件中包括天气、时钟、番茄钟、倒计时、日历、纪念日、习惯打卡、访客统计、白噪音、热力图、微博热搜、百度统计埋点等多种类型等小组件。<br><strong>小组件服务稳定</strong>。相比国外同类产品，服务稳定，使用十分方便。<br><strong>小组件支持个性化定制</strong>。小组件支持文字字体、颜色、数字等基础信息的组件设置。与此同时，小组件也支持小组件外观背景等公共配置。<br><strong>小组件平台化</strong>。目前，「组件世界&#x2F;WidgetStore」正在快速迭代中。并且，「组件世界&#x2F;WidgetStore」支持第三方开发者参与开发小组件，共建社区生态。</p><h3 id="实际使用体验"><a href="#实际使用体验" class="headerlink" title="实际使用体验"></a>实际使用体验</h3><h4 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h4><p>官网: <a href="https://cn.widgetstore.net/#/lib/basic">组件世界&#x2F;WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库</a><br>微信登陆。免费版 and 付费版的差异：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230423133519.png" alt="20230423133519|left|775"></p><p>免费版用于体验体验还是不错的。39.9 元&#x2F;年那个套餐看起来还不错的，有需要的可以试试。</p><h4 id="天气预报"><a href="#天气预报" class="headerlink" title="天气预报"></a>天气预报</h4><p>创建该组件，获取 url 地址：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f</span><br></pre></td></tr></table></figure><p>替换下面的 url 地址：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span>  <span class="attr">src</span>=<span class="string">&quot;https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span> <span class="attr">width</span>=<span class="string">&quot;300&quot;</span> <span class="attr">height</span>=<span class="string">&quot;300&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure><p>实际效果：</p><iframe  src="https://cn.widgetstore.net/view/index.html?q=5a69cbba6343e96e008b8d577a5b4815.0122a5876444c41d099d8ced1592d84f" frameborder="0" width="400" height="300" ></iframe><h4 id="节假日倒计时"><a href="#节假日倒计时" class="headerlink" title="节假日倒计时"></a>节假日倒计时</h4><p>配置同上，实际效果：</p><iframe  src="https://cn.widgetstore.net/view/index.html?q=b47ffc57625d6ba5004fa62311af799f.a145a9ee6444a6c200037f1662fa074d" frameborder="0" width="300" height="300" ></iframe>#### 动态日历<iframe  src="https://swg.notion.pet/s/1923d7786444c5b90003a5f02b42821d" frameborder="0" width="100" height="100" ></iframe><h4 id="卡片胶囊倒计时"><a href="#卡片胶囊倒计时" class="headerlink" title="卡片胶囊倒计时"></a>卡片胶囊倒计时</h4><iframe  src="https://swg.notion.pet/s/bg-873d64f46444c657000518ee33dd78b0" frameborder="0" width="500" height="300" ></iframe>#### 图表类型折线图、饼状图、柱状图等需要 notion 数据库，目前用 obsidian，所以这部分无法尝试。<h3 id="实际使用感受"><a href="#实际使用感受" class="headerlink" title="实际使用感受"></a>实际使用感受</h3><p>obsidian 使用组件世界基本玩的差不多了，总体感觉：眼睛一亮，后续仍然需要加强。<br>如果说到建议的话：</p><ul><li>免费账户政策 bug： <ul><li>免费账户只可以使用 2 个小组件，这个里面其实是有个政策 bug 的。因为任意一个账号创建的小组件，都可以免费的给任何用。（例如上文中的天气组件，你们都可以随便用）那么，如果我有几个小伙伴，每个人都注册一个这样的账号，然后创建各不相同的组件，然后共享。这样分分钟钟就可以用遍所有小组件。 </li><li>当然我没有这样做，这样做挺没意思的。我们还是要支持正版软件的良性循环。</li></ul></li><li>图表类型组件数据库支持类型太少了：<ul><li>正如官网上所说，目前只支持 notion，这个对 obsidian 不太友好。</li></ul></li><li>网上免费的资源有许多可以实现同等效果：<ul><li>例如：<a href="https://tianqiapi.com/api.php?style=tw&skin=pitaya">苏州天气预报 - TianqiAPI.com</a> 也可以实现同等的效果，所以用户依赖性不是很强。<div><iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tw&skin=pitaya" frameborder="0" width="500" height="500" allowtransparency="true"></iframe></div>好了，今天就到这里了，有什么想法欢迎给我留言。thanks❤</li></ul></li></ul><hr><h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol><li><a href="https://zhuanlan.zhihu.com/p/582745338">「组件世界&#x2F;WidgetStore」 ：一个丰富、强大的嵌入式小组件库 - 知乎</a></li><li></li><li></li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	逛网站的时候看到的组件库，感觉很漂亮，记录并实验看下效果。&lt;br&gt;    我用的是 obsidian，所以本文是基于 obsidian 来实验组件世界的效果。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>hexo 部署填写 github 用户名和密码一次性解决方案</title>
-    <link href="https://weicun581.github.io/2023/04/20/24%20hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>https://weicun581.github.io/2023/04/20/24%20hexo%E9%83%A8%E7%BD%B2%E5%A1%AB%E5%86%99github%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E4%B8%80%E6%AC%A1%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
-    <published>2023-04-20T11:37:00.000Z</published>
-    <updated>2023-04-20T07:31:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>🌈<strong>Description</strong>：<br>​hexo 部署文章时候，会弹出 github 弹窗填写 username 和 password，填完之后还是无法上传，本文会给出解决方法。</p></blockquote><span id="more"></span><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>hexo 博客半年没写了，今天尝试更新，发现 <code>hexo d</code> 之后需要输入 github 的用户名和密码，但是我输入之后没有效果，还是无法推送到 github 上。<br>研究之后发现 rootcause 是：github 已经无法再用密码登陆推送，只能用 token，我的 token 之前只设置了 3 个月的有效期，所以现在失效了。</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h4 id="1-重新生成新的-token"><a href="#1-重新生成新的-token" class="headerlink" title="1. 重新生成新的 token"></a>1. 重新生成新的 token</h4><p>新的 token 设置网址：<a href="https://github.com/settings/tokens">Personal Access Tokens (Classic) (github.com)</a><br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101025.png" alt="20230420101025|left"><br>新的 token （%%🔐α 💡ID💡MDO&#x2F;W 4 Cm 9 AJ 4 Ls 8&#x2F;i+yXXM 5 GzNzTJ 0 o 2 u 4 AwfZGVs 5 EqWEESkIf 0+kWt+quYVANDGUCe 4 GJWAxLJnr 7 vIgsi 7 QtSUNma 9 MPz 🔐%%）记得保存好，网页刷新之后就再也看不见了。</p><h4 id="2-配置-hexo-config-yml"><a href="#2-配置-hexo-config-yml" class="headerlink" title="2. 配置 hexo config.yml"></a>2. 配置 hexo config.yml</h4><p>配置 hexo config.yml：<br>原本的配置：<code>repo: https://github.com/weicun581/weicun581.git</code><br>新的配置：<code>repo: https://your token here@github.com/weicun581/weicun581.git</code><br>替换 <code>your token here</code> 替换成上一步的 token 就好了。</p><h2 id="实际使用效果"><a href="#实际使用效果" class="headerlink" title="实际使用效果"></a>实际使用效果</h2><p>在 hexo 根目录下执行：<code>hexo d</code>，之后在 github project 的 action 界面就可以看到 action 动作了：<br><img src="https://hello-jimmy.oss-cn-beijing.aliyuncs.com/20230420101947.png" alt="20230420101947|left"></p><hr><h3 id="🌈参考："><a href="#🌈参考：" class="headerlink" title="🌈参考："></a>🌈参考：</h3><ol><li><a href="https://blog.csdn.net/qq_43340547/article/details/119895671">(75条消息) 命令行输入hexo d后发现不能输入GitHub密码登录_SoberGit的博客-CSDN博客</a></li><li><a href="https://blog.csdn.net/weixin_41010198/article/details/119698015?utm_source=app&app_version=4.12.0&code=app_1562916241&uLinkId=usr1mkqgl919blen">(75条消息) github开发人员在七夕搞事情：remote: Support for password authentication was removed on August 13, 2021._点亮～黑夜的博客-CSDN博客</a></li></ol><p>个人博客地址：<a href="https://weicun.gitee.io/">蓝色单车 (gitee.io)</a></p>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;🌈&lt;strong&gt;Description&lt;/strong&gt;：&lt;br&gt;​	hexo 部署文章时候，会弹出 github 弹窗填写 username 和 password，填完之后还是无法上传，本文会给出解决方法。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    
-    <category term="hexo" scheme="https://weicun581.github.io/tags/hexo/"/>
-    
-    <category term="每日文章" scheme="https://weicun581.github.io/tags/%E6%AF%8F%E6%97%A5%E6%96%87%E7%AB%A0/"/>
-    
-    <category term="github" scheme="https://weicun581.github.io/tags/github/"/>
     
   </entry>
   
